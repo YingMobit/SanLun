@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1814993283817529374}
   - component: {fileID: 1847079754135139679}
   - component: {fileID: 1266748096387075986}
+  - component: {fileID: -7642586544639631282}
   m_Layer: 0
   m_Name: TestBullet
   m_TagString: Untagged
@@ -126,15 +127,52 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 0}
+  player_rigidbody: {fileID: 0}
+  transform: {fileID: 0}
   Weapon: {fileID: 0}
-  weapon_: {fileID: 0}
+  weapon_scr: {fileID: 0}
   fromGun: 
   bullet_damage: 0
-  bullet_speed: 10
+  bullet_speed: 14
   bullet_penetration_times: 0
-  bullet_life_time: 1000
+  bullet_life_time: 1
   life_time: 0
   MousePos: {x: 0, y: 0, z: 0}
   relative_pos: {x: 0, y: 0, z: 0}
   angle: 0
   cam: {fileID: 0}
+--- !u!70 &-7642586544639631282
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 37112826064083652}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 1, y: 2}
+  m_Direction: 0

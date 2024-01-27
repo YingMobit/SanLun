@@ -8,7 +8,7 @@ public class Bullets : MonoBehaviour
     public Rigidbody2D player_rigidbody;
     public Transform transform;
     public GameObject Weapon;
-    public USP weapon_;
+    public WeaponSystem weapon_scr;
 
     public string fromGun;
 
@@ -32,12 +32,11 @@ public class Bullets : MonoBehaviour
         cam = Camera.main;
         transform = GetComponent<Transform>();
         Weapon = GameObject.FindGameObjectWithTag("Weapon");
-        if (Weapon != null) weapon_ = Weapon.GetComponent<USP>(); else Debug.Log("Œ¥’“µΩŒ‰∆˜");
+        if (Weapon != null) weapon_scr = Weapon.GetComponent<WeaponSystem>(); else Debug.Log("Œ¥’“µΩŒ‰∆˜");
         fromGun = GameObject.Find("Player").name;
         rigidbody = GetComponent<Rigidbody2D>();
         TurnToPoint();
         DataInitial();
-        Debug.Log("Bullet≥ı ºªØÕÍ≥…");
     }
 
     // Update is called once per frame
@@ -48,12 +47,11 @@ public class Bullets : MonoBehaviour
 
     void DataInitial()
     {
-        if (weapon_ != null)
+        if (weapon_scr != null)
         {
-            bullet_penetration_times = weapon_.Fac_Penetration_Quantity;
-            bullet_damage = weapon_.Fac_Damage;
+            bullet_penetration_times = weapon_scr.Fac_Penetration_Quantity;
+            bullet_damage = weapon_scr.Fac_Damage;
             rigidbody.velocity = bullet_speed * transform.up + new Vector3(player_rigidbody.velocity.x, player_rigidbody.velocity.y, 0);
-            Debug.Log("?"+bullet_speed*Mathf.Sin(angle/Mathf.Deg2Rad)+bullet_speed*Mathf.Cos(angle / Mathf.Deg2Rad));
         }
         else Debug.Log("Œ¥’“µΩŒ‰∆˜Ω≈±æ");
     }

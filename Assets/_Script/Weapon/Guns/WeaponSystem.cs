@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class USP : MonoBehaviour,IGuns
+public class WeaponSystem : MonoBehaviour,IGuns
 {
     public BuffManager Buff;
     public GameObject Bullet;
@@ -34,8 +34,17 @@ public class USP : MonoBehaviour,IGuns
     public string Weapon_Name;
     public float last_shoot_time;
 
+    void Start()
+    {
+        Buff = GameObject.Find("BuffManager").GetComponent<BuffManager>();
+        Weapon_Name = gameObject.name;
+        Buff.OnDataChanged+=DataInitial;
+        DataInitial();
+    }
+
     public void DataInitial()//计算实际参数
     {
+        Debug.Log("DataInitial开始");
         BufOn_Reloading_time = Buff.Bufon_Reloading_time;
         BufOn_Shooting_Interval = Buff.Bufon_Shooting_Interval;
         BufOn_Damage = Buff.Bufon_Damage;
@@ -86,7 +95,7 @@ public class USP : MonoBehaviour,IGuns
 
             default: break;
 
-        }
+        }//基础参数赋值
 
         Fac_Reloading_time = Bas_Reloading_time * BufOn_Reloading_time;
         Fac_Shooting_Interval = Bas_Shooting_Interval * BufOn_Shooting_Interval;
@@ -95,15 +104,11 @@ public class USP : MonoBehaviour,IGuns
         Fac_Penetration_Quantity = Bas_Penetration_Quantity + BufOn_Penetration_Quantity;
 
         Bullet_Remained = Fac_Magazine_Capacity;
+        Debug.Log("DataInitial完成");
     }
 
     // Start is called before the first frame update
-    void Start()
-    {
-        Buff = GameObject.Find("BuffManager").GetComponent<BuffManager>();
-        Weapon_Name = gameObject.name;
-        DataInitial();
-    }
+    
 
     // Update is called once per frame
     void Update()

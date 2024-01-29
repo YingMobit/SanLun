@@ -11,7 +11,7 @@ public class BuffController : MonoBehaviour
     void Start()
     {
         buffManager = GameObject.Find("BuffManager").GetComponent<BuffManager>();
-        StartCoroutine(Test());
+        //StartCoroutine(Test());
     }
 
     public void Update_bufon_Reloading_time(float magnification)//magnification为倍率，用小数表示eg:20%->magnification = 0.2

@@ -45,6 +45,7 @@ public class WeaponSystem : MonoBehaviour,IGuns
     public void DataInitial()//计算实际参数
     {
         Debug.Log("DataInitial开始");
+        Weapon_Name = gameObject.name;
         BufOn_Reloading_time = Buff.Bufon_Reloading_time;
         BufOn_Shooting_Interval = Buff.Bufon_Shooting_Interval;
         BufOn_Damage = Buff.Bufon_Damage;
@@ -113,6 +114,7 @@ public class WeaponSystem : MonoBehaviour,IGuns
     // Update is called once per frame
     void Update()
     {
+        Weapon_Name = gameObject.name;
         switch (gameObject.name)
         {
             case "USP":

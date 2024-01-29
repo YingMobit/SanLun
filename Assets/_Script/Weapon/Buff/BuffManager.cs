@@ -6,7 +6,7 @@ using UnityEngine.Events;
 
 public class BuffManager: MonoBehaviour
 {
-
+    public WeaponSystem WeaponSystem;
     public  string weapon_name;
     public  float bufon_reloading_time = 1f;
     public  float bufon_Shooting_Interval = 1f;
@@ -15,6 +15,19 @@ public class BuffManager: MonoBehaviour
     public  int bufon_Penetration_Quantity = 0;
 
     public event Action OnDataChanged; // 定义数据改变事件
+
+    public string Weapon_Name
+    { 
+        get { return weapon_name; }
+        set
+        {
+            if (value != weapon_name)
+            {
+                weapon_name = value;
+                OnDataChanged?.Invoke();
+            }
+        }
+    }
 
     public float Bufon_Reloading_time
     {
@@ -91,6 +104,7 @@ public class BuffManager: MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        WeaponSystem = GameObject.Find("USP").GetComponent<WeaponSystem>();
         Bufon_Reloading_time = 1f;
         Bufon_Shooting_Interval = 1f;
         Bufon_Damage = 1f;
@@ -101,7 +115,7 @@ public class BuffManager: MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Weapon_Name = WeaponSystem.Weapon_Name;
     }
 
 }

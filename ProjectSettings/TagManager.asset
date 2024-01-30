@@ -46,6 +46,9 @@ TagManager:
   - name: caodi
     uniqueID: 854719057
     locked: 0
+  - name: Weapon
+    uniqueID: 4195724317
+    locked: 0
   - name: renwu
     uniqueID: 3410026113
     locked: 0

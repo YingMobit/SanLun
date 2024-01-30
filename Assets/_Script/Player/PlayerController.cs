@@ -4,17 +4,16 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField]
-    [Tooltip("Class")]
     private Camera cam;
-    public Rigidbody2D rigidbody;
-
-    [SerializeField]
-    [Tooltip("FaceToPointer")]
     Vector3 MousePos;
-    private int point_dir;
+    private bool point_dir;
     public float angle;
     private Vector3 relative_pos;
+
+    [SerializeField]
+    [Tooltip("Class")]
+    public Rigidbody2D rigidbody;
+
 
     [SerializeField,Range(1,10)] public float Turningspeed;
 
@@ -26,33 +25,28 @@ public class PlayerController : MonoBehaviour
 
     private void Awake()
     {
-        cam = Camera.main;  
+        cam = Camera.main;
         rigidbody = GetComponent<Rigidbody2D>();
     }
 
     private void Update()
     {
-        TurnToPoint();
-        Move();   
+        Move();
+        TurnToPointer();
     }
-
-    void TurnToPoint()
-    {
-        MousePos = cam.ScreenToWorldPoint(Input.mousePosition);
-        relative_pos = MousePos - transform.position;
-        point_dir = relative_pos.x < 0? 1:-1;
-        angle = Mathf.Atan2(relative_pos.x, relative_pos.y)*Mathf.Rad2Deg; 
-        //angle = angle * Mathf.Rad2Deg;
-        //Quaternion quaternion = Quaternion.AngleAxis(angle, Vector3.forward);
-        //transform.rotation = Quaternion.Lerp(transform.rotation,quaternion,Turningspeed*Time.deltaTime);
-        transform.rotation = Quaternion.Euler(new Vector3(0,0,-angle));
-        
-    }
-
     void Move()
     {
         move_dir_x = Input.GetAxis("Horizontal");
         move_dir_y = Input.GetAxis("Vertical");
         rigidbody.velocity = new Vector2(move_dir_x*MoveSpeed,move_dir_y*MoveSpeed);
+    }
+
+    void TurnToPointer()
+    {
+        MousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+        relative_pos = MousePos - transform.position;
+        point_dir = relative_pos.x > 0 ? true : false;
+        if (!point_dir) transform.rotation = Quaternion.Euler(0, 180, 0);
+        else transform.rotation = Quaternion.Euler(0, 0, 0);
     }
 }

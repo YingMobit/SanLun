@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: f7615be4a652cf24b9f5101a0682e361
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - timer_scr: {instanceID: 0}
+  - rigidbody: {instanceID: 0}
+  - Player: {instanceID: 0}
+  - BAS_data: {fileID: 11400000, guid: b9e0c2709e8c4c049bbf1159b43a0547, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

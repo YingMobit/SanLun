@@ -6,6 +6,12 @@ public class WeaponSystem : MonoBehaviour,IGuns
 {
     public BuffManager Buff;
     public GameObject Bullet;
+    public SpriteRenderer sprite_renderer;
+    public Sprite USP_spr;
+    public Sprite M4A1_spr;
+    public Sprite AK47_spr;
+    public Sprite M249_spr;
+    public Sprite Revolver_spr;
 
     [Header("»ù´¡²ÎÊý")]
     public float Bas_Reloading_time;
@@ -36,6 +42,7 @@ public class WeaponSystem : MonoBehaviour,IGuns
 
     void Start()
     {
+        sprite_renderer = GetComponent<SpriteRenderer>();
         Buff = GameObject.Find("BuffManager").GetComponent<BuffManager>();
         Weapon_Name = gameObject.name;
         Buff.OnDataChanged+=DataInitial;
@@ -60,6 +67,7 @@ public class WeaponSystem : MonoBehaviour,IGuns
                 Bas_Damage = 20f;
                 Bas_Magazine_Capacity = 14f;
                 Bas_Penetration_Quantity = 0;
+                sprite_renderer.sprite = USP_spr;
             break;
 
             case "AK47":
@@ -68,14 +76,16 @@ public class WeaponSystem : MonoBehaviour,IGuns
                 Bas_Damage = 35f;
                 Bas_Magazine_Capacity = 25f;
                 Bas_Penetration_Quantity = 1;
+                sprite_renderer.sprite = AK47_spr;
             break;
 
             case "M4A1":
                 Bas_Reloading_time = 2;
-                Bas_Shooting_Interval = 0.15f;
+                Bas_Shooting_Interval = 0.12f;
                 Bas_Damage = 25f;
                 Bas_Magazine_Capacity = 30f;
                 Bas_Penetration_Quantity = 0;
+                sprite_renderer.sprite = M4A1_spr;
             break;
 
             case "M249":
@@ -84,6 +94,7 @@ public class WeaponSystem : MonoBehaviour,IGuns
                 Bas_Damage = 20f;
                 Bas_Magazine_Capacity = 100f;
                 Bas_Penetration_Quantity = 0;
+                sprite_renderer.sprite = M249_spr;
             break;
 
             case "Revolver":
@@ -92,6 +103,7 @@ public class WeaponSystem : MonoBehaviour,IGuns
                 Bas_Damage = 100f;
                 Bas_Magazine_Capacity = 7f;
                 Bas_Penetration_Quantity = 2;
+                sprite_renderer.sprite = Revolver_spr;
             break;
 
             default: break;

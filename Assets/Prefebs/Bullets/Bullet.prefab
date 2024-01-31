@@ -143,7 +143,7 @@ MonoBehaviour:
   bullet_damage: 0
   bullet_speed: 40
   bullet_penetration_times: 0
-  bullet_life_time: 10
+  bullet_life_time: 2
   life_time: 0
   MousePos: {x: 0, y: 0, z: 0}
   relative_pos: {x: 0, y: 0, z: 0}

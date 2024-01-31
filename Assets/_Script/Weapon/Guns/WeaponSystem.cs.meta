@@ -3,7 +3,15 @@ guid: ba2d9080140462f40b0a58318ac4a2de
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - Buff: {instanceID: 0}
+  - Bullet: {instanceID: 0}
+  - sprite_renderer: {instanceID: 0}
+  - USP_spr: {instanceID: 0}
+  - M4A1_spr: {instanceID: 0}
+  - AK47_spr: {instanceID: 0}
+  - M249_spr: {instanceID: 0}
+  - Revolver_spr: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

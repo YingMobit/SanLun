@@ -49,4 +49,13 @@ public class PlayerController : MonoBehaviour
         if (!point_dir) transform.rotation = Quaternion.Euler(0, 180, 0);
         else transform.rotation = Quaternion.Euler(0, 0, 0);
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log("1");
+        if (collision.gameObject.tag == "Enemy")
+        {
+            Debug.Log("Be Attacked");
+        }
+    }
 }

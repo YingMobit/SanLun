@@ -28,12 +28,12 @@ public class Bullets : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player_rigidbody = GameObject.Find("PlayerBody").GetComponent<Rigidbody2D>();
+        player_rigidbody = GameObject.Find("Player").GetComponent<Rigidbody2D>();
         cam = Camera.main;
         transform = GetComponent<Transform>();
         Weapon = GameObject.FindGameObjectWithTag("Weapon");
         if (Weapon != null) weapon_scr = Weapon.GetComponent<WeaponSystem>(); else Debug.Log("Œ¥’“µΩŒ‰∆˜");
-        fromGun = GameObject.Find("PlayerBody").name;
+        fromGun = GameObject.Find("Player").name;
         rigidbody = GetComponent<Rigidbody2D>();
         TurnToPoint();
         DataInitial();

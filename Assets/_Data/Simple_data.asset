@@ -15,7 +15,6 @@ MonoBehaviour:
   BAS_Speed: 10
   BAS_MaxHealth: 100
   BAS_Atackvalue: 10
+  BAS_Attackarea: 3
+  BAS_AttackSpeed: 2
   Exp_reward: 200
-  texture_1: {fileID: 0}
-  texture_2: {fileID: 0}
-  texture_3: {fileID: 0}

@@ -37,8 +37,8 @@ public class PBO : MonoBehaviour
     void DataInitial()
     { 
         FAC_Speed = BAS_data.BAS_Speed;
-        FAC_MaxHealth = Mathf.RoundToInt(BAS_data.BAS_MaxHealth + 0.3f * timer_scr.timer);
-        FAC_Atackvalue = Mathf.RoundToInt(BAS_data.BAS_Atackvalue + 0.05f * timer_scr.timer);
+        FAC_MaxHealth = Mathf.RoundToInt(BAS_data.BAS_MaxHealth + 0.3f * Timer.timer);
+        FAC_Atackvalue = Mathf.RoundToInt(BAS_data.BAS_Atackvalue + 0.05f * Timer.timer);
 
     }
 

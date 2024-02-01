@@ -51,7 +51,6 @@ public class WeaponSystem : MonoBehaviour,IGuns
 
     public void DataInitial()//计算实际参数
     {
-        Debug.Log("DataInitial开始");
         Weapon_Name = gameObject.name;
         BufOn_Reloading_time = Buff.Bufon_Reloading_time;
         BufOn_Shooting_Interval = Buff.Bufon_Shooting_Interval;
@@ -117,7 +116,6 @@ public class WeaponSystem : MonoBehaviour,IGuns
         Fac_Penetration_Quantity = Bas_Penetration_Quantity + BufOn_Penetration_Quantity;
 
         Bullet_Remained = Fac_Magazine_Capacity;
-        Debug.Log("DataInitial完成");
     }
 
     // Start is called before the first frame update

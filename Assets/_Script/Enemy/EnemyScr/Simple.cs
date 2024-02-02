@@ -10,7 +10,8 @@ public class Simple : MonoBehaviour
     public GameObject Attackarea;
     public Simple_data BAS_data;
     public SpriteRenderer sprite_renderer;
-    public Sprite Attackarea_spr;
+    public Sprite BeAttackarea_spr;
+    public Sprite Death_spr;
 
     [Header("FactData")]
     public float FAC_Speed;
@@ -21,6 +22,7 @@ public class Simple : MonoBehaviour
     [Header("RealTimeData")]
     public float Health;
     public bool Attacking;
+    public bool Dead;
     public Vector3 Chasing_dir;
 
     // Start is called before the first frame update
@@ -36,10 +38,10 @@ public class Simple : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!Attacking) Chase();
+        if (!Attacking && !Dead) Chase();
         Debug.Log(!Attacking && (Vector3.Distance(transform.position, Player.transform.position) <= FAC_Attackarea));
         if (!Attacking && (Vector3.Distance(transform.position, Player.transform.position) <= FAC_Attackarea)) StartCoroutine(Attack());
-        if (Health <= 0) Death();
+        if (Health <= 0) StartCoroutine(Death());
     }
 
     void DataInitial()
@@ -48,6 +50,7 @@ public class Simple : MonoBehaviour
         FAC_MaxHealth = Mathf.RoundToInt(BAS_data.BAS_MaxHealth + 0.3f * Timer.timer);
         FAC_Atackvalue = Mathf.RoundToInt(BAS_data.BAS_Atackvalue + 0.05f * Timer.timer);
         FAC_Attackarea = BAS_data.BAS_Attackarea;
+        Health = FAC_MaxHealth;
     }
 
     IEnumerator Attack()
@@ -59,10 +62,10 @@ public class Simple : MonoBehaviour
         float angle;//生成攻击指示器的方向
         angle = Mathf.Atan2(Relative_pos.x, Relative_pos.y) * Mathf.Rad2Deg;
         Debug.Log(angle);
-        GameObject new_Attackarea = Instantiate(Attackarea,transform.position + new Vector3(0, BAS_data.BAS_Attackarea, 0) ,Quaternion.identity);
-        new_Attackarea.transform.RotateAround(transform.position ,Vector3.forward,-angle);
+        GameObject new_Attackarea = Instantiate(Attackarea, transform.position + new Vector3(0, BAS_data.BAS_Attackarea, 0), Quaternion.identity);
+        new_Attackarea.transform.RotateAround(transform.position, Vector3.forward, -angle);
         new_Attackarea.transform.SetParent(transform);
-        new_Attackarea.transform.localScale = new Vector3(BAS_data.BAS_Attackarea/3, BAS_data.BAS_Attackarea / 3, 1);
+        new_Attackarea.transform.localScale = new Vector3(BAS_data.BAS_Attackarea / 3, BAS_data.BAS_Attackarea / 3, 1);
         new_Attackarea.transform.SetParent(transform);
         yield return new WaitForSeconds(BAS_data.BAS_AttackSpeed);
         Collider2D Attackerea_collider = new_Attackarea.GetComponent<PolygonCollider2D>();
@@ -74,14 +77,36 @@ public class Simple : MonoBehaviour
 
     void Chase()
     {
-        Chasing_dir =Vector3.Normalize(Player.transform.position - transform.position);
+        Chasing_dir = Vector3.Normalize(Player.transform.position - transform.position);
         rigidbody.velocity = Chasing_dir * FAC_Speed;
         if (transform.position.x < Player.transform.position.x) { transform.rotation = Quaternion.Euler(0, 0, 0); }
         else transform.rotation = Quaternion.Euler(0, 180, 0);
     }
 
-    void Death()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.gameObject.tag == "PlayerAttack")
+        {
+            GameObject bullet = collision.gameObject;
+            Bullets bullets = bullet.GetComponent<Bullets>();
+            Health -= bullets.bullet_damage;
+            StartCoroutine(BeAttacked());
+        }
+    }
 
+    IEnumerator BeAttacked()
+    {
+        Sprite now_sprite = sprite_renderer.sprite;
+        sprite_renderer.sprite = BeAttackarea_spr;
+        yield return new WaitForSeconds(0.1f);
+        sprite_renderer.sprite = now_sprite;
+    }
+
+    IEnumerator Death()
+    {
+        Dead = true;
+        sprite_renderer.sprite = Death_spr;
+        yield return new WaitForSeconds(1f);
+        Destroy(gameObject);
     }
 }

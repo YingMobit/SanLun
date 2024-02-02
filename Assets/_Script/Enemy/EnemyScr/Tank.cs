@@ -10,7 +10,8 @@ public class Tank : MonoBehaviour
     public GameObject Attackarea;
     public Tank_data BAS_data;
     public SpriteRenderer sprite_renderer;
-    public Sprite Attackarea_spr;
+    public Sprite BeAttackarea_spr;
+    public Sprite Death_spr;
 
     [Header("FactData")]
     public float FAC_Speed;
@@ -21,6 +22,7 @@ public class Tank : MonoBehaviour
     [Header("RealTimeData")]
     public float Health;
     public bool Attacking;
+    public bool Dead;
     public Vector3 Chasing_dir;
 
     // Start is called before the first frame update
@@ -36,10 +38,10 @@ public class Tank : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!Attacking) Chase();
+        if (!Attacking && !Dead) Chase();
         Debug.Log(!Attacking && (Vector3.Distance(transform.position, Player.transform.position) <= FAC_Attackarea));
         if (!Attacking && (Vector3.Distance(transform.position, Player.transform.position) <= FAC_Attackarea)) StartCoroutine(Attack());
-        if (Health <= 0) Death();
+        if (Health <= 0) StartCoroutine(Death()); 
     }
 
     void DataInitial()
@@ -48,6 +50,7 @@ public class Tank : MonoBehaviour
         FAC_MaxHealth = Mathf.RoundToInt(BAS_data.BAS_MaxHealth + 0.3f * Timer.timer);
         FAC_Atackvalue = Mathf.RoundToInt(BAS_data.BAS_Atackvalue + 0.05f * Timer.timer);
         FAC_Attackarea = BAS_data.BAS_Attackarea;
+        Health = FAC_MaxHealth;
     }
 
     IEnumerator Attack()
@@ -80,8 +83,30 @@ public class Tank : MonoBehaviour
         else transform.rotation = Quaternion.Euler(0, 180, 0);
     }
 
-    void Death()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.gameObject.tag == "PlayerAttack")
+        {
+            GameObject bullet = collision.gameObject;
+            Bullets bullets = bullet.GetComponent<Bullets>();
+            Health -= bullets.bullet_damage;
+            StartCoroutine(BeAttacked());
+        }
+    }
 
+    IEnumerator BeAttacked()
+    {
+        Sprite now_sprite = sprite_renderer.sprite;
+        sprite_renderer.sprite = BeAttackarea_spr;
+        yield return new WaitForSeconds(0.1f);
+        sprite_renderer.sprite = now_sprite;
+    }
+
+    IEnumerator Death()
+    {
+        Dead = true;
+        sprite_renderer.sprite = Death_spr;
+        yield return new WaitForSeconds(1f);
+        Destroy(gameObject);    
     }
 }

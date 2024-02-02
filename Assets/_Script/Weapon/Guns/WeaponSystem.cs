@@ -166,7 +166,10 @@ public class WeaponSystem : MonoBehaviour,IGuns
                 if (Time.time - last_shoot_time > Fac_Shooting_Interval)
                 {
                     last_shoot_time = Time.time;
-                    Instantiate(Bullet, transform.position, Quaternion.identity);
+                    GameObject bullet = Instantiate(Bullet, transform.position, Quaternion.identity);
+                    Bullets bullet_scr = bullet.GetComponent<Bullets>();
+                    bullet_scr.bullet_damage = Fac_Damage;
+                    bullet_scr.bullet_penetration_times = Fac_Penetration_Quantity;
                     Bullet_Remained--;
                 }
             }

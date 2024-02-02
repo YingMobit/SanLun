@@ -10,8 +10,6 @@ public class Bullets : MonoBehaviour
     public GameObject Weapon;
     public WeaponSystem weapon_scr;
 
-    public string fromGun;
-
     public float bullet_damage;
     [Range(10, 50)] public float bullet_speed;
     public int bullet_penetration_times;
@@ -33,7 +31,6 @@ public class Bullets : MonoBehaviour
         transform = GetComponent<Transform>();
         Weapon = GameObject.FindGameObjectWithTag("Weapon");
         if (Weapon != null) weapon_scr = Weapon.GetComponent<WeaponSystem>(); else Debug.Log("Œ¥’“µΩŒ‰∆˜");
-        fromGun = GameObject.Find("Player").name;
         rigidbody = GetComponent<Rigidbody2D>();
         TurnToPoint();
         DataInitial();

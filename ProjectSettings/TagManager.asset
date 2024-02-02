@@ -6,15 +6,16 @@ TagManager:
   tags:
   - Weapon
   - Enemy
+  - EnemyAttack
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Actor
+  - Player
   - Water
   - UI
-  - 
-  - 
+  - EnemyAttack
+  - Enemy
   - 
   - 
   - 

@@ -50,12 +50,11 @@ public class PlayerController : MonoBehaviour
         else transform.rotation = Quaternion.Euler(0, 0, 0);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("1");
-        if (collision.gameObject.tag == "Enemy")
+        if (collision.gameObject.tag == "EnemyAttack")
         {
-            Debug.Log("Be Attacked");
+            Debug.Log("BeAttacked");
         }
     }
 }

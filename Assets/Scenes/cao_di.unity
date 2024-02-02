@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 5063568}
   - component: {fileID: 5063569}
   - component: {fileID: 5063570}
+  - component: {fileID: 5063571}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -202,6 +203,41 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!70 &5063571
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5063567}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.032952785, y: 0.09885836}
+  m_Size: {x: 2.2530875, y: 2.8462377}
+  m_Direction: 0
 --- !u!1 &5687772
 GameObject:
   m_ObjectHideFlags: 0
@@ -405,9 +441,9 @@ GameObject:
   - component: {fileID: 378356768}
   - component: {fileID: 378356770}
   - component: {fileID: 378356771}
-  m_Layer: 3
+  m_Layer: 7
   m_Name: Tank
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -494,13 +530,16 @@ MonoBehaviour:
   timer_scr: {fileID: 0}
   rigidbody: {fileID: 0}
   Player: {fileID: 0}
-  BAS_Data: {fileID: 11400000, guid: 018c9d1b8c2a31340804ac84d9c73e05, type: 2}
+  Attackarea: {fileID: 7497324553861565554, guid: b91f470c6e54abd44abe9e56f355befa, type: 3}
+  BAS_data: {fileID: 11400000, guid: 018c9d1b8c2a31340804ac84d9c73e05, type: 2}
+  sprite_renderer: {fileID: 0}
+  Attackarea_spr: {fileID: 0}
   FAC_Speed: 0
   FAC_MaxHealth: 0
   FAC_Atackvalue: 0
+  FAC_Attackarea: 0
   Health: 0
-  angle: 0
-  face_dir: 0
+  Attacking: 0
   Chasing_dir: {x: 0, y: 0, z: 0}
 --- !u!50 &378356771
 Rigidbody2D:
@@ -766,9 +805,9 @@ GameObject:
   - component: {fileID: 538815245}
   - component: {fileID: 538815247}
   - component: {fileID: 538815248}
-  m_Layer: 3
+  m_Layer: 7
   m_Name: PBO
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -855,11 +894,16 @@ MonoBehaviour:
   timer_scr: {fileID: 0}
   rigidbody: {fileID: 0}
   Player: {fileID: 0}
+  Attackarea: {fileID: 7497324553861565554, guid: b91f470c6e54abd44abe9e56f355befa, type: 3}
   BAS_data: {fileID: 11400000, guid: a34069879208a9744b334a87af7c8b5c, type: 2}
+  sprite_renderer: {fileID: 0}
+  Attackarea_spr: {fileID: 0}
   FAC_Speed: 0
   FAC_MaxHealth: 0
   FAC_Atackvalue: 0
+  FAC_Attackarea: 0
   Health: 0
+  Attacking: 0
   Chasing_dir: {x: 0, y: 0, z: 0}
 --- !u!50 &538815248
 Rigidbody2D:
@@ -1074,9 +1118,9 @@ GameObject:
   - component: {fileID: 891428041}
   - component: {fileID: 891428043}
   - component: {fileID: 891428044}
-  m_Layer: 3
+  m_Layer: 7
   m_Name: Simple
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -16,4 +16,5 @@ MonoBehaviour:
   BAS_MaxHealth: 600
   BAS_Atackvalue: 30
   BAS_Attackarea: 6
+  BAS_AttackSpeed: 2.5
   Exp_reward: 600

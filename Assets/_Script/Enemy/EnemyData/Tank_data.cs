@@ -10,5 +10,6 @@ public class Tank_data : ScriptableObject
     public float BAS_MaxHealth;
     public float BAS_Atackvalue;
     public float BAS_Attackarea;
+    public float BAS_AttackSpeed;
     public int Exp_reward;
 }

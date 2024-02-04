@@ -4,7 +4,7 @@ using UnityEngine;
 using System;
 using UnityEngine.Events;
 
-public class BuffManager: MonoBehaviour
+public class BuffManager_Weapon: MonoBehaviour
 {
     public WeaponSystem WeaponSystem;
     public  string weapon_name;
@@ -14,7 +14,7 @@ public class BuffManager: MonoBehaviour
     public  int bufon_Magazine_Capacity = 0;
     public  int bufon_Penetration_Quantity = 0;
 
-    public event Action OnDataChanged; // 定义数据改变事件
+    public event Action OnDataChanged_Weapon; // 定义数据改变事件
 
     public string Weapon_Name
     { 
@@ -24,7 +24,7 @@ public class BuffManager: MonoBehaviour
             if (value != weapon_name)
             {
                 weapon_name = value;
-                OnDataChanged?.Invoke();
+                OnDataChanged_Weapon?.Invoke();
             }
         }
     }
@@ -37,7 +37,7 @@ public class BuffManager: MonoBehaviour
             {
                 bufon_reloading_time = value;
                 Debug.Log("bufon_Reloading_time");
-                OnDataChanged?.Invoke(); // 触发数据改变事件
+                OnDataChanged_Weapon?.Invoke(); // 触发数据改变事件
             }
         }
         get { return bufon_reloading_time; }
@@ -53,7 +53,7 @@ public class BuffManager: MonoBehaviour
             {
                 bufon_Shooting_Interval = value;
                 Debug.Log("Bufon_Shooting_Interval");
-                OnDataChanged?.Invoke(); // 触发数据改变事件
+                OnDataChanged_Weapon?.Invoke(); // 触发数据改变事件
             }
         }
     }
@@ -67,7 +67,7 @@ public class BuffManager: MonoBehaviour
             {
                 bufon_Damage = value;
                 Debug.Log("Bufon_Damage");
-                OnDataChanged?.Invoke(); // 触发数据改变事件
+                OnDataChanged_Weapon?.Invoke(); // 触发数据改变事件
             }
         }
     }
@@ -81,7 +81,7 @@ public class BuffManager: MonoBehaviour
             {
                 bufon_Magazine_Capacity = value;
                 Debug.Log("Bufon_Magazine_Capacity");
-                OnDataChanged?.Invoke(); // 触发数据改变事件
+                OnDataChanged_Weapon?.Invoke(); // 触发数据改变事件
             }
         }
     }
@@ -95,7 +95,7 @@ public class BuffManager: MonoBehaviour
             {
                 bufon_Penetration_Quantity = value;
                 Debug.Log("Bufon_Penetration_Quantity");
-                OnDataChanged?.Invoke(); // 触发数据改变事件
+                OnDataChanged_Weapon?.Invoke(); // 触发数据改变事件
             }
         }
     }

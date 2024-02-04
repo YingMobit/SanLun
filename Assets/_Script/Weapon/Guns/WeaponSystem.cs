@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WeaponSystem : MonoBehaviour,IGuns
 {
-    public BuffManager Buff;
+    public BuffManager_Weapon Buff;
     public GameObject Bullet;
     public SpriteRenderer sprite_renderer;
     public Sprite USP_spr;
@@ -43,9 +43,9 @@ public class WeaponSystem : MonoBehaviour,IGuns
     void Start()
     {
         sprite_renderer = GetComponent<SpriteRenderer>();
-        Buff = GameObject.Find("BuffManager").GetComponent<BuffManager>();
+        Buff = GameObject.Find("BuffManager").GetComponent<BuffManager_Weapon>();
         Weapon_Name = gameObject.name;
-        Buff.OnDataChanged+=DataInitial;
+        Buff.OnDataChanged_Weapon+=DataInitial;
         DataInitial();
     }
 

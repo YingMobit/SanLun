@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5414216500120632575}
   - component: {fileID: 1656867348638973861}
   - component: {fileID: 7577652747367234200}
+  - component: {fileID: 2601492654527473635}
   m_Layer: 7
   m_Name: Tank
   m_TagString: Enemy
@@ -101,6 +102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer_scr: {fileID: 0}
   rigidbody: {fileID: 0}
+  animator: {fileID: 0}
   Player: {fileID: 0}
   Attackarea: {fileID: 7497324553861565554, guid: b91f470c6e54abd44abe9e56f355befa, type: 3}
   BAS_data: {fileID: 11400000, guid: 018c9d1b8c2a31340804ac84d9c73e05, type: 2}
@@ -177,3 +179,24 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 4, y: 4.375}
   m_Direction: 0
+--- !u!95 &2601492654527473635
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1085605499280629723}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 249df10aa42cb07449722f49d29cee78, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

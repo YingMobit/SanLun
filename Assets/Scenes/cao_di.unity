@@ -170,10 +170,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb986df0e1816d3438f11aa866013fe5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Death: {fileID: 0}
+  Buff: {fileID: 0}
+  sprite_renderer: {fileID: 0}
   angle: 0
+  MousePos: {x: 0, y: 0, z: 0}
+  Turningspeed: 1
+  Bas_MoveSpeed: 15
+  Bas_MaxHealth: 100
+  Bufon_Health: 0
+  Bufon_Speed: 0
+  Fac_MaxHealth: 0
+  Fac_Speed: 0
+  dead: 0
+  Health: 0
   rigidbody: {fileID: 0}
-  Turningspeed: 0
-  MoveSpeed: 15
   move_dir_x: 0
   move_dir_y: 0
 --- !u!50 &5063570
@@ -627,12 +638,12 @@ SpriteRenderer:
   m_SortingLayerID: -884941183
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: -160629596, guid: 4c592890a9c8de046b94d74763ecab2c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 83a13d2180159c041aa27fcefa3d8c7c, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.23, y: 0.26}
+  m_Size: {x: 0.2875, y: 0.3125}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -709,6 +720,7 @@ GameObject:
   m_Component:
   - component: {fileID: 689086542}
   - component: {fileID: 689086543}
+  - component: {fileID: 689086544}
   m_Layer: 0
   m_Name: BuffManager
   m_TagString: Untagged
@@ -750,6 +762,20 @@ MonoBehaviour:
   bufon_Damage: 1
   bufon_Magazine_Capacity: 0
   bufon_Penetration_Quantity: 0
+--- !u!114 &689086544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 689086541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06addfe9105700341830e28bfc08bd6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bufon_Health: 0
+  bufon_Speed: 1
 --- !u!1 &739033033
 GameObject:
   m_ObjectHideFlags: 0

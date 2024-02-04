@@ -6,6 +6,7 @@ public class Tank : MonoBehaviour
 {
     public Timer timer_scr;
     public Rigidbody2D rigidbody;
+    public Animator animator;
     public GameObject Player;
     public GameObject Attackarea;
     public Tank_data BAS_data;
@@ -28,6 +29,7 @@ public class Tank : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        animator = GetComponent<Animator>();
         sprite_renderer = GetComponent<SpriteRenderer>();
         rigidbody = GetComponent<Rigidbody2D>();
         Player = GameObject.Find("Player");
@@ -57,6 +59,7 @@ public class Tank : MonoBehaviour
     {
         Debug.Log("Attacking");
         Attacking = true;
+        animator.SetBool("Attacking", Attacking);
         rigidbody.velocity = Vector3.zero;
         Vector3 Relative_pos = Player.transform.position - transform.position;
         float angle;//生成攻击指示器的方向
@@ -73,6 +76,7 @@ public class Tank : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         Destroy(new_Attackarea);
         Attacking = false;
+        animator.SetBool("Attacking", Attacking);
     }
 
     void Chase()
@@ -90,23 +94,15 @@ public class Tank : MonoBehaviour
             GameObject bullet = collision.gameObject;
             Bullets bullets = bullet.GetComponent<Bullets>();
             Health -= bullets.bullet_damage;
-            StartCoroutine(BeAttacked());
+            animator.Play("BeAttacked");
         }
-    }
-
-    IEnumerator BeAttacked()
-    {
-        Sprite now_sprite = sprite_renderer.sprite;
-        sprite_renderer.sprite = BeAttackarea_spr;
-        yield return new WaitForSeconds(0.1f);
-        sprite_renderer.sprite = now_sprite;
     }
 
     IEnumerator Death()
     {
         Dead = true;
-        sprite_renderer.sprite = Death_spr;
+        animator.Play("Death");
         yield return new WaitForSeconds(1f);
-        Destroy(gameObject);    
+        Destroy(gameObject);
     }
 }

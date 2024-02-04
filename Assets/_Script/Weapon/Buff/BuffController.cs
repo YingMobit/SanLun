@@ -5,12 +5,12 @@ using UnityEngine;
 public class BuffController : MonoBehaviour
 {
 
-    public BuffManager buffManager;
+    public BuffManager_Weapon buffManager;
 
     // Start is called before the first frame update
     void Start()
     {
-        buffManager = GameObject.Find("BuffManager").GetComponent<BuffManager>();
+        buffManager = GameObject.Find("BuffManager").GetComponent<BuffManager_Weapon>();
         //StartCoroutine(Test());
     }
 

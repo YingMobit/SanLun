@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - EnemyAttack
   - PlayerAttack
+  - Barrier
   layers:
   - Default
   - TransparentFX

@@ -65,6 +65,11 @@ public class Bullets : MonoBehaviour
         {
             bullet_penetration_times--;
         }
+        if(collision.gameObject.tag=="Barrier")
+        {
+            bullet_penetration_times--;
+            collision.gameObject.GetComponent<Defence>().DealDamage(50f);
+        }
     }
 
     void TurnToPoint()

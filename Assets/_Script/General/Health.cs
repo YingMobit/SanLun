@@ -17,7 +17,8 @@ public class Health : MonoBehaviour
     public Tank_data TAN;
     public string tag;
 
-    public static event Action UpgradeData;
+    public static int DeadNumOfBarrier;
+    public static event Action<float> UpgradeData;
 
     //接口函数
     //扣血
@@ -27,10 +28,19 @@ public class Health : MonoBehaviour
         CheckDead();
     }
 
+    //加血
+    public void UpHealth(float Health)
+    {
+        maxHealth += Health;
+        curHealth += Health;
+    }
+
     //内部函数
     //初始化
     private void Start()
     {
+        UpgradeData += UpHealth;
+        DeadNumOfBarrier = 0;
         tag = gameObject.tag;
         switch (tag)
         {
@@ -57,10 +67,17 @@ public class Health : MonoBehaviour
     //检查死亡
     public void CheckDead()
     {
-        if(curHealth<0f)
+        if(curHealth<=0f)
         {
             Debug.Log("Dead!");
             //!!!执行死亡逻辑
+            if(tag=="Barrier")
+            {
+                DeadNumOfBarrier++;
+                Destroy(gameObject);
+                UpgradeData?.Invoke(50f);
+            }
+
         }
     }
 

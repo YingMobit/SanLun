@@ -37,7 +37,9 @@ public class BuffFunc : MonoBehaviour
     public void Buff_14() { Weapon.name = "Revolver"; CloseScene(); }
 
     void CloseScene()
-    { 
+    {
+        for (int i = 0; i < BuffBackGround.transform.childCount; i++) { GameObject child = BuffBackGround.transform.GetChild(i).gameObject; child.SetActive(false); }
         BuffBackGround.SetActive(false);
+        Time.timeScale = 1.0f;
     }
 }

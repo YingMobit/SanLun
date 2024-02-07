@@ -5,9 +5,6 @@ using UnityEngine;
 
 public class ExpCountor : MonoBehaviour
 {
-    public Simple simple;
-    public PBO pBO;
-    public Tank tank;
     public Simple_data simple_Data;
     public PBO_data pBO_Data;
     public Tank_data tank_Data;
@@ -24,12 +21,7 @@ public class ExpCountor : MonoBehaviour
     {
         CorrentLevelExp = 1000;
         CorrentLevel = 1;
-        simple = FindFirstObjectByType<Simple>();
-        pBO = FindFirstObjectByType<PBO>();
-        tank = FindFirstObjectByType<Tank>();
-        simple.Die += SimpleReward;
-        pBO.Die += PBOReward;
-        tank.Die += TankReward;
+
     }
 
     // Update is called once per frame
@@ -49,13 +41,13 @@ public class ExpCountor : MonoBehaviour
         }
     }
 
-    void SimpleReward() 
+    public void SimpleReward() 
     { CorrentExp += simple_Data.Exp_reward;if (CorrentLevel<MaxLevel) LevelUP();}
 
-    void PBOReward() 
+    public void PBOReward() 
     { CorrentExp += pBO_Data.Exp_reward; if (CorrentLevel < MaxLevel) LevelUP(); }
 
-    void TankReward() 
+    public void TankReward() 
     { CorrentExp += tank_Data.Exp_reward; if (CorrentLevel < MaxLevel) LevelUP(); }
 
 }

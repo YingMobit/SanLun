@@ -17,7 +17,9 @@ public class BuffScene : MonoBehaviour
         exp_countor.LevelUPed += BuffChoose;
     }
     void BuffChoose()
-    { 
+    {
+        for (int i = 0; i < BuffUI.transform.childCount; i++) { GameObject child = BuffUI.transform.GetChild(i).gameObject; child.SetActive(true); }
         BuffUI.SetActive(true);
+        Time.timeScale =0f;
     }
 }

@@ -32,7 +32,7 @@ public class BuffController_Player : MonoBehaviour
         {
             if (value != bufon_Speed)
             { 
-                Bufon_Speed = value;
+                bufon_Speed = value;
                 OnDataChanged_Player.Invoke();
             }
         }

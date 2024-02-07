@@ -36,7 +36,6 @@ public class BuffManager_Weapon: MonoBehaviour
             if (value != bufon_reloading_time)
             {
                 bufon_reloading_time = value;
-                Debug.Log("bufon_Reloading_time");
                 OnDataChanged_Weapon?.Invoke(); // 触发数据改变事件
             }
         }
@@ -52,7 +51,6 @@ public class BuffManager_Weapon: MonoBehaviour
             if (value != bufon_Shooting_Interval)
             {
                 bufon_Shooting_Interval = value;
-                Debug.Log("Bufon_Shooting_Interval");
                 OnDataChanged_Weapon?.Invoke(); // 触发数据改变事件
             }
         }
@@ -66,7 +64,6 @@ public class BuffManager_Weapon: MonoBehaviour
             if (value != bufon_Damage)
             {
                 bufon_Damage = value;
-                Debug.Log("Bufon_Damage");
                 OnDataChanged_Weapon?.Invoke(); // 触发数据改变事件
             }
         }
@@ -80,7 +77,6 @@ public class BuffManager_Weapon: MonoBehaviour
             if (value != bufon_Magazine_Capacity)
             {
                 bufon_Magazine_Capacity = value;
-                Debug.Log("Bufon_Magazine_Capacity");
                 OnDataChanged_Weapon?.Invoke(); // 触发数据改变事件
             }
         }
@@ -94,7 +90,6 @@ public class BuffManager_Weapon: MonoBehaviour
             if (value != bufon_Penetration_Quantity)
             {
                 bufon_Penetration_Quantity = value;
-                Debug.Log("Bufon_Penetration_Quantity");
                 OnDataChanged_Weapon?.Invoke(); // 触发数据改变事件
             }
         }

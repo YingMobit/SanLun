@@ -14,6 +14,7 @@ public class Tank : MonoBehaviour
     public SpriteRenderer sprite_renderer;
     public Sprite BeAttackarea_spr;
     public Sprite Death_spr;
+    public ExpCountor exp;
 
     [Header("FactData")]
     public float FAC_Speed;
@@ -32,6 +33,8 @@ public class Tank : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        exp = GameObject.Find("ExpManager").GetComponent<ExpCountor>();
+        Die += exp.PBOReward;
         animator = GetComponent<Animator>();
         sprite_renderer = GetComponent<SpriteRenderer>();
         rigidbody = GetComponent<Rigidbody2D>();
@@ -103,11 +106,7 @@ public class Tank : MonoBehaviour
         Dead = true;
         animator.Play("Death");
         yield return new WaitForSeconds(1f);
-        Destroy(gameObject);
-    }
-
-    private void OnDestroy()
-    {
         Die.Invoke();
+        Destroy(gameObject);
     }
 }

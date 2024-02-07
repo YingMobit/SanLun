@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -26,6 +27,8 @@ public class Simple : MonoBehaviour
     public bool Dead;
     public Vector3 Chasing_dir;
 
+    public event Action Die;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -40,11 +43,9 @@ public class Simple : MonoBehaviour
     void Update()
     {
         if (!Attacking && !Dead) Chase();
-        Debug.Log(!Attacking && (Vector3.Distance(transform.position, Player.transform.position) <= FAC_Attackarea));
         if (!Attacking && (Vector3.Distance(transform.position, Player.transform.position) <= FAC_Attackarea)) StartCoroutine(Attack());
         if (Health <= 0) StartCoroutine(Death());
     }
-
     void DataInitial()
     {
         FAC_Speed = BAS_data.BAS_Speed;
@@ -102,5 +103,10 @@ public class Simple : MonoBehaviour
         animator.Play("Death");
         yield return new WaitForSeconds(1f);
         Destroy(gameObject);
+    }
+
+    private void OnDestroy()
+    {
+        Die.Invoke();
     }
 }

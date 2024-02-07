@@ -8,7 +8,7 @@ public class BuffController_Player : MonoBehaviour
 {  
 
     public int bufon_Health;
-    public float bufon_Speed;
+    public float bufon_Speed = 1;
 
     public event Action OnDataChanged_Player; 
 

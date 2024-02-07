@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -26,6 +27,8 @@ public class Tank : MonoBehaviour
     public bool Dead;
     public Vector3 Chasing_dir;
 
+    public event Action Die;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -41,7 +44,6 @@ public class Tank : MonoBehaviour
     void Update()
     {
         if (!Attacking && !Dead) Chase();
-        Debug.Log(!Attacking && (Vector3.Distance(transform.position, Player.transform.position) <= FAC_Attackarea));
         if (!Attacking && (Vector3.Distance(transform.position, Player.transform.position) <= FAC_Attackarea)) StartCoroutine(Attack());
         if (Health <= 0) StartCoroutine(Death()); 
     }
@@ -57,14 +59,12 @@ public class Tank : MonoBehaviour
 
     IEnumerator Attack()
     {
-        Debug.Log("Attacking");
         Attacking = true;
         animator.SetBool("Attacking", Attacking);
         rigidbody.velocity = Vector3.zero;
         Vector3 Relative_pos = Player.transform.position - transform.position;
         float angle;//生成攻击指示器的方向
         angle = Mathf.Atan2(Relative_pos.x, Relative_pos.y) * Mathf.Rad2Deg;
-        Debug.Log(angle);
         GameObject new_Attackarea = Instantiate(Attackarea, transform.position + new Vector3(0, BAS_data.BAS_Attackarea, 0), Quaternion.identity);
         new_Attackarea.transform.RotateAround(transform.position, Vector3.forward, -angle);
         new_Attackarea.transform.SetParent(transform);
@@ -104,5 +104,10 @@ public class Tank : MonoBehaviour
         animator.Play("Death");
         yield return new WaitForSeconds(1f);
         Destroy(gameObject);
+    }
+
+    private void OnDestroy()
+    {
+        Die.Invoke();
     }
 }

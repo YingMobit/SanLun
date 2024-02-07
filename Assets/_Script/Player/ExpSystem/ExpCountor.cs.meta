@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 6094c22afa11ec843aafd5e22e65ca6c
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - simple: {instanceID: 0}
+  - pBO: {instanceID: 0}
+  - tank: {instanceID: 0}
+  - simple_Data: {fileID: 11400000, guid: b9e0c2709e8c4c049bbf1159b43a0547, type: 2}
+  - pBO_Data: {fileID: 11400000, guid: a34069879208a9744b334a87af7c8b5c, type: 2}
+  - tank_Data: {fileID: 11400000, guid: 018c9d1b8c2a31340804ac84d9c73e05, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

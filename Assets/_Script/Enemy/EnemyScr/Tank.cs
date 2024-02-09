@@ -15,6 +15,7 @@ public class Tank : MonoBehaviour
     public Sprite BeAttackarea_spr;
     public Sprite Death_spr;
     public ExpCountor exp;
+    public Collider2D Body;
 
     [Header("FactData")]
     public float FAC_Speed;
@@ -33,6 +34,7 @@ public class Tank : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Body = transform .GetChild(0).GetComponent<Collider2D>();
         exp = GameObject.Find("ExpManager").GetComponent<ExpCountor>();
         Die += exp.PBOReward;
         animator = GetComponent<Animator>();
@@ -63,6 +65,7 @@ public class Tank : MonoBehaviour
     IEnumerator Attack()
     {
         Attacking = true;
+        Body.enabled = false;
         animator.SetBool("Attacking", Attacking);
         rigidbody.velocity = Vector3.zero;
         Vector3 Relative_pos = Player.transform.position - transform.position;
@@ -77,6 +80,7 @@ public class Tank : MonoBehaviour
         Collider2D Attackerea_collider = new_Attackarea.GetComponent<PolygonCollider2D>();
         Attackerea_collider.enabled = true;
         yield return new WaitForSeconds(0.5f);
+        Body.enabled = false;
         Destroy(new_Attackarea);
         Attacking = false;
         animator.SetBool("Attacking", Attacking);

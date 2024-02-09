@@ -15,6 +15,7 @@ public class PBO : MonoBehaviour
     public Sprite BeAttackarea_spr;
     public Sprite Death_spr;
     public ExpCountor exp;
+    public Collider2D Body;
 
     [Header("FactData")]
     public float FAC_Speed;
@@ -33,6 +34,7 @@ public class PBO : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Body = transform.GetChild(0).GetComponent<Collider2D>();
         exp = GameObject.Find("ExpManager").GetComponent<ExpCountor>();
         Die += exp.PBOReward;
         animator = GetComponent<Animator>();
@@ -63,6 +65,7 @@ public class PBO : MonoBehaviour
     IEnumerator Attack()
     {
         Attacking = true;
+        Body.enabled = false;
         animator.SetBool("Attacking", Attacking);
         rigidbody.velocity = Vector3.zero;
         Vector3 Relative_pos = Player.transform.position - transform.position;
@@ -78,6 +81,7 @@ public class PBO : MonoBehaviour
         Attackerea_collider.enabled = true;
         yield return new WaitForSeconds(0.5f);
         Destroy(new_Attackarea);
+        Body.enabled = true;
         Attacking = false;
         animator.SetBool("Attacking", Attacking);
     }

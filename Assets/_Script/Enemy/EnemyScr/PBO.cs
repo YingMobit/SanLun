@@ -16,6 +16,7 @@ public class PBO : MonoBehaviour
     public Sprite Death_spr;
     public ExpCountor exp;
     public Collider2D Body;
+    public Collider2D Body2;
 
     [Header("FactData")]
     public float FAC_Speed;
@@ -35,6 +36,7 @@ public class PBO : MonoBehaviour
     void Start()
     {
         Body = transform.GetChild(0).GetComponent<Collider2D>();
+        Body2 = GetComponent<Collider2D>();
         exp = GameObject.Find("ExpManager").GetComponent<ExpCountor>();
         Die += exp.PBOReward;
         animator = GetComponent<Animator>();
@@ -49,7 +51,7 @@ public class PBO : MonoBehaviour
     void Update()
     {
         if (!Attacking && !Dead) Chase();
-        if (!Attacking && (Vector3.Distance(transform.position, Player.transform.position) <= FAC_Attackarea)) StartCoroutine(Attack());
+        if (!Attacking && (Vector3.Distance(transform.position, Player.transform.position) <= FAC_Attackarea)&&!Dead) StartCoroutine(Attack());
         if (Health <= 0) StartCoroutine(Death());
     }
 
@@ -108,6 +110,8 @@ public class PBO : MonoBehaviour
     IEnumerator Death()
     {
         Dead = true;
+        Body.enabled = false;
+        Body2.enabled = false;
         animator.Play("Death");
         yield return new WaitForSeconds(1f);
         Die.Invoke();

@@ -4,9 +4,18 @@ using UnityEngine;
 
 public class WeaponSystem : MonoBehaviour,IGuns
 {
+    public BGMController bgmController;
     public BuffManager_Weapon Buff;
     public GameObject Bullet;
     public SpriteRenderer sprite_renderer;
+    [Header("ShootingAudio")]
+    public AudioClip USP_SA;
+    public AudioClip M4A1_SA;
+    public AudioClip AK47_SA;
+    public AudioClip M249_SA;
+    public AudioClip Revolver_SA;
+
+    [Header("WeaponSprite")]
     public Sprite USP_spr;
     public Sprite M4A1_spr;
     public Sprite AK47_spr;
@@ -33,6 +42,8 @@ public class WeaponSystem : MonoBehaviour,IGuns
     public float Fac_Damage;
     public float Fac_Magazine_Capacity;
     public int Fac_Penetration_Quantity;
+    public AudioClip ShootingAudio;
+    public AudioClip ReloadAudio;
 
     [Header("动态参数")]
     public float Bullet_Remained;
@@ -67,6 +78,7 @@ public class WeaponSystem : MonoBehaviour,IGuns
                 Bas_Magazine_Capacity = 14f;
                 Bas_Penetration_Quantity = 0;
                 sprite_renderer.sprite = USP_spr;
+                ShootingAudio = USP_SA;
             break;
 
             case "AK47":
@@ -76,6 +88,7 @@ public class WeaponSystem : MonoBehaviour,IGuns
                 Bas_Magazine_Capacity = 25f;
                 Bas_Penetration_Quantity = 1;
                 sprite_renderer.sprite = AK47_spr;
+                ShootingAudio = AK47_SA;
             break;
 
             case "M4A1":
@@ -85,6 +98,7 @@ public class WeaponSystem : MonoBehaviour,IGuns
                 Bas_Magazine_Capacity = 30f;
                 Bas_Penetration_Quantity = 0;
                 sprite_renderer.sprite = M4A1_spr;
+                ShootingAudio = M4A1_SA;
             break;
 
             case "M249":
@@ -94,6 +108,7 @@ public class WeaponSystem : MonoBehaviour,IGuns
                 Bas_Magazine_Capacity = 100f;
                 Bas_Penetration_Quantity = 0;
                 sprite_renderer.sprite = M249_spr;
+                ShootingAudio = M249_SA;
             break;
 
             case "Revolver":
@@ -103,6 +118,7 @@ public class WeaponSystem : MonoBehaviour,IGuns
                 Bas_Magazine_Capacity = 7f;
                 Bas_Penetration_Quantity = 2;
                 sprite_renderer.sprite = Revolver_spr;
+                ShootingAudio = Revolver_SA;
             break;
 
             default: break;
@@ -142,6 +158,7 @@ public class WeaponSystem : MonoBehaviour,IGuns
                 }
             break;
         }
+        if (Input.GetKeyDown(KeyCode.R)) { StartCoroutine(ReLoad(Fac_Reloading_time)); }
     }
 
     public IEnumerator ReLoad(float reloading_time)
@@ -149,7 +166,7 @@ public class WeaponSystem : MonoBehaviour,IGuns
         if (!Reloading)
         { 
             Reloading = true;
-            //音效播放();
+            bgmController.PLayAudio(ReloadAudio);
             yield return new WaitForSeconds(reloading_time);
             Bullet_Remained = Fac_Magazine_Capacity;
             Reloading = false; 
@@ -166,6 +183,7 @@ public class WeaponSystem : MonoBehaviour,IGuns
                 if (Time.time - last_shoot_time > Fac_Shooting_Interval)
                 {
                     last_shoot_time = Time.time;
+                    bgmController.PLayAudio(ShootingAudio);
                     GameObject bullet = Instantiate(Bullet, transform.position, Quaternion.identity);
                     Bullets bullet_scr = bullet.GetComponent<Bullets>();
                     bullet_scr.bullet_damage = Fac_Damage;

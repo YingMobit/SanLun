@@ -111,6 +111,7 @@ MonoBehaviour:
   BeAttackarea_spr: {fileID: 21300000, guid: 1d90009d4323f904aae08c3eb0e5a761, type: 2}
   Death_spr: {fileID: 21300000, guid: dfc6c68aeab180b43adf89a3d5fd43c3, type: 2}
   exp: {fileID: 0}
+  Body: {fileID: 0}
   FAC_Speed: 0
   FAC_MaxHealth: 0
   FAC_Atackvalue: 0

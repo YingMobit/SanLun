@@ -3,70 +3,102 @@ using UnityEngine.Tilemaps;
 
 public class MapGenerator : MonoBehaviour
 {
-    public Tilemap tilemap;
-    public Tilemap barrierTilemap;
-    public TileBase[] grassTiles;
-    public TileBase barrierTile;
-    public TileBase floorTile;
 
+    // 声明
+    public Tilemap FloorTilemap;            // 地面
+    public GameObject[] BarrierPrefabs;     // 屏障预制体组
+    public TileBase[] GrassTiles;           // 草地瓦片组
+    public TileBase FloorTile;          // 黑色石砖瓦片
+    public Grid grid;         // 网格父物体
+    public int[,] MapData;         // 存储地图数据xy坐标 数据0未解锁1解锁
+    public int BarrierNum;          // 屏障命名数
 
+    private Vector3Int nowPos;          // grid当前所在Pos
+
+    // 函数
+
+    // 初始
     private void Start()
     {
-        GenerateMap();
-    }
-    public void GenerateMap()
-    {
-        // 清空旧地图
-        tilemap.ClearAllTiles();
-        barrierTilemap.ClearAllTiles();
-
-        // 生成地图
-        GenerateTiles();
-        GenerateBarriers();
+        // 清空地图
+        ClearChildren(grid.gameObject);
+        // 初始小地图
+        InitialMap();
+        // 初始屏障
+        BarrierNum = 1;
+        InitialBarrier();
     }
 
-    void GenerateTiles()
+    private void Update()
     {
-        Vector3Int mapSize = new Vector3Int(13, 9, 0);
-        for (int x = 0; x < mapSize.x; x++)
+        if (Input.GetMouseButton(0))
         {
-            for (int y = 0; y < mapSize.y; y++)
+            GetPos();
+        }
+
+    }
+
+    private void ClearChildren(GameObject parent)
+    {
+        if (parent == null)
+        {
+            Debug.LogError("Grid not assigned!");
+            return;
+        }
+
+        // 遍历子物体并销毁
+        foreach (Transform child in parent.transform)
+        {
+            Destroy(child.gameObject);
+        }
+    }
+
+    private void InitialMap()
+    {
+        // 创建FloorTilemap,添加组件
+        GameObject tilemapObj = new GameObject("FloorTilemap");
+        tilemapObj.transform.parent = grid.transform; // 将Tilemap设为grid的子物体
+        FloorTilemap = tilemapObj.AddComponent<Tilemap>();
+        TilemapRenderer tilemapRenderer = tilemapObj.AddComponent<TilemapRenderer>();
+        tilemapRenderer.sortingOrder = 0;
+
+        // 创建地面瓦片   初始13*9
+        for (int x = -6; x < 7; x++)
+        {
+            for (int y = -4; y < 5; y++)
             {
-                // 随机选择一个草地瓦片
-                TileBase tile = grassTiles[Random.Range(0, grassTiles.Length)];
-                tilemap.SetTile(new Vector3Int(x, y, 0), tile);
+                TileBase tile = GrassTiles[Random.Range(0, GrassTiles.Length)];
+                FloorTilemap.SetTile(new Vector3Int(x, y, 0), tile);
             }
         }
     }
 
-    void GenerateBarriers()
+    private void InitialBarrier()
     {
-        Vector3Int mapSize = new Vector3Int(13, 9, 0);
-
-        // 生成四个角落的地面瓦片
-        barrierTilemap.SetTile(new Vector3Int(-1, -1, 0), floorTile);
-        barrierTilemap.SetTile(new Vector3Int(mapSize.x, -1, 0), floorTile);
-        barrierTilemap.SetTile(new Vector3Int(-1, mapSize.y, 0), floorTile);
-        barrierTilemap.SetTile(new Vector3Int(mapSize.x, mapSize.y, 0), floorTile);
-
-        // 生成四条墙
-        GenerateWall(new Vector3Int(-1, 0, 0), new Vector3Int(1, mapSize.y, 0));
-        GenerateWall(new Vector3Int(mapSize.x, 0, 0), new Vector3Int(1, mapSize.y, 0));
-        GenerateWall(new Vector3Int(0, mapSize.y, 0), new Vector3Int(mapSize.x, 1, 0));
-        GenerateWall(new Vector3Int(0, -1, 0), new Vector3Int(mapSize.x, 1, 0));
+        GameObject Barrier1 = new GameObject("Barrier" + BarrierNum++);// 左
+        GameObject Barrier2 = new GameObject("Barrier" + BarrierNum++);// 上
+        GameObject Barrier3 = new GameObject("Barrier" + BarrierNum++);// 右
+        GameObject Barrier4 = new GameObject("Barrier" + BarrierNum++);// 下
+        AddBarrierComponent(Barrier1,1);
     }
 
-    void GenerateWall(Vector3Int start, Vector3Int size)
+    private void AddBarrierComponent(GameObject barrier,int direction)
     {
-        for (int x = start.x; x < start.x + size.x; x++)
+        bool hasTile = FloorTilemap.HasTile(nowPos + new Vector3Int(-13,0,0));
+        if(!hasTile)//没有小地图那么生成屏障s
         {
-            for (int y = start.y; y < start.y + size.y; y++)
-            {
-                if (x == start.x || x == start.x + size.x - 1 || y == start.y || y == start.y + size.y - 1)
-                {
-                    barrierTilemap.SetTile(new Vector3Int(x, y, 0), barrierTile);
-                }
-            }
+            switch(direction)
         }
+    }
+
+
+
+    // 其他函数
+    // 鼠标点击获取坐标
+    public void GetPos()
+    {
+        Vector3 worldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector3Int gridPos = grid.WorldToCell(worldPos);
+        Debug.Log(gridPos);
     }
 }

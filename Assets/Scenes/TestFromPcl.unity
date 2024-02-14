@@ -279,9 +279,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FloorTilemap: {fileID: 706867848}
-  BarrierPrefabs:
-  - {fileID: 6328812314217782316, guid: 4ddc70732404a8e4fa081e5596eb4d04, type: 3}
-  - {fileID: 8471754480396140798, guid: b4f9eebda937cf14da5f5e2312e7470c, type: 3}
+  BarrierTile: {fileID: 11400000, guid: 1384e57480e8a3e418ea41d73157a545, type: 2}
   GrassTiles:
   - {fileID: 11400000, guid: 62faa837899e09042ba44555542f62b7, type: 2}
   - {fileID: 11400000, guid: bf3a2a081427eb447b14f10af9f4ba3e, type: 2}
@@ -668,9 +666,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba2d9080140462f40b0a58318ac4a2de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bgmController: {fileID: 0}
   Buff: {fileID: 0}
   Bullet: {fileID: 8644765470549886596, guid: cff526da21b249046a0cdba2ef680228, type: 3}
   sprite_renderer: {fileID: 898282072}
+  USP_SA: {fileID: 0}
+  M4A1_SA: {fileID: 0}
+  AK47_SA: {fileID: 0}
+  M249_SA: {fileID: 0}
+  Revolver_SA: {fileID: 0}
   USP_spr: {fileID: 21300000, guid: ab29f1c135f4b624ba9a86865d234d6a, type: 2}
   M4A1_spr: {fileID: 21300000, guid: 74ece20253c75aa41893601fae4bc542, type: 2}
   AK47_spr: {fileID: 21300000, guid: 73108bc8db8fd964094ff8dc4d488194, type: 2}
@@ -691,6 +695,8 @@ MonoBehaviour:
   Fac_Damage: 20
   Fac_Magazine_Capacity: 14
   Fac_Penetration_Quantity: 0
+  ShootingAudio: {fileID: 0}
+  ReloadAudio: {fileID: 0}
   Bullet_Remained: 10
   Reloading: 0
   Weapon_Name: USP

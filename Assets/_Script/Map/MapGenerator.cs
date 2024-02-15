@@ -1,3 +1,4 @@
+using System;
 using System.Threading;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -35,13 +36,15 @@ public class MapGenerator : MonoBehaviour
         // 初始小地图
         BarrierNum = 1;
         InitialMap();
+        //注册函数
+        Health.UpdataMap += AddMap;
     }
 
     private void Update()
     {
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButtonDown(0))
         {
-            GetPos();
+            GetPos(Input.mousePosition);
         }
     }
 
@@ -77,14 +80,14 @@ public class MapGenerator : MonoBehaviour
         GenerateBarrier(nowPos);
     }
 
-    public void GeneratePlot(Vector3Int centerPos)
+    private void GeneratePlot(Vector3Int centerPos)
     {
         // 创建地面瓦片   13*9
         for (int x = -6+ centerPos.x; x < 7+ centerPos.x; x++)
         {
             for (int y = -4+ centerPos.y; y < 5+ centerPos.y; y++)
             {
-                TileBase tile = GrassTiles[Random.Range(0, GrassTiles.Length)];
+                TileBase tile = GrassTiles[UnityEngine.Random.Range(0, GrassTiles.Length)];
                 FloorTilemap.SetTile(new Vector3Int(x, y, 0), tile);
             }
         }
@@ -94,7 +97,7 @@ public class MapGenerator : MonoBehaviour
     {
         bool hasTile;
         //Direction.Up
-        hasTile = FloorTilemap.HasTile(nowPos + new Vector3Int(0, +9, 0)) || FloorTilemap.HasTile(nowPos + new Vector3Int(0, +5, 0));
+        hasTile = FloorTilemap.HasTile(centerPos + new Vector3Int(0, +9, 0)) || FloorTilemap.HasTile(centerPos + new Vector3Int(0, +5, 0));
         if (!hasTile)// 没有小地图那么生成屏障
         {
             GameObject Barrier1 = new GameObject("Barrier" + BarrierNum++);// 上 0,+9,0
@@ -103,7 +106,7 @@ public class MapGenerator : MonoBehaviour
         }
 
         //Direction.Down
-        hasTile = FloorTilemap.HasTile(nowPos + new Vector3Int(0, -9, 0)) && FloorTilemap.HasTile(nowPos + new Vector3Int(0, -5, 0));
+        hasTile = FloorTilemap.HasTile(centerPos + new Vector3Int(0, -9, 0)) && FloorTilemap.HasTile(centerPos + new Vector3Int(0, -5, 0));
         if (!hasTile)// 没有小地图那么生成屏障
         {
             GameObject Barrier2 = new GameObject("Barrier" + BarrierNum++);// 下 0,-9,0
@@ -112,7 +115,7 @@ public class MapGenerator : MonoBehaviour
         }
 
         //Direction.Left
-        hasTile = FloorTilemap.HasTile(nowPos + new Vector3Int(-13, 0, 0)) && FloorTilemap.HasTile(nowPos + new Vector3Int(-7, 0, 0));
+        hasTile = FloorTilemap.HasTile(centerPos + new Vector3Int(-13, 0, 0)) && FloorTilemap.HasTile(centerPos + new Vector3Int(-7, 0, 0));
         if (!hasTile)// 没有小地图那么生成屏障
         {
             GameObject Barrier3 = new GameObject("Barrier" + BarrierNum++);// 左 -13,0,0
@@ -121,7 +124,7 @@ public class MapGenerator : MonoBehaviour
         }
 
         //Direction.Right
-        hasTile = FloorTilemap.HasTile(nowPos + new Vector3Int(+13, 0, 0)) && FloorTilemap.HasTile(nowPos + new Vector3Int(+7, 0, 0));
+        hasTile = FloorTilemap.HasTile(centerPos + new Vector3Int(+13, 0, 0)) && FloorTilemap.HasTile(centerPos + new Vector3Int(+7, 0, 0));
         if (!hasTile)// 没有小地图那么生成屏障
         {
             GameObject Barrier4 = new GameObject("Barrier" + BarrierNum++);// 右 +13,0,0
@@ -177,13 +180,36 @@ public class MapGenerator : MonoBehaviour
         }
     }
 
+    public void AddMap(Vector3Int centorPos,GameObject barrier)
+    {
+        Tilemap tilemap = barrier.GetComponent<Tilemap>();
+        bool isHorizon = tilemap.HasTile(centorPos + new Vector3Int(+1, 0, 0)) && tilemap.HasTile(centorPos + new Vector3Int(-1, 0, 0));
+        if(isHorizon)//上下哪一个
+        {
+            nowPos = centorPos + new Vector3Int(0, -5, 0);
+            if(!FloorTilemap.HasTile(nowPos))
+            {
+                nowPos += new Vector3Int(0, +9, 0);
+            }
+        }
+        else// 竖着的 左右选一个
+        {
+            nowPos = centorPos + new Vector3Int(0, -7, 0);
+            if (!FloorTilemap.HasTile(nowPos))
+            {
+                nowPos += new Vector3Int(0, +13, 0);
+            }
+        }
 
+        GeneratePlot(nowPos);
+        GenerateBarrier(nowPos);
+    }
 
     // 其他函数
-    // 鼠标点击获取坐标
-    public void GetPos()
+    // 鼠标点击获取网格坐标
+    public void GetPos(Vector3 screenPos)
     {
-        Vector3 worldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector3 worldPos = Camera.main.ScreenToWorldPoint(screenPos);
         Vector3Int gridPos = grid.WorldToCell(worldPos);
         Debug.Log(gridPos);
     }

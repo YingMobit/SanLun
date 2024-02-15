@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,11 +10,14 @@ public class Bullets : MonoBehaviour
     public Transform transform;
     public GameObject Weapon;
     public WeaponSystem weapon_scr;
+    public BuffManager_Weapon buff;
 
     public float bullet_damage;
     [Range(10, 50)] public float bullet_speed;
     public int bullet_penetration_times;
     public int bullet_life_time;
+    public float Critical_Hit_Chance;
+    public int Critical_Hit_Damage;
 
     public float life_time;
 
@@ -26,6 +30,7 @@ public class Bullets : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        buff = GameObject .Find("BuffManager").GetComponent<BuffManager_Weapon>();
         player_rigidbody = GameObject.Find("Player").GetComponent<Rigidbody2D>();
         cam = Camera.main;
         transform = GetComponent<Transform>();
@@ -49,8 +54,19 @@ public class Bullets : MonoBehaviour
             bullet_penetration_times = weapon_scr.Fac_Penetration_Quantity;
             bullet_damage = weapon_scr.Fac_Damage;
             rigidbody.velocity = bullet_speed * transform.up + new Vector3(player_rigidbody.velocity.x, player_rigidbody.velocity.y, 0);
+            Critical_Hit_Chance = buff.Bufon_Critical_Hit_Chance; Critical_Hit_Damage = buff.Bufon_Critical_Hit_Damage;
+            WhetherCriticalHit();
         }
         else Debug.Log("Œ¥’“µΩŒ‰∆˜Ω≈±æ");
+    }
+
+    void WhetherCriticalHit()
+    { 
+        int seed = DateTime.Now.GetHashCode();
+        System.Random rand = new System.Random(seed);
+        float chance = (float)rand.NextDouble();
+        Debug.Log(chance);
+        if (chance <= Critical_Hit_Chance) { bullet_damage = bullet_damage * Critical_Hit_Damage; Debug.Log("±©ª˜"); } 
     }
 
     void AutoDead()

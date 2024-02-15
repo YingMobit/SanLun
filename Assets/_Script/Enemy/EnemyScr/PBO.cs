@@ -17,11 +17,12 @@ public class PBO : MonoBehaviour
     public ExpCountor exp;
     public Collider2D Body;
     public Collider2D Body2;
+    public PlayerController Player_scr;
 
     [Header("FactData")]
     public float FAC_Speed;
     public float FAC_MaxHealth;
-    public float FAC_Atackvalue;
+    public int FAC_Atackvalue;
     public float FAC_Attackarea;
 
     [Header("RealTimeData")]
@@ -35,14 +36,16 @@ public class PBO : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Player = GameObject.Find("Player");
         Body = transform.GetChild(0).GetComponent<Collider2D>();
         Body2 = GetComponent<Collider2D>();
         exp = GameObject.Find("ExpManager").GetComponent<ExpCountor>();
+        Player_scr = Player.GetComponent<PlayerController>();
         Die += exp.PBOReward;
+        Die += Player_scr.SuckBlood;
         animator = GetComponent<Animator>();
         sprite_renderer = GetComponent<SpriteRenderer>();
         rigidbody = GetComponent<Rigidbody2D>();
-        Player = GameObject.Find("Player");
         DataInitial();
 
     }
@@ -78,10 +81,13 @@ public class PBO : MonoBehaviour
         new_Attackarea.transform.SetParent(transform);
         new_Attackarea.transform.localScale = new Vector3(BAS_data.BAS_Attackarea / 3, BAS_data.BAS_Attackarea / 3, 1);
         new_Attackarea.transform.SetParent(transform);
+        Attackaera attackaera = new_Attackarea.AddComponent<Attackaera>();
+        attackaera.AttackValue = FAC_Atackvalue;
         yield return new WaitForSeconds(BAS_data.BAS_AttackSpeed);
         Collider2D Attackerea_collider = new_Attackarea.GetComponent<PolygonCollider2D>();
         Attackerea_collider.enabled = true;
-        yield return new WaitForSeconds(0.5f);
+        Attackerea_collider.isTrigger = false;
+        yield return new WaitForSeconds(3f);
         Destroy(new_Attackarea);
         Body.enabled = true;
         Attacking = false;

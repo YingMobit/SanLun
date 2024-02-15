@@ -300,6 +300,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bufon_Health: 0
   bufon_Speed: 1
+  bufon_blood_suck_chance: 0
 --- !u!114 &139969396
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -319,6 +320,8 @@ MonoBehaviour:
   bufon_Damage: 1
   bufon_Magazine_Capacity: 0
   bufon_Penetration_Quantity: 0
+  Bufon_Critical_Hit_Chance: 0.1
+  Bufon_Critical_Hit_Damage: 2
 --- !u!1 &193279833
 GameObject:
   m_ObjectHideFlags: 0
@@ -1027,7 +1030,7 @@ CapsuleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.032952785, y: 0.09885836}
@@ -1073,6 +1076,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Death: {fileID: 0}
+  Shield_pref: {fileID: 7497324553861565554, guid: 5df19d7abf21197429e68c54cdd6866c, type: 3}
   Buff: {fileID: 0}
   sprite_renderer: {fileID: 0}
   angle: 0
@@ -1084,8 +1088,13 @@ MonoBehaviour:
   Bufon_Speed: 0
   Fac_MaxHealth: 0
   Fac_Speed: 0
+  Fac_SuckBloodChance: 0
+  Whether_Generate_Shield: 0
   dead: 0
   Health: 0
+  Last_Be_Attacked_time: 0
+  Shield: {fileID: 0}
+  Last_Shield_Time: 0
   rigidbody: {fileID: 0}
   move_dir_x: 0
   move_dir_y: 0
@@ -1098,7 +1107,7 @@ Transform:
   m_GameObject: {fileID: 679694260}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 110.6, y: 0, z: 0}
+  m_LocalPosition: {x: 119.7, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1337,6 +1346,22 @@ PrefabInstance:
     - target: {fileID: 1085605499280629723, guid: dbde4f0a2d833894ab0418d78927fcef, type: 3}
       propertyPath: m_Name
       value: Tank
+      objectReference: {fileID: 0}
+    - target: {fileID: 1882652155592735146, guid: dbde4f0a2d833894ab0418d78927fcef, type: 3}
+      propertyPath: m_Size.x
+      value: 4.036953
+      objectReference: {fileID: 0}
+    - target: {fileID: 1882652155592735146, guid: dbde4f0a2d833894ab0418d78927fcef, type: 3}
+      propertyPath: m_Size.y
+      value: 4.2223067
+      objectReference: {fileID: 0}
+    - target: {fileID: 1882652155592735146, guid: dbde4f0a2d833894ab0418d78927fcef, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.035645008
+      objectReference: {fileID: 0}
+    - target: {fileID: 1882652155592735146, guid: dbde4f0a2d833894ab0418d78927fcef, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.028516054
       objectReference: {fileID: 0}
     - target: {fileID: 5414216500120632575, guid: dbde4f0a2d833894ab0418d78927fcef, type: 3}
       propertyPath: m_Enabled
@@ -1835,6 +1860,22 @@ PrefabInstance:
       propertyPath: timer_scr
       value: 
       objectReference: {fileID: 2130128872}
+    - target: {fileID: 9128429646202920047, guid: 9d48d2a126878ce4fa9173eb1d4714f7, type: 3}
+      propertyPath: m_Size.x
+      value: 2.7210922
+      objectReference: {fileID: 0}
+    - target: {fileID: 9128429646202920047, guid: 9d48d2a126878ce4fa9173eb1d4714f7, type: 3}
+      propertyPath: m_Size.y
+      value: 2.5114818
+      objectReference: {fileID: 0}
+    - target: {fileID: 9128429646202920047, guid: 9d48d2a126878ce4fa9173eb1d4714f7, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.07088852
+      objectReference: {fileID: 0}
+    - target: {fileID: 9128429646202920047, guid: 9d48d2a126878ce4fa9173eb1d4714f7, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.2646129
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2516,6 +2557,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buff_Player: {fileID: 0}
   buff_Weapon: {fileID: 0}
+  playerController: {fileID: 0}
   Weapon: {fileID: 0}
   BuffBackGround: {fileID: 830538204}
 --- !u!1 &1486816759
@@ -2710,6 +2752,22 @@ PrefabInstance:
     - target: {fileID: 8347530143610279272, guid: 11836780bb381f245a2a37b3a7a1bdc6, type: 3}
       propertyPath: m_Name
       value: Simple
+      objectReference: {fileID: 0}
+    - target: {fileID: 8873133238573666618, guid: 11836780bb381f245a2a37b3a7a1bdc6, type: 3}
+      propertyPath: m_Size.x
+      value: 2.3643055
+      objectReference: {fileID: 0}
+    - target: {fileID: 8873133238573666618, guid: 11836780bb381f245a2a37b3a7a1bdc6, type: 3}
+      propertyPath: m_Size.y
+      value: 3.277862
+      objectReference: {fileID: 0}
+    - target: {fileID: 8873133238573666618, guid: 11836780bb381f245a2a37b3a7a1bdc6, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.004565239
+      objectReference: {fileID: 0}
+    - target: {fileID: 8873133238573666618, guid: 11836780bb381f245a2a37b3a7a1bdc6, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.0082781315
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

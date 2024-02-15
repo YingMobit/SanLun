@@ -95,7 +95,9 @@ public class BuffManager_Weapon: MonoBehaviour
         }
     }
 
+    public float Bufon_Critical_Hit_Chance =0.1f;
 
+    public int Bufon_Critical_Hit_Damage = 2;
     // Start is called before the first frame update
     void Start()
     {

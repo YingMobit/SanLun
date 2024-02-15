@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,6 +7,7 @@ public class PlayerController : MonoBehaviour
 {
     private Camera cam;
     public Sprite Death;
+    public GameObject Shield_pref;
     public BuffController_Player Buff;
     public SpriteRenderer sprite_renderer;//playerbody的sprite_renderer
 
@@ -26,10 +28,15 @@ public class PlayerController : MonoBehaviour
     [Header("实际属性")]
     public float Fac_MaxHealth;
     public float Fac_Speed;
+    public float Fac_SuckBloodChance;
+    public bool Whether_Generate_Shield;
 
-    [Header("玩家状态")]
+    [Header("实时参数")]
     public bool dead;
     public float Health;
+    public float Last_Be_Attacked_time;
+    public GameObject Shield;
+    public float Last_Shield_Time;
 
     [SerializeField]
     [Tooltip("Class")]
@@ -57,6 +64,7 @@ public class PlayerController : MonoBehaviour
 
         Fac_Speed = Bufon_Speed * Bas_MoveSpeed;
         Fac_MaxHealth = Bufon_Health + Bas_MaxHealth;
+        Fac_SuckBloodChance = Buff.bufon_blood_suck_chance;
 
         Health = Fac_MaxHealth;
     }
@@ -67,6 +75,7 @@ public class PlayerController : MonoBehaviour
         {
             Move();
             TurnToPointer();
+            if (Whether_Generate_Shield) GenerateShield();
         }
         if (Health <= 0) Dead();
     }
@@ -86,17 +95,33 @@ public class PlayerController : MonoBehaviour
         else transform.rotation = Quaternion.Euler(0, 0, 0);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "EnemyAttack")
-        {
-            Debug.Log("BeAttacked");
-        }
-    }
-
     void Dead()
     { 
         dead = true;
         sprite_renderer.sprite = Death;
+    }
+
+    public void SuckBlood()
+    { 
+        int seed = DateTime.Now.GetHashCode();
+        System.Random rand = new System.Random(seed);
+        float chance = (float)rand.NextDouble();
+        if (chance <= Fac_SuckBloodChance)
+        {
+            Debug.Log("吸血");
+            Health += 5;
+            if (Health > Fac_MaxHealth) Health = Fac_MaxHealth;
+        }
+    }
+
+    void GenerateShield()
+    {
+        if (Shield == null && Time.time - Last_Shield_Time >= 20)
+        {
+            Collider2D Body = GetComponent<Collider2D>();
+            Body.enabled = false;
+            Shield = Instantiate(Shield_pref,transform.position ,Quaternion.identity);
+            Shield.transform.SetParent(transform);
+        }
     }
 }

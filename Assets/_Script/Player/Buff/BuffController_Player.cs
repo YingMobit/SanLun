@@ -9,6 +9,7 @@ public class BuffController_Player : MonoBehaviour
 
     public int bufon_Health;
     public float bufon_Speed = 1;
+    public float bufon_blood_suck_chance;
 
     public event Action OnDataChanged_Player; 
 
@@ -33,6 +34,19 @@ public class BuffController_Player : MonoBehaviour
             if (value != bufon_Speed)
             { 
                 bufon_Speed = value;
+                OnDataChanged_Player.Invoke();
+            }
+        }
+    }
+
+    public float Bufon_blood_suck_chance
+    {
+        get { return bufon_blood_suck_chance; }
+        set 
+        {
+            if (value != bufon_blood_suck_chance)
+            { 
+                bufon_blood_suck_chance = value;
                 OnDataChanged_Player.Invoke();
             }
         }

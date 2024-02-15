@@ -21,7 +21,6 @@ public class ExpCountor : MonoBehaviour
     {
         CorrentLevelExp = 1000;
         CorrentLevel = 1;
-
     }
 
     // Update is called once per frame
@@ -36,7 +35,7 @@ public class ExpCountor : MonoBehaviour
         { 
             CorrentExp -= CorrentLevelExp;
             CorrentLevel++;
-            CorrentLevelExp = 1000 + 350 * (CorrentLevel - 1);
+            CorrentLevelExp = 2000 + 800 * (CorrentLevel - 1);
             LevelUPed.Invoke();
         }
     }

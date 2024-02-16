@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "PBO_data", menuName = "PVO_data", order = 1)]
+[CreateAssetMenu(fileName = "PBO_data", menuName = "PBO_data", order = 1)]
 
 public class PBO_data : ScriptableObject
 {

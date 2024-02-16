@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1656867348638973861}
   - component: {fileID: 7577652747367234200}
   - component: {fileID: 2601492654527473635}
+  - component: {fileID: 8845571529986637882}
   m_Layer: 7
   m_Name: Tank
   m_TagString: Enemy
@@ -86,7 +87,7 @@ SpriteRenderer:
   m_Size: {x: 4, y: 4.375}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &5414216500120632575
@@ -107,11 +108,10 @@ MonoBehaviour:
   Player: {fileID: 0}
   Attackarea: {fileID: 7497324553861565554, guid: b91f470c6e54abd44abe9e56f355befa, type: 3}
   BAS_data: {fileID: 11400000, guid: 018c9d1b8c2a31340804ac84d9c73e05, type: 2}
-  sprite_renderer: {fileID: 0}
-  BeAttackarea_spr: {fileID: 21300000, guid: 4698dbc316e7bb14bb351f0031ffefc7, type: 2}
-  Death_spr: {fileID: 21300000, guid: da701fabe0af3bd4ab09716069bd9d16, type: 2}
   exp: {fileID: 0}
   Body: {fileID: 0}
+  Body2: {fileID: 0}
+  PLayer_scr: {fileID: 0}
   FAC_Speed: 0
   FAC_MaxHealth: 0
   FAC_Atackvalue: 0
@@ -203,6 +203,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8845571529986637882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1085605499280629723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ed61a826ce96694e8a2dab72cf969bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Animation: {fileID: 11400000, guid: eb85d0f727f954741a6e38aeebca7da1, type: 2}
+  animator: {fileID: 0}
 --- !u!1 &8248737325123753218
 GameObject:
   m_ObjectHideFlags: 0
@@ -267,7 +281,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.07841921, y: -0.28516006}
+  m_Offset: {x: -0.035645008, y: -0.028516054}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -278,5 +292,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.0408335, y: 2.5683794}
+  m_Size: {x: 4.036953, y: 4.2223067}
   m_EdgeRadius: 0

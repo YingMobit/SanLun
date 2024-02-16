@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     public Sprite Death;
     public GameObject Shield_pref;
     public BuffController_Player Buff;
-    public SpriteRenderer sprite_renderer;//playerbodyµÄsprite_renderer
+    public Animator animator;
 
     private bool point_dir;
     public float angle;
@@ -49,9 +49,9 @@ public class PlayerController : MonoBehaviour
 
     private void Awake()
     {
+        animator = GetComponent<Animator>();
         Buff = GameObject.Find("BuffManager").GetComponent<BuffController_Player>();
         Buff.OnDataChanged_Player += DataInitial;
-        sprite_renderer = gameObject.GetComponentInChildren<SpriteRenderer>();
         cam = Camera.main;
         rigidbody = GetComponent<Rigidbody2D>();
         DataInitial();
@@ -98,7 +98,7 @@ public class PlayerController : MonoBehaviour
     void Dead()
     { 
         dead = true;
-        sprite_renderer.sprite = Death;
+        animator.SetBool("Dead",true);
     }
 
     public void SuckBlood()

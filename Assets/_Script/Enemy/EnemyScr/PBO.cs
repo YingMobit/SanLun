@@ -11,9 +11,6 @@ public class PBO : MonoBehaviour
     public GameObject Player;
     public GameObject Attackarea;
     public PBO_data BAS_data;
-    public SpriteRenderer sprite_renderer;
-    public Sprite BeAttackarea_spr;
-    public Sprite Death_spr;
     public ExpCountor exp;
     public Collider2D Body;
     public Collider2D Body2;
@@ -44,7 +41,6 @@ public class PBO : MonoBehaviour
         Die += exp.PBOReward;
         Die += Player_scr.SuckBlood;
         animator = GetComponent<Animator>();
-        sprite_renderer = GetComponent<SpriteRenderer>();
         rigidbody = GetComponent<Rigidbody2D>();
         DataInitial();
 

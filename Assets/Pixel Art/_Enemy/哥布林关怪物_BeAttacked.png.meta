@@ -1,0 +1,2613 @@
+fileFormatVersion: 2
+guid: 1237227294cf34f40989d7f92884d811
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 8
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_0"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 278
+        width: 44
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43a2961b404837c45a4a574635577fcd
+      internalID: -681636590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_1"
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 276
+        width: 17
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32e569e3e2087a64ea59ce3558a5f0ba
+      internalID: 574367546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_2"
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 252
+        width: 34
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a0415f1218dce044a1e685168cdbecd
+      internalID: -1935933488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_3"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 254
+        width: 19
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15acea41c0a46aa46a23b0ea4e8618d1
+      internalID: 934522203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_4"
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 256
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9ba408bff908484aa7a08993ce2b18d
+      internalID: -1283125545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_5"
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 235
+        width: 8
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8b80d42f628fa54488bda7b91152152
+      internalID: 1092509633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_6"
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 238
+        width: 17
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7af235412d16b994f9b81788d0ebcdc2
+      internalID: 563124623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_7"
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 228
+        width: 23
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35f8e8db5f57d7a4fa92b1046e3197b7
+      internalID: 199669527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_8"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 230
+        width: 20
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 491b66108009c0445b7b337e447d14fe
+      internalID: 785472849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_9"
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 230
+        width: 10
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fe67f66247057b44adb842410611855
+      internalID: -1249208100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_10"
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 231
+        width: 26
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e918eb0d7bf2cb42afd41778bcd349e
+      internalID: 641991859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_11"
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 231
+        width: 24
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 004b7673ae692d2489ed7d8d2c42b457
+      internalID: -693535760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_12"
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 232
+        width: 20
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78492334f3b8c12428f8b12784915a32
+      internalID: 755722198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_13"
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 237
+        width: 17
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2adfa9f845fe1a74d95dcc38734ff0df
+      internalID: -369645256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_14"
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 209
+        width: 24
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cece120ab16dba4db124db966ddee5e
+      internalID: 632138405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_15"
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 209
+        width: 24
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 457c1c4c99d08ad4287c4759306fd20f
+      internalID: -1272398212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_16"
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 223
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1555b1f13d9d02240ad1486e0e3e6fe9
+      internalID: 51300542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_17"
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 222
+        width: 24
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5f7567c7fdf43847a2ec61377f417c1
+      internalID: 1218741408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_18"
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 234
+        width: 25
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba917170de2c8f54aab72f114552dd64
+      internalID: -1804836380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_19"
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 233
+        width: 20
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e2fab93da643b7419aea294835dce93
+      internalID: 1463049308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_20"
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 192
+        width: 28
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f2eadccfa2f5614999983eeebc25a09
+      internalID: 1700964589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_21"
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 191
+        width: 28
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e020b41050a5504c99bace0eb9301ce
+      internalID: -147929837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_22"
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 191
+        width: 28
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dce03ed016b1754185b180925a316e0
+      internalID: 725257817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_23"
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 211
+        width: 35
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02a7fa88344bbfb4b81a4dd52539de63
+      internalID: -1578653618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_24"
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 216
+        width: 37
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8bfd29dd00f0d841b53d46c6ec29fb1
+      internalID: 24559047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_25"
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 221
+        width: 23
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a4143abf8cc3cd44b403d0705663f18
+      internalID: 202776806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_26"
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 213
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f95d311e800e3864f8606c1386e18028
+      internalID: 344380920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_27"
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 208
+        width: 19
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4f73b3394b371a44801cce1dd89fc65
+      internalID: 359408338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_28"
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 208
+        width: 28
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cdd681974da84e4d91b34adbed116c4
+      internalID: -1033919118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_29"
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 207
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31dd9ccb1f8e5f04dac597bbd2372cc6
+      internalID: 2122046890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_30"
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 207
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc3a59f2380f1a94585e66ba26ce1f22
+      internalID: 1173285539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_31"
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 211
+        width: 20
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ae4247aeaa08dd4d916809184ee2151
+      internalID: -873018995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_32"
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 170
+        width: 28
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1015db88c45eca743a854e39ed2daae1
+      internalID: 1498196424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_33"
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 176
+        width: 28
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70afe1d840e170346a2d02eb0f2e1ed1
+      internalID: 1563320449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_34"
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 165
+        width: 46
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dfeb3d12479f1b48bfc9763e7398c66
+      internalID: 1595415313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_35"
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 192
+        width: 24
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e6d5fa76fe978444be9f85ef493a5ec
+      internalID: 1093084013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_36"
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 184
+        width: 20
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4181edbfc6a11ff4a89a36440446f412
+      internalID: 652056474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_37"
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 194
+        width: 21
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56b74bb90c0519a4cada33d5e2fcbda5
+      internalID: 235822179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_38"
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 185
+        width: 29
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed68c55508728964fad45e4edb759316
+      internalID: -2049903344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_39"
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 200
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39cbf70f2039a7341a1e04102f078233
+      internalID: -466183454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_40"
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 180
+        width: 21
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e409921bf116aef4ba7493f1a9f0e3b0
+      internalID: -1463557764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_41"
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 192
+        width: 23
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46dcdf6ea20ca0d4c8c099cbde495604
+      internalID: 1164667727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_42"
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 150
+        width: 34
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e79be3cb31f1a64288b18105682a243
+      internalID: -1136853870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_43"
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 150
+        width: 34
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fc180ab8b886d6438218c2194dd1d64
+      internalID: 1145911145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_44"
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 143
+        width: 32
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41ad9e334d5615c4a8ccc732b1c76d64
+      internalID: 1889375817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_45"
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 165
+        width: 26
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23909a730a510c24cb3dde529ae584b0
+      internalID: -296012113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_46"
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 154
+        width: 22
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb56b8fa41ee3ae4daed1abda024e496
+      internalID: -903585068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_47"
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 162
+        width: 20
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a500f73527c791547846cd46e236037c
+      internalID: 1671095061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_48"
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 162
+        width: 19
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87a01c4ec2f78fd4b8c5a391878fa805
+      internalID: 964153243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_49"
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 153
+        width: 19
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0785e0d193d231940b3723ed78881d46
+      internalID: 1072380934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_50"
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 153
+        width: 21
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cf88654e1111d840868f335f84f1faa
+      internalID: -1576988936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_51"
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 171
+        width: 21
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc0067ecb201bab4faaa5433081f4066
+      internalID: -1852573199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_52"
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 151
+        width: 21
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 913caf4977b06c0488f732f1d5ea6a58
+      internalID: 1170992327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_53"
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 169
+        width: 23
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac738b6e8818bbe4fb23729e3968a45e
+      internalID: -359188790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_54"
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 129
+        width: 32
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68eaf7d0184d925408f1e8888f39e08e
+      internalID: 1231495007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_55"
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 134
+        width: 28
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c42c6fdfce44cc45863a4d189e29067
+      internalID: 1297605418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_56"
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 131
+        width: 24
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aefe50a38d796324ca3f1390e8845c65
+      internalID: 1569702216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_57"
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 133
+        width: 23
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 693c909493c8dc94ba1f71637af85391
+      internalID: -589907017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_58"
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 123
+        width: 22
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 358ddb9bdf690cf44ba0fd4b3d4e36f5
+      internalID: 2077996077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_59"
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 124
+        width: 21
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 219c3958871b383489a43b185a668728
+      internalID: 1052270319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_60"
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 131
+        width: 20
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04924472c95b2e240816ee267b6c5313
+      internalID: -1918100725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_61"
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 147
+        width: 25
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0cb95b80a301b243af5078d91b8bc4b
+      internalID: -1565126790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_62"
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 146
+        width: 23
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 063377ef46d37dc4b968a9318d2ae328
+      internalID: 308864571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_63"
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 108
+        width: 34
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60358007a315bbd45ba45d741186fcec
+      internalID: -747313268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_64"
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 108
+        width: 34
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11647bf174847ba4faa6bab839858998
+      internalID: 1065900746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_65"
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 102
+        width: 34
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9334d900fc6c88d45b9f9a046ead59cc
+      internalID: 898805325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_66"
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 92
+        width: 28
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b4fe571621375b49ab1f529af67dc9d
+      internalID: 484968288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_67"
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 92
+        width: 28
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1ecbb5a23c4bbc4ba2a4a31d90abc3a
+      internalID: -100349913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_68"
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 101
+        width: 23
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bd6d9abb19ae5042b0eb053f5821788
+      internalID: -306909810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_69"
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 98
+        width: 20
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fa188b76b579234f84eb1fe952fe89f
+      internalID: 1884048604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_70"
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 123
+        width: 23
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8121c2fe7dc4e540972a3d39231f317
+      internalID: -1127473642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_71"
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 116
+        width: 20
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a415007ade3bc3646913d0bf351cbff8
+      internalID: -504883422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_72"
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 121
+        width: 19
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3db77b212824d246b7a8b761d1c6e40
+      internalID: 687349191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_73"
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 120
+        width: 23
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 659d9956e02ec0b449191205fc1ee996
+      internalID: 649395323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_74"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 60
+        width: 51
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36d61f6dbf81a5b46bec91d83986d9b2
+      internalID: 900802337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_75"
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 0
+        width: 46
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe28b9ec7f40d9e478a5fa7327d9c6b1
+      internalID: 222724885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_76"
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 50
+        width: 33
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d39d656b2a398742b99a844ca1c6b4f
+      internalID: 1675045535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_77"
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 87
+        width: 34
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4d978f7c2cbb564eb4c2c1cb7e4fc01
+      internalID: -1604602937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_78"
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 67
+        width: 23
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f14b49fca8953340bab3bc770dc48ff
+      internalID: -2099851964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_79"
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 92
+        width: 22
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a20af46c8596c04abf73e492b12f845
+      internalID: -613889018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_80"
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 92
+        width: 20
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe61631e35c377c47891478bc44d7035
+      internalID: -1568578425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_81"
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 90
+        width: 20
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a2fb51f48d767544a213202d80c5dab
+      internalID: 2023429744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_82"
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 90
+        width: 25
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7b629b4e6eb9e647a8f7dfd3b217cc1
+      internalID: -701884991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_83"
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 90
+        width: 20
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28a80b292f1034f4782fa6638c074c14
+      internalID: 1479536331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_84"
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 91
+        width: 21
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d4645fb1618a124b9c3782520dbc764
+      internalID: -92340159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_85"
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 47
+        width: 46
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0349f73328a1c78458c4e3b955c77a17
+      internalID: 1098821718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_86"
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 50
+        width: 34
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0f8fe4deb0083d4eb67c4e6ab75e157
+      internalID: -309294450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_87"
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 64
+        width: 26
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a114d9b14351dc94e97cd360d73c64f3
+      internalID: 707901069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_88"
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 65
+        width: 20
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efb8f73183fe1574b8d9c0e0a20c969d
+      internalID: 1326834627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_89"
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 64
+        width: 27
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98bbcbd6d0b60f94f9bdebc94730f0bf
+      internalID: -2050652881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_90"
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 65
+        width: 27
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e29a890865fd6354294dd4b2aaeee62d
+      internalID: -1607379008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_91"
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 60
+        width: 20
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efeff45168dfd9a468308eed3a4ec479
+      internalID: -305589363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_92"
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 52
+        width: 21
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e8d3bc5d8f0dbb4ea43c42fde48b32c
+      internalID: 1139055510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_93"
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 2
+        width: 46
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 176b0403eb73eef42bdbacf94526746b
+      internalID: 1516676421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_94"
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 0
+        width: 46
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d83358798ed652d49acefd8de1a787e3
+      internalID: -603431670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_95"
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 0
+        width: 46
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bb497e2f3deb8f4abd6adf3edea56a1
+      internalID: 327831742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_96"
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 0
+        width: 46
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8c9ea802219a81409ea300bb5a219e5
+      internalID: -2090798549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_97"
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 35
+        width: 24
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd5367ca5ce9d084c8cc38f0f55df47d
+      internalID: 1103989663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_98"
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 34
+        width: 23
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25abeebb0ddf9f841b01458ccbd27e7d
+      internalID: 706308635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_99"
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 35
+        width: 25
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2eb91c5b167d7724ca04c4250e794425
+      internalID: 336074423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_100"
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 34
+        width: 22
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7a552fc3596ba246a9496117c9f6298
+      internalID: -1480376458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_101"
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 33
+        width: 22
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e57e039f3ab73ce4581dc38177fd56de
+      internalID: -644699485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_102"
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 33
+        width: 20
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0699e1595431fcc4d82c8337cc1cfd57
+      internalID: 1416499120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_103"
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 29
+        width: 20
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 248616fb2e16db74799fe2120a782b76
+      internalID: -504479325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_104"
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 30
+        width: 20
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28fed60e00623a245a76a2ac1261df49
+      internalID: 1144468906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_105"
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 1
+        width: 24
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd694e23fcb646e44a9b28fe24f0b5ac
+      internalID: 1097149798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_106"
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 1
+        width: 24
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ede78958a01fa64fb9a8b7774ea8b9e
+      internalID: 450772457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_107"
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 2
+        width: 23
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14002809bc3b85340a26b7dc2e2ae7df
+      internalID: 1253125620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_108"
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 2
+        width: 23
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93f7f8d02e4bdf44cac3bcd2927062cf
+      internalID: -1201696734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_109"
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 2
+        width: 22
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08e6e63b052a98d46aa1c68af2084dcc
+      internalID: -923509359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_110"
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 2
+        width: 22
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37fc53717e503c44f9408436986e5787
+      internalID: -1697380694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_111"
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 2
+        width: 26
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84f62d3ad7f62094497f94bed76ec474
+      internalID: 2122028028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_112"
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 2
+        width: 26
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6af2013fe10bb5f4594e3d8f9ef1da8d
+      internalID: 1557058952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_0": -681636590
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_1": 574367546
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_10": 641991859
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_100": -1480376458
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_101": -644699485
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_102": 1416499120
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_103": -504479325
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_104": 1144468906
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_105": 1097149798
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_106": 450772457
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_107": 1253125620
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_108": -1201696734
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_109": -923509359
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_11": -693535760
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_110": -1697380694
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_111": 2122028028
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_112": 1557058952
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_12": 755722198
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_13": -369645256
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_14": 632138405
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_15": -1272398212
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_16": 51300542
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_17": 1218741408
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_18": -1804836380
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_19": 1463049308
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_2": -1935933488
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_20": 1700964589
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_21": -147929837
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_22": 725257817
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_23": -1578653618
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_24": 24559047
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_25": 202776806
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_26": 344380920
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_27": 359408338
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_28": -1033919118
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_29": 2122046890
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_3": 934522203
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_30": 1173285539
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_31": -873018995
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_32": 1498196424
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_33": 1563320449
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_34": 1595415313
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_35": 1093084013
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_36": 652056474
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_37": 235822179
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_38": -2049903344
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_39": -466183454
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_4": -1283125545
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_40": -1463557764
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_41": 1164667727
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_42": -1136853870
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_43": 1145911145
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_44": 1889375817
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_45": -296012113
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_46": -903585068
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_47": 1671095061
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_48": 964153243
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_49": 1072380934
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_5": 1092509633
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_50": -1576988936
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_51": -1852573199
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_52": 1170992327
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_53": -359188790
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_54": 1231495007
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_55": 1297605418
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_56": 1569702216
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_57": -589907017
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_58": 2077996077
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_59": 1052270319
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_6": 563124623
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_60": -1918100725
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_61": -1565126790
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_62": 308864571
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_63": -747313268
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_64": 1065900746
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_65": 898805325
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_66": 484968288
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_67": -100349913
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_68": -306909810
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_69": 1884048604
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_7": 199669527
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_70": -1127473642
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_71": -504883422
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_72": 687349191
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_73": 649395323
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_74": 900802337
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_75": 222724885
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_76": 1675045535
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_77": -1604602937
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_78": -2099851964
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_79": -613889018
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_8": 785472849
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_80": -1568578425
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_81": 2023429744
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_82": -701884991
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_83": 1479536331
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_84": -92340159
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_85": 1098821718
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_86": -309294450
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_87": 707901069
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_88": 1326834627
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_89": -2050652881
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_9": -1249208100
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_90": -1607379008
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_91": -305589363
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_92": 1139055510
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_93": 1516676421
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_94": -603431670
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_95": 327831742
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_96": -2090798549
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_97": 1103989663
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_98": 706308635
+      "\u54E5\u5E03\u6797\u5173\u602A\u7269_BeAttacked_99": 336074423
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Unity.VisualScripting;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
@@ -37,6 +38,12 @@ public class Health : MonoBehaviour
     public static event Action<float> UpgradeData;
     public static event Action<Pos,GameObject> UpdataMap;
 
+    static Health()// 静态构造函数,当类第一次调用时激活
+    {
+        DeadNumOfBarrier = 0;//但整型默认初始到0
+        //UpgradeData += UpHealth;
+    }
+
 
     //接口函数
     //扣血
@@ -57,8 +64,10 @@ public class Health : MonoBehaviour
     //初始化
     private void Start()
     {
-        UpgradeData += UpHealth;
-        DeadNumOfBarrier = 0;
+        if (UpgradeData == null)// || !UpgradeData.GetInvocationList().Contains(UpHealth))// 这是为啥
+        {
+            UpgradeData += UpHealth;
+        }
         tag = gameObject.tag;
         if(DeadNumOfBarrier == 0)
         {

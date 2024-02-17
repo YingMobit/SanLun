@@ -1,6 +1,7 @@
 using System;
 using System.Threading;
 using Unity.VisualScripting;
+using Unity.VisualScripting.FullSerializer;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
@@ -91,49 +92,57 @@ public class MapGenerator : MonoBehaviour
                 FloorTilemap.SetTile(new Vector3Int(x, y, 0), tile);
             }
         }
+    }//centorPos是要生成的中心点
+
+    private void GenerateCorner(Vector3Int centerPos)
+    {
+        FloorTilemap.SetTile(centerPos + new Vector3Int(+7, +5, 0), FloorTile);
+        FloorTilemap.SetTile(centerPos + new Vector3Int(+7, -5, 0), FloorTile);
+        FloorTilemap.SetTile(centerPos + new Vector3Int(-7, +5, 0), FloorTile);
+        FloorTilemap.SetTile(centerPos + new Vector3Int(-7, -5, 0), FloorTile);
     }
 
     private void GenerateBarrier(Vector3Int centerPos)
     {
         bool hasTile;
         //Direction.Up
-        hasTile = FloorTilemap.HasTile(centerPos + new Vector3Int(0, +9, 0)) || FloorTilemap.HasTile(centerPos + new Vector3Int(0, +5, 0));
+        hasTile = FloorTilemap.HasTile(centerPos + new Vector3Int(0, +9, 0));//  || FloorTilemap.HasTile(centerPos + new Vector3Int(0, +5, 0));
         if (!hasTile)// 没有小地图那么生成屏障
         {
             GameObject Barrier1 = new GameObject("Barrier" + BarrierNum++);// 上 0,+9,0
             Barrier1.transform.SetParent(grid.transform);
-            AddBarrierComponent(Barrier1, Direction.Up);
+            AddBarrierComponent(Barrier1,centerPos, Direction.Up);
         }
 
         //Direction.Down
-        hasTile = FloorTilemap.HasTile(centerPos + new Vector3Int(0, -9, 0)) && FloorTilemap.HasTile(centerPos + new Vector3Int(0, -5, 0));
+        hasTile = FloorTilemap.HasTile(centerPos + new Vector3Int(0, -9, 0));//  && FloorTilemap.HasTile(centerPos + new Vector3Int(0, -5, 0));
         if (!hasTile)// 没有小地图那么生成屏障
         {
             GameObject Barrier2 = new GameObject("Barrier" + BarrierNum++);// 下 0,-9,0
             Barrier2.transform.SetParent(grid.transform);
-            AddBarrierComponent(Barrier2, Direction.Down);
+            AddBarrierComponent(Barrier2, centerPos, Direction.Down);
         }
 
         //Direction.Left
-        hasTile = FloorTilemap.HasTile(centerPos + new Vector3Int(-13, 0, 0)) && FloorTilemap.HasTile(centerPos + new Vector3Int(-7, 0, 0));
+        hasTile = FloorTilemap.HasTile(centerPos + new Vector3Int(-13, 0, 0));//  && FloorTilemap.HasTile(centerPos + new Vector3Int(-7, 0, 0));
         if (!hasTile)// 没有小地图那么生成屏障
         {
             GameObject Barrier3 = new GameObject("Barrier" + BarrierNum++);// 左 -13,0,0
             Barrier3.transform.SetParent(grid.transform);
-            AddBarrierComponent(Barrier3, Direction.Left);
+            AddBarrierComponent(Barrier3, centerPos, Direction.Left);
         }
 
         //Direction.Right
-        hasTile = FloorTilemap.HasTile(centerPos + new Vector3Int(+13, 0, 0)) && FloorTilemap.HasTile(centerPos + new Vector3Int(+7, 0, 0));
+        hasTile = FloorTilemap.HasTile(centerPos + new Vector3Int(+13, 0, 0));//  && FloorTilemap.HasTile(centerPos + new Vector3Int(+7, 0, 0));
         if (!hasTile)// 没有小地图那么生成屏障
         {
             GameObject Barrier4 = new GameObject("Barrier" + BarrierNum++);// 右 +13,0,0
             Barrier4.transform.SetParent(grid.transform);
-            AddBarrierComponent(Barrier4, Direction.Right);
+            AddBarrierComponent(Barrier4, centerPos, Direction.Right);
         }
     }
 
-    private void AddBarrierComponent(GameObject barrier,Direction dir)
+    private void AddBarrierComponent(GameObject barrier,Vector3Int centerPos,Direction dir)
     {
         Tilemap tilemap = barrier.AddComponent<Tilemap>();
         barrier.AddComponent<TilemapRenderer>();
@@ -142,67 +151,105 @@ public class MapGenerator : MonoBehaviour
         barrier.AddComponent<CompositeCollider2D>();
         barrier.tag = "Barrier";
         barrier.AddComponent<Defence>();
-        barrier.AddComponent<Health>();
+        Health health = barrier.AddComponent<Health>();
+
+        Vector3Int setPos = Vector3Int.zero;
         switch (dir)
         {
             case Direction.Up://-6，+5，0 左至右
-                Vector3Int setUpPos = nowPos + new Vector3Int(-6, +5, 0);
+                setPos = centerPos + new Vector3Int(-6, +5, 0);
                 for (int i = 0; i < 13; i++)
                 {
-                    tilemap.SetTile(setUpPos, BarrierTile);
-                    setUpPos += new Vector3Int(+1, 0, 0);
+                    tilemap.SetTile(setPos, BarrierTile);
+                    setPos += new Vector3Int(+1, 0, 0);
                 }
                 break;
             case Direction.Down://-6,-5,0 左至右
-                Vector3Int setDownPos = nowPos + new Vector3Int(-6, -5, 0);
+                setPos = centerPos + new Vector3Int(-6, -5, 0);
                 for (int i = 0; i < 13; i++)
                 {
-                    tilemap.SetTile(setDownPos, BarrierTile);
-                    setDownPos += new Vector3Int(+1, 0, 0);
+                    tilemap.SetTile(setPos, BarrierTile);
+                    setPos += new Vector3Int(+1, 0, 0);
                 }
                 break;
             case Direction.Left:// -7,-4,0 下至上
-                Vector3Int setLeftPos = nowPos + new Vector3Int(-7, -4, 0);
+                setPos = centerPos + new Vector3Int(-7, -4, 0);
                 for (int i = 0; i < 9; i++)
                 {
-                    tilemap.SetTile(setLeftPos, BarrierTile);
-                    setLeftPos += new Vector3Int(0, +1, 0);
+                    tilemap.SetTile(setPos, BarrierTile);
+                    setPos += new Vector3Int(0, +1, 0);
                 }
                 break;
             case Direction.Right:
-                Vector3Int setRightPos = nowPos + new Vector3Int(+7, -4, 0);
+                setPos = centerPos + new Vector3Int(+7, -4, 0);
                 for (int i = 0; i < 9; i++)
                 {
-                    tilemap.SetTile(setRightPos, BarrierTile);
-                    setRightPos += new Vector3Int(0, +1, 0);
+                    tilemap.SetTile(setPos, BarrierTile);
+                    setPos += new Vector3Int(0, +1, 0);
                 }
                 break;
         }
+        if(dir ==Direction.Up||dir==Direction.Down)
+        {
+            health.Posdata = new Health.Pos { max = setPos, dir = Health.Direction.Horizon };
+        }
+        if (dir == Direction.Left || dir == Direction.Right)
+        {
+            health.Posdata = new Health.Pos { max = setPos, dir = Health.Direction.Vertical };
+        }
+
+
     }
 
-    public void AddMap(Vector3Int centorPos,GameObject barrier)
+    private void ChangeFloor(Health.Pos Posdata)
     {
-        Tilemap tilemap = barrier.GetComponent<Tilemap>();
-        bool isHorizon = tilemap.HasTile(centorPos + new Vector3Int(+1, 0, 0)) && tilemap.HasTile(centorPos + new Vector3Int(-1, 0, 0));
-        if(isHorizon)//上下哪一个
+        Vector3Int Pos = Posdata.max;
+        if (Posdata.dir == Health.Direction.Horizon)
         {
-            nowPos = centorPos + new Vector3Int(0, -5, 0);
-            if(!FloorTilemap.HasTile(nowPos))
+            for(int i=0;i<13;i++)
             {
-                nowPos += new Vector3Int(0, +9, 0);
+                Pos += new Vector3Int(-1, 0, 0);
+                FloorTilemap.SetTile(Pos, FloorTile);
+            }
+        }
+        if (Posdata.dir == Health.Direction.Vertical)
+        {
+            for (int i = 0; i < 9; i++)
+            {
+                Pos += new Vector3Int(0, -1, 0);
+                FloorTilemap.SetTile(Pos, FloorTile);
+            }
+        }
+    }
+
+    public void AddMap(Health.Pos Posdata,GameObject barrier)
+    {
+        Vector3Int centerPos = Vector3Int.zero;// 打的右边
+        if (Posdata.dir == Health.Direction.Horizon) { centerPos = Posdata.max + new Vector3Int(-7, 0, 0); }
+        if (Posdata.dir == Health.Direction.Vertical) { centerPos = Posdata.max + new Vector3Int(0, -5, 0); }
+        Debug.Log("centerPos1:" + centerPos);// 7 0 0，barrier中心
+        if (Posdata.dir == Health.Direction.Horizon)//上下哪一个
+        {
+            centerPos = centerPos + new Vector3Int(0, -5, 0);
+            if(FloorTilemap.HasTile(centerPos))
+            {
+                centerPos += new Vector3Int(0, +10, 0);
             }
         }
         else// 竖着的 左右选一个
         {
-            nowPos = centorPos + new Vector3Int(0, -7, 0);
-            if (!FloorTilemap.HasTile(nowPos))
+            centerPos = centerPos + new Vector3Int(-7, 0, 0);
+            if (FloorTilemap.HasTile(centerPos))// 有的话换另一边
             {
-                nowPos += new Vector3Int(0, +13, 0);
+                centerPos += new Vector3Int(+14, 0, 0);
             }
         }
 
-        GeneratePlot(nowPos);
-        GenerateBarrier(nowPos);
+        Debug.Log("centerPlotPos" + centerPos);
+        GeneratePlot(centerPos);
+        GenerateBarrier(centerPos);
+        GenerateCorner(centerPos);
+        ChangeFloor(Posdata);
     }
 
     // 其他函数

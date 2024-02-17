@@ -12,16 +12,30 @@ public class Health : MonoBehaviour
     //所有的伤害应该都是先通过Defence再由他进入Health的,Defence直接get到这个脚本并通过TakeDamage扣血|||后续还有事件通过tag加血
 
     //声明
+    public struct Pos
+    {
+        public Vector3Int max;// 注意这个max仍然大了一个单位
+        public Direction dir;
+    }
+
+    public enum Direction
+    {
+        Horizon,
+        Vertical
+    }
+
     public static float maxHealth;         //最大血量
     public float curHealth;         //当前血量
     public PBO_data PBO;
     public Simple_data SIM;
     public Tank_data TAN;
     public string tag;
+    public Pos Posdata;
+
 
     public static int DeadNumOfBarrier;
     public static event Action<float> UpgradeData;
-    public static event Action<Vector3Int,GameObject> UpdataMap;
+    public static event Action<Pos,GameObject> UpdataMap;
 
 
     //接口函数
@@ -93,9 +107,7 @@ public class Health : MonoBehaviour
     public void AddMap()
     {
         Tilemap tilemap = gameObject.GetComponent<Tilemap>();
-        BoundsInt bounds = tilemap.cellBounds;
-        Vector3Int centerPos = new Vector3Int(bounds.x + bounds.size.x / 2, bounds.y + bounds.size.y / 2, 0);
-
-        UpdataMap?.Invoke(centerPos,gameObject);
+        UpdataMap?.Invoke(Posdata,gameObject);
+        Debug.Log("Posdata:" + Posdata.max);
     }
 }

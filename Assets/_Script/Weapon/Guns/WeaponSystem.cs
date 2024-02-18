@@ -8,26 +8,9 @@ public class WeaponSystem : MonoBehaviour,IGuns
     public BuffManager_Weapon Buff;
     public GameObject Bullet;
     public SpriteRenderer sprite_renderer;
-    [Header("ShootingAudio")]
-    public AudioClip USP_SA;
-    public AudioClip M4A1_SA;
-    public AudioClip AK47_SA;
-    public AudioClip M249_SA;
-    public AudioClip Revolver_SA;
-
-    [Header("WeaponSprite")]
-    public Sprite USP_spr;
-    public Sprite M4A1_spr;
-    public Sprite AK47_spr;
-    public Sprite M249_spr;
-    public Sprite Revolver_spr;
-
     [Header("基础参数")]
-    public float Bas_Reloading_time;
-    public float Bas_Shooting_Interval;
-    public float Bas_Damage;
-    public float Bas_Magazine_Capacity;
-    public int Bas_Penetration_Quantity;
+    public List<GunData> GunDatas;
+    public GunData BasData;
 
     [Header("Buff")]
     public float BufOn_Reloading_time=1;
@@ -72,64 +55,35 @@ public class WeaponSystem : MonoBehaviour,IGuns
         switch (Weapon_Name)
         {
             case "USP":
-                Bas_Reloading_time = 1.4f;
-                Bas_Shooting_Interval = 0.2f;
-                Bas_Damage = 20f;
-                Bas_Magazine_Capacity = 14f;
-                Bas_Penetration_Quantity = 0;
-                sprite_renderer.sprite = USP_spr;
-                ShootingAudio = USP_SA;
+                BasData = GunDatas[0];
             break;
 
             case "AK47":
-                Bas_Reloading_time = 2.3f;
-                Bas_Shooting_Interval = 0.18f;
-                Bas_Damage = 35f;
-                Bas_Magazine_Capacity = 25f;
-                Bas_Penetration_Quantity = 1;
-                sprite_renderer.sprite = AK47_spr;
-                ShootingAudio = AK47_SA;
+                BasData = GunDatas[1];
             break;
 
             case "M4A1":
-                Bas_Reloading_time = 2;
-                Bas_Shooting_Interval = 0.12f;
-                Bas_Damage = 25f;
-                Bas_Magazine_Capacity = 30f;
-                Bas_Penetration_Quantity = 0;
-                sprite_renderer.sprite = M4A1_spr;
-                ShootingAudio = M4A1_SA;
+                BasData = GunDatas[2];
             break;
 
             case "M249":
-                Bas_Reloading_time = 4.5f;
-                Bas_Shooting_Interval = 0.05f;
-                Bas_Damage = 20f;
-                Bas_Magazine_Capacity = 100f;
-                Bas_Penetration_Quantity = 0;
-                sprite_renderer.sprite = M249_spr;
-                ShootingAudio = M249_SA;
+                BasData = GunDatas[3];
             break;
 
             case "Revolver":
-                Bas_Reloading_time = 1.4f;
-                Bas_Shooting_Interval = 0.4f;
-                Bas_Damage = 100f;
-                Bas_Magazine_Capacity = 7f;
-                Bas_Penetration_Quantity = 2;
-                sprite_renderer.sprite = Revolver_spr;
-                ShootingAudio = Revolver_SA;
+                BasData = GunDatas[4];
             break;
 
             default: break;
-
         }//基础参数赋值
+        sprite_renderer.sprite = BasData.sprite;
+        ShootingAudio = BasData.ShootAudio;
 
-        Fac_Reloading_time = Bas_Reloading_time * BufOn_Reloading_time;
-        Fac_Shooting_Interval = Bas_Shooting_Interval * BufOn_Shooting_Interval;
-        Fac_Damage = Bas_Damage * BufOn_Damage;
-        Fac_Magazine_Capacity = Bas_Magazine_Capacity + BufOn_Magazine_Capacity;
-        Fac_Penetration_Quantity = Bas_Penetration_Quantity + BufOn_Penetration_Quantity;
+        Fac_Reloading_time = BasData.Bas_Reloading_time * BufOn_Reloading_time;
+        Fac_Shooting_Interval = BasData.Bas_Shooting_Interval * BufOn_Shooting_Interval;
+        Fac_Damage = BasData.Bas_Damage * BufOn_Damage;
+        Fac_Magazine_Capacity = BasData.Bas_Magazine_Capacity + BufOn_Magazine_Capacity;
+        Fac_Penetration_Quantity = BasData.Bas_Penetration_Quantity + BufOn_Penetration_Quantity;
 
         Bullet_Remained = Fac_Magazine_Capacity;
     }
@@ -159,6 +113,7 @@ public class WeaponSystem : MonoBehaviour,IGuns
             break;
         }
         if (Input.GetKeyDown(KeyCode.R)) { StartCoroutine(ReLoad(Fac_Reloading_time)); }
+        if (Bullet_Remained <= 0) { StartCoroutine(ReLoad(Fac_Reloading_time)); }
     }
 
     public IEnumerator ReLoad(float reloading_time)
@@ -174,10 +129,7 @@ public class WeaponSystem : MonoBehaviour,IGuns
     }
 
     public void Shoot()
-    {
-        if (Bullet_Remained <= 0) { StartCoroutine(ReLoad(Fac_Reloading_time)); }
-        else
-        {
+    {  
             if (!Reloading)
             {
                 if (Time.time - last_shoot_time > Fac_Shooting_Interval)
@@ -191,7 +143,6 @@ public class WeaponSystem : MonoBehaviour,IGuns
                     Bullet_Remained--;
                 }
             }
-        }
     }
 
 }

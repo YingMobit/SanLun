@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Unity.VisualScripting;
-using UnityEditor.Experimental.GraphView;
+using UnityEditor.Experimental;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
@@ -27,9 +27,9 @@ public class Health : MonoBehaviour
 
     public static float maxHealth;         //最大血量
     public float curHealth;         //当前血量
-    public PBO_data PBO;
-    public Simple_data SIM;
-    public Tank_data TAN;
+    public Enemy_data PBO;
+    public Enemy_data SIM;
+    public Enemy_data TAN;
     public string tag;
     public Pos Posdata;
 

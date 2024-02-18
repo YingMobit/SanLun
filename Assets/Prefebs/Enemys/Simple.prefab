@@ -107,7 +107,8 @@ MonoBehaviour:
   animator: {fileID: 0}
   Player: {fileID: 0}
   Attackarea: {fileID: 7497324553861565554, guid: b91f470c6e54abd44abe9e56f355befa, type: 3}
-  BAS_data: {fileID: 11400000, guid: b9e0c2709e8c4c049bbf1159b43a0547, type: 2}
+  DamagePop: {fileID: 2517804631209406012, guid: 66e5fa9ad3164784db9a2df6bc49b6d4, type: 3}
+  BAS_data: {fileID: 11400000, guid: 60b70c11c58eabc4f9a39c762dae237d, type: 2}
   exp: {fileID: 0}
   Body: {fileID: 0}
   Body2: {fileID: 0}

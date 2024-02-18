@@ -9,12 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bfc8d997eea9f2a42af207215b320039, type: 3}
-  m_Name: PBO_data
+  m_Script: {fileID: 11500000, guid: 328b34b644a64ab4dbc77a8951e0b275, type: 3}
+  m_Name: Simple
   m_EditorClassIdentifier: 
-  BAS_Speed: 18
-  BAS_MaxHealth: 60
-  BAS_Atackvalue: 20
-  BAS_Attackarea: 2.4
-  BAS_AttackSpeed: 0.75
-  Exp_reward: 400
+  BAS_Speed: 10
+  BAS_MaxHealth: 100
+  BAS_Atackvalue: 10
+  BAS_Attackarea: 3
+  BAS_AttackSpeed: 4
+  Exp_reward: 200
+  Health_gain_bytime: 0.5
+  AttackValue_gain_bytime: 0.05

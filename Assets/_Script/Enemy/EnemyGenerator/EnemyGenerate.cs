@@ -32,7 +32,7 @@ public class EnemyGenerate : MonoBehaviour
         if (Time.time - last_generate_time >= generate_interval) Generate(ChooseEnemy());
     }
 
-    void LevelUP() { current_level++; }
+    void LevelUP() { current_level++; generate_interval -= 0.03f; }
 
     void Generate(GameObject Enemy)
     {

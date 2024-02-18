@@ -49,7 +49,7 @@ public class PlayerController : MonoBehaviour
 
     private void Awake()
     {
-        animator = GetComponent<Animator>();
+        animator = gameObject.GetComponentInChildren<Animator>();
         Buff = GameObject.Find("BuffManager").GetComponent<BuffController_Player>();
         Buff.OnDataChanged_Player += DataInitial;
         cam = Camera.main;
@@ -84,6 +84,8 @@ public class PlayerController : MonoBehaviour
         move_dir_x = Input.GetAxis("Horizontal");
         move_dir_y = Input.GetAxis("Vertical");
         rigidbody.velocity = new Vector2(move_dir_x* Fac_Speed, move_dir_y*Fac_Speed);
+        if (move_dir_x != 0 || move_dir_y != 0) animator.SetBool("Moving", true);
+        else animator.SetBool("Moving", false);
     }
 
     void TurnToPointer()

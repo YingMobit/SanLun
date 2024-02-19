@@ -29,17 +29,23 @@ public class Health : MonoBehaviour
     public float curHealth;         //当前血量
     public Enemy_data Enemy;
     public string tag;
-    public Pos Posdata;
+    public Pos Posdata;         // 存了位置信息
+    public static int BarrierDestroyCount;          // 破坏的屏障计数
 
-    //事件
+    // 事件
     public static event Action<float> UpgradeData;          // 加血
     public static event Action<Pos,GameObject> UpdataMap;           // 加图
+    public static event Action AddExit;         // 加出口
     // 屏障加血逻辑
     public static float BarrierHealthIncrease = 1f;         // 增血速率初始为1
-    public static int BarrierDestroyCount = 0;          // 破坏的屏障计数
     public const int BarrierDestroyThreshold = 4;           // 触发增血逻辑的屏障破坏阈值
     public const int BarrierHealthIncreaseDecayThreshold = 20;           // 每破坏4*5个屏障减少增血速率
     public const float BarrierHealthIncreaseDecayRate = 0.9f;           // 增血速率的衰减率
+    // 出口逻辑
+    private float exitProbability = 0.0f; // 当前累积的出口生成概率
+    private float exitProbabilityIncrement = 0.000375f; // 初始概率增幅
+    private float exitProbabilityIncrementFactor = 1.0f; // 概率增幅因子
+    private const float Pmax = 0.03f; // 最大生成概率
 
 
     static Health()// 静态构造函数,当类第一次调用时激活
@@ -47,7 +53,7 @@ public class Health : MonoBehaviour
         BarrierDestroyCount = 0;//但整型默认初始到0
         //UpgradeData += UpHealth;
     }
-
+    
 
     //接口函数
     //扣血
@@ -108,11 +114,36 @@ public class Health : MonoBehaviour
             //!!!执行死亡逻辑
             if(tag=="Barrier")
             {
-                BarrierDestroyCount++;
+                OnBarrierDead();
                 Destroy(gameObject);
                 AddHealth();
                 AddMap();
             }
+        }
+    }
+
+    private void OnBarrierDead()
+    {
+        BarrierDestroyCount++;
+        if (BarrierDestroyCount % 10 == 0)
+        {
+            exitProbabilityIncrementFactor *= 1.025f; // 增加概率增幅因子
+            exitProbabilityIncrement *= exitProbabilityIncrementFactor; // 更新概率增幅
+        }
+        // 更新概率
+        exitProbability += exitProbabilityIncrement;
+        exitProbability = Mathf.Min(exitProbability, Pmax); // 保证概率不超过最大值 但实际超不过从期望上
+        // 检查是否生成出口
+        if (UnityEngine.Random.value < exitProbability)
+        {
+            AddExit?.Invoke();// 生成出口
+            ResetExitProbability();
+            return;
+        }
+        if (BarrierDestroyCount >= 1000)
+        {
+            AddExit?.Invoke();// 生成出口
+            BarrierDestroyCount = 0; // 重置屏障破坏计数
         }
     }
 
@@ -139,5 +170,14 @@ public class Health : MonoBehaviour
         Tilemap tilemap = gameObject.GetComponent<Tilemap>();
         UpdataMap?.Invoke(Posdata,gameObject);
         Debug.Log("Posdata:" + Posdata.max);
+    }
+
+    // 清概率数据
+    private void ResetExitProbability()
+    {
+        // 重置出口生成概率计算的变量
+        exitProbability = 0.0f;
+        exitProbabilityIncrement = 0.000375f; // 重置为初始增幅
+        exitProbabilityIncrementFactor = 1.0f; // 重置增幅因子
     }
 }

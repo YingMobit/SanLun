@@ -8,8 +8,15 @@ using UnityEngine.Tilemaps;
 
 public class MapGenerator : MonoBehaviour
 {
-
     // 声明
+    public enum Direction
+    {
+        Up,
+        Down,
+        Left,
+        Right
+    }
+
     public Tilemap FloorTilemap;            // 地面
     public Tilemap ObstacleTilemap;          // 障碍
     public TileBase BarrierTile;     // 屏障瓦片
@@ -22,17 +29,43 @@ public class MapGenerator : MonoBehaviour
     public float ObstacleFrequency = 0.4f;  // 障碍物的生成频率，数值越大障碍物越多
     public int ObstacleSeed;              // 随机种子，可以生成不同的障碍物模式
 
-    public enum Direction
-    {
-        Up,
-        Down,
-        Left,
-        Right
-    }
+
+    public static MapGenerator Instance { get; private set; }           // 静态的 Instance 属性，用于获取单例实例
 
     // 函数
 
-    // 初始
+    void Awake()
+    {
+        if (Instance == null)// 检查是否已经存在一个实例
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);// 如果已经存在实例，销毁当前实例，以确保只有一个实例存在
+        }
+    }
+
+    //外部函数
+    public bool EnemyPos(Vector3 worldPos)
+    {
+        Vector3Int gridPos = grid.LocalToCell(worldPos);
+        if (FloorTilemap.HasTile(gridPos))
+        {
+            if(!ObstacleTilemap.HasTile(gridPos))
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public void GenerateExit()
+    {
+
+    }
+
+    // 内部函数
     private void Start()
     {
         // 清空地图
@@ -42,6 +75,7 @@ public class MapGenerator : MonoBehaviour
         InitialMap();
         //注册函数
         Health.UpdataMap += AddMap;
+        Health.AddExit += GenerateExit;
     }
 
     private void Update()
@@ -259,7 +293,6 @@ public class MapGenerator : MonoBehaviour
             }
         }
     }
-
 
     public void AddMap(Health.Pos Posdata,GameObject barrier)
     {

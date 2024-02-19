@@ -75,9 +75,17 @@ public class PlayerController : MonoBehaviour
         {
             Move();
             TurnToPointer();
-            if (Whether_Generate_Shield) GenerateShield();
         }
         if (Health <= 0) Dead();
+    }
+
+    private void FixedUpdate()
+    {
+        if (!dead)
+        {
+            Move();
+            TurnToPointer();
+        }
     }
     void Move()
     {

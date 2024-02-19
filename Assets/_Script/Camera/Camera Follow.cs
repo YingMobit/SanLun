@@ -13,7 +13,7 @@ public class CameraFollow : MonoBehaviour
         Player = GameObject.Find("Player");
     }
 
-    private void LateUpdate()
+    private void FixedUpdate()
     {
         Chase();
     }

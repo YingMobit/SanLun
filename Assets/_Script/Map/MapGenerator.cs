@@ -1,5 +1,6 @@
 using System;
 using System.Threading;
+using Unity.Mathematics;
 using Unity.VisualScripting;
 using Unity.VisualScripting.FullSerializer;
 using UnityEngine;
@@ -10,12 +11,16 @@ public class MapGenerator : MonoBehaviour
 
     // 声明
     public Tilemap FloorTilemap;            // 地面
+    public Tilemap ObstacleTilemap;          // 障碍
     public TileBase BarrierTile;     // 屏障瓦片
     public TileBase[] GrassTiles;           // 草地瓦片组
     public TileBase FloorTile;          // 黑色石砖瓦片
+    public TileBase ObstacleTile;         // 障碍物瓦片
     public Grid grid;         // 网格父物体
-    public int[,] MapData;         // 存储地图数据xy坐标 数据0未解锁1解锁
+    public int[,] MapData;         // 存储地图数据xy坐标 数据0未解锁1解锁// 暂时用不到
     public int BarrierNum;          // 屏障命名数
+    public float ObstacleFrequency = 0.4f;  // 障碍物的生成频率，数值越大障碍物越多
+    public int ObstacleSeed;              // 随机种子，可以生成不同的障碍物模式
 
     public enum Direction
     {
@@ -24,8 +29,6 @@ public class MapGenerator : MonoBehaviour
         Left,
         Right
     }
-
-    private Vector3Int nowPos;          // grid当前所在Pos
 
     // 函数
 
@@ -67,7 +70,7 @@ public class MapGenerator : MonoBehaviour
     private void InitialMap()
     {
         // 初始化路径点
-        nowPos = new Vector3Int(0, 0, 0);
+        Vector3Int centerPos = Vector3Int.zero;
 
         // 创建FloorTilemap,添加组件
         GameObject tilemapObj = new GameObject("FloorTilemap");
@@ -76,9 +79,23 @@ public class MapGenerator : MonoBehaviour
         TilemapRenderer tilemapRenderer = tilemapObj.AddComponent<TilemapRenderer>();
         tilemapRenderer.sortingOrder = 0;
 
+        // 创建随机障碍物
+        GameObject tilemapObj1 = new GameObject("ObstacleTilemap");
+        tilemapObj1.transform.parent = grid.transform;
+        ObstacleTilemap = tilemapObj1.AddComponent<Tilemap>();
+        TilemapRenderer tilemapRenderer1 = tilemapObj1.AddComponent<TilemapRenderer>();
+        tilemapRenderer1.sortingOrder = 0;
+        tilemapObj1.AddComponent<TilemapCollider2D>().usedByComposite = true;
+        tilemapObj1.AddComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
+        tilemapObj1.AddComponent<CompositeCollider2D>();
+        tilemapObj1.tag = "Obstacle";
+
+
         //创建初始地图
-        GeneratePlot(nowPos);
-        GenerateBarrier(nowPos);
+        GeneratePlot(centerPos);
+        GenerateObstacle(centerPos);
+        GenerateBarrier(centerPos);
+        GenerateCorner(centerPos);
     }
 
     private void GeneratePlot(Vector3Int centerPos)
@@ -222,6 +239,28 @@ public class MapGenerator : MonoBehaviour
         }
     }
 
+    private void GenerateObstacle(Vector3Int centerPos)
+    {
+        // 使用当前时间作为种子来生成一个随机偏移量
+        System.Random rand = new System.Random((int)DateTime.Now.Ticks & 0x0000FFFF);
+        float randomOffsetX = rand.Next(-100000, 100000);
+        float randomOffsetY = rand.Next(-100000, 100000);// 偏移量这里选局部
+
+        for (int x = -6 + centerPos.x; x < 7 + centerPos.x; x++)
+        {
+            for (int y = -4 + centerPos.y; y < 5 + centerPos.y; y++)
+            {
+                // 在Perlin噪声的基础上添加随机偏移量
+                float perlinValue = Mathf.PerlinNoise((x + randomOffsetX) * ObstacleFrequency, (y + randomOffsetY) * ObstacleFrequency);
+                if (perlinValue > 0.6f) // 这里的阈值决定了障碍物的稀疏程度
+                {
+                    ObstacleTilemap.SetTile(new Vector3Int(x, y, 0), ObstacleTile);
+                }
+            }
+        }
+    }
+
+
     public void AddMap(Health.Pos Posdata,GameObject barrier)
     {
         Vector3Int centerPos = Vector3Int.zero;// 打的右边
@@ -247,6 +286,7 @@ public class MapGenerator : MonoBehaviour
 
         Debug.Log("centerPlotPos" + centerPos);
         GeneratePlot(centerPos);
+        GenerateObstacle(centerPos);
         GenerateBarrier(centerPos);
         GenerateCorner(centerPos);
         ChangeFloor(Posdata);

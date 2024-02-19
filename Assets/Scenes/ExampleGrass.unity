@@ -2536,6 +2536,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FloorTilemap: {fileID: 307061216}
+  ObstacleTilemap: {fileID: 0}
   BarrierTile: {fileID: 11400000, guid: 1384e57480e8a3e418ea41d73157a545, type: 2}
   GrassTiles:
   - {fileID: 11400000, guid: 62faa837899e09042ba44555542f62b7, type: 2}
@@ -2543,8 +2544,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3762be1c99f3179428868bc87473c2ff, type: 2}
   - {fileID: 11400000, guid: 8d381729db53e8940b1903b4ddb8389b, type: 2}
   FloorTile: {fileID: 11400000, guid: 7af3d1e0f74ab8e4c827b000f9abd47b, type: 2}
+  ObstacleTile: {fileID: 11400000, guid: 89e51135102daa4448f85ff10b3a9f33, type: 2}
   grid: {fileID: 1001350600}
   BarrierNum: 0
+  ObstacleFrequency: 0.3
+  ObstacleSeed: 1234
 --- !u!1001 &1656841343
 PrefabInstance:
   m_ObjectHideFlags: 0

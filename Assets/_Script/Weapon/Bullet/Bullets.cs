@@ -84,7 +84,7 @@ public class Bullets : MonoBehaviour
         if(collision.gameObject.tag=="Barrier")
         {
             bullet_penetration_times--;
-            collision.gameObject.GetComponent<Defence>().DealDamage(50f);
+            collision.gameObject.GetComponent<Defence>().DealDamage(1f);
         }
     }
 

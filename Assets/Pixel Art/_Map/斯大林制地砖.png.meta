@@ -202,7 +202,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -210,6 +210,27 @@ TextureImporter:
       bones: []
       spriteID: ad058423deb9ce44587cf7c44ec1f2aa
       internalID: -805694310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stake1
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 149
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad2ccffcff95d4d47bafbd28a5d9d183
+      internalID: -2069418116
       vertices: []
       indices: 
       edges: []
@@ -229,6 +250,7 @@ TextureImporter:
       Floor: -1777848010
       shu1: -550972723
       shu2: 1134631757
+      stake1: -2069418116
       "\u65AF\u5927\u6797\u5236\u5730\u7816_0": 1795092230
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1232782388662511684}
   - component: {fileID: 4606221393785669216}
   - component: {fileID: 6282663280314952247}
+  - component: {fileID: 6879981561970721388}
   m_Layer: 6
   m_Name: 'Attackaera '
   m_TagString: EnemyAttack
@@ -138,3 +139,18 @@ PolygonCollider2D:
       - {x: 0.9701493, y: -1.9632802}
       - {x: 1.979929, y: 0.041816592}
   m_UseDelaunayMesh: 0
+--- !u!114 &6879981561970721388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7497324553861565554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29a44cca4af115848964c2ed3798ca1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AttackValue: 0
+  Player_scr: {fileID: 0}
+  Blood: {fileID: 5031225446542873951, guid: df459ce9caa530c40aa145d116ad1506, type: 3}

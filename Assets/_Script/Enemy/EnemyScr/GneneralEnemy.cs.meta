@@ -3,7 +3,19 @@ guid: f875158894aa45f40a94c832f8bbee1a
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - timer_scr: {instanceID: 0}
+  - rigidbody: {instanceID: 0}
+  - animator: {instanceID: 0}
+  - Player: {instanceID: 0}
+  - Attackarea: {instanceID: 0}
+  - DamagePop: {instanceID: 0}
+  - BAS_data: {instanceID: 0}
+  - exp: {instanceID: 0}
+  - Body: {instanceID: 0}
+  - Body2: {instanceID: 0}
+  - Player_scr: {instanceID: 0}
+  - Blood: {fileID: 5031225446542873951, guid: df459ce9caa530c40aa145d116ad1506, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

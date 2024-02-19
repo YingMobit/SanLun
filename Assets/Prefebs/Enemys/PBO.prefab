@@ -113,6 +113,7 @@ MonoBehaviour:
   Body: {fileID: 0}
   Body2: {fileID: 0}
   Player_scr: {fileID: 0}
+  Blood: {fileID: 5031225446542873951, guid: df459ce9caa530c40aa145d116ad1506, type: 3}
   FAC_Speed: 0
   FAC_MaxHealth: 0
   FAC_Atackvalue: 0

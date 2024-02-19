@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEditor;
 
 public class GneneralEnemy : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class GneneralEnemy : MonoBehaviour
     public Collider2D Body;
     public Collider2D Body2;
     public PlayerController Player_scr;
+    public GameObject Blood;
 
     [Header("FactData")]
     public float FAC_Speed;
@@ -77,7 +79,7 @@ public class GneneralEnemy : MonoBehaviour
         new_Attackarea.transform.SetParent(transform);
         new_Attackarea.transform.localScale = new Vector3(BAS_data.BAS_Attackarea / 3, BAS_data.BAS_Attackarea / 3, 1);
         new_Attackarea.transform.SetParent(transform);
-        Attackaera attackaera = new_Attackarea.AddComponent<Attackaera>();
+        Attackaera attackaera = new_Attackarea.GetComponent<Attackaera>();
         attackaera.AttackValue = FAC_Atackvalue;
         yield return new WaitForSeconds(BAS_data.BAS_AttackSpeed);
         Collider2D Attackerea_collider = new_Attackarea.GetComponent<PolygonCollider2D>();
@@ -108,7 +110,7 @@ public class GneneralEnemy : MonoBehaviour
             new_DamagePop.transform .SetParent(transform);
             TextMesh textMesh = new_DamagePop.GetComponent<TextMesh>();
             textMesh.text = bullets.bullet_damage.ToString();
-            
+            Instantiate(Blood,transform.position ,Quaternion.identity);
             animator.Play("BeAttacked");
         }
     }

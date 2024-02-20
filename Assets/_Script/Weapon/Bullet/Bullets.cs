@@ -18,7 +18,7 @@ public class Bullets : MonoBehaviour
     public int bullet_life_time;
     public float Critical_Hit_Chance;
     public int Critical_Hit_Damage;
-
+    public bool isCriticalHit;
     public float life_time;
 
     [Header("÷∏œÚ Û±Í")]
@@ -65,8 +65,7 @@ public class Bullets : MonoBehaviour
         int seed = DateTime.Now.GetHashCode();
         System.Random rand = new System.Random(seed);
         float chance = (float)rand.NextDouble();
-        Debug.Log(chance);
-        if (chance <= Critical_Hit_Chance) { bullet_damage = bullet_damage * Critical_Hit_Damage; Debug.Log("±©ª˜"); } 
+        if (chance <= Critical_Hit_Chance) {isCriticalHit = true; bullet_damage = bullet_damage * Critical_Hit_Damage; Debug.Log("±©ª˜"); } 
     }
 
     void AutoDead()

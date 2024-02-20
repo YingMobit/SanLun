@@ -519,9 +519,10 @@ GameObject:
   - component: {fileID: 307061214}
   - component: {fileID: 307061216}
   - component: {fileID: 307061215}
+  - component: {fileID: 307061217}
   m_Layer: 0
   m_Name: FloorTilemap
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -628,6 +629,42 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!19719996 &307061217
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 307061213}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0
+  m_UseDelaunayMesh: 0
 --- !u!1 &318291415
 GameObject:
   m_ObjectHideFlags: 0
@@ -1039,7 +1076,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &679694263
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1056,6 +1093,7 @@ MonoBehaviour:
   Shield_pref: {fileID: 7497324553861565554, guid: 5df19d7abf21197429e68c54cdd6866c, type: 3}
   Buff: {fileID: 0}
   animator: {fileID: 0}
+  CurePop: {fileID: 2517804631209406012, guid: 66e5fa9ad3164784db9a2df6bc49b6d4, type: 3}
   angle: 0
   MousePos: {x: 0, y: 0, z: 0}
   Turningspeed: 1
@@ -1084,7 +1122,7 @@ Transform:
   m_GameObject: {fileID: 679694260}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.7, y: -0.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1324,10 +1362,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tank
       objectReference: {fileID: 0}
-    - target: {fileID: 5414216500120632575, guid: dbde4f0a2d833894ab0418d78927fcef, type: 3}
-      propertyPath: Blood
-      value: 
-      objectReference: {fileID: 5031225446542873951, guid: df459ce9caa530c40aa145d116ad1506, type: 3}
     - target: {fileID: 5414216500120632575, guid: dbde4f0a2d833894ab0418d78927fcef, type: 3}
       propertyPath: timer_scr
       value: 
@@ -1805,10 +1839,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4534968412303445925, guid: 9d48d2a126878ce4fa9173eb1d4714f7, type: 3}
-      propertyPath: Blood
-      value: 
-      objectReference: {fileID: 5031225446542873951, guid: df459ce9caa530c40aa145d116ad1506, type: 3}
     - target: {fileID: 4534968412303445925, guid: 9d48d2a126878ce4fa9173eb1d4714f7, type: 3}
       propertyPath: timer_scr
       value: 
@@ -2598,10 +2628,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5252375919568172182, guid: 11836780bb381f245a2a37b3a7a1bdc6, type: 3}
-      propertyPath: Blood
-      value: 
-      objectReference: {fileID: 5031225446542873951, guid: df459ce9caa530c40aa145d116ad1506, type: 3}
-    - target: {fileID: 5252375919568172182, guid: 11836780bb381f245a2a37b3a7a1bdc6, type: 3}
       propertyPath: timer_scr
       value: 
       objectReference: {fileID: 2130128872}
@@ -2741,10 +2767,14 @@ MonoBehaviour:
   PBO: {fileID: 2028354219064804929, guid: 9d48d2a126878ce4fa9173eb1d4714f7, type: 3}
   Tank: {fileID: 1085605499280629723, guid: dbde4f0a2d833894ab0418d78927fcef, type: 3}
   Player: {fileID: 679694260}
+  ObstacleTile: {fileID: 0}
+  GroundTile: {fileID: 307061213}
   exp_countor: {fileID: 0}
+  Ground: {fileID: 307061216}
+  Obstacle: {fileID: 0}
   current_level: 1
-  Closest_generate_distance: 25
-  generate_interval: 1
+  Closest_generate_distance: 20
+  generate_interval: 1.2
   last_generate_time: 0
   Player_Pos: {x: 0, y: 0, z: 0}
 --- !u!1 &2114130786

@@ -9,6 +9,7 @@ TagManager:
   - EnemyAttack
   - PlayerAttack
   - Barrier
+  - Ground
   - Obstacle
   layers:
   - Default
@@ -21,7 +22,7 @@ TagManager:
   - Enemy
   - PlayerAttack
   - EnemyBody
-  - 
+  - Ground
   - 
   - 
   - 

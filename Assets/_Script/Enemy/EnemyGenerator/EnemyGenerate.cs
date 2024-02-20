@@ -3,18 +3,25 @@ using System.Collections.Generic;
 using System;
 using UnityEngine;
 using JetBrains.Annotations;
+using UnityEditor;
+using UnityEngine.Tilemaps;
+using UnityEngine.UIElements;
 
 public class EnemyGenerate : MonoBehaviour
 {
-
+    //public List<GameObject> Enemys;
     public GameObject Simple;
     public GameObject PBO;
     public GameObject Tank;
     public GameObject Player;
+    public GameObject ObstacleTile;
+    public GameObject GroundTile;
     public ExpCountor exp_countor;
+    public Tilemap Ground;
+    public Tilemap Obstacle;
 
     public int current_level =1;
-    [Range(10, 100)] public float Closest_generate_distance;
+    [Range(0, 100)] public float Closest_generate_distance;
     [Range(0,3)]public float generate_interval;
     public float last_generate_time;
     public Vector3 Player_Pos;
@@ -24,6 +31,16 @@ public class EnemyGenerate : MonoBehaviour
     {
         exp_countor = GameObject.FindFirstObjectByType<ExpCountor>();
         exp_countor.LevelUPed += LevelUP;
+        StartCoroutine(GetTile());
+    }
+
+    IEnumerator GetTile()
+    { 
+        yield return new WaitForSeconds(1f);
+        GroundTile = GameObject.Find("FloorTilemap");
+        Ground = GroundTile.GetComponent<Tilemap>();
+        ObstacleTile = GameObject.Find("ObstacleTilemap");
+        Obstacle = ObstacleTile.GetComponent<Tilemap>();
     }
 
     // Update is called once per frame
@@ -36,15 +53,47 @@ public class EnemyGenerate : MonoBehaviour
 
     void Generate(GameObject Enemy)
     {
+        Instantiate(Enemy, ChoosePos(), Quaternion.identity);
+        last_generate_time = Time.time;
+    }
+
+    Vector3 GeneratePos()
+    {
         int seed = DateTime.Now.GetHashCode();
         float Farest_generate_distance = 3 * Closest_generate_distance;
         System.Random rand = new System.Random(seed);
-        float random_distance = rand.Next(1, 3)*2*Closest_generate_distance;
-        float angle = (float)rand.NextDouble()*Mathf.PI;
+        float random_distance = rand.Next(1, 3) * 2 * Closest_generate_distance;
+        float angle = (float)rand.NextDouble() * Mathf.PI;
         Player_Pos = Player.transform.position;
-        Vector3 generate_pos = Player_Pos + new Vector3(random_distance*Mathf.Cos(angle),random_distance*Mathf.Sin(angle),0);
-        Instantiate(Enemy,generate_pos,Quaternion.identity);
-        last_generate_time = Time.time;
+        Vector3 generate_pos = Player_Pos + new Vector3(random_distance * Mathf.Cos(angle), random_distance * Mathf.Sin(angle), 0);
+        Debug.Log(generate_pos);
+        Ray ray = new Ray(generate_pos,transform.forward);
+        RaycastHit hit;
+        if (Physics.Raycast(ray, out hit,5))
+        {
+            if (hit.collider.CompareTag("Ground")) return generate_pos;
+            else return GeneratePos();
+        }
+        else return GeneratePos();
+    }
+
+    Vector3 ChoosePos()
+    {
+        int seed = DateTime.Now.GetHashCode();
+        System.Random rand = new System.Random(seed);
+        BoundsInt Bounds = Ground.cellBounds;
+        bool isPositionValid =false;
+        Vector3 Position;
+        do
+        {
+            int X = rand.Next(Bounds.xMin, Bounds.xMax);
+            int Y = rand.Next(Bounds.yMin, Bounds.yMax);
+            Vector3Int spawnPosition = new Vector3Int(X, Y, 0);
+            Position = Ground.CellToWorld(spawnPosition);
+            if (Ground.HasTile(spawnPosition) && !Obstacle.HasTile(spawnPosition)&& Vector3.Distance(Player.transform.position, Position) >= Closest_generate_distance) isPositionValid = true;
+        }
+        while (!isPositionValid);
+        return Position;
     }
     GameObject ChooseEnemy()
     {

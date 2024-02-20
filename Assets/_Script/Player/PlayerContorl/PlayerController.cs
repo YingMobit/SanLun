@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     public GameObject Shield_pref;
     public BuffController_Player Buff;
     public Animator animator;
+    public GameObject CurePop;
 
     private bool point_dir;
     public float angle;
@@ -71,7 +72,7 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        if (!dead) { GenerateShield(); }
+        if (!dead&& Whether_Generate_Shield) { GenerateShield(); }
         if (Health <= 0) Dead();
     }
 
@@ -117,6 +118,10 @@ public class PlayerController : MonoBehaviour
             Debug.Log("ÎüÑª");
             Health += 5;
             if (Health > Fac_MaxHealth) Health = Fac_MaxHealth;
+            Instantiate(CurePop,transform.position,Quaternion.identity);
+            TextMesh text = CurePop.GetComponent<TextMesh>();
+            text.color = Color.yellow;
+            text.text = "5";
         }
     }
 

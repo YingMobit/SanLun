@@ -46,6 +46,8 @@ public class Health : MonoBehaviour
     private float exitProbabilityIncrement = 0.000375f; // 初始概率增幅
     private float exitProbabilityIncrementFactor = 1.0f; // 概率增幅因子
     private const float Pmax = 0.03f; // 最大生成概率
+    private const int MaxBarriersBeforeGuaranteedExit = 1000; // 保底出口的屏障破坏上限
+
 
 
     static Health()// 静态构造函数,当类第一次调用时激活
@@ -140,7 +142,7 @@ public class Health : MonoBehaviour
             ResetExitProbability();
             return;
         }
-        if (BarrierDestroyCount >= 1000)
+        if (BarrierDestroyCount >= 2) // 暂时修改
         {
             AddExit?.Invoke();// 生成出口
             BarrierDestroyCount = 0; // 重置屏障破坏计数

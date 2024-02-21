@@ -3,6 +3,7 @@ using System.Threading;
 using Unity.Mathematics;
 using Unity.VisualScripting;
 using Unity.VisualScripting.FullSerializer;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
@@ -28,6 +29,10 @@ public class MapGenerator : MonoBehaviour
     public int BarrierNum;          // 屏障命名数
     public float ObstacleFrequency = 0.4f;  // 障碍物的生成频率，数值越大障碍物越多
     public int ObstacleSeed;              // 随机种子，可以生成不同的障碍物模式
+    public GameObject Exit;         // 出口
+
+    // 出口逻辑
+    private bool exitCanGenerate;           // 是否可以生成出口
 
 
     public static MapGenerator Instance { get; private set; }           // 静态的 Instance 属性，用于获取单例实例
@@ -62,7 +67,7 @@ public class MapGenerator : MonoBehaviour
 
     public void GenerateExit()
     {
-
+        exitCanGenerate = true;
     }
 
     // 内部函数
@@ -72,6 +77,7 @@ public class MapGenerator : MonoBehaviour
         ClearChildren(grid.gameObject);
         // 初始小地图
         BarrierNum = 1;
+        exitCanGenerate = false;
         InitialMap();
         //注册函数
         Health.UpdataMap += AddMap;
@@ -112,6 +118,10 @@ public class MapGenerator : MonoBehaviour
         FloorTilemap = tilemapObj.AddComponent<Tilemap>();
         TilemapRenderer tilemapRenderer = tilemapObj.AddComponent<TilemapRenderer>();
         tilemapRenderer.sortingOrder = 0;
+        tilemapObj.AddComponent<TilemapCollider2D>().usedByComposite = true;
+        tilemapObj.AddComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
+        tilemapObj.AddComponent<CompositeCollider2D>();
+        tilemapObj.tag = "Ground";
 
         // 创建随机障碍物
         GameObject tilemapObj1 = new GameObject("ObstacleTilemap");
@@ -128,6 +138,7 @@ public class MapGenerator : MonoBehaviour
         //创建初始地图
         GeneratePlot(centerPos);
         GenerateObstacle(centerPos);
+        ObstacleTilemap.SetTile(centerPos, null);
         GenerateBarrier(centerPos);
         GenerateCorner(centerPos);
     }
@@ -278,7 +289,7 @@ public class MapGenerator : MonoBehaviour
         // 使用当前时间作为种子来生成一个随机偏移量
         System.Random rand = new System.Random((int)DateTime.Now.Ticks & 0x0000FFFF);
         float randomOffsetX = rand.Next(-100000, 100000);
-        float randomOffsetY = rand.Next(-100000, 100000);// 偏移量这里选局部
+        float randomOffsetY = rand.Next(-100000, 100000);// 偏移量这里选局部//TODO改成全局
 
         for (int x = -6 + centerPos.x; x < 7 + centerPos.x; x++)
         {
@@ -319,7 +330,14 @@ public class MapGenerator : MonoBehaviour
 
         Debug.Log("centerPlotPos" + centerPos);
         GeneratePlot(centerPos);
-        GenerateObstacle(centerPos);
+        if(exitCanGenerate)
+        {
+            // 在centerPos添加出口 
+            Instantiate(Exit, grid.CellToLocalInterpolated(centerPos), Quaternion.Euler(Vector3.zero));
+            // 清数据
+            exitCanGenerate = false;
+        }
+        GenerateObstacle(centerPos);//bug：人出生卡死在木桩 现在改人出生网格（0.5，0.5，0）
         GenerateBarrier(centerPos);
         GenerateCorner(centerPos);
         ChangeFloor(Posdata);

@@ -307,40 +307,56 @@ public class MapGenerator : MonoBehaviour
 
     public void AddMap(Health.Pos Posdata,GameObject barrier)
     {
+        Vector3Int centerPos = GetCenterPos(Posdata);
+        if (centerPos == new Vector3Int(1, 0, 0))// fix：为了修复已经解锁的小地图因为又一次屏障的破坏而增加
+        {
+            ChangeFloor(Posdata);
+            return;
+        }
+        GeneratePlot(centerPos);
+        if(exitCanGenerate)
+        {
+            Instantiate(Exit, grid.CellToLocalInterpolated(centerPos), Quaternion.Euler(Vector3.zero));// 在centerPos添加出口 
+            exitCanGenerate = false;// 清数据
+        }
+        GenerateObstacle(centerPos);//bug：人出生卡死在木桩 现在改人出生网格（0.5，0.5，0）*5.12
+        GenerateBarrier(centerPos);
+        GenerateCorner(centerPos);
+        ChangeFloor(Posdata);
+    }
+
+    private Vector3Int GetCenterPos(Health.Pos Posdata)
+    {
         Vector3Int centerPos = Vector3Int.zero;// 打的右边
         if (Posdata.dir == Health.Direction.Horizon) { centerPos = Posdata.max + new Vector3Int(-7, 0, 0); }
         if (Posdata.dir == Health.Direction.Vertical) { centerPos = Posdata.max + new Vector3Int(0, -5, 0); }
-        Debug.Log("centerPos1:" + centerPos);// 7 0 0，barrier中心
         if (Posdata.dir == Health.Direction.Horizon)//上下哪一个
         {
             centerPos = centerPos + new Vector3Int(0, -5, 0);
-            if(FloorTilemap.HasTile(centerPos))
+            if (!FloorTilemap.HasTile(centerPos))
             {
-                centerPos += new Vector3Int(0, +10, 0);
+                return centerPos;
+            }
+            centerPos += new Vector3Int(0, +10, 0);
+            if (!FloorTilemap.HasTile(centerPos))
+            {
+                return centerPos;
             }
         }
         else// 竖着的 左右选一个
         {
             centerPos = centerPos + new Vector3Int(-7, 0, 0);
-            if (FloorTilemap.HasTile(centerPos))// 有的话换另一边
+            if (!FloorTilemap.HasTile(centerPos))// 有的话换另一边
             {
-                centerPos += new Vector3Int(+14, 0, 0);
+                return centerPos;
+            }
+            centerPos += new Vector3Int(+14, 0, 0);
+            if (!FloorTilemap.HasTile(centerPos))
+            {
+                return centerPos;
             }
         }
-
-        Debug.Log("centerPlotPos" + centerPos);
-        GeneratePlot(centerPos);
-        if(exitCanGenerate)
-        {
-            // 在centerPos添加出口 
-            Instantiate(Exit, grid.CellToLocalInterpolated(centerPos), Quaternion.Euler(Vector3.zero));
-            // 清数据
-            exitCanGenerate = false;
-        }
-        GenerateObstacle(centerPos);//bug：人出生卡死在木桩 现在改人出生网格（0.5，0.5，0）
-        GenerateBarrier(centerPos);
-        GenerateCorner(centerPos);
-        ChangeFloor(Posdata);
+        return new Vector3Int(1,0,0);
     }
 
     // 其他函数

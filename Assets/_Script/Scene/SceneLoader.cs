@@ -24,7 +24,7 @@ public class SceneLoader : MonoBehaviour
     public void BackBase()
     {
         PauseMenu.SetActive(false);
-        //Time.timeScale = 1f;
+        Time.timeScale = 1f;
         //StartCoroutine(LoadSceneAsync("Base"));
         StartCoroutine(LoadSceneByCrossFade(SceneManager.GetActiveScene().buildIndex == 1 ? 0 : 1));
 

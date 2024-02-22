@@ -142,7 +142,7 @@ public class Health : MonoBehaviour
             ResetExitProbability();
             return;
         }
-        if (BarrierDestroyCount >= 2) // 暂时修改
+        if (BarrierDestroyCount >= 2) // bug：暂时修改
         {
             AddExit?.Invoke();// 生成出口
             BarrierDestroyCount = 0; // 重置屏障破坏计数
@@ -169,9 +169,7 @@ public class Health : MonoBehaviour
     // 死亡加图
     private void AddMap()
     {
-        Tilemap tilemap = gameObject.GetComponent<Tilemap>();
         UpdataMap?.Invoke(Posdata,gameObject);
-        Debug.Log("Posdata:" + Posdata.max);
     }
 
     // 清概率数据

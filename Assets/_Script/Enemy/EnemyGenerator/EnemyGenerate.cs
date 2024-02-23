@@ -77,6 +77,12 @@ public class EnemyGenerate : MonoBehaviour
         else return GeneratePos();
     }
 
+    //真有bug：切完场景会丢失tilemap而且怪还是有在外面的|||或者你改用raycast。草地已经加上了tilemapcollider2d和compositecollider2d为了修之前的bug
+    /*
+     * do
+     * {20-50范围里头随机一个vector3的世界坐标}
+     * while（MapGenerator.Instance.EnemyPos(vector3的世界坐标)）
+     */
     Vector3 ChoosePos()
     {
         int seed = DateTime.Now.GetHashCode();

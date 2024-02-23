@@ -10,8 +10,36 @@ public class BuffController_Player : MonoBehaviour
     public int bufon_Health;
     public float bufon_Speed = 1;
     public float bufon_blood_suck_chance;
+    public int healthreward_value =5;
+    public int blood_suck_value;
 
     public event Action OnDataChanged_Player; 
+
+
+    public int Blood_suck_value
+    {
+        get { return blood_suck_value; }
+        set
+        {
+            if (blood_suck_value != value)
+            { 
+                blood_suck_value = value;
+                OnDataChanged_Player.Invoke(); 
+            }
+        }
+    }
+    public int Healthreward_Value
+    {
+        get { return healthreward_value; }
+        set 
+        { 
+            if (healthreward_value != value) 
+            {
+                healthreward_value = value;
+                OnDataChanged_Player.Invoke();
+            }
+        }
+    }
 
     public int Bufon_Health
     {

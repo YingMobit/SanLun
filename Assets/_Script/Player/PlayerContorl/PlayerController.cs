@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     public BuffController_Player Buff;
     public Animator animator;
     public GameObject CurePop;
+    public HealthStick healthStick;
 
     private bool point_dir;
     public float angle;
@@ -20,24 +21,53 @@ public class PlayerController : MonoBehaviour
     [Header("基础属性")]
     public float Turningspeed;
     public float Bas_MoveSpeed;
-    public float Bas_MaxHealth;
+    public int Bas_MaxHealth;
 
     [Header("Buff")]
-    public float Bufon_Health;
+    public int Bufon_Health;
     public float Bufon_Speed;
 
     [Header("实际属性")]
-    public float Fac_MaxHealth;
     public float Fac_Speed;
     public float Fac_SuckBloodChance;
     public bool Whether_Generate_Shield;
+    public int HealthReward_Value;
+    public int Blood_suck_value;
+    public int fac_MaxHealth = 100;
+    public int Fac_MaxHealth
+    { 
+        get { return fac_MaxHealth; }
+        set
+        {
+            if (value != fac_MaxHealth)
+            { 
+                fac_MaxHealth = value;
+                HealthDataChanged.Invoke();
+            }
+        }
+    }
+
 
     [Header("实时参数")]
     public bool dead;
-    public float Health;
     public float Last_Be_Attacked_time;
     public GameObject Shield;
     public float Last_Shield_Time;
+    public int health = 100;
+    public int Health
+    {
+        get {return health;}
+        set
+        {
+            if (value != health)
+            {
+                health = value;
+                HealthDataChanged.Invoke();
+            }
+        }
+    }
+
+    public Color health_hell_color;
 
     [SerializeField]
     [Tooltip("Class")]
@@ -48,14 +78,19 @@ public class PlayerController : MonoBehaviour
     public float move_dir_x;
     public float move_dir_y;
 
-    private void Awake()
+    public event Action HealthDataChanged;
+
+    private void Start()
     {
+        healthStick = FindFirstObjectByType<HealthStick>();
+        HealthDataChanged += healthStick.Update;
         animator = gameObject.GetComponentInChildren<Animator>();
         Buff = GameObject.Find("BuffManager").GetComponent<BuffController_Player>();
         Buff.OnDataChanged_Player += DataInitial;
         cam = Camera.main;
         rigidbody = GetComponent<Rigidbody2D>();
         DataInitial();
+        Health = Fac_MaxHealth;
     }
 
     void DataInitial()
@@ -67,7 +102,8 @@ public class PlayerController : MonoBehaviour
         Fac_MaxHealth = Bufon_Health + Bas_MaxHealth;
         Fac_SuckBloodChance = Buff.bufon_blood_suck_chance;
 
-        Health = Fac_MaxHealth;
+        HealthReward_Value = Buff.Healthreward_Value;
+        Blood_suck_value = Buff.Blood_suck_value;
     }
 
     private void Update()
@@ -116,12 +152,12 @@ public class PlayerController : MonoBehaviour
         if (chance <= Fac_SuckBloodChance)
         {
             Debug.Log("吸血");
-            Health += 5;
+            Health += Blood_suck_value;
             if (Health > Fac_MaxHealth) Health = Fac_MaxHealth;
             Instantiate(CurePop,transform.position,Quaternion.identity);
             TextMesh text = CurePop.GetComponent<TextMesh>();
-            text.color = Color.yellow;
-            text.text = "5";
+            text.color = health_hell_color;
+            text.text = Blood_suck_value.ToString();
         }
     }
 
@@ -135,4 +171,18 @@ public class PlayerController : MonoBehaviour
             Shield.transform.SetParent(transform);
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision .gameObject .CompareTag("HealthReward"))
+        {
+            Health += HealthReward_Value;
+            Health = Health > Fac_MaxHealth? Fac_MaxHealth:Health;
+            Instantiate(CurePop, transform.position, Quaternion.identity);
+            TextMesh text = CurePop.GetComponent<TextMesh>();
+            text.color = health_hell_color;
+            text.text = HealthReward_Value.ToString();
+        }
+    }
+
 }

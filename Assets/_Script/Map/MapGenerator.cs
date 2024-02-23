@@ -297,7 +297,7 @@ public class MapGenerator : MonoBehaviour
             {
                 // 在Perlin噪声的基础上添加随机偏移量
                 float perlinValue = Mathf.PerlinNoise((x + randomOffsetX) * ObstacleFrequency, (y + randomOffsetY) * ObstacleFrequency);
-                if (perlinValue > 0.6f) // 这里的阈值决定了障碍物的稀疏程度
+                if (perlinValue > 0.8f) // 这里的阈值决定了障碍物的稀疏程度
                 {
                     ObstacleTilemap.SetTile(new Vector3Int(x, y, 0), ObstacleTile);
                 }

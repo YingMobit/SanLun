@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 328b34b644a64ab4dbc77a8951e0b275, type: 3}
   m_Name: Simple
   m_EditorClassIdentifier: 
-  BAS_Speed: 10
+  BAS_Speed: 18
   BAS_MaxHealth: 100
   BAS_Atackvalue: 10
   BAS_Attackarea: 3
-  BAS_AttackSpeed: 1.2
+  BAS_AttackSpeed: 1
   Exp_reward: 200
   Health_gain_bytime: 0.5
   AttackValue_gain_bytime: 0.05

@@ -15,7 +15,6 @@ public class BuffFunc : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //BuffBackGround = GameObject.Find("ChooseBackground");
         buff_Player = GameObject.Find("BuffManager").GetComponent<BuffController_Player>();
         buff_Weapon = GameObject.Find("BuffManager").GetComponent<BuffManager_Weapon>();
         playerController = GameObject.Find("Player").GetComponent<PlayerController>();
@@ -37,6 +36,8 @@ public class BuffFunc : MonoBehaviour
     public void Buff_12() { Weapon.name = "AK47"; CloseScene(); }
     public void Buff_13() { Weapon.name = "M249"; CloseScene(); }
     public void Buff_14() { Weapon.name = "Revolver"; CloseScene(); }
+    public void Buff_15() { buff_Player.Healthreward_Value += 5; CloseScene(); }
+    public void Buff_16() { buff_Player.Blood_suck_value += 5; CloseScene(); }
 
     void CloseScene()
     {

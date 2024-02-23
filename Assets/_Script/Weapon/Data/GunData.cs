@@ -11,4 +11,5 @@ public class GunData : ScriptableObject
     public int Bas_Penetration_Quantity;
     public Sprite sprite;
     public AudioClip ShootAudio;
+    public AudioClip ReloadAudio;
 }

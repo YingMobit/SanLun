@@ -12,10 +12,12 @@ public class GneneralEnemy : MonoBehaviour
     public GameObject Player;
     public GameObject Attackarea;
     public GameObject DamagePop;
+    public GameObject HealthReward;
     public Enemy_data BAS_data;
     public ExpCountor exp;
     public Collider2D Body;
     public Collider2D Body2;
+    public Rigidbody2D Rigidbody2d;
     public PlayerController Player_scr;
     public GameObject Blood;
 
@@ -24,6 +26,7 @@ public class GneneralEnemy : MonoBehaviour
     public float FAC_MaxHealth;
     public int FAC_Atackvalue;
     public float FAC_Attackarea;
+    public float HealthRewardChance;
 
     [Header("RealTimeData")]
     public float Health;
@@ -32,11 +35,13 @@ public class GneneralEnemy : MonoBehaviour
     public Vector3 Chasing_dir;
     GameObject new_Attackarea;
     public Color CriticalHit;
+    public Coroutine death;
 
     public event Action Die;
 
     public void Start()
     {
+        Rigidbody2d = GetComponent<Rigidbody2D>();
         Player = GameObject.Find("Player");
         Body = transform.GetChild(0).GetComponent<Collider2D>();
         Body2 = GetComponent<Collider2D>();
@@ -53,7 +58,7 @@ public class GneneralEnemy : MonoBehaviour
     {
         if (!Attacking && !Dead) Chase();
         if (!Attacking && (Vector3.Distance(transform.position, Player.transform.position) <= FAC_Attackarea) && !Dead) StartCoroutine(Attack());
-        if (Health <= 0) StartCoroutine(Death());
+        if (Health <= 0 && death == null) death = StartCoroutine(Death());
     }
 
     void DataInitial()
@@ -68,7 +73,7 @@ public class GneneralEnemy : MonoBehaviour
     IEnumerator Attack()
     {
         Attacking = true;
-        Body.enabled = false;
+        Rigidbody2d.bodyType = RigidbodyType2D.Kinematic;
         animator.SetBool("Attacking", Attacking);
         rigidbody.velocity = Vector3.zero;
         Vector3 Relative_pos = Player.transform.position - transform.position;
@@ -92,8 +97,8 @@ public class GneneralEnemy : MonoBehaviour
         }
         yield return new WaitForSeconds(0.5f);
         Destroy(new_Attackarea);
-        Body.enabled = true;
         Attacking = false;
+        Rigidbody2d.bodyType = RigidbodyType2D.Dynamic;
         animator.SetBool("Attacking", Attacking);
     }
 
@@ -120,6 +125,7 @@ public class GneneralEnemy : MonoBehaviour
                 textMesh.color = CriticalHit;
                 textMesh.characterSize = 1.6f;
             }
+            else textMesh.color = Color.red;
             textMesh.text = bullets.bullet_damage.ToString();
             Instantiate(Blood,transform.position ,Quaternion.identity);
             animator.Play("BeAttacked");
@@ -129,13 +135,20 @@ public class GneneralEnemy : MonoBehaviour
     {
         Dead = true;
         StopCoroutine(Attack());
+        Die.Invoke();
+        exp.CorrentExp += BAS_data.Exp_reward;
         if (new_Attackarea != null)Destroy(new_Attackarea);
         Body.enabled = false;
         Body2.enabled = false;
         animator.Play("Death");
         yield return new WaitForSeconds(1f);
-        exp.CorrentExp += BAS_data.Exp_reward;
-        Die.Invoke();
+        HealthRewarding();
         Destroy(gameObject);
+    }
+
+    void HealthRewarding()
+    {
+        float chance = UnityEngine.Random.Range(0f,1f);
+        if (chance < HealthRewardChance) Instantiate(HealthReward,transform.position,Quaternion.identity);
     }
 }

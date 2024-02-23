@@ -9,14 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 328b34b644a64ab4dbc77a8951e0b275, type: 3}
-  m_Name: Tank
+  m_Script: {fileID: 11500000, guid: 99178be26bf54e946be7f879046681ec, type: 3}
+  m_Name: 15
   m_EditorClassIdentifier: 
-  BAS_Speed: 16
-  BAS_MaxHealth: 300
-  BAS_Atackvalue: 25
-  BAS_Attackarea: 6
-  BAS_AttackSpeed: 1.6
-  Exp_reward: 500
-  Health_gain_bytime: 1
-  AttackValue_gain_bytime: 0.1
+  InternalCode: 15
+  BuffName: "\u4F18\u826F\u8865\u7ED9"
+  Buffdescription: "\u589E\u5F3A\u6218\u5229\u54C1\u7684\u751F\u547D\u6062\u590D\u6548\u679C"

@@ -36,7 +36,7 @@ public class EnemyGenerate : MonoBehaviour
 
     IEnumerator GetTile()
     { 
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
         GroundTile = GameObject.Find("FloorTilemap");
         Ground = GroundTile.GetComponent<Tilemap>();
         ObstacleTile = GameObject.Find("ObstacleTilemap");
@@ -90,7 +90,7 @@ public class EnemyGenerate : MonoBehaviour
             int Y = rand.Next(Bounds.yMin, Bounds.yMax);
             Vector3Int spawnPosition = new Vector3Int(X, Y, 0);
             Position = Ground.CellToWorld(spawnPosition);
-            if (Ground.HasTile(spawnPosition) && !Obstacle.HasTile(spawnPosition)&& Vector3.Distance(Player.transform.position, Position) >= Closest_generate_distance) isPositionValid = true;
+            if ((Ground.HasTile(spawnPosition) && !Obstacle.HasTile(spawnPosition))&&( Vector3.Distance(Player.transform.position, Position) >= Closest_generate_distance)) isPositionValid = true;
         }
         while (!isPositionValid);
         return Position;

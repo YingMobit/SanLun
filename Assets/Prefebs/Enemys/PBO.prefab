@@ -107,17 +107,20 @@ MonoBehaviour:
   animator: {fileID: 0}
   Player: {fileID: 0}
   Attackarea: {fileID: 7497324553861565554, guid: b91f470c6e54abd44abe9e56f355befa, type: 3}
-  DamagePop: {fileID: 2517804631209406012, guid: 66e5fa9ad3164784db9a2df6bc49b6d4, type: 3}
+  DamagePop: {fileID: 6451222663598607286, guid: 66e5fa9ad3164784db9a2df6bc49b6d4, type: 3}
+  HealthReward: {fileID: 6694145585729643020, guid: 7686a8fc6f703bd4abb49ade3d32dbfb, type: 3}
   BAS_data: {fileID: 11400000, guid: 1536ac0cebca7db4e9a67de4e5cf6395, type: 2}
   exp: {fileID: 0}
   Body: {fileID: 0}
   Body2: {fileID: 0}
+  Rigidbody2d: {fileID: 0}
   Player_scr: {fileID: 0}
   Blood: {fileID: 5031225446542873951, guid: df459ce9caa530c40aa145d116ad1506, type: 3}
   FAC_Speed: 0
   FAC_MaxHealth: 0
   FAC_Atackvalue: 0
   FAC_Attackarea: 0
+  HealthRewardChance: 0.1
   Health: 0
   Attacking: 0
   Dead: 0
@@ -229,7 +232,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5048388290806187937}
-  - component: {fileID: 9128429646202920047}
+  - component: {fileID: 7367517963348759273}
   m_Layer: 7
   m_Name: Body
   m_TagString: Untagged
@@ -252,8 +255,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2607826452567305274}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &9128429646202920047
-BoxCollider2D:
+--- !u!58 &7367517963348759273
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -261,7 +264,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 3008350707285613567}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: ee1e3bef4450282489687764b015722c, type: 2}
+  m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -284,16 +287,6 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.07088852, y: -0.2646129}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 2.7210922, y: 2.5114818}
-  m_EdgeRadius: 0
+  m_Radius: 1.3

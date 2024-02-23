@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Bas_Reloading_time: 3.8
   Bas_Shooting_Interval: 0.4
-  Bas_Damage: 100
+  Bas_Damage: 50
   Bas_Magazine_Capacity: 7
   Bas_Penetration_Quantity: 2
   sprite: {fileID: 21300000, guid: 3d97a06c2f0f4254a98b3cd4294749cc, type: 2}
   ShootAudio: {fileID: 8300000, guid: 535684efae3239b49ac994383ffbce20, type: 3}
+  ReloadAudio: {fileID: 8300000, guid: a110f0d3f7d0c1c4482c0ac002a6116b, type: 3}

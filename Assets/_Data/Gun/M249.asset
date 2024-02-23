@@ -19,3 +19,4 @@ MonoBehaviour:
   Bas_Penetration_Quantity: 0
   sprite: {fileID: 21300000, guid: e0065641900536d4f9ac44ab7a8d38b7, type: 2}
   ShootAudio: {fileID: 8300000, guid: 135bbd83e7d9c1644b72c5f6fe42ed10, type: 3}
+  ReloadAudio: {fileID: 8300000, guid: 9730b8f1669201e4ab695371621c2613, type: 3}

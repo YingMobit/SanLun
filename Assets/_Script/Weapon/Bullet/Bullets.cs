@@ -12,7 +12,7 @@ public class Bullets : MonoBehaviour
     public WeaponSystem weapon_scr;
     public BuffManager_Weapon buff;
 
-    public float bullet_damage;
+    public int bullet_damage;
     [Range(10, 50)] public float bullet_speed;
     public int bullet_penetration_times;
     public int bullet_life_time;

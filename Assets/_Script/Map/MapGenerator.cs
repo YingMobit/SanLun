@@ -4,6 +4,7 @@ using Unity.Mathematics;
 using Unity.VisualScripting;
 using Unity.VisualScripting.FullSerializer;
 using UnityEditor.Experimental.GraphView;
+using UnityEditor.Tilemaps;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
@@ -30,6 +31,7 @@ public class MapGenerator : MonoBehaviour
     public float ObstacleFrequency = 0.4f;  // 障碍物的生成频率，数值越大障碍物越多
     public int ObstacleSeed;              // 随机种子，可以生成不同的障碍物模式
     public GameObject Exit;         // 出口
+    public GameObject ProtalBar;            // 读秒条
 
     // 出口逻辑
     private bool exitCanGenerate;           // 是否可以生成出口
@@ -297,7 +299,7 @@ public class MapGenerator : MonoBehaviour
             {
                 // 在Perlin噪声的基础上添加随机偏移量
                 float perlinValue = Mathf.PerlinNoise((x + randomOffsetX) * ObstacleFrequency, (y + randomOffsetY) * ObstacleFrequency);
-                if (perlinValue > 0.8f) // 这里的阈值决定了障碍物的稀疏程度
+                if (perlinValue > 0.7f) // 这里的阈值决定了障碍物的稀疏程度
                 {
                     ObstacleTilemap.SetTile(new Vector3Int(x, y, 0), ObstacleTile);
                 }
@@ -316,7 +318,8 @@ public class MapGenerator : MonoBehaviour
         GeneratePlot(centerPos);
         if(exitCanGenerate)
         {
-            Instantiate(Exit, grid.CellToLocalInterpolated(centerPos), Quaternion.Euler(Vector3.zero));// 在centerPos添加出口 
+            GameObject exitClone = Instantiate(Exit, grid.CellToLocalInterpolated(centerPos), Quaternion.Euler(Vector3.zero));// 在centerPos添加出口
+            exitClone.GetComponent<ExitManager>().ProtalBar = ProtalBar;
             exitCanGenerate = false;// 清数据
         }
         GenerateObstacle(centerPos);//bug：人出生卡死在木桩 现在改人出生网格（0.5，0.5，0）*5.12

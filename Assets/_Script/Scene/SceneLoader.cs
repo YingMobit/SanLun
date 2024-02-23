@@ -8,7 +8,6 @@ public class SceneLoader : MonoBehaviour
 {
     // 声明
     public GameObject PauseMenu;            // 暂停菜单
-    public Slider LoadSlider;           // 加载进度条
     public Animator transition;         // 过场
     public float transitionTime = 1f;           // 过场时间
 
@@ -65,7 +64,7 @@ public class SceneLoader : MonoBehaviour
         while (!sync.isDone)
         {
             float progress = Mathf.Clamp01(sync.progress / 0.9f);
-            LoadSlider.value = progress; // Slider转转转
+            //LoadSlider.value = progress; // Slider转转转
             if (sync.progress >= 0.9f)// 90%后激活场景
             {
                 sync.allowSceneActivation = true;

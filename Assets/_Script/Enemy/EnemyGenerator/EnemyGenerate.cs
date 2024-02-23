@@ -81,7 +81,7 @@ public class EnemyGenerate : MonoBehaviour
     /*
      * do
      * {20-50范围里头随机一个vector3的世界坐标}
-     * while（MapGenerator.Instance.EnemyPos(vector3的世界坐标)）
+     * while（！MapGenerator.Instance.EnemyPos(vector3的世界坐标)）
      */
     Vector3 ChoosePos()
     {

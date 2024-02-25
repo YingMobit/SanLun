@@ -5065,7 +5065,7 @@ MonoBehaviour:
   Ground: {fileID: 307061216}
   Obstacle: {fileID: 0}
   current_level: 1
-  Closest_generate_distance: 20
+  Closest_generate_distance: 25.5
   generate_interval: 1
   last_generate_time: 0
   Player_Pos: {x: 0, y: 0, z: 0}

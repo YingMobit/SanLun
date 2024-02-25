@@ -51,6 +51,16 @@ public class GneneralEnemy : MonoBehaviour
         rigidbody = GetComponent<Rigidbody2D>();
         exp = GameObject.Find("ExpManager").GetComponent<ExpCountor>();
         DataInitial();
+        StartCoroutine(FreefromBarrier());
+    }
+
+    IEnumerator FreefromBarrier()
+    { 
+        Body.enabled = false;
+        Body2.enabled = false;
+        yield return new WaitForSeconds(0.3f);
+        Body.enabled = true;
+        Body2.enabled = true;
     }
 
     // Update is called once per frame
@@ -60,6 +70,7 @@ public class GneneralEnemy : MonoBehaviour
         if (!Attacking && (Vector3.Distance(transform.position, Player.transform.position) <= FAC_Attackarea) && !Dead) StartCoroutine(Attack());
         if (Health <= 0 && death == null) death = StartCoroutine(Death());
     }
+
 
     void DataInitial()
     {

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System;
 using UnityEngine;
-using JetBrains.Annotations;
+using JetBrains;
 using UnityEditor;
 using UnityEngine.Tilemaps;
 using UnityEngine.UIElements;
@@ -60,21 +60,25 @@ public class EnemyGenerate : MonoBehaviour
     Vector3 GeneratePos()
     {
         int seed = DateTime.Now.GetHashCode();
-        float Farest_generate_distance = 3 * Closest_generate_distance;
         System.Random rand = new System.Random(seed);
-        float random_distance = rand.Next(1, 3) * 2 * Closest_generate_distance;
-        float angle = (float)rand.NextDouble() * Mathf.PI;
-        Player_Pos = Player.transform.position;
-        Vector3 generate_pos = Player_Pos + new Vector3(random_distance * Mathf.Cos(angle), random_distance * Mathf.Sin(angle), 0);
-        Debug.Log(generate_pos);
-        Ray ray = new Ray(generate_pos,transform.forward);
-        RaycastHit hit;
-        if (Physics.Raycast(ray, out hit,5))
+        Vector3 generate_pos;
+        Ray ray;
+        RaycastHit2D hit;
+        do
         {
-            if (hit.collider.CompareTag("Ground")) return generate_pos;
-            else return GeneratePos();
+            float random_distance = (float)rand.NextDouble() * Closest_generate_distance + Closest_generate_distance;
+            float angle = (float)rand.NextDouble() * Mathf.PI;
+            Player_Pos = Player.transform.position;
+            generate_pos = Player_Pos + new Vector3(random_distance * Mathf.Cos(angle), random_distance * Mathf.Sin(angle), 0);
+            Debug.Log(generate_pos);
+            ray = new Ray(generate_pos - transform.forward, transform.forward);
+            Debug.DrawRay(generate_pos - transform.forward, transform.forward,Color.red, Mathf.Infinity);
+            Debug.Log(Physics2D.Raycast(generate_pos - transform.forward, transform.forward, Mathf.Infinity));
+            hit = Physics2D.Raycast(generate_pos-transform.forward,transform.forward,Mathf.Infinity,0);
+            if (hit.collider == null) continue;
         }
-        else return GeneratePos();
+        while (!hit.collider.CompareTag("Ground"));
+        return generate_pos;
     }
 
     //真有bug：切完场景会丢失tilemap而且怪还是有在外面的|||或者你改用raycast。草地已经加上了tilemapcollider2d和compositecollider2d为了修之前的bug
@@ -88,17 +92,17 @@ public class EnemyGenerate : MonoBehaviour
         int seed = DateTime.Now.GetHashCode();
         System.Random rand = new System.Random(seed);
         BoundsInt Bounds = Ground.cellBounds;
-        bool isPositionValid =false;
+        bool isPositionFar =false;
         Vector3 Position;
         do
         {
-            int X = rand.Next(Bounds.xMin, Bounds.xMax);
-            int Y = rand.Next(Bounds.yMin, Bounds.yMax);
+            int X = rand.Next(Bounds.xMin+1, Bounds.xMax-1);
+            int Y = rand.Next(Bounds.yMin+1, Bounds.yMax-1);
             Vector3Int spawnPosition = new Vector3Int(X, Y, 0);
             Position = Ground.CellToWorld(spawnPosition);
-            if ((Ground.HasTile(spawnPosition) && !Obstacle.HasTile(spawnPosition))&&( Vector3.Distance(Player.transform.position, Position) >= Closest_generate_distance)) isPositionValid = true;
+            isPositionFar = Vector3.Distance(Position, Player.transform.position) >= Closest_generate_distance;
         }
-        while (!isPositionValid);
+        while (!MapGenerator.Instance.EnemyPos(Position) || !isPositionFar);
         return Position;
     }
     GameObject ChooseEnemy()

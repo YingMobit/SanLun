@@ -58,7 +58,7 @@ public class GneneralEnemy : MonoBehaviour
     { 
         Body.enabled = false;
         Body2.enabled = false;
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.1f);
         Body.enabled = true;
         Body2.enabled = true;
     }
@@ -151,9 +151,9 @@ public class GneneralEnemy : MonoBehaviour
         if (new_Attackarea != null)Destroy(new_Attackarea);
         Body.enabled = false;
         Body2.enabled = false;
+        HealthRewarding();
         animator.Play("Death");
         yield return new WaitForSeconds(1f);
-        HealthRewarding();
         Destroy(gameObject);
     }
 

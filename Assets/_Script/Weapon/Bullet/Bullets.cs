@@ -76,15 +76,16 @@ public class Bullets : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Enemy")
+        if (collision.gameObject.CompareTag("Enemy"))
         {
             bullet_penetration_times--;
         }
-        if(collision.gameObject.tag=="Barrier")
+        if(collision.gameObject.CompareTag("Barrier"))
         {
             bullet_penetration_times--;
             collision.gameObject.GetComponent<Defence>().DealDamage(1f);
         }
+        if(collision.gameObject.CompareTag("Obstacle")) Destroy(gameObject);
     }
 
     void TurnToPoint()

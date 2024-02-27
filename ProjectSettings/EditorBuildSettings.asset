@@ -9,9 +9,9 @@ EditorBuildSettings:
     path: Assets/SimplePixelUI/ExamleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/Base.unity
-    guid: d3523b87593985748b65ebbe72bedca5
-  - enabled: 1
     path: Assets/Scenes/ExampleGrass.unity
     guid: 53ad8063a361da44d95b95fa3c78a403
+  - enabled: 1
+    path: Assets/Scenes/Base.unity
+    guid: d3523b87593985748b65ebbe72bedca5
   m_configObjects: {}

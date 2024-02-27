@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 4606221393785669216}
   - component: {fileID: 1539241882124011726}
   - component: {fileID: 8931097928378314218}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: TimelyShield
-  m_TagString: EnemyAttack
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

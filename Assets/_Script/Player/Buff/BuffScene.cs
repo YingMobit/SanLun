@@ -6,7 +6,7 @@ using UnityEngine.UIElements;
 
 public class BuffScene : MonoBehaviour
 {
-    public BGMController bgmController;
+    public SoundEffectController bgmController;
     public ExpCountor exp_countor;
     public GameObject BuffUI;
     public AudioClip LevelUP;

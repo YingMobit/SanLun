@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WeaponSystem : MonoBehaviour,IGuns
 {
-    public BGMController bgmController;
+    public SoundEffectController bgmController;
     public BuffManager_Weapon Buff;
     public GameObject Bullet;
     public SpriteRenderer sprite_renderer;

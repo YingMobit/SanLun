@@ -182,6 +182,7 @@ public class PlayerController : MonoBehaviour
             TextMesh text = CurePop.GetComponent<TextMesh>();
             text.color = health_hell_color;
             text.text = HealthReward_Value.ToString();
+            Destroy(collision.gameObject);
         }
     }
 

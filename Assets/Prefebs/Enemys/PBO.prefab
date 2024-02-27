@@ -120,7 +120,7 @@ MonoBehaviour:
   FAC_MaxHealth: 0
   FAC_Atackvalue: 0
   FAC_Attackarea: 0
-  HealthRewardChance: 0.1
+  HealthRewardChance: 0.05
   Health: 0
   Attacking: 0
   Dead: 0

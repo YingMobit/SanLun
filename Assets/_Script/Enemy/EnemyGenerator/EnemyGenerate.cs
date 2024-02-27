@@ -46,15 +46,28 @@ public class EnemyGenerate : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Time.time - last_generate_time >= generate_interval) Generate(ChooseEnemy());
+        if (Ground == null) 
+        {
+            GroundTile = GameObject.Find("FloorTilemap");
+            Ground = GroundTile.GetComponent<Tilemap>();
+        }
+        if (Obstacle == null)
+        {
+            ObstacleTile = GameObject.Find("ObstacleTilemap");
+            Obstacle = ObstacleTile.GetComponent<Tilemap>();
+        }
+        if (Time.time - last_generate_time >= generate_interval&& Obstacle != null&& Ground != null) Generate(ChooseEnemy());
     }
 
     void LevelUP() { current_level++; generate_interval -= 0.03f; }
 
     void Generate(GameObject Enemy)
     {
-        Instantiate(Enemy, ChoosePos(), Quaternion.identity);
-        last_generate_time = Time.time;
+        if (Ground != null && Obstacle != null)
+        {
+            Instantiate(Enemy, ChoosePos(), Quaternion.identity);
+            last_generate_time = Time.time;
+        }
     }
 
     Vector3 GeneratePos()
@@ -112,7 +125,7 @@ public class EnemyGenerate : MonoBehaviour
             return Simple;
         }
 
-        else if (current_level <= 10)
+        else if (current_level <= 7)
         {
             int seed = DateTime.Now.GetHashCode();
             System.Random rand = new System.Random(seed);

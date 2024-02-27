@@ -9,6 +9,7 @@ public class GunData : ScriptableObject
     public float Bas_Damage;
     public float Bas_Magazine_Capacity;
     public int Bas_Penetration_Quantity;
+    public float Bas_HitBack;
     public Sprite sprite;
     public AudioClip ShootAudio;
     public AudioClip ReloadAudio;

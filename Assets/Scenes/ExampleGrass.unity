@@ -912,7 +912,7 @@ MonoBehaviour:
   Weapon: {fileID: 0}
   maincam: {fileID: 0}
   image: {fileID: 309708032}
-  Correction: {x: 18, y: 27, z: 0}
+  Correction: {x: 50, y: 80, z: 0}
 --- !u!1 &318291415
 GameObject:
   m_ObjectHideFlags: 0
@@ -1731,7 +1731,7 @@ MonoBehaviour:
   Shield: {fileID: 0}
   Last_Shield_Time: 0
   health: 0
-  health_hell_color: {r: 1, g: 0.39260864, b: 0, a: 0}
+  health_hell_color: {r: 1, g: 0.26490125, b: 0, a: 1}
   rigidbody: {fileID: 0}
   move_dir_x: 0
   move_dir_y: 0
@@ -1744,7 +1744,7 @@ Transform:
   m_GameObject: {fileID: 679694260}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.84, y: 2.58, z: 0}
+  m_LocalPosition: {x: 3.1, y: 2.58, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2574,6 +2574,7 @@ MonoBehaviour:
   Fac_Damage: 0
   Fac_Magazine_Capacity: 0
   Fac_Penetration_Quantity: 0
+  Fac_HitBackForce: 0
   ShootingAudio: {fileID: 0}
   ReloadAudio: {fileID: 0}
   Bullet_Remained: 0
@@ -2905,7 +2906,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2607826452567305274, guid: 9d48d2a126878ce4fa9173eb1d4714f7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 127.6
+      value: 341.8
       objectReference: {fileID: 0}
     - target: {fileID: 2607826452567305274, guid: 9d48d2a126878ce4fa9173eb1d4714f7, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4248,7 +4249,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 145e7a6ad13990a49bb91bd00068adb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BGM: {fileID: 0}
   Audio: {fileID: 0}
 --- !u!1001 &1592243636
 PrefabInstance:

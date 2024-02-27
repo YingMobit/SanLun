@@ -25,6 +25,7 @@ public class WeaponSystem : MonoBehaviour,IGuns
     public int Fac_Damage;
     public float Fac_Magazine_Capacity;
     public int Fac_Penetration_Quantity;
+    public float Fac_HitBackForce;
     public AudioClip ShootingAudio;
     public AudioClip ReloadAudio;
 
@@ -84,6 +85,7 @@ public class WeaponSystem : MonoBehaviour,IGuns
         Fac_Damage = Mathf.RoundToInt( BasData.Bas_Damage * BufOn_Damage);
         Fac_Magazine_Capacity = BasData.Bas_Magazine_Capacity + BufOn_Magazine_Capacity;
         Fac_Penetration_Quantity = BasData.Bas_Penetration_Quantity + BufOn_Penetration_Quantity;
+        Fac_HitBackForce = BasData.Bas_HitBack;
         ReloadAudio = BasData.ReloadAudio;
 
         Bullet_Remained = Fac_Magazine_Capacity;

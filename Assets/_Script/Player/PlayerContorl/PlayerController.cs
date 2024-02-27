@@ -154,9 +154,11 @@ public class PlayerController : MonoBehaviour
             Debug.Log("ÎüÑª");
             Health += Blood_suck_value;
             if (Health > Fac_MaxHealth) Health = Fac_MaxHealth;
-            Instantiate(CurePop,transform.position,Quaternion.identity);
-            TextMesh text = CurePop.GetComponent<TextMesh>();
+            GameObject newCurePop = Instantiate(CurePop,transform.position,Quaternion.identity);
+            newCurePop .transform.SetParent(transform);
+            TextMesh text = newCurePop.GetComponent<TextMesh>(); 
             text.color = health_hell_color;
+            text.characterSize = 2.25f;
             text.text = Blood_suck_value.ToString();
         }
     }
@@ -178,8 +180,9 @@ public class PlayerController : MonoBehaviour
         {
             Health += HealthReward_Value;
             Health = Health > Fac_MaxHealth? Fac_MaxHealth:Health;
-            Instantiate(CurePop, transform.position, Quaternion.identity);
-            TextMesh text = CurePop.GetComponent<TextMesh>();
+            GameObject newCurePop = Instantiate(CurePop, transform.position, Quaternion.identity);
+            newCurePop.transform.SetParent(transform);
+            TextMesh text = newCurePop.GetComponent<TextMesh>();
             text.color = health_hell_color;
             text.text = HealthReward_Value.ToString();
             Destroy(collision.gameObject);

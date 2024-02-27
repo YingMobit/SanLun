@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using System;
-using UnityEditor;
+using System.Collections;
+using UnityEngine;
 
 public class GneneralEnemy : MonoBehaviour
 {
@@ -13,6 +11,7 @@ public class GneneralEnemy : MonoBehaviour
     public GameObject Attackarea;
     public GameObject DamagePop;
     public GameObject HealthReward;
+    GameObject bullet;
     public Enemy_data BAS_data;
     public ExpCountor exp;
     public Collider2D Body;
@@ -20,6 +19,7 @@ public class GneneralEnemy : MonoBehaviour
     public Rigidbody2D Rigidbody2d;
     public PlayerController Player_scr;
     public GameObject Blood;
+    Bullets bullets;
 
     [Header("FactData")]
     public float FAC_Speed;
@@ -32,6 +32,7 @@ public class GneneralEnemy : MonoBehaviour
     public float Health;
     public bool Attacking;
     public bool Dead;
+    public bool BeHittingBack;
     public Vector3 Chasing_dir;
     GameObject new_Attackarea;
     public Color CriticalHit;
@@ -55,7 +56,7 @@ public class GneneralEnemy : MonoBehaviour
     }
 
     IEnumerator FreefromBarrier()
-    { 
+    {
         Body.enabled = false;
         Body2.enabled = false;
         yield return new WaitForSeconds(0.1f);
@@ -66,7 +67,7 @@ public class GneneralEnemy : MonoBehaviour
     // Update is called once per frame
     public void Update()
     {
-        if (!Attacking && !Dead) Chase();
+        if (!Attacking&&!BeHittingBack && !Dead) Chase();
         if (!Attacking && (Vector3.Distance(transform.position, Player.transform.position) <= FAC_Attackarea) && !Dead) StartCoroutine(Attack());
         if (Health <= 0 && death == null) death = StartCoroutine(Death());
     }
@@ -76,7 +77,7 @@ public class GneneralEnemy : MonoBehaviour
     {
         FAC_Speed = BAS_data.BAS_Speed;
         FAC_MaxHealth = Mathf.RoundToInt(BAS_data.BAS_MaxHealth + BAS_data.Health_gain_bytime * Timer.timer);
-        FAC_Atackvalue = Mathf.RoundToInt(BAS_data.BAS_Atackvalue + BAS_data.AttackValue_gain_bytime* Timer.timer);
+        FAC_Atackvalue = Mathf.RoundToInt(BAS_data.BAS_Atackvalue + BAS_data.AttackValue_gain_bytime * Timer.timer);
         FAC_Attackarea = BAS_data.BAS_Attackarea;
         Health = FAC_MaxHealth;
     }
@@ -121,34 +122,49 @@ public class GneneralEnemy : MonoBehaviour
         else transform.rotation = Quaternion.Euler(0, 180, 0);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "PlayerAttack")
         {
-            GameObject bullet = collision.gameObject;
-            Bullets bullets = bullet.GetComponent<Bullets>();
+            bullet = collision.gameObject;
+            bullets = bullet.GetComponent<Bullets>();
             Health -= bullets.bullet_damage;
-            GameObject new_DamagePop = Instantiate(DamagePop,transform .position,Quaternion.identity);
-            new_DamagePop.transform .SetParent(transform);
+            GameObject new_DamagePop = Instantiate(DamagePop, transform.position, Quaternion.identity);
+            new_DamagePop.transform.SetParent(transform);
             TextMesh textMesh = new_DamagePop.GetComponent<TextMesh>();
             if (bullets.isCriticalHit)
             {
                 textMesh.color = CriticalHit;
-                textMesh.characterSize = 1.6f;
+                new_DamagePop.transform.localScale = new Vector3(2.25f * 1.6f, 2.25f * 1.6f, 2.25f * 1.6f);
             }
-            else textMesh.color = Color.red;
+            else { textMesh.color = Color.red; new_DamagePop.transform.localScale = new Vector3(2.25f, 2.25f, 2.25f); }
             textMesh.text = bullets.bullet_damage.ToString();
-            Instantiate(Blood,transform.position ,Quaternion.identity);
+            Instantiate(Blood, transform.position, Quaternion.identity);
             animator.Play("BeAttacked");
+            StartCoroutine(BeHitBack());
         }
     }
+
+    IEnumerator BeHitBack()
+    {
+        BeHittingBack = true;
+        float Force = bullets.HitBackForce;
+        float angle = (bullet.transform.rotation.eulerAngles.z-270)*Mathf.Deg2Rad;
+        Vector2 Dirction = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle)).normalized;
+        rigidbody.AddForce(Dirction * Force, ForceMode2D.Impulse);
+        Debug.Log(angle);
+        Debug.Log(Dirction);
+        yield return new WaitForSeconds(0.3f);
+        BeHittingBack = false;
+    }
+
     IEnumerator Death()
     {
         Dead = true;
         StopCoroutine(Attack());
         Die.Invoke();
         exp.CorrentExp += BAS_data.Exp_reward;
-        if (new_Attackarea != null)Destroy(new_Attackarea);
+        if (new_Attackarea != null) Destroy(new_Attackarea);
         Body.enabled = false;
         Body2.enabled = false;
         HealthRewarding();
@@ -159,7 +175,7 @@ public class GneneralEnemy : MonoBehaviour
 
     void HealthRewarding()
     {
-        float chance = UnityEngine.Random.Range(0f,1f);
-        if (chance < HealthRewardChance) Instantiate(HealthReward,transform.position,Quaternion.identity);
+        float chance = UnityEngine.Random.Range(0f, 1f);
+        if (chance < HealthRewardChance) Instantiate(HealthReward, transform.position, Quaternion.identity);
     }
 }

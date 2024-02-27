@@ -20,6 +20,7 @@ public class Bullets : MonoBehaviour
     public int Critical_Hit_Damage;
     public bool isCriticalHit;
     public float life_time;
+    public float HitBackForce;
 
     [Header("÷∏œÚ Û±Í")]
     public Vector3 MousePos;
@@ -53,6 +54,7 @@ public class Bullets : MonoBehaviour
         {
             bullet_penetration_times = weapon_scr.Fac_Penetration_Quantity;
             bullet_damage = weapon_scr.Fac_Damage;
+            HitBackForce = weapon_scr.Fac_HitBackForce;
             rigidbody.velocity = bullet_speed * transform.up + new Vector3(player_rigidbody.velocity.x, player_rigidbody.velocity.y, 0);
             Critical_Hit_Chance = buff.Bufon_Critical_Hit_Chance; Critical_Hit_Damage = buff.Bufon_Critical_Hit_Damage;
             WhetherCriticalHit();
@@ -65,7 +67,7 @@ public class Bullets : MonoBehaviour
         int seed = DateTime.Now.GetHashCode();
         System.Random rand = new System.Random(seed);
         float chance = (float)rand.NextDouble();
-        if (chance <= Critical_Hit_Chance) {isCriticalHit = true; bullet_damage = bullet_damage * Critical_Hit_Damage; Debug.Log("±©ª˜"); } 
+        if (chance <= Critical_Hit_Chance) {isCriticalHit = true; bullet_damage = bullet_damage * Critical_Hit_Damage;} 
     }
 
     void AutoDead()

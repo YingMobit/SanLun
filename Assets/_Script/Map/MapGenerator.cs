@@ -368,6 +368,6 @@ public class MapGenerator : MonoBehaviour
     {
         Vector3 worldPos = Camera.main.ScreenToWorldPoint(screenPos);
         Vector3Int gridPos = grid.WorldToCell(worldPos);
-        Debug.Log(gridPos);
+        //Debug.Log(gridPos);
     }
 }

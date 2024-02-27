@@ -22,7 +22,7 @@ public class EnemyGenerate : MonoBehaviour
 
     public int current_level =1;
     [Range(0, 100)] public float Closest_generate_distance;
-    [Range(0,3)]public float generate_interval;
+    [Range(0,10)]public float generate_interval;
     public float last_generate_time;
     public Vector3 Player_Pos;
 

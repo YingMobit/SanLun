@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Linq; // Add this for sorting
+using System.Threading;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UI;
@@ -14,9 +15,15 @@ public class LeaderBored : MonoBehaviour
     private int maxRetries = 3;         // 重连次数
     private RootObject rootObject;            // 下载到的排行榜数据 json格式（已经用类分）
     [Header("展示排行")]
-    private bool canSwitchLeader;           // 是否可以切换排行榜
     public GameObject scorePrefab;          // 预制体框
     public Transform scoreParent;           // content
+    [Header("按钮")]
+    private bool isLevel;           // 是否是LevelButton
+    public GameObject LevelButton;          //切换等级榜
+    public GameObject PointButton;          //切换积分榜
+    [Header("按钮")]
+    public GameObject PopPanel;            // 弹窗
+    public Text PopText;            //弹窗文本
 
 
     [System.Serializable]
@@ -24,7 +31,7 @@ public class LeaderBored : MonoBehaviour
     {
         public string name;
         public int score;
-        public int level;
+        public int seconds;// 用seconds表示level 一定注意
         public string text;
         public string date;
     }
@@ -49,102 +56,99 @@ public class LeaderBored : MonoBehaviour
 
     // 函数
     // 外部函数
-    public void ShowLeaderBored()
-    {
-        //TODO：添加一个按钮一旦进入trigger那么就激活按钮E，按下激活面板
-    }
     public void AddScore()
     {
-        //TODO：添加一个panel在Base场景激活需要从出口走,绑定按钮
-        //TODO：数据自动传递
-        //StartCoroutine(AddNewPlayer();
+        //HASDO：数据自动传递CHANGE:由于无法备注直接在回到这个场景的时候添加
+        string playerName = PlayerPrefs.GetString("playerName", "Guest" + Random.Range(1000, 10000).ToString());
+        int score = PlayerPrefs.GetInt("Point", 0);
+        int level = PlayerPrefs.GetInt("Level", 0);
+        StartCoroutine(AddNewPlayer(playerName, score,level));
+    }
+
+    public void ShowScoresLeader()
+    {
+        GameObject button = SwitchLeader();
+        button.GetComponent<Button>().interactable = false;
+
+        ClearExistingScores(); // 清数据
+
+        if (rootObject != null && rootObject.dreamlo.leaderboard.entry != null)
+        {
+            // 排序
+            var sortedScores = rootObject.dreamlo.leaderboard.entry.ToList();
+            sortedScores.Sort((s1, s2) => s2.score.CompareTo(s1.score));
+
+            for (int i = 0; i < sortedScores.Count; i++)
+            {
+                DisplayScore(sortedScores[i], i + 1);
+            }
+        }
+        button.GetComponent<Button>().interactable = true;
     }
 
     public void ShowLevelsLeader()
     {
         //rootObject = JsonUtility.FromJson<RootObject>(jsonText);// 通过对scroes的process已经获取到了rootObject
-        if(canSwitchLeader)
+
+        //SUSDO:只有在true的时候才能显示按钮
+        GameObject button = SwitchLeader();
+        button.GetComponent<Button>().interactable = false;
+
+        ClearExistingScores(); // 清数据
+
+        if (rootObject != null && rootObject.dreamlo.leaderboard.entry != null)
         {
-            canSwitchLeader = false;
-            //TODO:只有在true的时候才能显示按钮
-            ClearExistingScores(); // 清数据
+            // 排序
+            var sortedLevels = rootObject.dreamlo.leaderboard.entry.ToList();
+            sortedLevels.Sort((s1, s2) => s2.seconds.CompareTo(s1.seconds));
 
-            if (rootObject != null && rootObject.dreamlo.leaderboard.entry != null)
+            for (int i = 0; i < sortedLevels.Count; i++)
             {
-                // 排序
-                var sortedScores = rootObject.dreamlo.leaderboard.entry.ToList();
-                sortedScores.Sort((s1, s2) => s2.score.CompareTo(s1.score));
-
-                for (int i = 0; i < sortedScores.Count; i++)
-                {
-                    DisplayLevel(sortedScores[i], i + 1);
-                }
+                DisplayLevel(sortedLevels[i], i + 1);
             }
-            canSwitchLeader = true;
         }
+        button.GetComponent<Button>().interactable = true;
     }
 
-    public void ShowScoresLeader()
-    {
-        if(canSwitchLeader)
-        {
-            canSwitchLeader = false;
-            ClearExistingScores(); // 清数据
 
-            if (rootObject != null && rootObject.dreamlo.leaderboard.entry != null)
-            {
-                // 排序
-                var sortedScores = rootObject.dreamlo.leaderboard.entry.ToList();
-                sortedScores.Sort((s1, s2) => s2.score.CompareTo(s1.score));
-
-                for (int i = 0; i < sortedScores.Count; i++)
-                {
-                    DisplayScore(sortedScores[i], i + 1);
-                }
-            }
-            canSwitchLeader = true;
-        }
-    }
 
     // 内部函数
     private void Start()
     {
-        //StartCoroutine(AddNewPlayer("13", 20,2,"good")); // 测试添加新玩家
+        StartCoroutine(AddNewPlayer("樂", 1,5)); // 测试添加新玩家
         StartCoroutine(DownLoad()); // 获取
+        isLevel = false;
+        PopPanel.SetActive(false);
     }
 
-    IEnumerator AddNewPlayer(string playerName, int score,int level,string text, int attempt = 0)
+    IEnumerator AddNewPlayer(string playerName, int score,int level, int attempt = 0)
     {
-        UnityWebRequest request = UnityWebRequest.Get(url + privateCode + "/add/" + UnityWebRequest.EscapeURL(playerName) + "/" + score + "/" + level + "/" +text);
+        UnityWebRequest request = UnityWebRequest.Get(url + privateCode + "/add/" + UnityWebRequest.EscapeURL(playerName) + "/" + score + "/" + level);
         yield return request.SendWebRequest();
         if (request.result == UnityWebRequest.Result.ConnectionError || request.result == UnityWebRequest.Result.ProtocolError)
         {
-            Debug.LogError("Error adding score: " + request.error);
+            //Debug.LogError("Error adding score: " + request.error);
             if (attempt < maxRetries)
             {
                 Debug.Log("Retrying to add score...");
-                StartCoroutine(AddNewPlayer(playerName, score,level,text, attempt + 1));
+                StartCoroutine(AddNewPlayer(playerName, score, attempt + 1));
+            }
+            else
+            {
+                PopMessage("成绩提交至排行榜失败,请检查网络");
             }
         }
-        else
-        {
-            //TODO:添加一个Panel用来提示输入错误
-            Debug.Log("Score added successfully!");
-        }
+        //HASDO:添加一个Panel用来提示输入错误,将addTextComponent修改成弹窗
     }
 
     IEnumerator DownLoad(int attempt = 0)
     {
-        canSwitchLeader = false;
-        if (scoreParent.gameObject.GetComponent<Text>() != null)
-        {
-            Destroy(scoreParent.gameObject.GetComponent<Text>());
-        }
+        //TODO:解决逻辑下载时候到底在哪
         UnityWebRequest request = UnityWebRequest.Get(url + publicCode + "/json");
         yield return request.SendWebRequest();
         if (request.result == UnityWebRequest.Result.ConnectionError || request.result == UnityWebRequest.Result.ProtocolError)
         {
-            Debug.LogError("Error getting scores: " + request.error);
+            //Debug.LogError("Error getting scores: " + request.error);
             if (attempt < maxRetries)
             {
                 Debug.Log("Retrying to get scores...");
@@ -152,7 +156,7 @@ public class LeaderBored : MonoBehaviour
             }
             else
             {
-                scoreParent.gameObject.AddComponent<Text>().text = "排行榜获取失败";
+                PopMessage("排行榜下载,请检查网络");
             }
         }
         else
@@ -180,7 +184,10 @@ public class LeaderBored : MonoBehaviour
             {
                 DisplayScore(sortedScores[i], i + 1);
             }
-            canSwitchLeader = true;
+        }
+        else
+        {
+            PopMessage("排行榜数据丢失");
         }
     }
 
@@ -208,12 +215,11 @@ public class LeaderBored : MonoBehaviour
     {
         GameObject newScoreRow = Instantiate(scorePrefab, scoreParent);
         Text[] texts = newScoreRow.GetComponentsInChildren<Text>();
-        if (texts.Length >= 4)
+        if (texts.Length >= 3)
         {
-            texts[0].text = rank.ToString();
+            texts[0].text = "No." + rank.ToString();
             texts[1].text = entry.name;
-            texts[2].text = entry.score.ToString();
-            texts[3].text = entry.text;
+            texts[2].text = entry.score.ToString() + "分";
         }
     }
 
@@ -221,12 +227,33 @@ public class LeaderBored : MonoBehaviour
     {
         GameObject newScoreRow = Instantiate(scorePrefab, scoreParent);
         Text[] texts = newScoreRow.GetComponentsInChildren<Text>();
-        if (texts.Length >= 4)
+        if (texts.Length >= 3)
         {
-            texts[0].text = rank.ToString();
+            texts[0].text = "No." + rank.ToString();
             texts[1].text = entry.name;
-            texts[2].text = entry.level.ToString();
-            texts[3].text = entry.text;
+            texts[2].text = "Lv." + entry.seconds.ToString();
         }
+    }
+
+    private GameObject SwitchLeader()
+    {
+        isLevel = !isLevel;
+        LevelButton.SetActive(!LevelButton.activeSelf);
+        PointButton.SetActive(!PointButton.activeSelf);
+        if(LevelButton.activeSelf)
+        {
+            return LevelButton;
+        }
+        else
+        {
+            return PointButton;
+        }
+    }
+
+    private void PopMessage(string message)
+    {
+        PopPanel.SetActive(true);
+        PopPanel.transform.GetChild(1).gameObject.SetActive(true);
+        PopText.text = message;
     }
 }

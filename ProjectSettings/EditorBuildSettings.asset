@@ -5,16 +5,19 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/SimplePixelUI/ExamleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/OldBase.unity
-    guid: d3523b87593985748b65ebbe72bedca5
+    path: Assets/Scenes/Base.unity
+    guid: e3c68798b09063b46b6a76e41c770a81
   - enabled: 1
     path: Assets/Scenes/ExampleGrass.unity
     guid: 53ad8063a361da44d95b95fa3c78a403
-  - enabled: 1
-    path: Assets/Scenes/Base.unity
+  - enabled: 0
+    path: Assets/SimplePixelUI/ExamleScene.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 0
+    path: Assets/Scenes/OldBase.unity
+    guid: d3523b87593985748b65ebbe72bedca5
+  - enabled: 0
+    path: Assets/Scenes/OldBase.unity
     guid: d3523b87593985748b65ebbe72bedca5
   m_configObjects: {}

@@ -67,7 +67,10 @@ public class SceneLoader : MonoBehaviour
     private void Start()
     {
         PauseMenu.SetActive(false);
-        DeadMenu.SetActive(false);
+        if (DeadMenu != null)
+        {
+            DeadMenu.SetActive(false);
+        }
     }
 
     private void Update()
@@ -76,7 +79,7 @@ public class SceneLoader : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Tab) || Input.GetKeyDown(KeyCode.Escape))
             {
-                //TODO:需要判断在那个场景中
+                //HASDO:需要判断在那个场景中CHANGE:不需要，只需要改每个场景的PauseMenu就好
                 PauseGame();
             }
         }

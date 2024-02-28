@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 1530598917471601461}
   - component: {fileID: 8493717630029833282}
   - component: {fileID: 3142563433638684967}
-  - component: {fileID: 8215867005616877877}
   - component: {fileID: 7252477616038648074}
   m_Layer: 5
   m_Name: entry
@@ -70,7 +69,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 0}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -80,20 +79,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &8215867005616877877
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 313569693524224334}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_HorizontalFit: 0
-  m_VerticalFit: 0
 --- !u!114 &7252477616038648074
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -110,7 +95,7 @@ MonoBehaviour:
   m_MinWidth: -1
   m_MinHeight: -1
   m_PreferredWidth: -1
-  m_PreferredHeight: 58.2566
+  m_PreferredHeight: 40
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
@@ -141,15 +126,15 @@ RectTransform:
   m_GameObject: {fileID: 3096358870754488089}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.19999999, y: 0.19999999, z: 1}
+  m_LocalScale: {x: 0.13, y: 0.13, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1530598917471601461}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 278.8, y: -29.128}
-  m_SizeDelta: {x: 377.4808, y: 232.02}
+  m_AnchoredPosition: {x: 287.7268, y: -20}
+  m_SizeDelta: {x: 590.5152, y: 232.02}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4897532464470893332
 CanvasRenderer:
@@ -192,7 +177,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u5206"
+  m_Text: "10000\u5206"
 --- !u!1 &4632990279352322644
 GameObject:
   m_ObjectHideFlags: 0
@@ -220,15 +205,15 @@ RectTransform:
   m_GameObject: {fileID: 4632990279352322644}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.19999999, y: 0.19999999, z: 1}
+  m_LocalScale: {x: 0.13, y: 0.13, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1530598917471601461}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 164.2, y: -29.128}
-  m_SizeDelta: {x: 815.8557, y: 232.02}
+  m_AnchoredPosition: {x: 159.5, y: -20}
+  m_SizeDelta: {x: 1358.7504, y: 232.02}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5775759586142182980
 CanvasRenderer:
@@ -271,7 +256,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u73A9\u5BB6\u540D"
+  m_Text: "\u73A9\u5BB6\u540D\u73A9\u5BB6\u540D\u73A9\u5BB6\u540D\u73A9\u5BB6\u540D\u73A9\u5BB6\u540D\u73A9\u5BB6\u540D"
 --- !u!1 &6480989906473267379
 GameObject:
   m_ObjectHideFlags: 0
@@ -299,15 +284,15 @@ RectTransform:
   m_GameObject: {fileID: 6480989906473267379}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.19999999, y: 0.19999999, z: 1}
+  m_LocalScale: {x: 0.13, y: 0.13, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1530598917471601461}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 40.8, y: -27.793}
-  m_SizeDelta: {x: 313.4484, y: 232.02}
+  m_AnchoredPosition: {x: 38.180603, y: -20}
+  m_SizeDelta: {x: 532.4187, y: 232.02}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5434240444164555666
 CanvasRenderer:
@@ -350,4 +335,4 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u5E8F\u53F7"
+  m_Text: No.25

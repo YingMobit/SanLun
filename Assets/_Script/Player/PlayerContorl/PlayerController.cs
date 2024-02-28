@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour
     private Vector3 relative_pos;
     public Vector3 MousePos;
 
-    [Header("»ù´¡ÊôÐÔ")]
+    [Header("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½")]
     public float Turningspeed;
     public float Bas_MoveSpeed;
     public int Bas_MaxHealth;
@@ -27,7 +27,7 @@ public class PlayerController : MonoBehaviour
     public int Bufon_Health;
     public float Bufon_Speed;
 
-    [Header("Êµ¼ÊÊôÐÔ")]
+    [Header("Êµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½")]
     public float Fac_Speed;
     public float Fac_SuckBloodChance;
     public bool Whether_Generate_Shield;
@@ -48,7 +48,7 @@ public class PlayerController : MonoBehaviour
     }
 
 
-    [Header("ÊµÊ±²ÎÊý")]
+    [Header("ÊµÊ±ï¿½ï¿½ï¿½ï¿½")]
     public bool dead;
     public float Last_Be_Attacked_time;
     public GameObject Shield;
@@ -74,7 +74,7 @@ public class PlayerController : MonoBehaviour
     public Rigidbody2D rigidbody;
 
     [SerializeField]
-    [Tooltip("Íæ¼ÒÒÆ¶¯")]
+    [Tooltip("ï¿½ï¿½ï¿½ï¿½Æ¶ï¿½")]
     public float move_dir_x;
     public float move_dir_y;
 
@@ -141,6 +141,7 @@ public class PlayerController : MonoBehaviour
     void Dead()
     { 
         dead = true;
+        PlayerPrefs.SetInt("PointState", 0);
         animator.SetBool("Dead",true);
     }
 
@@ -151,7 +152,7 @@ public class PlayerController : MonoBehaviour
         float chance = (float)rand.NextDouble();
         if (chance <= Fac_SuckBloodChance)
         {
-            Debug.Log("ÎüÑª");
+            Debug.Log("ï¿½ï¿½Ñª");
             Health += Blood_suck_value;
             if (Health > Fac_MaxHealth) Health = Fac_MaxHealth;
             GameObject newCurePop = Instantiate(CurePop,transform.position,Quaternion.identity);

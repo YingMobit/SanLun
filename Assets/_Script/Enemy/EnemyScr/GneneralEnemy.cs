@@ -162,7 +162,7 @@ public class GneneralEnemy : MonoBehaviour
     {
         Dead = true;
         StopCoroutine(Attack());
-        Die.Invoke();
+        Die?.Invoke();
         exp.CorrentExp += BAS_data.Exp_reward;
         if (new_Attackarea != null) Destroy(new_Attackarea);
         Body.enabled = false;

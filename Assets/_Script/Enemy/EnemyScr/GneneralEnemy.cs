@@ -1,3 +1,4 @@
+
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -117,7 +118,7 @@ public class GneneralEnemy : MonoBehaviour
         animator.SetBool("Attacking", Attacking);
         rigidbody.velocity = Vector3.zero;
         Vector3 Relative_pos = Player.transform.position - transform.position;
-        float angle;//Éú³É¹¥»÷Ö¸Ê¾Æ÷µÄ·½Ïò
+        float angle;//ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½Ö¸Ê¾ï¿½ï¿½ï¿½Ä·ï¿½ï¿½ï¿½
         angle = Mathf.Atan2(Relative_pos.x, Relative_pos.y) * Mathf.Rad2Deg;
         new_Attackarea = Instantiate(Attackarea, transform.position + new Vector3(0, BAS_data.BAS_Attackarea, 0), Quaternion.identity);
         new_Attackarea.transform.RotateAround(transform.position, Vector3.forward, -angle);
@@ -218,7 +219,7 @@ public class GneneralEnemy : MonoBehaviour
         PathFindingManager pathFindingManager = new PathFindingManager();
         if (Ground != null && Obstacle != null)
         {
-            Debug.Log("±ÜÕÏ");
+            Debug.Log("ï¿½ï¿½ï¿½ï¿½");
             List<AStarTile> path = pathFindingManager.FindPath(Ground.WorldToCell(transform.position), Ground.WorldToCell(Player.transform.position), pathFindingManager.InitialTile(Ground, Obstacle), Ground, Obstacle);
             do
             {

@@ -95,7 +95,7 @@ MonoBehaviour:
   m_MinWidth: -1
   m_MinHeight: -1
   m_PreferredWidth: -1
-  m_PreferredHeight: 40
+  m_PreferredHeight: 107
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
@@ -126,14 +126,14 @@ RectTransform:
   m_GameObject: {fileID: 3096358870754488089}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.13, y: 0.13, z: 1}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1530598917471601461}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 287.7268, y: -20}
+  m_AnchoredPosition: {x: 826, y: -51.643}
   m_SizeDelta: {x: 590.5152, y: 232.02}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4897532464470893332
@@ -205,14 +205,14 @@ RectTransform:
   m_GameObject: {fileID: 4632990279352322644}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.13, y: 0.13, z: 1}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1530598917471601461}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 159.5, y: -20}
+  m_AnchoredPosition: {x: 452, y: -51.643}
   m_SizeDelta: {x: 1358.7504, y: 232.02}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5775759586142182980
@@ -284,15 +284,15 @@ RectTransform:
   m_GameObject: {fileID: 6480989906473267379}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.13, y: 0.13, z: 1}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1530598917471601461}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 38.180603, y: -20}
-  m_SizeDelta: {x: 532.4187, y: 232.02}
+  m_AnchoredPosition: {x: 92.68, y: -51.643}
+  m_SizeDelta: {x: 440.821, y: 232.02}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5434240444164555666
 CanvasRenderer:

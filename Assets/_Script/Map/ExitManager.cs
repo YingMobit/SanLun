@@ -28,9 +28,9 @@ public class ExitManager : MonoBehaviour
         ProtalBar.transform.GetChild(2).GetComponent<Text>().text = timer + "/"+ delay;
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (other.CompareTag("Player"))
+        if (collision.CompareTag("Player"))
         {
             ProtalBar.gameObject.SetActive(true); // 显示进度条
             timer = 0.0f; // 重置计时器
@@ -39,9 +39,9 @@ public class ExitManager : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit2D(Collider2D other)
+    private void OnTriggerExit2D(Collider2D collision)
     {
-        if (other.CompareTag("Player"))
+        if (collision.CompareTag("Player"))
         {
             IsPlayerInTrigger = false;
         }

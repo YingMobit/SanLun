@@ -43,14 +43,11 @@ public class MapGenerator : MonoBehaviour
 
     void Awake()
     {
-        if (Instance == null)// 检查是否已经存在一个实例
+        if (Instance != null && Instance != this)
         {
-            Instance = this;
+            Destroy(Instance.gameObject);  // 销毁旧实例
         }
-        else
-        {
-            Destroy(gameObject);// 如果已经存在实例，销毁当前实例，以确保只有一个实例存在
-        }
+        Instance = this;
     }
 
     //外部函数
@@ -370,4 +367,15 @@ public class MapGenerator : MonoBehaviour
         Vector3Int gridPos = grid.WorldToCell(worldPos);
         //Debug.Log(gridPos);
     }
+
+    private void OnDisable()
+    {
+        Health.UpdataMap -= AddMap;
+        Health.AddExit -= GenerateExit;
+        if (Instance == this)
+        {
+            Instance = null;
+        }
+    }
+
 }

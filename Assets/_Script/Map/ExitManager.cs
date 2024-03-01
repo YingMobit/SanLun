@@ -49,7 +49,7 @@ public class ExitManager : MonoBehaviour
     // 读条
     private void LoadTime()
     {
-        if (ProtalBar.gameObject.activeSelf)
+        if (ProtalBar.activeSelf)
         {
             if (IsPlayerInTrigger)// 如果进度条处于激活状态，但玩家不在触发区内，则减少进度条
             {
@@ -57,9 +57,9 @@ public class ExitManager : MonoBehaviour
                 UpdateProgressBar();
                 if (timer >= delay)
                 {
-                    SceneLoader.Instance.SwichScene();
-                    ProtalBar.gameObject.SetActive(false); // 隐藏进度条
+                    ProtalBar.SetActive(false); // 隐藏进度条
                     PlayerPrefs.SetInt("PointState", 1);//1 成功 0 死亡 -1无数据/已读取
+                    SceneLoader.Instance.SwichScene();
                 }
             }
             else
@@ -69,7 +69,7 @@ public class ExitManager : MonoBehaviour
                 if (timer <= 0.0f)
                 {
                     timer = 0.0f;
-                    ProtalBar.gameObject.SetActive(false);// 当计时器为0时销毁进度条
+                    ProtalBar.SetActive(false);// 当计时器为0时销毁进度条
                 }
             }
         }

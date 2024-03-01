@@ -85,19 +85,8 @@ public class Health : MonoBehaviour
         {
             switch (tag)
             {
-                //这边Timer里的timer还没改成静态
                 case "Barrier":
                     maxHealth = 1f;
-                    // 初始给50,后面调
-                    break;
-                case "PBO":
-                    maxHealth = Mathf.RoundToInt(Enemy.BAS_MaxHealth + 0.3f * Timer.timer);
-                    break;
-                case "Simple":
-                    maxHealth = Mathf.RoundToInt(Enemy.BAS_MaxHealth + 0.3f * Timer.timer);
-                    break;
-                case "Tank":
-                    maxHealth = Mathf.RoundToInt(Enemy.BAS_MaxHealth + 0.3f * Timer.timer);
                     break;
                 default:
                     break;

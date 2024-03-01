@@ -91,6 +91,7 @@ public class Guidance : MonoBehaviour
         else
         {
             DialogPanel.SetActive(false);
+            PlayerPrefs.SetInt("IsFirst", 0);
             player.GetComponent<BasePlayer>().enabled = true;
         }
     }

@@ -10,6 +10,7 @@ public class Enter : MonoBehaviour
     {
         if(collision.tag == "Player")
         {
+            PlayerPrefs.SetInt("PointState", -1);
             SceneLoader.Instance.SwichScene();
         }
     }

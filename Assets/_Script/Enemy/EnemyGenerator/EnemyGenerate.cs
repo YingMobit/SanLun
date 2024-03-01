@@ -104,23 +104,26 @@ public class EnemyGenerate : MonoBehaviour
     {
         int seed = DateTime.Now.GetHashCode();
         System.Random rand = new System.Random(seed);
-        BoundsInt Bounds = Ground.cellBounds;
         bool isPositionFar =false;
         Vector3 Position = new Vector3(0,0,0);
-        if (Bounds.xMin + 1 < Bounds.xMax - 1 && Bounds.yMin + 1 < Bounds.yMax - 1)
+        if (Ground != null)
         {
-            do
+            BoundsInt Bounds = Ground.cellBounds;
+            if (Bounds.xMin + 1 < Bounds.xMax - 1 && Bounds.yMin + 1 < Bounds.yMax - 1)
             {
-                Debug.Log(new Vector2Int(Bounds.xMin + 1, Bounds.xMax - 1));
-                Debug.Log(new Vector2Int(Bounds.yMin + 1, Bounds.yMax - 1));
-                int X = rand.Next(Bounds.xMin + 1, Bounds.xMax - 1);
-                int Y = rand.Next(Bounds.yMin + 1, Bounds.yMax - 1);
-                Vector3Int spawnPosition = new Vector3Int(X, Y, 0);
-                Position = Ground.CellToWorld(spawnPosition);
-                isPositionFar = Vector3.Distance(Position, Player.transform.position) >= Closest_generate_distance;
+                do
+                {
+                    Debug.Log(new Vector2Int(Bounds.xMin + 1, Bounds.xMax - 1));
+                    Debug.Log(new Vector2Int(Bounds.yMin + 1, Bounds.yMax - 1));
+                    int X = rand.Next(Bounds.xMin + 1, Bounds.xMax - 1);
+                    int Y = rand.Next(Bounds.yMin + 1, Bounds.yMax - 1);
+                    Vector3Int spawnPosition = new Vector3Int(X, Y, 0);
+                    Position = Ground.CellToWorld(spawnPosition);
+                    isPositionFar = Vector3.Distance(Position, Player.transform.position) >= Closest_generate_distance;
+                }
+                while (!MapGenerator.Instance.EnemyPos(Position) || !isPositionFar);
+                return Position;
             }
-            while (!MapGenerator.Instance.EnemyPos(Position) || !isPositionFar);
-            return Position;
         }
         return Position;
 

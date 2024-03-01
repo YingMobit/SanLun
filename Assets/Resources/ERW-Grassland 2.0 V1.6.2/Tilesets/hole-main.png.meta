@@ -3,7 +3,7 @@ guid: b351335b1d189c748bcebf9b576b0366
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -20,11 +20,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -63,6 +64,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -74,6 +77,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -86,6 +90,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -98,6 +103,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -110,6 +116,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -2205,108 +2212,107 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      hole-main_1: -1136918835
-      hole-main_74: 743881937
-      hole-main_4: 1562629525
-      hole-main_22: -1504310040
-      hole-main_32: 1929870818
-      hole-main_81: -290693578
-      hole-main_47: -1014895340
-      hole-main_52: 907264946
-      hole-main_60: 592301890
-      hole-main_42: -1729904122
-      hole-main_48: 699422034
-      hole-main_65: 985747789
-      hole-main_46: -167910852
-      hole-main_16: -36458201
-      hole-main_36: 1126591770
-      hole-main_85: -1816771531
-      hole-main_89: 1201293734
-      hole-main_64: 1227800227
-      hole-main_58: -12436390
-      hole-main_6: 1675481455
-      hole-main_26: 1812492411
-      hole-main_34: 966675785
-      hole-main_23: -1970029204
-      hole-main_8: -2019173337
-      hole-main_73: 1612614266
-      hole-main_70: 1166941452
-      hole-main_43: 387868528
-      hole-main_27: 294028711
-      hole-main_79: -1226149957
-      hole-main_14: -1801433864
-      hole-main_44: 1573188764
-      hole-main_51: -1396174992
-      hole-main_67: 984515102
-      hole-main_96: -226760298
-      hole-main_11: -1775311123
-      hole-main_71: 809108715
-      hole-main_9: 1435902166
-      hole-main_95: 230258763
-      hole-main_76: -571964584
-      hole-main_40: -551649108
-      hole-main_7: -1766136584
       hole-main_0: -512039898
-      hole-main_38: -1541111418
-      hole-main_35: -1403015971
-      hole-main_17: 1253023562
-      hole-main_21: 1067935350
-      hole-main_30: 1092491957
-      hole-main_61: -2083919109
-      hole-main_84: 795311084
-      hole-main_72: 575627442
-      hole-main_75: 1049124751
-      hole-main_50: 1650040331
+      hole-main_1: -1136918835
+      hole-main_10: 700234351
+      hole-main_11: -1775311123
+      hole-main_12: 804982555
+      hole-main_13: -1308930767
+      hole-main_14: -1801433864
       hole-main_15: 962595580
-      hole-main_55: -739635330
-      hole-main_53: -1225710930
-      hole-main_49: -1524626615
-      hole-main_56: -894887797
-      hole-main_39: 1353004291
-      hole-main_94: -424301353
-      hole-main_68: -1320514339
+      hole-main_16: -36458201
+      hole-main_17: 1253023562
       hole-main_18: 505806814
       hole-main_19: 1369430933
-      hole-main_80: -164962636
-      hole-main_83: -1539005569
-      hole-main_28: 1835089385
-      hole-main_66: -577312539
-      hole-main_12: 804982555
-      hole-main_82: 2081001866
-      hole-main_31: 326484471
-      hole-main_86: -1602732146
-      hole-main_29: -1279711353
-      hole-main_41: -28340184
-      hole-main_62: 1789255212
-      hole-main_88: 1491886245
-      hole-main_91: 968004388
-      hole-main_10: 700234351
+      hole-main_2: 550352748
+      hole-main_20: -1468649973
+      hole-main_21: 1067935350
+      hole-main_22: -1504310040
+      hole-main_23: -1970029204
+      hole-main_24: 760487139
       hole-main_25: -23629736
+      hole-main_26: 1812492411
+      hole-main_27: 294028711
+      hole-main_28: 1835089385
+      hole-main_29: -1279711353
       hole-main_3: -558692759
-      hole-main_87: -2047511657
+      hole-main_30: 1092491957
+      hole-main_31: 326484471
+      hole-main_32: 1929870818
+      hole-main_33: 1573542596
+      hole-main_34: 966675785
+      hole-main_35: -1403015971
+      hole-main_36: 1126591770
+      hole-main_37: -1092706749
+      hole-main_38: -1541111418
+      hole-main_39: 1353004291
+      hole-main_4: 1562629525
+      hole-main_40: -551649108
+      hole-main_41: -28340184
+      hole-main_42: -1729904122
+      hole-main_43: 387868528
+      hole-main_44: 1573188764
+      hole-main_45: -973545753
+      hole-main_46: -167910852
+      hole-main_47: -1014895340
+      hole-main_48: 699422034
+      hole-main_49: -1524626615
+      hole-main_5: -915519084
+      hole-main_50: 1650040331
+      hole-main_51: -1396174992
+      hole-main_52: 907264946
+      hole-main_53: -1225710930
       hole-main_54: -597308096
+      hole-main_55: -739635330
+      hole-main_56: -894887797
+      hole-main_57: -1270478322
+      hole-main_58: -12436390
+      hole-main_59: 355040328
+      hole-main_6: 1675481455
+      hole-main_60: 592301890
+      hole-main_61: -2083919109
+      hole-main_62: 1789255212
+      hole-main_63: 971874487
+      hole-main_64: 1227800227
+      hole-main_65: 985747789
+      hole-main_66: -577312539
+      hole-main_67: 984515102
+      hole-main_68: -1320514339
+      hole-main_69: -1033611103
+      hole-main_7: -1766136584
+      hole-main_70: 1166941452
+      hole-main_71: 809108715
+      hole-main_72: 575627442
+      hole-main_73: 1612614266
+      hole-main_74: 743881937
+      hole-main_75: 1049124751
+      hole-main_76: -571964584
+      hole-main_77: -1636508301
+      hole-main_78: 1082838859
+      hole-main_79: -1226149957
+      hole-main_8: -2019173337
+      hole-main_80: -164962636
+      hole-main_81: -290693578
+      hole-main_82: 2081001866
+      hole-main_83: -1539005569
+      hole-main_84: 795311084
+      hole-main_85: -1816771531
+      hole-main_86: -1602732146
+      hole-main_87: -2047511657
+      hole-main_88: 1491886245
+      hole-main_89: 1201293734
+      hole-main_9: 1435902166
+      hole-main_90: 1691494435
+      hole-main_91: 968004388
+      hole-main_92: 984017230
+      hole-main_93: 33202860
+      hole-main_94: -424301353
+      hole-main_95: 230258763
+      hole-main_96: -226760298
       hole-main_97: 1772329290
       hole-main_98: -897252971
-      hole-main_69: -1033611103
-      hole-main_77: -1636508301
-      hole-main_92: 984017230
-      hole-main_57: -1270478322
-      hole-main_59: 355040328
-      hole-main_33: 1573542596
-      hole-main_93: 33202860
-      hole-main_2: 550352748
-      hole-main_90: 1691494435
-      hole-main_20: -1468649973
-      hole-main_5: -915519084
-      hole-main_13: -1308930767
-      hole-main_45: -973545753
-      hole-main_37: -1092706749
-      hole-main_63: 971874487
-      hole-main_24: 760487139
-      hole-main_78: 1082838859
-  spritePackingTag: 
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

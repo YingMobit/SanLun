@@ -3,7 +3,7 @@ guid: eb27decd71bda294ca0fd76cbf125ddb
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -20,11 +20,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -63,6 +64,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -74,6 +77,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -86,6 +90,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -98,6 +103,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -110,6 +116,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -630,33 +637,32 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Insects-butterfly2-flying around-24 frames-150x106_16: 1810113158
-      Insects-butterfly2-flying around-24 frames-150x106_3: 377682418
-      Insects-butterfly2-flying around-24 frames-150x106_1: 290616692
-      Insects-butterfly2-flying around-24 frames-150x106_11: -710072409
-      Insects-butterfly2-flying around-24 frames-150x106_7: -1069317692
-      Insects-butterfly2-flying around-24 frames-150x106_13: 609220055
       Insects-butterfly2-flying around-24 frames-150x106_0: -796909221
-      Insects-butterfly2-flying around-24 frames-150x106_22: 1415662456
-      Insects-butterfly2-flying around-24 frames-150x106_15: 973908255
-      Insects-butterfly2-flying around-24 frames-150x106_18: -717968719
-      Insects-butterfly2-flying around-24 frames-150x106_2: 543859869
-      Insects-butterfly2-flying around-24 frames-150x106_6: -1939349613
-      Insects-butterfly2-flying around-24 frames-150x106_5: 138180308
-      Insects-butterfly2-flying around-24 frames-150x106_17: -845644001
-      Insects-butterfly2-flying around-24 frames-150x106_8: 569864759
-      Insects-butterfly2-flying around-24 frames-150x106_14: 401314913
-      Insects-butterfly2-flying around-24 frames-150x106_19: -1063654631
-      Insects-butterfly2-flying around-24 frames-150x106_20: 1563130461
-      Insects-butterfly2-flying around-24 frames-150x106_23: 640021671
+      Insects-butterfly2-flying around-24 frames-150x106_1: 290616692
       Insects-butterfly2-flying around-24 frames-150x106_10: -2052795975
+      Insects-butterfly2-flying around-24 frames-150x106_11: -710072409
       Insects-butterfly2-flying around-24 frames-150x106_12: -1494826232
+      Insects-butterfly2-flying around-24 frames-150x106_13: 609220055
+      Insects-butterfly2-flying around-24 frames-150x106_14: 401314913
+      Insects-butterfly2-flying around-24 frames-150x106_15: 973908255
+      Insects-butterfly2-flying around-24 frames-150x106_16: 1810113158
+      Insects-butterfly2-flying around-24 frames-150x106_17: -845644001
+      Insects-butterfly2-flying around-24 frames-150x106_18: -717968719
+      Insects-butterfly2-flying around-24 frames-150x106_19: -1063654631
+      Insects-butterfly2-flying around-24 frames-150x106_2: 543859869
+      Insects-butterfly2-flying around-24 frames-150x106_20: 1563130461
       Insects-butterfly2-flying around-24 frames-150x106_21: 1743638775
+      Insects-butterfly2-flying around-24 frames-150x106_22: 1415662456
+      Insects-butterfly2-flying around-24 frames-150x106_23: 640021671
+      Insects-butterfly2-flying around-24 frames-150x106_3: 377682418
       Insects-butterfly2-flying around-24 frames-150x106_4: 375133874
+      Insects-butterfly2-flying around-24 frames-150x106_5: 138180308
+      Insects-butterfly2-flying around-24 frames-150x106_6: -1939349613
+      Insects-butterfly2-flying around-24 frames-150x106_7: -1069317692
+      Insects-butterfly2-flying around-24 frames-150x106_8: 569864759
       Insects-butterfly2-flying around-24 frames-150x106_9: -1980880022
-  spritePackingTag: 
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

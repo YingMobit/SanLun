@@ -3,7 +3,7 @@ guid: 6e7b6efde074dc5468c064f6afc328f1
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -20,11 +20,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -63,6 +64,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -74,6 +77,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -86,6 +90,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -98,6 +103,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -110,6 +116,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -1134,57 +1141,56 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      wall1- ramps_0: 627130721
+      wall1- ramps_1: -1464910657
       wall1- ramps_10: -1057291297
-      wall1- ramps_24: -1613057075
-      wall1- ramps_34: -199206765
-      wall1- ramps_8: 841738188
-      wall1- ramps_29: 1535451894
-      wall1- ramps_46: -1310132104
-      wall1- ramps_30: -1084059476
-      wall1- ramps_5: -1955710621
-      wall1- ramps_25: 1958205934
-      wall1- ramps_23: -2116862310
-      wall1- ramps_45: 169560760
-      wall1- ramps_31: -975178899
-      wall1- ramps_7: 1759453315
-      wall1- ramps_36: 1833275210
-      wall1- ramps_22: 2050432922
-      wall1- ramps_2: -1079103661
-      wall1- ramps_12: 888911273
-      wall1- ramps_17: 1036088373
-      wall1- ramps_28: 828328648
-      wall1- ramps_21: 115672547
-      wall1- ramps_4: -2082338425
-      wall1- ramps_13: 337393738
-      wall1- ramps_33: -982643573
-      wall1- ramps_14: 59103589
       wall1- ramps_11: -186479994
-      wall1- ramps_44: 258798700
+      wall1- ramps_12: 888911273
+      wall1- ramps_13: 337393738
+      wall1- ramps_14: 59103589
+      wall1- ramps_15: -726268318
+      wall1- ramps_16: 813121844
+      wall1- ramps_17: 1036088373
+      wall1- ramps_18: -143918596
+      wall1- ramps_19: 166646819
+      wall1- ramps_2: -1079103661
+      wall1- ramps_20: -535137455
+      wall1- ramps_21: 115672547
+      wall1- ramps_22: 2050432922
+      wall1- ramps_23: -2116862310
+      wall1- ramps_24: -1613057075
+      wall1- ramps_25: 1958205934
+      wall1- ramps_26: -899204489
+      wall1- ramps_27: -1626663608
+      wall1- ramps_28: 828328648
+      wall1- ramps_29: 1535451894
       wall1- ramps_3: 1038883765
+      wall1- ramps_30: -1084059476
+      wall1- ramps_31: -975178899
+      wall1- ramps_32: -312021261
+      wall1- ramps_33: -982643573
+      wall1- ramps_34: -199206765
       wall1- ramps_35: 1827230006
+      wall1- ramps_36: 1833275210
       wall1- ramps_37: -632200748
       wall1- ramps_38: 507237362
-      wall1- ramps_1: -1464910657
-      wall1- ramps_40: -1941530684
-      wall1- ramps_42: -490481540
-      wall1- ramps_41: -1568818079
-      wall1- ramps_47: -627969137
-      wall1- ramps_15: -726268318
       wall1- ramps_39: -675617356
-      wall1- ramps_18: -143918596
-      wall1- ramps_0: 627130721
-      wall1- ramps_19: 166646819
-      wall1- ramps_20: -535137455
-      wall1- ramps_16: 813121844
+      wall1- ramps_4: -2082338425
+      wall1- ramps_40: -1941530684
+      wall1- ramps_41: -1568818079
+      wall1- ramps_42: -490481540
       wall1- ramps_43: 1648515895
-      wall1- ramps_9: 1781876551
-      wall1- ramps_27: -1626663608
+      wall1- ramps_44: 258798700
+      wall1- ramps_45: 169560760
+      wall1- ramps_46: -1310132104
+      wall1- ramps_47: -627969137
+      wall1- ramps_5: -1955710621
       wall1- ramps_6: 1381316355
-      wall1- ramps_26: -899204489
-      wall1- ramps_32: -312021261
-  spritePackingTag: 
+      wall1- ramps_7: 1759453315
+      wall1- ramps_8: 841738188
+      wall1- ramps_9: 1781876551
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

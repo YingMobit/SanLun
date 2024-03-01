@@ -3,7 +3,7 @@ guid: 06629e608ad513c4a927fa4723fcd630
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -20,11 +20,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -63,6 +64,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -74,6 +77,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -86,6 +90,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -98,6 +103,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -110,6 +116,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -2457,120 +2464,119 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      wall1_44: 1472127292
-      wall1_32: 943958189
-      wall1_43: -998002268
-      wall1_3: 924850414
-      wall1_5: 557993674
-      wall1_68: -1889189747
-      wall1_74: -600614912
-      wall1_108: 90711824
-      wall1_93: -1134869116
-      wall1_8: 238837264
-      wall1_52: 260251954
-      wall1_104: -1556110854
-      wall1_34: 53450531
-      wall1_99: 856908478
-      wall1_66: 796832439
-      wall1_49: -1085063806
-      wall1_21: 1248917876
-      wall1_89: 2086019046
-      wall1_64: -1653040319
-      wall1_105: -349540004
-      wall1_19: 1281952480
-      wall1_78: 533461941
-      wall1_40: -1128672541
-      wall1_67: 630857573
-      wall1_4: -825859016
-      wall1_23: -1986762156
-      wall1_106: -331891042
-      wall1_70: -193963912
-      wall1_36: -736198903
-      wall1_50: 1660428596
-      wall1_76: -1741896838
-      wall1_80: 371709325
-      wall1_31: -441351321
-      wall1_30: 662982630
-      wall1_77: -2135635980
-      wall1_20: 1584387399
-      wall1_29: 885540642
-      wall1_55: 1620986840
-      wall1_90: 698151481
-      wall1_110: 518003029
-      wall1_81: -1576156395
-      wall1_97: -563795449
-      wall1_10: 1209089977
-      wall1_56: -1334811555
-      wall1_38: 2117318121
-      wall1_46: 1714946531
-      wall1_2: -1490132539
-      wall1_16: -57150262
-      wall1_6: 410602398
-      wall1_54: -881020086
-      wall1_82: -222673908
-      wall1_28: -810115126
-      wall1_15: 2069491779
-      wall1_75: 2115513542
-      wall1_39: 875299512
-      wall1_86: -785380059
-      wall1_14: -611236259
-      wall1_79: -2109478281
-      wall1_41: 833095505
-      wall1_26: -1300823502
-      wall1_58: 554435189
-      wall1_98: -505125599
-      wall1_100: -250830769
-      wall1_11: 358791583
-      wall1_59: -1117172487
-      wall1_53: -1159814118
-      wall1_95: 917104137
-      wall1_1: 411799836
-      wall1_33: -1632466583
-      wall1_88: -1867984898
-      wall1_17: 378988927
-      wall1_24: -71537386
-      wall1_65: 170663387
-      wall1_94: 1550101822
-      wall1_51: 1756679554
-      wall1_83: 207489940
-      wall1_96: 1323278328
-      wall1_109: -663599988
-      wall1_12: 1709111725
-      wall1_22: 380376252
-      wall1_60: -1503167011
-      wall1_35: -396844000
-      wall1_57: 277518026
-      wall1_27: 2032767911
-      wall1_42: -1016646288
-      wall1_37: -607894598
-      wall1_103: 75776087
-      wall1_18: 1250514408
-      wall1_69: 1788772281
-      wall1_87: -2008363100
-      wall1_92: 231345480
-      wall1_85: 801457628
-      wall1_48: -1195142745
-      wall1_61: 113329963
       wall1_0: 455427678
-      wall1_62: -606501533
-      wall1_71: -1634576823
-      wall1_84: -448822889
-      wall1_7: 556883565
-      wall1_73: 1632446790
-      wall1_13: 1757545825
-      wall1_107: -427666873
-      wall1_72: -552574352
-      wall1_47: 223893808
-      wall1_63: 1698041412
-      wall1_25: 1703679977
-      wall1_102: -1132695740
-      wall1_9: 1614941725
+      wall1_1: 411799836
+      wall1_10: 1209089977
+      wall1_100: -250830769
       wall1_101: 1507587252
+      wall1_102: -1132695740
+      wall1_103: 75776087
+      wall1_104: -1556110854
+      wall1_105: -349540004
+      wall1_106: -331891042
+      wall1_107: -427666873
+      wall1_108: 90711824
+      wall1_109: -663599988
+      wall1_11: 358791583
+      wall1_110: 518003029
+      wall1_12: 1709111725
+      wall1_13: 1757545825
+      wall1_14: -611236259
+      wall1_15: 2069491779
+      wall1_16: -57150262
+      wall1_17: 378988927
+      wall1_18: 1250514408
+      wall1_19: 1281952480
+      wall1_2: -1490132539
+      wall1_20: 1584387399
+      wall1_21: 1248917876
+      wall1_22: 380376252
+      wall1_23: -1986762156
+      wall1_24: -71537386
+      wall1_25: 1703679977
+      wall1_26: -1300823502
+      wall1_27: 2032767911
+      wall1_28: -810115126
+      wall1_29: 885540642
+      wall1_3: 924850414
+      wall1_30: 662982630
+      wall1_31: -441351321
+      wall1_32: 943958189
+      wall1_33: -1632466583
+      wall1_34: 53450531
+      wall1_35: -396844000
+      wall1_36: -736198903
+      wall1_37: -607894598
+      wall1_38: 2117318121
+      wall1_39: 875299512
+      wall1_4: -825859016
+      wall1_40: -1128672541
+      wall1_41: 833095505
+      wall1_42: -1016646288
+      wall1_43: -998002268
+      wall1_44: 1472127292
       wall1_45: 2137208527
+      wall1_46: 1714946531
+      wall1_47: 223893808
+      wall1_48: -1195142745
+      wall1_49: -1085063806
+      wall1_5: 557993674
+      wall1_50: 1660428596
+      wall1_51: 1756679554
+      wall1_52: 260251954
+      wall1_53: -1159814118
+      wall1_54: -881020086
+      wall1_55: 1620986840
+      wall1_56: -1334811555
+      wall1_57: 277518026
+      wall1_58: 554435189
+      wall1_59: -1117172487
+      wall1_6: 410602398
+      wall1_60: -1503167011
+      wall1_61: 113329963
+      wall1_62: -606501533
+      wall1_63: 1698041412
+      wall1_64: -1653040319
+      wall1_65: 170663387
+      wall1_66: 796832439
+      wall1_67: 630857573
+      wall1_68: -1889189747
+      wall1_69: 1788772281
+      wall1_7: 556883565
+      wall1_70: -193963912
+      wall1_71: -1634576823
+      wall1_72: -552574352
+      wall1_73: 1632446790
+      wall1_74: -600614912
+      wall1_75: 2115513542
+      wall1_76: -1741896838
+      wall1_77: -2135635980
+      wall1_78: 533461941
+      wall1_79: -2109478281
+      wall1_8: 238837264
+      wall1_80: 371709325
+      wall1_81: -1576156395
+      wall1_82: -222673908
+      wall1_83: 207489940
+      wall1_84: -448822889
+      wall1_85: 801457628
+      wall1_86: -785380059
+      wall1_87: -2008363100
+      wall1_88: -1867984898
+      wall1_89: 2086019046
+      wall1_9: 1614941725
+      wall1_90: 698151481
       wall1_91: -1789220672
-  spritePackingTag: 
+      wall1_92: 231345480
+      wall1_93: -1134869116
+      wall1_94: 1550101822
+      wall1_95: 917104137
+      wall1_96: 1323278328
+      wall1_97: -563795449
+      wall1_98: -505125599
+      wall1_99: 856908478
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

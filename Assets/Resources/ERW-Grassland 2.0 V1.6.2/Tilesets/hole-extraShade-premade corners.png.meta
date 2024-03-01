@@ -3,7 +3,7 @@ guid: 9ea2f18c74deb6043965bfe9de4b483b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -20,11 +20,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -63,6 +64,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -74,6 +77,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -86,6 +90,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -98,6 +103,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -110,6 +116,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -1176,59 +1183,58 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      hole-extraShade-premade corners_21: 558476990
-      hole-extraShade-premade corners_48: 633583749
-      hole-extraShade-premade corners_13: 1359502937
-      hole-extraShade-premade corners_32: 247828285
-      hole-extraShade-premade corners_17: -262659685
-      hole-extraShade-premade corners_4: 1476487361
+      hole-extraShade-premade corners_0: 1616247147
+      hole-extraShade-premade corners_1: 437911284
+      hole-extraShade-premade corners_10: -534589708
       hole-extraShade-premade corners_11: -2054445218
+      hole-extraShade-premade corners_12: 763308583
+      hole-extraShade-premade corners_13: 1359502937
+      hole-extraShade-premade corners_14: 525670806
+      hole-extraShade-premade corners_15: 313040783
+      hole-extraShade-premade corners_16: -1467243482
+      hole-extraShade-premade corners_17: -262659685
+      hole-extraShade-premade corners_18: 585186196
       hole-extraShade-premade corners_19: 324074135
-      hole-extraShade-premade corners_6: -384649063
+      hole-extraShade-premade corners_2: 609516163
+      hole-extraShade-premade corners_20: 403289201
+      hole-extraShade-premade corners_21: 558476990
+      hole-extraShade-premade corners_22: -314991237
+      hole-extraShade-premade corners_23: -972882669
+      hole-extraShade-premade corners_24: 1404139574
+      hole-extraShade-premade corners_25: 1210091199
+      hole-extraShade-premade corners_26: -1419086921
+      hole-extraShade-premade corners_27: -1765325946
       hole-extraShade-premade corners_28: -469804611
       hole-extraShade-premade corners_29: -9066615
-      hole-extraShade-premade corners_0: 1616247147
-      hole-extraShade-premade corners_45: -1021169783
-      hole-extraShade-premade corners_40: 712588420
-      hole-extraShade-premade corners_43: -1745331549
       hole-extraShade-premade corners_3: 387140639
-      hole-extraShade-premade corners_34: -397337064
-      hole-extraShade-premade corners_8: -1444425681
-      hole-extraShade-premade corners_26: -1419086921
-      hole-extraShade-premade corners_12: 763308583
-      hole-extraShade-premade corners_33: 368164708
-      hole-extraShade-premade corners_44: 585457709
-      hole-extraShade-premade corners_49: 985151146
-      hole-extraShade-premade corners_25: 1210091199
-      hole-extraShade-premade corners_23: -972882669
       hole-extraShade-premade corners_30: -1729284938
       hole-extraShade-premade corners_31: -933816010
-      hole-extraShade-premade corners_9: -773841134
-      hole-extraShade-premade corners_24: 1404139574
-      hole-extraShade-premade corners_47: -682194185
-      hole-extraShade-premade corners_37: -1185788907
+      hole-extraShade-premade corners_32: 247828285
+      hole-extraShade-premade corners_33: 368164708
+      hole-extraShade-premade corners_34: -397337064
       hole-extraShade-premade corners_35: 1439218045
-      hole-extraShade-premade corners_18: 585186196
-      hole-extraShade-premade corners_15: 313040783
-      hole-extraShade-premade corners_7: -651061566
-      hole-extraShade-premade corners_27: -1765325946
-      hole-extraShade-premade corners_38: -1225688323
-      hole-extraShade-premade corners_46: 432611034
-      hole-extraShade-premade corners_5: 1593566139
       hole-extraShade-premade corners_36: -71815937
-      hole-extraShade-premade corners_42: -908970704
+      hole-extraShade-premade corners_37: -1185788907
+      hole-extraShade-premade corners_38: -1225688323
       hole-extraShade-premade corners_39: -1349198807
-      hole-extraShade-premade corners_2: 609516163
-      hole-extraShade-premade corners_14: 525670806
+      hole-extraShade-premade corners_4: 1476487361
+      hole-extraShade-premade corners_40: 712588420
       hole-extraShade-premade corners_41: -1759019336
-      hole-extraShade-premade corners_22: -314991237
-      hole-extraShade-premade corners_16: -1467243482
-      hole-extraShade-premade corners_10: -534589708
-      hole-extraShade-premade corners_20: 403289201
-      hole-extraShade-premade corners_1: 437911284
-  spritePackingTag: 
+      hole-extraShade-premade corners_42: -908970704
+      hole-extraShade-premade corners_43: -1745331549
+      hole-extraShade-premade corners_44: 585457709
+      hole-extraShade-premade corners_45: -1021169783
+      hole-extraShade-premade corners_46: 432611034
+      hole-extraShade-premade corners_47: -682194185
+      hole-extraShade-premade corners_48: 633583749
+      hole-extraShade-premade corners_49: 985151146
+      hole-extraShade-premade corners_5: 1593566139
+      hole-extraShade-premade corners_6: -384649063
+      hole-extraShade-premade corners_7: -651061566
+      hole-extraShade-premade corners_8: -1444425681
+      hole-extraShade-premade corners_9: -773841134
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

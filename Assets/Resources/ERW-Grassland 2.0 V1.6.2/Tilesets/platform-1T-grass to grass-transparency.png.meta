@@ -3,7 +3,7 @@ guid: d44208b2ed2be6b4187dfd74edb9307f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -20,11 +20,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -63,6 +64,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -74,6 +77,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -86,6 +90,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -98,6 +103,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -110,6 +116,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -1554,77 +1561,76 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      platform-1T-grass to grass-transparency_2: 2062920838
-      platform-1T-grass to grass-transparency_36: -1730505886
-      platform-1T-grass to grass-transparency_38: -1666693815
-      platform-1T-grass to grass-transparency_60: 1667481344
-      platform-1T-grass to grass-transparency_37: -550471763
-      platform-1T-grass to grass-transparency_12: -572681657
-      platform-1T-grass to grass-transparency_24: 400327723
-      platform-1T-grass to grass-transparency_57: 1179490684
-      platform-1T-grass to grass-transparency_43: -1305769732
-      platform-1T-grass to grass-transparency_31: 52129800
-      platform-1T-grass to grass-transparency_47: 131501656
-      platform-1T-grass to grass-transparency_55: -326678066
-      platform-1T-grass to grass-transparency_22: 1365248287
-      platform-1T-grass to grass-transparency_8: 1433455213
-      platform-1T-grass to grass-transparency_40: 1678571012
-      platform-1T-grass to grass-transparency_30: -1134199259
-      platform-1T-grass to grass-transparency_51: -516290682
-      platform-1T-grass to grass-transparency_20: 892925388
-      platform-1T-grass to grass-transparency_32: 1454767768
-      platform-1T-grass to grass-transparency_53: -2086888582
-      platform-1T-grass to grass-transparency_59: -1151284660
-      platform-1T-grass to grass-transparency_58: 1252663786
-      platform-1T-grass to grass-transparency_15: -505533321
       platform-1T-grass to grass-transparency_0: -1577933615
-      platform-1T-grass to grass-transparency_41: -460881188
-      platform-1T-grass to grass-transparency_54: -1857622784
-      platform-1T-grass to grass-transparency_28: -1494113223
-      platform-1T-grass to grass-transparency_27: -1048128109
-      platform-1T-grass to grass-transparency_65: 1561963019
-      platform-1T-grass to grass-transparency_17: -947536653
-      platform-1T-grass to grass-transparency_29: -1033432232
-      platform-1T-grass to grass-transparency_46: 1857809841
-      platform-1T-grass to grass-transparency_56: 1169742961
-      platform-1T-grass to grass-transparency_50: 367086538
-      platform-1T-grass to grass-transparency_64: 44979495
-      platform-1T-grass to grass-transparency_7: 87303198
-      platform-1T-grass to grass-transparency_34: -2139749700
-      platform-1T-grass to grass-transparency_14: -1994492427
-      platform-1T-grass to grass-transparency_52: 1438622497
-      platform-1T-grass to grass-transparency_19: -1866155332
-      platform-1T-grass to grass-transparency_16: -1857672733
-      platform-1T-grass to grass-transparency_25: 1312766752
-      platform-1T-grass to grass-transparency_67: -1671942915
-      platform-1T-grass to grass-transparency_42: 1365649691
-      platform-1T-grass to grass-transparency_35: 666389252
-      platform-1T-grass to grass-transparency_11: 359296260
-      platform-1T-grass to grass-transparency_9: 2085657542
-      platform-1T-grass to grass-transparency_6: 1653963891
-      platform-1T-grass to grass-transparency_10: -1047397300
-      platform-1T-grass to grass-transparency_23: -1682899787
-      platform-1T-grass to grass-transparency_4: -2137718824
-      platform-1T-grass to grass-transparency_5: -1891482024
-      platform-1T-grass to grass-transparency_63: -368584486
-      platform-1T-grass to grass-transparency_61: 933249054
-      platform-1T-grass to grass-transparency_3: 726846591
-      platform-1T-grass to grass-transparency_66: 343251061
-      platform-1T-grass to grass-transparency_44: 1358186069
-      platform-1T-grass to grass-transparency_49: -2067729367
-      platform-1T-grass to grass-transparency_18: -856609080
       platform-1T-grass to grass-transparency_1: 326399320
-      platform-1T-grass to grass-transparency_39: -1196617371
-      platform-1T-grass to grass-transparency_33: -821626164
-      platform-1T-grass to grass-transparency_62: 413117833
-      platform-1T-grass to grass-transparency_21: -1946161411
-      platform-1T-grass to grass-transparency_48: -1050389732
+      platform-1T-grass to grass-transparency_10: -1047397300
+      platform-1T-grass to grass-transparency_11: 359296260
+      platform-1T-grass to grass-transparency_12: -572681657
       platform-1T-grass to grass-transparency_13: -1601360992
+      platform-1T-grass to grass-transparency_14: -1994492427
+      platform-1T-grass to grass-transparency_15: -505533321
+      platform-1T-grass to grass-transparency_16: -1857672733
+      platform-1T-grass to grass-transparency_17: -947536653
+      platform-1T-grass to grass-transparency_18: -856609080
+      platform-1T-grass to grass-transparency_19: -1866155332
+      platform-1T-grass to grass-transparency_2: 2062920838
+      platform-1T-grass to grass-transparency_20: 892925388
+      platform-1T-grass to grass-transparency_21: -1946161411
+      platform-1T-grass to grass-transparency_22: 1365248287
+      platform-1T-grass to grass-transparency_23: -1682899787
+      platform-1T-grass to grass-transparency_24: 400327723
+      platform-1T-grass to grass-transparency_25: 1312766752
       platform-1T-grass to grass-transparency_26: 1794846617
+      platform-1T-grass to grass-transparency_27: -1048128109
+      platform-1T-grass to grass-transparency_28: -1494113223
+      platform-1T-grass to grass-transparency_29: -1033432232
+      platform-1T-grass to grass-transparency_3: 726846591
+      platform-1T-grass to grass-transparency_30: -1134199259
+      platform-1T-grass to grass-transparency_31: 52129800
+      platform-1T-grass to grass-transparency_32: 1454767768
+      platform-1T-grass to grass-transparency_33: -821626164
+      platform-1T-grass to grass-transparency_34: -2139749700
+      platform-1T-grass to grass-transparency_35: 666389252
+      platform-1T-grass to grass-transparency_36: -1730505886
+      platform-1T-grass to grass-transparency_37: -550471763
+      platform-1T-grass to grass-transparency_38: -1666693815
+      platform-1T-grass to grass-transparency_39: -1196617371
+      platform-1T-grass to grass-transparency_4: -2137718824
+      platform-1T-grass to grass-transparency_40: 1678571012
+      platform-1T-grass to grass-transparency_41: -460881188
+      platform-1T-grass to grass-transparency_42: 1365649691
+      platform-1T-grass to grass-transparency_43: -1305769732
+      platform-1T-grass to grass-transparency_44: 1358186069
       platform-1T-grass to grass-transparency_45: -1340394930
-  spritePackingTag: 
+      platform-1T-grass to grass-transparency_46: 1857809841
+      platform-1T-grass to grass-transparency_47: 131501656
+      platform-1T-grass to grass-transparency_48: -1050389732
+      platform-1T-grass to grass-transparency_49: -2067729367
+      platform-1T-grass to grass-transparency_5: -1891482024
+      platform-1T-grass to grass-transparency_50: 367086538
+      platform-1T-grass to grass-transparency_51: -516290682
+      platform-1T-grass to grass-transparency_52: 1438622497
+      platform-1T-grass to grass-transparency_53: -2086888582
+      platform-1T-grass to grass-transparency_54: -1857622784
+      platform-1T-grass to grass-transparency_55: -326678066
+      platform-1T-grass to grass-transparency_56: 1169742961
+      platform-1T-grass to grass-transparency_57: 1179490684
+      platform-1T-grass to grass-transparency_58: 1252663786
+      platform-1T-grass to grass-transparency_59: -1151284660
+      platform-1T-grass to grass-transparency_6: 1653963891
+      platform-1T-grass to grass-transparency_60: 1667481344
+      platform-1T-grass to grass-transparency_61: 933249054
+      platform-1T-grass to grass-transparency_62: 413117833
+      platform-1T-grass to grass-transparency_63: -368584486
+      platform-1T-grass to grass-transparency_64: 44979495
+      platform-1T-grass to grass-transparency_65: 1561963019
+      platform-1T-grass to grass-transparency_66: 343251061
+      platform-1T-grass to grass-transparency_67: -1671942915
+      platform-1T-grass to grass-transparency_7: 87303198
+      platform-1T-grass to grass-transparency_8: 1433455213
+      platform-1T-grass to grass-transparency_9: 2085657542
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

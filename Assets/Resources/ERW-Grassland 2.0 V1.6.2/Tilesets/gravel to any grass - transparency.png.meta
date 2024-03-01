@@ -3,7 +3,7 @@ guid: 001964f9f93d3584daa8b5184ef06575
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -20,11 +20,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -63,6 +64,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -74,6 +77,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -86,6 +90,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -98,6 +103,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -110,6 +116,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -1617,80 +1624,79 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      gravel to any grass - transparency_0: 2079832732
+      gravel to any grass - transparency_1: 1416712955
+      gravel to any grass - transparency_10: 668952898
+      gravel to any grass - transparency_11: 332047023
+      gravel to any grass - transparency_12: -421920868
+      gravel to any grass - transparency_13: 1677769441
+      gravel to any grass - transparency_14: 231365333
+      gravel to any grass - transparency_15: -419921438
+      gravel to any grass - transparency_16: 110933658
+      gravel to any grass - transparency_17: -636275361
+      gravel to any grass - transparency_18: -455018136
+      gravel to any grass - transparency_19: 1997390379
+      gravel to any grass - transparency_2: 1016221014
+      gravel to any grass - transparency_20: -2093139401
+      gravel to any grass - transparency_21: -1604436458
+      gravel to any grass - transparency_22: 337128558
+      gravel to any grass - transparency_23: -760170132
+      gravel to any grass - transparency_24: -10802060
+      gravel to any grass - transparency_25: -6992278
+      gravel to any grass - transparency_26: 688896067
+      gravel to any grass - transparency_27: -1499201153
       gravel to any grass - transparency_28: 764574979
       gravel to any grass - transparency_29: 832384625
-      gravel to any grass - transparency_69: -613553101
-      gravel to any grass - transparency_13: 1677769441
-      gravel to any grass - transparency_58: 292362793
-      gravel to any grass - transparency_21: -1604436458
-      gravel to any grass - transparency_35: 1590248991
-      gravel to any grass - transparency_43: -1492297740
-      gravel to any grass - transparency_26: 688896067
-      gravel to any grass - transparency_36: 1094527636
-      gravel to any grass - transparency_4: -893425470
-      gravel to any grass - transparency_50: 1044561928
-      gravel to any grass - transparency_31: -1807297792
-      gravel to any grass - transparency_9: -337163810
-      gravel to any grass - transparency_37: 1743219353
+      gravel to any grass - transparency_3: 845370954
       gravel to any grass - transparency_30: 1463823030
+      gravel to any grass - transparency_31: -1807297792
+      gravel to any grass - transparency_32: -844174269
+      gravel to any grass - transparency_33: -1082351639
+      gravel to any grass - transparency_34: 1272857062
+      gravel to any grass - transparency_35: 1590248991
+      gravel to any grass - transparency_36: 1094527636
+      gravel to any grass - transparency_37: 1743219353
       gravel to any grass - transparency_38: -57846403
-      gravel to any grass - transparency_0: 2079832732
       gravel to any grass - transparency_39: -299745803
-      gravel to any grass - transparency_15: -419921438
-      gravel to any grass - transparency_55: 196087745
-      gravel to any grass - transparency_60: 1000027929
-      gravel to any grass - transparency_46: 1389364160
+      gravel to any grass - transparency_4: -893425470
+      gravel to any grass - transparency_40: 874777094
       gravel to any grass - transparency_41: -136116037
-      gravel to any grass - transparency_1: 1416712955
-      gravel to any grass - transparency_53: -1093485075
-      gravel to any grass - transparency_62: 1079398201
-      gravel to any grass - transparency_14: 231365333
-      gravel to any grass - transparency_66: -527746330
-      gravel to any grass - transparency_68: -1508269176
-      gravel to any grass - transparency_45: -635040352
-      gravel to any grass - transparency_44: -474663492
       gravel to any grass - transparency_42: -1307429419
-      gravel to any grass - transparency_2: 1016221014
-      gravel to any grass - transparency_8: 1357431272
-      gravel to any grass - transparency_59: 1990650506
-      gravel to any grass - transparency_11: 332047023
-      gravel to any grass - transparency_5: 685504189
+      gravel to any grass - transparency_43: -1492297740
+      gravel to any grass - transparency_44: -474663492
+      gravel to any grass - transparency_45: -635040352
+      gravel to any grass - transparency_46: 1389364160
       gravel to any grass - transparency_47: -1852883909
       gravel to any grass - transparency_48: 1033041675
-      gravel to any grass - transparency_17: -636275361
-      gravel to any grass - transparency_56: 429573287
-      gravel to any grass - transparency_6: -492667148
-      gravel to any grass - transparency_65: -639899125
-      gravel to any grass - transparency_57: 1708282493
-      gravel to any grass - transparency_19: 1997390379
-      gravel to any grass - transparency_63: 97333901
-      gravel to any grass - transparency_12: -421920868
-      gravel to any grass - transparency_16: 110933658
-      gravel to any grass - transparency_51: -220615854
-      gravel to any grass - transparency_33: -1082351639
-      gravel to any grass - transparency_7: 1193661535
-      gravel to any grass - transparency_40: 874777094
-      gravel to any grass - transparency_34: 1272857062
-      gravel to any grass - transparency_25: -6992278
-      gravel to any grass - transparency_67: 1022607191
-      gravel to any grass - transparency_70: 44126720
-      gravel to any grass - transparency_18: -455018136
       gravel to any grass - transparency_49: 1474207688
-      gravel to any grass - transparency_24: -10802060
+      gravel to any grass - transparency_5: 685504189
+      gravel to any grass - transparency_50: 1044561928
+      gravel to any grass - transparency_51: -220615854
       gravel to any grass - transparency_52: 622468310
-      gravel to any grass - transparency_10: 668952898
-      gravel to any grass - transparency_20: -2093139401
-      gravel to any grass - transparency_61: -508684526
-      gravel to any grass - transparency_64: -1129923428
-      gravel to any grass - transparency_23: -760170132
+      gravel to any grass - transparency_53: -1093485075
       gravel to any grass - transparency_54: -1374466225
-      gravel to any grass - transparency_3: 845370954
-      gravel to any grass - transparency_32: -844174269
-      gravel to any grass - transparency_27: -1499201153
-      gravel to any grass - transparency_22: 337128558
-  spritePackingTag: 
+      gravel to any grass - transparency_55: 196087745
+      gravel to any grass - transparency_56: 429573287
+      gravel to any grass - transparency_57: 1708282493
+      gravel to any grass - transparency_58: 292362793
+      gravel to any grass - transparency_59: 1990650506
+      gravel to any grass - transparency_6: -492667148
+      gravel to any grass - transparency_60: 1000027929
+      gravel to any grass - transparency_61: -508684526
+      gravel to any grass - transparency_62: 1079398201
+      gravel to any grass - transparency_63: 97333901
+      gravel to any grass - transparency_64: -1129923428
+      gravel to any grass - transparency_65: -639899125
+      gravel to any grass - transparency_66: -527746330
+      gravel to any grass - transparency_67: 1022607191
+      gravel to any grass - transparency_68: -1508269176
+      gravel to any grass - transparency_69: -613553101
+      gravel to any grass - transparency_7: 1193661535
+      gravel to any grass - transparency_70: 44126720
+      gravel to any grass - transparency_8: 1357431272
+      gravel to any grass - transparency_9: -337163810
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

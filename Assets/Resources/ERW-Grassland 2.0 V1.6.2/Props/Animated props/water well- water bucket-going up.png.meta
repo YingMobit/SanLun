@@ -3,7 +3,7 @@ guid: 300e1525851e1344fb72287682f86e5b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -20,11 +20,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -63,6 +64,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -74,6 +77,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -86,6 +90,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -98,6 +103,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -110,6 +116,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -441,24 +448,23 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      water well- water bucket-going up_4: -1006274355
       water well- water bucket-going up_0: -564387916
-      water well- water bucket-going up_3: 136573796
+      water well- water bucket-going up_1: 1198440749
       water well- water bucket-going up_10: -450499787
+      water well- water bucket-going up_11: 51325231
+      water well- water bucket-going up_12: -655082431
+      water well- water bucket-going up_13: -246742551
       water well- water bucket-going up_14: -1284598646
       water well- water bucket-going up_2: 1736311304
-      water well- water bucket-going up_9: 890342428
-      water well- water bucket-going up_13: -246742551
-      water well- water bucket-going up_1: 1198440749
-      water well- water bucket-going up_6: -1666642825
-      water well- water bucket-going up_12: -655082431
+      water well- water bucket-going up_3: 136573796
+      water well- water bucket-going up_4: -1006274355
       water well- water bucket-going up_5: 565212799
+      water well- water bucket-going up_6: -1666642825
       water well- water bucket-going up_7: -1670596916
       water well- water bucket-going up_8: 560714181
-      water well- water bucket-going up_11: 51325231
-  spritePackingTag: 
+      water well- water bucket-going up_9: 890342428
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

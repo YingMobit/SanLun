@@ -3,7 +3,7 @@ guid: 88ac1321725c1714a854d01f36ba7c77
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -20,11 +20,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -63,6 +64,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -74,6 +77,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -86,6 +90,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -98,6 +103,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -110,6 +116,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -1134,57 +1141,56 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      wall1-ramps-transparency_18: 1853073700
-      wall1-ramps-transparency_22: 33427220
-      wall1-ramps-transparency_44: -546867120
-      wall1-ramps-transparency_13: -381535969
-      wall1-ramps-transparency_37: 976989867
-      wall1-ramps-transparency_23: -320404188
-      wall1-ramps-transparency_7: 554501826
-      wall1-ramps-transparency_16: 1376210678
-      wall1-ramps-transparency_19: -1285909724
-      wall1-ramps-transparency_26: 551511422
-      wall1-ramps-transparency_14: 855154429
-      wall1-ramps-transparency_29: -2128738156
-      wall1-ramps-transparency_39: -1810935638
-      wall1-ramps-transparency_45: -1642125170
-      wall1-ramps-transparency_35: 921381857
-      wall1-ramps-transparency_40: -841262607
-      wall1-ramps-transparency_5: 367792956
       wall1-ramps-transparency_0: -47827607
-      wall1-ramps-transparency_2: 1971745027
-      wall1-ramps-transparency_34: -860978725
-      wall1-ramps-transparency_10: -952844920
-      wall1-ramps-transparency_12: -1411603718
-      wall1-ramps-transparency_24: -269399806
       wall1-ramps-transparency_1: 821939570
-      wall1-ramps-transparency_38: -1456217547
+      wall1-ramps-transparency_10: -952844920
       wall1-ramps-transparency_11: 1110908267
-      wall1-ramps-transparency_6: 892877681
-      wall1-ramps-transparency_25: 1774778579
-      wall1-ramps-transparency_47: 1835773258
-      wall1-ramps-transparency_3: -1070295324
-      wall1-ramps-transparency_41: 1308790400
-      wall1-ramps-transparency_8: -107674995
-      wall1-ramps-transparency_17: -2004958935
-      wall1-ramps-transparency_30: 1145650804
-      wall1-ramps-transparency_42: 972246095
-      wall1-ramps-transparency_21: -1437206009
-      wall1-ramps-transparency_32: -1443416074
-      wall1-ramps-transparency_36: -1512639503
-      wall1-ramps-transparency_31: -2040687709
-      wall1-ramps-transparency_20: 2023094876
-      wall1-ramps-transparency_28: -1629554628
+      wall1-ramps-transparency_12: -1411603718
+      wall1-ramps-transparency_13: -381535969
+      wall1-ramps-transparency_14: 855154429
       wall1-ramps-transparency_15: -1839565100
-      wall1-ramps-transparency_4: 101465497
-      wall1-ramps-transparency_33: -149480709
+      wall1-ramps-transparency_16: 1376210678
+      wall1-ramps-transparency_17: -2004958935
+      wall1-ramps-transparency_18: 1853073700
+      wall1-ramps-transparency_19: -1285909724
+      wall1-ramps-transparency_2: 1971745027
+      wall1-ramps-transparency_20: 2023094876
+      wall1-ramps-transparency_21: -1437206009
+      wall1-ramps-transparency_22: 33427220
+      wall1-ramps-transparency_23: -320404188
+      wall1-ramps-transparency_24: -269399806
+      wall1-ramps-transparency_25: 1774778579
+      wall1-ramps-transparency_26: 551511422
       wall1-ramps-transparency_27: -1544194409
+      wall1-ramps-transparency_28: -1629554628
+      wall1-ramps-transparency_29: -2128738156
+      wall1-ramps-transparency_3: -1070295324
+      wall1-ramps-transparency_30: 1145650804
+      wall1-ramps-transparency_31: -2040687709
+      wall1-ramps-transparency_32: -1443416074
+      wall1-ramps-transparency_33: -149480709
+      wall1-ramps-transparency_34: -860978725
+      wall1-ramps-transparency_35: 921381857
+      wall1-ramps-transparency_36: -1512639503
+      wall1-ramps-transparency_37: 976989867
+      wall1-ramps-transparency_38: -1456217547
+      wall1-ramps-transparency_39: -1810935638
+      wall1-ramps-transparency_4: 101465497
+      wall1-ramps-transparency_40: -841262607
+      wall1-ramps-transparency_41: 1308790400
+      wall1-ramps-transparency_42: 972246095
       wall1-ramps-transparency_43: 56913133
+      wall1-ramps-transparency_44: -546867120
+      wall1-ramps-transparency_45: -1642125170
       wall1-ramps-transparency_46: -1059220303
+      wall1-ramps-transparency_47: 1835773258
+      wall1-ramps-transparency_5: 367792956
+      wall1-ramps-transparency_6: 892877681
+      wall1-ramps-transparency_7: 554501826
+      wall1-ramps-transparency_8: -107674995
       wall1-ramps-transparency_9: 1906469295
-  spritePackingTag: 
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

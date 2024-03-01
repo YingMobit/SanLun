@@ -3,7 +3,7 @@ guid: 17221bbd3abc4da4ea001ed054921e3a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -20,11 +20,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -63,6 +64,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -74,6 +77,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -86,6 +90,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -98,6 +103,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -110,6 +116,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -462,25 +469,24 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      chimney smoke-chiminey 2 - white smoke_0: -1533731754
       chimney smoke-chiminey 2 - white smoke_1: 1824772860
-      chimney smoke-chiminey 2 - white smoke_12: 601310185
-      chimney smoke-chiminey 2 - white smoke_2: -668277007
-      chimney smoke-chiminey 2 - white smoke_11: 1541701873
       chimney smoke-chiminey 2 - white smoke_10: -1662402179
+      chimney smoke-chiminey 2 - white smoke_11: 1541701873
+      chimney smoke-chiminey 2 - white smoke_12: 601310185
+      chimney smoke-chiminey 2 - white smoke_13: -908747462
+      chimney smoke-chiminey 2 - white smoke_14: 1495081899
+      chimney smoke-chiminey 2 - white smoke_15: 814489177
+      chimney smoke-chiminey 2 - white smoke_2: -668277007
+      chimney smoke-chiminey 2 - white smoke_3: 2073295671
+      chimney smoke-chiminey 2 - white smoke_4: -1928511670
+      chimney smoke-chiminey 2 - white smoke_5: -1907132600
       chimney smoke-chiminey 2 - white smoke_6: -396199560
       chimney smoke-chiminey 2 - white smoke_7: -1928058179
-      chimney smoke-chiminey 2 - white smoke_9: 527986267
-      chimney smoke-chiminey 2 - white smoke_15: 814489177
-      chimney smoke-chiminey 2 - white smoke_13: -908747462
       chimney smoke-chiminey 2 - white smoke_8: -1456997259
-      chimney smoke-chiminey 2 - white smoke_5: -1907132600
-      chimney smoke-chiminey 2 - white smoke_0: -1533731754
-      chimney smoke-chiminey 2 - white smoke_4: -1928511670
-      chimney smoke-chiminey 2 - white smoke_14: 1495081899
-      chimney smoke-chiminey 2 - white smoke_3: 2073295671
-  spritePackingTag: 
+      chimney smoke-chiminey 2 - white smoke_9: 527986267
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

@@ -3,7 +3,7 @@ guid: 9bfe0afd1b7f8c04db13bae416129986
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -20,11 +20,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -63,6 +64,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -74,6 +77,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -86,6 +90,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -98,6 +103,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -110,6 +116,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -504,27 +511,26 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      small animals - frog-frog - idle 2 - frontview_16: 1684288982
-      small animals - frog-frog - idle 2 - frontview_15: 1026639020
-      small animals - frog-frog - idle 2 - frontview_5: -1569401233
-      small animals - frog-frog - idle 2 - frontview_14: -134644968
-      small animals - frog-frog - idle 2 - frontview_17: -329431971
-      small animals - frog-frog - idle 2 - frontview_13: 1816295340
-      small animals - frog-frog - idle 2 - frontview_6: 297142310
-      small animals - frog-frog - idle 2 - frontview_8: -1318886462
-      small animals - frog-frog - idle 2 - frontview_4: 1843526573
-      small animals - frog-frog - idle 2 - frontview_7: -1025796130
-      small animals - frog-frog - idle 2 - frontview_12: 45973157
+      small animals - frog-frog - idle 2 - frontview_0: 1340778922
       small animals - frog-frog - idle 2 - frontview_1: 865163467
       small animals - frog-frog - idle 2 - frontview_10: -1548481362
       small animals - frog-frog - idle 2 - frontview_11: -1117013380
+      small animals - frog-frog - idle 2 - frontview_12: 45973157
+      small animals - frog-frog - idle 2 - frontview_13: 1816295340
+      small animals - frog-frog - idle 2 - frontview_14: -134644968
+      small animals - frog-frog - idle 2 - frontview_15: 1026639020
+      small animals - frog-frog - idle 2 - frontview_16: 1684288982
+      small animals - frog-frog - idle 2 - frontview_17: -329431971
       small animals - frog-frog - idle 2 - frontview_2: -181109460
-      small animals - frog-frog - idle 2 - frontview_9: -1981873573
-      small animals - frog-frog - idle 2 - frontview_0: 1340778922
       small animals - frog-frog - idle 2 - frontview_3: -700408831
-  spritePackingTag: 
+      small animals - frog-frog - idle 2 - frontview_4: 1843526573
+      small animals - frog-frog - idle 2 - frontview_5: -1569401233
+      small animals - frog-frog - idle 2 - frontview_6: 297142310
+      small animals - frog-frog - idle 2 - frontview_7: -1025796130
+      small animals - frog-frog - idle 2 - frontview_8: -1318886462
+      small animals - frog-frog - idle 2 - frontview_9: -1981873573
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

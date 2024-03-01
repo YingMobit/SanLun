@@ -3,7 +3,7 @@ guid: cf15bb744a517774484e2129328fb250
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -20,11 +20,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -63,6 +64,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -74,6 +77,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -86,6 +90,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -98,6 +103,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -110,6 +116,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -1071,54 +1078,53 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      dirt2 to grass - transparency_42: -1827456739
-      dirt2 to grass - transparency_25: 222452217
-      dirt2 to grass - transparency_17: -419143058
-      dirt2 to grass - transparency_14: 1013178200
-      dirt2 to grass - transparency_21: -918963195
-      dirt2 to grass - transparency_1: -813621479
-      dirt2 to grass - transparency_29: 1271346926
-      dirt2 to grass - transparency_36: -1675644963
-      dirt2 to grass - transparency_2: -1391927586
-      dirt2 to grass - transparency_37: 1281848199
-      dirt2 to grass - transparency_3: -971250616
-      dirt2 to grass - transparency_9: 1775698817
-      dirt2 to grass - transparency_33: 549355297
-      dirt2 to grass - transparency_11: 619524508
       dirt2 to grass - transparency_0: 1502206875
-      dirt2 to grass - transparency_22: 812099961
-      dirt2 to grass - transparency_24: -107431647
-      dirt2 to grass - transparency_23: 1046438611
-      dirt2 to grass - transparency_13: -543209225
-      dirt2 to grass - transparency_26: -450588573
-      dirt2 to grass - transparency_39: 1913919119
-      dirt2 to grass - transparency_32: -81490765
-      dirt2 to grass - transparency_18: 1879416444
-      dirt2 to grass - transparency_34: 1445601148
-      dirt2 to grass - transparency_30: 760127463
-      dirt2 to grass - transparency_35: -1518275793
-      dirt2 to grass - transparency_41: -942763410
+      dirt2 to grass - transparency_1: -813621479
       dirt2 to grass - transparency_10: -1093400828
-      dirt2 to grass - transparency_6: -2042893954
-      dirt2 to grass - transparency_5: -43434057
-      dirt2 to grass - transparency_7: -380837715
-      dirt2 to grass - transparency_31: 637844620
-      dirt2 to grass - transparency_19: 1062282619
-      dirt2 to grass - transparency_44: -532688380
+      dirt2 to grass - transparency_11: 619524508
       dirt2 to grass - transparency_12: -459849580
-      dirt2 to grass - transparency_8: -2023915379
-      dirt2 to grass - transparency_28: 310527826
-      dirt2 to grass - transparency_27: -1606762103
-      dirt2 to grass - transparency_40: -303971240
-      dirt2 to grass - transparency_38: -1575124190
+      dirt2 to grass - transparency_13: -543209225
+      dirt2 to grass - transparency_14: 1013178200
       dirt2 to grass - transparency_15: -848073031
       dirt2 to grass - transparency_16: -117475695
-      dirt2 to grass - transparency_43: -22092523
-      dirt2 to grass - transparency_4: -1989948217
+      dirt2 to grass - transparency_17: -419143058
+      dirt2 to grass - transparency_18: 1879416444
+      dirt2 to grass - transparency_19: 1062282619
+      dirt2 to grass - transparency_2: -1391927586
       dirt2 to grass - transparency_20: 738641044
-  spritePackingTag: 
+      dirt2 to grass - transparency_21: -918963195
+      dirt2 to grass - transparency_22: 812099961
+      dirt2 to grass - transparency_23: 1046438611
+      dirt2 to grass - transparency_24: -107431647
+      dirt2 to grass - transparency_25: 222452217
+      dirt2 to grass - transparency_26: -450588573
+      dirt2 to grass - transparency_27: -1606762103
+      dirt2 to grass - transparency_28: 310527826
+      dirt2 to grass - transparency_29: 1271346926
+      dirt2 to grass - transparency_3: -971250616
+      dirt2 to grass - transparency_30: 760127463
+      dirt2 to grass - transparency_31: 637844620
+      dirt2 to grass - transparency_32: -81490765
+      dirt2 to grass - transparency_33: 549355297
+      dirt2 to grass - transparency_34: 1445601148
+      dirt2 to grass - transparency_35: -1518275793
+      dirt2 to grass - transparency_36: -1675644963
+      dirt2 to grass - transparency_37: 1281848199
+      dirt2 to grass - transparency_38: -1575124190
+      dirt2 to grass - transparency_39: 1913919119
+      dirt2 to grass - transparency_4: -1989948217
+      dirt2 to grass - transparency_40: -303971240
+      dirt2 to grass - transparency_41: -942763410
+      dirt2 to grass - transparency_42: -1827456739
+      dirt2 to grass - transparency_43: -22092523
+      dirt2 to grass - transparency_44: -532688380
+      dirt2 to grass - transparency_5: -43434057
+      dirt2 to grass - transparency_6: -2042893954
+      dirt2 to grass - transparency_7: -380837715
+      dirt2 to grass - transparency_8: -2023915379
+      dirt2 to grass - transparency_9: 1775698817
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

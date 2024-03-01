@@ -3,7 +3,7 @@ guid: 468228de2d488cc46b42cb60c15fb77d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -20,11 +20,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -63,6 +64,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -74,6 +77,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -86,6 +90,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -98,6 +103,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -110,6 +116,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -504,27 +511,26 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      orc mage - no hand fx-atk1_8: -266673996
-      orc mage - no hand fx-atk1_2: 2050471543
-      orc mage - no hand fx-atk1_14: -2017308525
-      orc mage - no hand fx-atk1_5: 971822925
-      orc mage - no hand fx-atk1_4: 1041170703
-      orc mage - no hand fx-atk1_10: 1463514165
-      orc mage - no hand fx-atk1_13: 1160012846
-      orc mage - no hand fx-atk1_3: 773922117
-      orc mage - no hand fx-atk1_17: -486076118
       orc mage - no hand fx-atk1_0: -1113846999
-      orc mage - no hand fx-atk1_7: -352609744
-      orc mage - no hand fx-atk1_15: -1329585913
-      orc mage - no hand fx-atk1_11: -590723053
-      orc mage - no hand fx-atk1_16: -1529467174
-      orc mage - no hand fx-atk1_9: -593978338
-      orc mage - no hand fx-atk1_6: -919281951
       orc mage - no hand fx-atk1_1: -1247335523
+      orc mage - no hand fx-atk1_10: 1463514165
+      orc mage - no hand fx-atk1_11: -590723053
       orc mage - no hand fx-atk1_12: 1774339236
-  spritePackingTag: 
+      orc mage - no hand fx-atk1_13: 1160012846
+      orc mage - no hand fx-atk1_14: -2017308525
+      orc mage - no hand fx-atk1_15: -1329585913
+      orc mage - no hand fx-atk1_16: -1529467174
+      orc mage - no hand fx-atk1_17: -486076118
+      orc mage - no hand fx-atk1_2: 2050471543
+      orc mage - no hand fx-atk1_3: 773922117
+      orc mage - no hand fx-atk1_4: 1041170703
+      orc mage - no hand fx-atk1_5: 971822925
+      orc mage - no hand fx-atk1_6: -919281951
+      orc mage - no hand fx-atk1_7: -352609744
+      orc mage - no hand fx-atk1_8: -266673996
+      orc mage - no hand fx-atk1_9: -593978338
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

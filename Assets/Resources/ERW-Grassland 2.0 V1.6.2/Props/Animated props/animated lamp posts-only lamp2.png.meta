@@ -3,7 +3,7 @@ guid: 1322702ec1814ab4887ddf34e64a667f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -20,11 +20,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -63,6 +64,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -74,6 +77,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -86,6 +90,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -98,6 +103,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -110,6 +116,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -525,28 +532,27 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      animated lamp posts-only lamp2_14: -1765044536
-      animated lamp posts-only lamp2_5: 1221954875
-      animated lamp posts-only lamp2_13: -1936884333
-      animated lamp posts-only lamp2_6: -1278546166
-      animated lamp posts-only lamp2_10: 243794266
-      animated lamp posts-only lamp2_11: -776572779
-      animated lamp posts-only lamp2_4: 1658665859
-      animated lamp posts-only lamp2_12: -58166219
-      animated lamp posts-only lamp2_8: 1291671898
-      animated lamp posts-only lamp2_2: 1597206903
-      animated lamp posts-only lamp2_18: -2098857562
-      animated lamp posts-only lamp2_15: -1848080539
-      animated lamp posts-only lamp2_17: -976254264
-      animated lamp posts-only lamp2_7: -285333817
-      animated lamp posts-only lamp2_3: 837749958
       animated lamp posts-only lamp2_0: 1624591984
       animated lamp posts-only lamp2_1: -382604590
+      animated lamp posts-only lamp2_10: 243794266
+      animated lamp posts-only lamp2_11: -776572779
+      animated lamp posts-only lamp2_12: -58166219
+      animated lamp posts-only lamp2_13: -1936884333
+      animated lamp posts-only lamp2_14: -1765044536
+      animated lamp posts-only lamp2_15: -1848080539
       animated lamp posts-only lamp2_16: 1039544336
+      animated lamp posts-only lamp2_17: -976254264
+      animated lamp posts-only lamp2_18: -2098857562
+      animated lamp posts-only lamp2_2: 1597206903
+      animated lamp posts-only lamp2_3: 837749958
+      animated lamp posts-only lamp2_4: 1658665859
+      animated lamp posts-only lamp2_5: 1221954875
+      animated lamp posts-only lamp2_6: -1278546166
+      animated lamp posts-only lamp2_7: -285333817
+      animated lamp posts-only lamp2_8: 1291671898
       animated lamp posts-only lamp2_9: -1129327845
-  spritePackingTag: 
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

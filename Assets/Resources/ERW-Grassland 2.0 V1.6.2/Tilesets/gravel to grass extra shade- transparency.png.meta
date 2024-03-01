@@ -3,7 +3,7 @@ guid: 84b06eef5af662748a6739744e8bbfde
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -20,11 +20,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -63,6 +64,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -74,6 +77,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -86,6 +90,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -98,6 +103,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -110,6 +116,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -1113,56 +1120,55 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      gravel to grass extra shade- transparency_46: 1018487071
-      gravel to grass extra shade- transparency_25: 1566981867
-      gravel to grass extra shade- transparency_35: 1379444709
-      gravel to grass extra shade- transparency_10: 2138001585
-      gravel to grass extra shade- transparency_5: -1148238476
-      gravel to grass extra shade- transparency_31: -535342968
-      gravel to grass extra shade- transparency_6: 2025272019
-      gravel to grass extra shade- transparency_34: -286470890
-      gravel to grass extra shade- transparency_13: -1017072267
-      gravel to grass extra shade- transparency_26: -8042182
-      gravel to grass extra shade- transparency_44: -510255264
-      gravel to grass extra shade- transparency_27: -503190761
-      gravel to grass extra shade- transparency_36: -485708605
-      gravel to grass extra shade- transparency_12: -1463097958
-      gravel to grass extra shade- transparency_15: 1605619969
-      gravel to grass extra shade- transparency_33: -2031789972
+      gravel to grass extra shade- transparency_0: 1521542456
       gravel to grass extra shade- transparency_1: -1202019028
+      gravel to grass extra shade- transparency_10: 2138001585
       gravel to grass extra shade- transparency_11: 683423499
-      gravel to grass extra shade- transparency_41: 431316282
-      gravel to grass extra shade- transparency_2: -525770540
-      gravel to grass extra shade- transparency_4: -153483452
-      gravel to grass extra shade- transparency_40: 1734877455
-      gravel to grass extra shade- transparency_23: -873117734
-      gravel to grass extra shade- transparency_9: -1414203358
-      gravel to grass extra shade- transparency_24: -850250783
-      gravel to grass extra shade- transparency_38: -869734842
-      gravel to grass extra shade- transparency_28: 1937158381
-      gravel to grass extra shade- transparency_19: 1206601063
-      gravel to grass extra shade- transparency_8: 305574008
-      gravel to grass extra shade- transparency_45: 387563447
+      gravel to grass extra shade- transparency_12: -1463097958
+      gravel to grass extra shade- transparency_13: -1017072267
       gravel to grass extra shade- transparency_14: 1875573650
-      gravel to grass extra shade- transparency_32: -320997399
-      gravel to grass extra shade- transparency_21: 569391701
+      gravel to grass extra shade- transparency_15: 1605619969
+      gravel to grass extra shade- transparency_16: -1135540147
+      gravel to grass extra shade- transparency_17: -347801205
+      gravel to grass extra shade- transparency_18: 68972523
+      gravel to grass extra shade- transparency_19: 1206601063
+      gravel to grass extra shade- transparency_2: -525770540
       gravel to grass extra shade- transparency_20: 1517434219
+      gravel to grass extra shade- transparency_21: 569391701
       gravel to grass extra shade- transparency_22: -924965527
-      gravel to grass extra shade- transparency_39: -1974329753
+      gravel to grass extra shade- transparency_23: -873117734
+      gravel to grass extra shade- transparency_24: -850250783
+      gravel to grass extra shade- transparency_25: 1566981867
+      gravel to grass extra shade- transparency_26: -8042182
+      gravel to grass extra shade- transparency_27: -503190761
+      gravel to grass extra shade- transparency_28: 1937158381
       gravel to grass extra shade- transparency_29: 756485643
       gravel to grass extra shade- transparency_3: 1866347718
-      gravel to grass extra shade- transparency_16: -1135540147
-      gravel to grass extra shade- transparency_37: -1680543540
-      gravel to grass extra shade- transparency_43: -1072574418
-      gravel to grass extra shade- transparency_18: 68972523
-      gravel to grass extra shade- transparency_0: 1521542456
-      gravel to grass extra shade- transparency_17: -347801205
-      gravel to grass extra shade- transparency_7: 1198615867
       gravel to grass extra shade- transparency_30: -1011783724
+      gravel to grass extra shade- transparency_31: -535342968
+      gravel to grass extra shade- transparency_32: -320997399
+      gravel to grass extra shade- transparency_33: -2031789972
+      gravel to grass extra shade- transparency_34: -286470890
+      gravel to grass extra shade- transparency_35: 1379444709
+      gravel to grass extra shade- transparency_36: -485708605
+      gravel to grass extra shade- transparency_37: -1680543540
+      gravel to grass extra shade- transparency_38: -869734842
+      gravel to grass extra shade- transparency_39: -1974329753
+      gravel to grass extra shade- transparency_4: -153483452
+      gravel to grass extra shade- transparency_40: 1734877455
+      gravel to grass extra shade- transparency_41: 431316282
       gravel to grass extra shade- transparency_42: -943118525
-  spritePackingTag: 
+      gravel to grass extra shade- transparency_43: -1072574418
+      gravel to grass extra shade- transparency_44: -510255264
+      gravel to grass extra shade- transparency_45: 387563447
+      gravel to grass extra shade- transparency_46: 1018487071
+      gravel to grass extra shade- transparency_5: -1148238476
+      gravel to grass extra shade- transparency_6: 2025272019
+      gravel to grass extra shade- transparency_7: 1198615867
+      gravel to grass extra shade- transparency_8: 305574008
+      gravel to grass extra shade- transparency_9: -1414203358
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

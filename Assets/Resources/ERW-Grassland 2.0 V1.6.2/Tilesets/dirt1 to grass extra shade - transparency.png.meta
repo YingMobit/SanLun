@@ -3,7 +3,7 @@ guid: cbea8764055ac28408c4908e84a380c3
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -20,11 +20,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -63,6 +64,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -74,6 +77,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -86,6 +90,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -98,6 +103,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -110,6 +116,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -1008,51 +1015,50 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      dirt1 to grass extra shade - transparency_31: -148848736
-      dirt1 to grass extra shade - transparency_25: 2042882378
       dirt1 to grass extra shade - transparency_0: 132120775
-      dirt1 to grass extra shade - transparency_6: -723642640
-      dirt1 to grass extra shade - transparency_24: -2123872299
-      dirt1 to grass extra shade - transparency_18: -173751316
-      dirt1 to grass extra shade - transparency_17: -1374795458
-      dirt1 to grass extra shade - transparency_23: -1745919339
-      dirt1 to grass extra shade - transparency_30: -155874084
-      dirt1 to grass extra shade - transparency_38: -22488062
+      dirt1 to grass extra shade - transparency_1: 438193912
       dirt1 to grass extra shade - transparency_10: 970746855
-      dirt1 to grass extra shade - transparency_13: 92421234
-      dirt1 to grass extra shade - transparency_26: -1406686314
       dirt1 to grass extra shade - transparency_11: 1966894500
+      dirt1 to grass extra shade - transparency_12: 102096457
+      dirt1 to grass extra shade - transparency_13: 92421234
+      dirt1 to grass extra shade - transparency_14: -61376163
+      dirt1 to grass extra shade - transparency_15: 948586094
+      dirt1 to grass extra shade - transparency_16: 598648949
+      dirt1 to grass extra shade - transparency_17: -1374795458
+      dirt1 to grass extra shade - transparency_18: -173751316
+      dirt1 to grass extra shade - transparency_19: -1438894966
+      dirt1 to grass extra shade - transparency_2: -407817230
+      dirt1 to grass extra shade - transparency_20: -519706155
+      dirt1 to grass extra shade - transparency_21: -1598276426
+      dirt1 to grass extra shade - transparency_22: -1409968284
+      dirt1 to grass extra shade - transparency_23: -1745919339
+      dirt1 to grass extra shade - transparency_24: -2123872299
+      dirt1 to grass extra shade - transparency_25: 2042882378
+      dirt1 to grass extra shade - transparency_26: -1406686314
+      dirt1 to grass extra shade - transparency_27: -1468856647
+      dirt1 to grass extra shade - transparency_28: -1327792677
+      dirt1 to grass extra shade - transparency_29: -335338765
+      dirt1 to grass extra shade - transparency_3: 979872190
+      dirt1 to grass extra shade - transparency_30: -155874084
+      dirt1 to grass extra shade - transparency_31: -148848736
+      dirt1 to grass extra shade - transparency_32: -818120719
       dirt1 to grass extra shade - transparency_33: 843610793
+      dirt1 to grass extra shade - transparency_34: -1619098987
+      dirt1 to grass extra shade - transparency_35: 1877681374
+      dirt1 to grass extra shade - transparency_36: -638236748
+      dirt1 to grass extra shade - transparency_37: 113700009
+      dirt1 to grass extra shade - transparency_38: -22488062
+      dirt1 to grass extra shade - transparency_39: -66493994
+      dirt1 to grass extra shade - transparency_4: 1933775024
       dirt1 to grass extra shade - transparency_40: 1886858786
       dirt1 to grass extra shade - transparency_41: -938030031
-      dirt1 to grass extra shade - transparency_34: -1619098987
-      dirt1 to grass extra shade - transparency_1: 438193912
-      dirt1 to grass extra shade - transparency_8: 1140602944
-      dirt1 to grass extra shade - transparency_35: 1877681374
-      dirt1 to grass extra shade - transparency_15: 948586094
-      dirt1 to grass extra shade - transparency_7: -915314574
-      dirt1 to grass extra shade - transparency_20: -519706155
-      dirt1 to grass extra shade - transparency_12: 102096457
-      dirt1 to grass extra shade - transparency_27: -1468856647
-      dirt1 to grass extra shade - transparency_14: -61376163
-      dirt1 to grass extra shade - transparency_29: -335338765
-      dirt1 to grass extra shade - transparency_28: -1327792677
-      dirt1 to grass extra shade - transparency_19: -1438894966
-      dirt1 to grass extra shade - transparency_16: 598648949
-      dirt1 to grass extra shade - transparency_3: 979872190
-      dirt1 to grass extra shade - transparency_21: -1598276426
-      dirt1 to grass extra shade - transparency_2: -407817230
-      dirt1 to grass extra shade - transparency_22: -1409968284
-      dirt1 to grass extra shade - transparency_39: -66493994
-      dirt1 to grass extra shade - transparency_36: -638236748
-      dirt1 to grass extra shade - transparency_32: -818120719
-      dirt1 to grass extra shade - transparency_4: 1933775024
       dirt1 to grass extra shade - transparency_5: -374214488
+      dirt1 to grass extra shade - transparency_6: -723642640
+      dirt1 to grass extra shade - transparency_7: -915314574
+      dirt1 to grass extra shade - transparency_8: 1140602944
       dirt1 to grass extra shade - transparency_9: -88151208
-      dirt1 to grass extra shade - transparency_37: 113700009
-  spritePackingTag: 
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

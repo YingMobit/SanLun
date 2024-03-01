@@ -3,7 +3,7 @@ guid: 87ec0e8cf06f3604cbe4bdab0df31bd5
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -20,11 +20,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -63,6 +64,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -74,6 +77,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -86,6 +90,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -98,6 +103,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -110,6 +116,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -1386,69 +1393,68 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      stone path to grass extra shade_39: -1001550412
-      stone path to grass extra shade_6: -1149928241
-      stone path to grass extra shade_50: 1015262099
-      stone path to grass extra shade_36: -589898028
-      stone path to grass extra shade_15: 1911559847
-      stone path to grass extra shade_26: 570820737
-      stone path to grass extra shade_42: 182184242
-      stone path to grass extra shade_3: -811604433
-      stone path to grass extra shade_40: 100250047
-      stone path to grass extra shade_48: -1156209432
-      stone path to grass extra shade_21: 225498764
-      stone path to grass extra shade_24: -1105593164
-      stone path to grass extra shade_5: 1697124337
-      stone path to grass extra shade_58: 1943077753
-      stone path to grass extra shade_45: -1396731909
-      stone path to grass extra shade_44: 631155638
-      stone path to grass extra shade_54: -1085741116
+      stone path to grass extra shade_0: -791123971
       stone path to grass extra shade_1: -842075907
-      stone path to grass extra shade_52: -961652457
-      stone path to grass extra shade_43: -886017092
-      stone path to grass extra shade_30: -691323475
-      stone path to grass extra shade_51: -1344068078
-      stone path to grass extra shade_59: 277002505
-      stone path to grass extra shade_57: -498590126
-      stone path to grass extra shade_56: 1946077755
-      stone path to grass extra shade_53: -23581990
+      stone path to grass extra shade_10: 680566977
+      stone path to grass extra shade_11: 1867430914
+      stone path to grass extra shade_12: 1359116491
+      stone path to grass extra shade_13: -1557418782
+      stone path to grass extra shade_14: 81488490
+      stone path to grass extra shade_15: 1911559847
       stone path to grass extra shade_16: 1802159323
       stone path to grass extra shade_17: -723103460
-      stone path to grass extra shade_10: 680566977
-      stone path to grass extra shade_14: 81488490
-      stone path to grass extra shade_2: -693698003
-      stone path to grass extra shade_22: 1460476460
       stone path to grass extra shade_18: 2120826052
-      stone path to grass extra shade_23: -1331265660
-      stone path to grass extra shade_25: -466989433
-      stone path to grass extra shade_41: 1802653400
-      stone path to grass extra shade_27: 1360731629
-      stone path to grass extra shade_37: 248908947
-      stone path to grass extra shade_4: -2105475608
-      stone path to grass extra shade_33: 1758144841
-      stone path to grass extra shade_49: -1025549772
-      stone path to grass extra shade_47: -1931344885
-      stone path to grass extra shade_55: 2142369095
-      stone path to grass extra shade_7: 1033419915
-      stone path to grass extra shade_31: 2056186265
-      stone path to grass extra shade_46: 2095295630
-      stone path to grass extra shade_13: -1557418782
-      stone path to grass extra shade_9: 717385681
-      stone path to grass extra shade_12: 1359116491
-      stone path to grass extra shade_34: -1064459902
-      stone path to grass extra shade_32: 1888974122
-      stone path to grass extra shade_35: -416344531
-      stone path to grass extra shade_8: 198258609
-      stone path to grass extra shade_38: -1038433701
-      stone path to grass extra shade_28: 661946261
       stone path to grass extra shade_19: 695004340
-      stone path to grass extra shade_0: -791123971
-      stone path to grass extra shade_29: -1697179259
+      stone path to grass extra shade_2: -693698003
       stone path to grass extra shade_20: -476561478
-      stone path to grass extra shade_11: 1867430914
-  spritePackingTag: 
+      stone path to grass extra shade_21: 225498764
+      stone path to grass extra shade_22: 1460476460
+      stone path to grass extra shade_23: -1331265660
+      stone path to grass extra shade_24: -1105593164
+      stone path to grass extra shade_25: -466989433
+      stone path to grass extra shade_26: 570820737
+      stone path to grass extra shade_27: 1360731629
+      stone path to grass extra shade_28: 661946261
+      stone path to grass extra shade_29: -1697179259
+      stone path to grass extra shade_3: -811604433
+      stone path to grass extra shade_30: -691323475
+      stone path to grass extra shade_31: 2056186265
+      stone path to grass extra shade_32: 1888974122
+      stone path to grass extra shade_33: 1758144841
+      stone path to grass extra shade_34: -1064459902
+      stone path to grass extra shade_35: -416344531
+      stone path to grass extra shade_36: -589898028
+      stone path to grass extra shade_37: 248908947
+      stone path to grass extra shade_38: -1038433701
+      stone path to grass extra shade_39: -1001550412
+      stone path to grass extra shade_4: -2105475608
+      stone path to grass extra shade_40: 100250047
+      stone path to grass extra shade_41: 1802653400
+      stone path to grass extra shade_42: 182184242
+      stone path to grass extra shade_43: -886017092
+      stone path to grass extra shade_44: 631155638
+      stone path to grass extra shade_45: -1396731909
+      stone path to grass extra shade_46: 2095295630
+      stone path to grass extra shade_47: -1931344885
+      stone path to grass extra shade_48: -1156209432
+      stone path to grass extra shade_49: -1025549772
+      stone path to grass extra shade_5: 1697124337
+      stone path to grass extra shade_50: 1015262099
+      stone path to grass extra shade_51: -1344068078
+      stone path to grass extra shade_52: -961652457
+      stone path to grass extra shade_53: -23581990
+      stone path to grass extra shade_54: -1085741116
+      stone path to grass extra shade_55: 2142369095
+      stone path to grass extra shade_56: 1946077755
+      stone path to grass extra shade_57: -498590126
+      stone path to grass extra shade_58: 1943077753
+      stone path to grass extra shade_59: 277002505
+      stone path to grass extra shade_6: -1149928241
+      stone path to grass extra shade_7: 1033419915
+      stone path to grass extra shade_8: 198258609
+      stone path to grass extra shade_9: 717385681
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

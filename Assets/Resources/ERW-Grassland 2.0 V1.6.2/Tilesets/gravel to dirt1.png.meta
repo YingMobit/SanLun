@@ -3,7 +3,7 @@ guid: ecb331a78aedadd4f9efac8511eee7b5
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -20,11 +20,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -63,6 +64,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -74,6 +77,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -86,6 +90,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -98,6 +103,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -110,6 +116,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -819,42 +826,41 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      gravel to dirt1_24: -1136322420
-      gravel to dirt1_32: -1147050179
-      gravel to dirt1_2: 128964538
-      gravel to dirt1_16: -773179082
-      gravel to dirt1_8: 1350844481
-      gravel to dirt1_19: -735560095
-      gravel to dirt1_5: 328581488
-      gravel to dirt1_18: -1367212839
-      gravel to dirt1_4: -640888349
-      gravel to dirt1_3: 1499401926
-      gravel to dirt1_17: 898994104
-      gravel to dirt1_29: 1344596274
-      gravel to dirt1_26: 1025486878
       gravel to dirt1_0: 728988773
-      gravel to dirt1_14: 1556495150
+      gravel to dirt1_1: 1229535402
+      gravel to dirt1_10: -294593856
+      gravel to dirt1_11: -189703168
       gravel to dirt1_12: -1919922433
+      gravel to dirt1_13: -505890929
+      gravel to dirt1_14: 1556495150
+      gravel to dirt1_15: -54008318
+      gravel to dirt1_16: -773179082
+      gravel to dirt1_17: 898994104
+      gravel to dirt1_18: -1367212839
+      gravel to dirt1_19: -735560095
+      gravel to dirt1_2: 128964538
+      gravel to dirt1_20: 1700919556
       gravel to dirt1_21: -709696358
       gravel to dirt1_22: 2034522354
-      gravel to dirt1_10: -294593856
       gravel to dirt1_23: 1484362045
-      gravel to dirt1_13: -505890929
+      gravel to dirt1_24: -1136322420
+      gravel to dirt1_25: 553401626
+      gravel to dirt1_26: 1025486878
+      gravel to dirt1_27: -1798587797
+      gravel to dirt1_28: -1813672068
+      gravel to dirt1_29: 1344596274
+      gravel to dirt1_3: 1499401926
       gravel to dirt1_30: 2129606633
+      gravel to dirt1_31: 1997403266
+      gravel to dirt1_32: -1147050179
+      gravel to dirt1_4: -640888349
+      gravel to dirt1_5: 328581488
       gravel to dirt1_6: 1832497574
       gravel to dirt1_7: -981084328
-      gravel to dirt1_20: 1700919556
-      gravel to dirt1_1: 1229535402
+      gravel to dirt1_8: 1350844481
       gravel to dirt1_9: -1904265053
-      gravel to dirt1_28: -1813672068
-      gravel to dirt1_31: 1997403266
-      gravel to dirt1_27: -1798587797
-      gravel to dirt1_15: -54008318
-      gravel to dirt1_25: 553401626
-      gravel to dirt1_11: -189703168
-  spritePackingTag: 
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

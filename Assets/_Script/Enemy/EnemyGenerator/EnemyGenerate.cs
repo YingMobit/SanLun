@@ -37,8 +37,8 @@ public class EnemyGenerate : MonoBehaviour
     IEnumerator GetTile()
     { 
         yield return new WaitForSeconds(0.5f);
-        GroundTile = GameObject.Find("FloorTilemap");
-        Ground = GroundTile.GetComponent<Tilemap>();
+        //GroundTile = GameObject.Find("FloorTilemap");
+        //Ground = GroundTile.GetComponent<Tilemap>();
         ObstacleTile = GameObject.Find("ObstacleTilemap");
         Obstacle = ObstacleTile.GetComponent<Tilemap>();
     }

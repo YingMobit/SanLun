@@ -3,7 +3,7 @@ guid: 3ddc22c766b6f904993c521d0c61af77
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -20,11 +20,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -63,6 +64,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -74,6 +77,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -86,6 +90,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -98,6 +103,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -110,6 +116,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -693,36 +700,35 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      stone ground to grass extra shade- transition2_3: 831226145
-      stone ground to grass extra shade- transition2_15: 589919254
-      stone ground to grass extra shade- transition2_13: 1735126454
-      stone ground to grass extra shade- transition2_21: -1548608405
-      stone ground to grass extra shade- transition2_1: 317580539
       stone ground to grass extra shade- transition2_0: 544774712
-      stone ground to grass extra shade- transition2_2: 1530136715
-      stone ground to grass extra shade- transition2_4: 1609533035
-      stone ground to grass extra shade- transition2_12: 472129365
-      stone ground to grass extra shade- transition2_16: -354552790
-      stone ground to grass extra shade- transition2_14: 1461297226
-      stone ground to grass extra shade- transition2_9: -470948911
-      stone ground to grass extra shade- transition2_6: 292612045
-      stone ground to grass extra shade- transition2_25: 1695880097
-      stone ground to grass extra shade- transition2_20: 1838267767
-      stone ground to grass extra shade- transition2_22: -829121955
-      stone ground to grass extra shade- transition2_26: -1791654257
-      stone ground to grass extra shade- transition2_17: -118985476
-      stone ground to grass extra shade- transition2_8: 539692237
-      stone ground to grass extra shade- transition2_23: -1620555563
-      stone ground to grass extra shade- transition2_7: -930883810
+      stone ground to grass extra shade- transition2_1: 317580539
       stone ground to grass extra shade- transition2_10: 1557662765
-      stone ground to grass extra shade- transition2_24: 322957849
       stone ground to grass extra shade- transition2_11: -2049209141
-      stone ground to grass extra shade- transition2_5: -1845642601
+      stone ground to grass extra shade- transition2_12: 472129365
+      stone ground to grass extra shade- transition2_13: 1735126454
+      stone ground to grass extra shade- transition2_14: 1461297226
+      stone ground to grass extra shade- transition2_15: 589919254
+      stone ground to grass extra shade- transition2_16: -354552790
+      stone ground to grass extra shade- transition2_17: -118985476
       stone ground to grass extra shade- transition2_18: 710627451
       stone ground to grass extra shade- transition2_19: 762071748
-  spritePackingTag: 
+      stone ground to grass extra shade- transition2_2: 1530136715
+      stone ground to grass extra shade- transition2_20: 1838267767
+      stone ground to grass extra shade- transition2_21: -1548608405
+      stone ground to grass extra shade- transition2_22: -829121955
+      stone ground to grass extra shade- transition2_23: -1620555563
+      stone ground to grass extra shade- transition2_24: 322957849
+      stone ground to grass extra shade- transition2_25: 1695880097
+      stone ground to grass extra shade- transition2_26: -1791654257
+      stone ground to grass extra shade- transition2_3: 831226145
+      stone ground to grass extra shade- transition2_4: 1609533035
+      stone ground to grass extra shade- transition2_5: -1845642601
+      stone ground to grass extra shade- transition2_6: 292612045
+      stone ground to grass extra shade- transition2_7: -930883810
+      stone ground to grass extra shade- transition2_8: 539692237
+      stone ground to grass extra shade- transition2_9: -470948911
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

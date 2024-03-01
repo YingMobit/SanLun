@@ -3,7 +3,7 @@ guid: f970c162ef29e954f96c7586a1c61e7a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -20,11 +20,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -63,6 +64,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -74,6 +77,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -86,6 +90,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -98,6 +103,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -110,6 +116,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -2205,108 +2212,107 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      hole-extra grass shade_94: -1331222419
-      hole-extra grass shade_62: -376370929
-      hole-extra grass shade_22: 2114475707
-      hole-extra grass shade_27: -1740385275
-      hole-extra grass shade_73: 2089442570
-      hole-extra grass shade_98: -1129873895
-      hole-extra grass shade_47: 1786086278
-      hole-extra grass shade_33: -2111220400
-      hole-extra grass shade_4: -398198579
-      hole-extra grass shade_95: 1119717631
-      hole-extra grass shade_93: 1089312085
-      hole-extra grass shade_60: -1636145261
-      hole-extra grass shade_37: -726440579
-      hole-extra grass shade_15: -1006923623
-      hole-extra grass shade_55: 709516609
-      hole-extra grass shade_89: -2040218455
-      hole-extra grass shade_9: -846345699
-      hole-extra grass shade_75: -40703786
-      hole-extra grass shade_80: -1513942126
-      hole-extra grass shade_2: -1076976874
-      hole-extra grass shade_68: -684916187
-      hole-extra grass shade_90: -766626188
-      hole-extra grass shade_91: -641142780
-      hole-extra grass shade_69: -1700935207
-      hole-extra grass shade_26: -850039885
-      hole-extra grass shade_57: -500276401
-      hole-extra grass shade_46: -1463668530
       hole-extra grass shade_0: -1827233142
-      hole-extra grass shade_7: -1519274253
-      hole-extra grass shade_41: 1014902954
-      hole-extra grass shade_40: 1494370937
-      hole-extra grass shade_24: -249445442
-      hole-extra grass shade_48: -623413581
-      hole-extra grass shade_86: 1460878649
-      hole-extra grass shade_39: 1651017754
-      hole-extra grass shade_13: -529314194
-      hole-extra grass shade_58: -1359526503
-      hole-extra grass shade_51: -1434383705
-      hole-extra grass shade_28: -596399132
-      hole-extra grass shade_6: -1890482985
+      hole-extra grass shade_1: -1316540370
+      hole-extra grass shade_10: 722598508
       hole-extra grass shade_11: 1332868179
       hole-extra grass shade_12: -657984026
-      hole-extra grass shade_74: -1384339523
-      hole-extra grass shade_54: -795385175
-      hole-extra grass shade_44: -765228712
-      hole-extra grass shade_5: -662795556
-      hole-extra grass shade_88: -2127869482
-      hole-extra grass shade_64: -616942326
-      hole-extra grass shade_23: -554013097
-      hole-extra grass shade_17: 924222444
-      hole-extra grass shade_19: 1418621768
-      hole-extra grass shade_43: -999931208
-      hole-extra grass shade_83: -670941567
-      hole-extra grass shade_49: -156641112
-      hole-extra grass shade_52: 964850854
-      hole-extra grass shade_77: -302252395
-      hole-extra grass shade_45: -1437030427
-      hole-extra grass shade_61: -343019412
-      hole-extra grass shade_63: 1723176334
-      hole-extra grass shade_3: 1491195944
-      hole-extra grass shade_20: 1554007815
-      hole-extra grass shade_67: -161155068
-      hole-extra grass shade_21: 1327013179
-      hole-extra grass shade_25: 589405740
-      hole-extra grass shade_59: 2113411330
-      hole-extra grass shade_30: 213883089
-      hole-extra grass shade_97: 2000839488
-      hole-extra grass shade_29: 1161566673
-      hole-extra grass shade_56: -1024030536
-      hole-extra grass shade_96: -880742019
-      hole-extra grass shade_10: 722598508
-      hole-extra grass shade_66: 889607238
-      hole-extra grass shade_70: -41370988
-      hole-extra grass shade_76: 605457750
-      hole-extra grass shade_8: -1616052647
-      hole-extra grass shade_53: 566814057
-      hole-extra grass shade_72: 1208579843
-      hole-extra grass shade_42: -1597632495
-      hole-extra grass shade_92: -643968242
-      hole-extra grass shade_32: -529449703
-      hole-extra grass shade_87: 1425184325
-      hole-extra grass shade_71: 530378393
-      hole-extra grass shade_50: 523739474
-      hole-extra grass shade_65: 528480536
-      hole-extra grass shade_79: 1149667726
-      hole-extra grass shade_16: -370256952
-      hole-extra grass shade_18: 1616745487
-      hole-extra grass shade_81: 980880066
-      hole-extra grass shade_36: 2058334048
-      hole-extra grass shade_82: -1556716415
-      hole-extra grass shade_78: 159711840
-      hole-extra grass shade_35: -164114016
-      hole-extra grass shade_85: 1954070836
-      hole-extra grass shade_34: -1227617071
-      hole-extra grass shade_38: 210507852
-      hole-extra grass shade_31: 1200893263
-      hole-extra grass shade_1: -1316540370
+      hole-extra grass shade_13: -529314194
       hole-extra grass shade_14: 1770194310
+      hole-extra grass shade_15: -1006923623
+      hole-extra grass shade_16: -370256952
+      hole-extra grass shade_17: 924222444
+      hole-extra grass shade_18: 1616745487
+      hole-extra grass shade_19: 1418621768
+      hole-extra grass shade_2: -1076976874
+      hole-extra grass shade_20: 1554007815
+      hole-extra grass shade_21: 1327013179
+      hole-extra grass shade_22: 2114475707
+      hole-extra grass shade_23: -554013097
+      hole-extra grass shade_24: -249445442
+      hole-extra grass shade_25: 589405740
+      hole-extra grass shade_26: -850039885
+      hole-extra grass shade_27: -1740385275
+      hole-extra grass shade_28: -596399132
+      hole-extra grass shade_29: 1161566673
+      hole-extra grass shade_3: 1491195944
+      hole-extra grass shade_30: 213883089
+      hole-extra grass shade_31: 1200893263
+      hole-extra grass shade_32: -529449703
+      hole-extra grass shade_33: -2111220400
+      hole-extra grass shade_34: -1227617071
+      hole-extra grass shade_35: -164114016
+      hole-extra grass shade_36: 2058334048
+      hole-extra grass shade_37: -726440579
+      hole-extra grass shade_38: 210507852
+      hole-extra grass shade_39: 1651017754
+      hole-extra grass shade_4: -398198579
+      hole-extra grass shade_40: 1494370937
+      hole-extra grass shade_41: 1014902954
+      hole-extra grass shade_42: -1597632495
+      hole-extra grass shade_43: -999931208
+      hole-extra grass shade_44: -765228712
+      hole-extra grass shade_45: -1437030427
+      hole-extra grass shade_46: -1463668530
+      hole-extra grass shade_47: 1786086278
+      hole-extra grass shade_48: -623413581
+      hole-extra grass shade_49: -156641112
+      hole-extra grass shade_5: -662795556
+      hole-extra grass shade_50: 523739474
+      hole-extra grass shade_51: -1434383705
+      hole-extra grass shade_52: 964850854
+      hole-extra grass shade_53: 566814057
+      hole-extra grass shade_54: -795385175
+      hole-extra grass shade_55: 709516609
+      hole-extra grass shade_56: -1024030536
+      hole-extra grass shade_57: -500276401
+      hole-extra grass shade_58: -1359526503
+      hole-extra grass shade_59: 2113411330
+      hole-extra grass shade_6: -1890482985
+      hole-extra grass shade_60: -1636145261
+      hole-extra grass shade_61: -343019412
+      hole-extra grass shade_62: -376370929
+      hole-extra grass shade_63: 1723176334
+      hole-extra grass shade_64: -616942326
+      hole-extra grass shade_65: 528480536
+      hole-extra grass shade_66: 889607238
+      hole-extra grass shade_67: -161155068
+      hole-extra grass shade_68: -684916187
+      hole-extra grass shade_69: -1700935207
+      hole-extra grass shade_7: -1519274253
+      hole-extra grass shade_70: -41370988
+      hole-extra grass shade_71: 530378393
+      hole-extra grass shade_72: 1208579843
+      hole-extra grass shade_73: 2089442570
+      hole-extra grass shade_74: -1384339523
+      hole-extra grass shade_75: -40703786
+      hole-extra grass shade_76: 605457750
+      hole-extra grass shade_77: -302252395
+      hole-extra grass shade_78: 159711840
+      hole-extra grass shade_79: 1149667726
+      hole-extra grass shade_8: -1616052647
+      hole-extra grass shade_80: -1513942126
+      hole-extra grass shade_81: 980880066
+      hole-extra grass shade_82: -1556716415
+      hole-extra grass shade_83: -670941567
       hole-extra grass shade_84: 1391985725
-  spritePackingTag: 
+      hole-extra grass shade_85: 1954070836
+      hole-extra grass shade_86: 1460878649
+      hole-extra grass shade_87: 1425184325
+      hole-extra grass shade_88: -2127869482
+      hole-extra grass shade_89: -2040218455
+      hole-extra grass shade_9: -846345699
+      hole-extra grass shade_90: -766626188
+      hole-extra grass shade_91: -641142780
+      hole-extra grass shade_92: -643968242
+      hole-extra grass shade_93: 1089312085
+      hole-extra grass shade_94: -1331222419
+      hole-extra grass shade_95: 1119717631
+      hole-extra grass shade_96: -880742019
+      hole-extra grass shade_97: 2000839488
+      hole-extra grass shade_98: -1129873895
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

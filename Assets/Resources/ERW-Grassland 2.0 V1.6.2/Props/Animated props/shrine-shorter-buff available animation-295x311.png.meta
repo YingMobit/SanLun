@@ -3,7 +3,7 @@ guid: 04bdabf260b38404399d9355b1b47abf
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -20,11 +20,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -63,6 +64,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -74,6 +77,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -86,6 +90,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -98,6 +103,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -110,6 +116,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -357,20 +364,19 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      shrine-shorter-buff available animation-295x311_3: 989224323
-      shrine-shorter-buff available animation-295x311_5: -1627379098
-      shrine-shorter-buff available animation-295x311_9: 632826542
-      shrine-shorter-buff available animation-295x311_6: -270800478
-      shrine-shorter-buff available animation-295x311_10: 1721978711
-      shrine-shorter-buff available animation-295x311_1: 1540753911
-      shrine-shorter-buff available animation-295x311_2: -581727146
       shrine-shorter-buff available animation-295x311_0: -753086623
-      shrine-shorter-buff available animation-295x311_8: 1698779043
+      shrine-shorter-buff available animation-295x311_1: 1540753911
+      shrine-shorter-buff available animation-295x311_10: 1721978711
+      shrine-shorter-buff available animation-295x311_2: -581727146
+      shrine-shorter-buff available animation-295x311_3: 989224323
       shrine-shorter-buff available animation-295x311_4: 1352566632
+      shrine-shorter-buff available animation-295x311_5: -1627379098
+      shrine-shorter-buff available animation-295x311_6: -270800478
       shrine-shorter-buff available animation-295x311_7: 1160408615
-  spritePackingTag: 
+      shrine-shorter-buff available animation-295x311_8: 1698779043
+      shrine-shorter-buff available animation-295x311_9: 632826542
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

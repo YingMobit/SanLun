@@ -31,6 +31,7 @@ public class GneneralEnemy : MonoBehaviour
     public Tilemap Obstacle;
     public GameObject Ground_obj;
     public GameObject Obstacle_obj;
+    public PathFindingManager pathFindingManager;
 
     [Header("FactData")]
     public float FAC_Speed;
@@ -55,6 +56,7 @@ public class GneneralEnemy : MonoBehaviour
 
     public void Start()
     {
+        pathFindingManager = FindAnyObjectByType<PathFindingManager>();
         tilemap = GameObject.Find("FloorTilemap").GetComponent<Tilemap>();
         Rigidbody2d = GetComponent<Rigidbody2D>();
         Player = GameObject.Find("Player");
@@ -203,6 +205,7 @@ public class GneneralEnemy : MonoBehaviour
         Body2.enabled = false;
         HealthRewarding();
         animator.Play("Death");
+        PlayerPrefs.SetInt("Point",PlayerPrefs.GetInt("Point",0)+BAS_data.Exp_reward);
         yield return new WaitForSeconds(1f);
         Destroy(gameObject);
     }
@@ -216,25 +219,48 @@ public class GneneralEnemy : MonoBehaviour
     IEnumerator ObstacleAvoidance()
     {
         AvoidingObstacle = true;
-        PathFindingManager pathFindingManager = new PathFindingManager();
         if (Ground != null && Obstacle != null)
         {
-            Debug.Log("����");
+            BoundsInt ground = Ground.cellBounds;
             List<AStarTile> path = pathFindingManager.FindPath(Ground.WorldToCell(transform.position), Ground.WorldToCell(Player.transform.position), pathFindingManager.InitialTile(Ground, Obstacle), Ground, Obstacle);
-            do
+            if (path != null)
             {
-                AStarTile nextnode = path[0];
-                Vector3 WorldPos = Ground.CellToWorld(new Vector3Int(nextnode.x, nextnode.y, 0));
-                Vector3 nowPos = transform.position;
                 do
-                    transform.position = Vector3.Lerp(nowPos, WorldPos, FAC_Speed * Time.deltaTime);
-                while (Ground.WorldToCell(transform.position) == new Vector3Int(nextnode.x, nextnode.y, 0));
-                path.Remove(nextnode);
+                {
+                    AStarTile nextnode = path[0];
+                    Vector3 WorldPos = Ground.CellToWorld(new Vector3Int(nextnode.x, nextnode.y, 0)) + new Vector3Int(ground.xMin, ground.yMin, 0);
+                    Vector3 nowPos = transform.position;
+                    do
+                    { rigidbody.velocity = (WorldPos - nowPos).normalized * FAC_Speed; }
+                    while (Ground.WorldToCell(WorldPos) != Ground.WorldToCell(transform.position));
+                    //StartCoroutine(MoveToPosition(WorldPos, 0.1f, new Vector3Int(nextnode.x, nextnode.y, 0)));
+                    path.Remove(nextnode);
+                }
+                while (path.Count > 0);
             }
-            while (path.Count > 0);
             AvoidingObstacle = false;
-            return null;
         }
-        else return null;
+        yield return null;
     }
+
+    IEnumerator MoveToPosition(Vector3 targetPosition, float moveTime, Vector3Int targetCell)
+    {
+        float elapsedTime = 0;
+        Vector3 startingPos = transform.position;
+
+        while (elapsedTime < moveTime)
+        {
+            transform.position = Vector3.Lerp(startingPos, targetPosition, (elapsedTime / moveTime));
+            elapsedTime += Time.deltaTime;
+
+            if (Ground.WorldToCell(transform.position) == targetCell)
+            {
+                transform.position = targetPosition;
+                yield break;
+            }
+            yield return new WaitForEndOfFrame();
+        }
+        transform.position = targetPosition;
+    }
+
 }

@@ -3,7 +3,7 @@ guid: fa7971df7bd40484cad4b09b0666161e
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -20,11 +20,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -63,6 +64,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -74,6 +77,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -86,6 +90,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -98,6 +103,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -110,6 +116,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -2457,120 +2464,119 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      wall1 - transparency_96: 1124297638
+      wall1 - transparency_0: 1431914393
+      wall1 - transparency_1: 1933384976
       wall1 - transparency_10: 658893952
-      wall1 - transparency_72: -1602784431
-      wall1 - transparency_25: 1950884995
-      wall1 - transparency_5: -840546314
-      wall1 - transparency_108: 1427610102
-      wall1 - transparency_106: 1161916720
-      wall1 - transparency_57: -816907174
-      wall1 - transparency_63: -19566812
-      wall1 - transparency_94: -673322776
-      wall1 - transparency_3: 766756090
-      wall1 - transparency_86: -2040887463
-      wall1 - transparency_64: 1244438851
-      wall1 - transparency_41: -848115837
-      wall1 - transparency_47: -1004155794
-      wall1 - transparency_103: -1840474489
-      wall1 - transparency_35: 93476353
-      wall1 - transparency_52: -1289229371
-      wall1 - transparency_65: 1915825671
-      wall1 - transparency_55: -1551237778
-      wall1 - transparency_6: 1121154677
-      wall1 - transparency_46: -341367065
-      wall1 - transparency_102: -153578396
-      wall1 - transparency_70: 1856100448
-      wall1 - transparency_81: -1417561943
       wall1 - transparency_100: 1659330805
-      wall1 - transparency_20: 1242866920
-      wall1 - transparency_78: 1739265082
-      wall1 - transparency_2: 423619053
-      wall1 - transparency_19: 28829161
-      wall1 - transparency_69: 20617266
+      wall1 - transparency_101: -1891808607
+      wall1 - transparency_102: -153578396
+      wall1 - transparency_103: -1840474489
       wall1 - transparency_104: 1072669094
+      wall1 - transparency_105: 905282111
+      wall1 - transparency_106: 1161916720
+      wall1 - transparency_107: -860677208
+      wall1 - transparency_108: 1427610102
       wall1 - transparency_109: -821283004
-      wall1 - transparency_4: 1417356801
-      wall1 - transparency_51: -448796529
-      wall1 - transparency_30: -1214068701
-      wall1 - transparency_79: 991163059
-      wall1 - transparency_39: 2090453147
-      wall1 - transparency_34: -890699287
-      wall1 - transparency_9: -474318851
+      wall1 - transparency_11: 1817285208
+      wall1 - transparency_110: 1956019766
       wall1 - transparency_12: 396277335
       wall1 - transparency_13: -829618987
-      wall1 - transparency_37: 1672861966
-      wall1 - transparency_18: -736598648
-      wall1 - transparency_73: -627923006
-      wall1 - transparency_93: 245727840
-      wall1 - transparency_40: 213339217
-      wall1 - transparency_50: -1332523650
-      wall1 - transparency_95: 1335201453
-      wall1 - transparency_22: 1135793339
-      wall1 - transparency_36: -683356567
-      wall1 - transparency_74: -195386103
-      wall1 - transparency_90: 1417951867
-      wall1 - transparency_88: 956056092
-      wall1 - transparency_48: -327705783
-      wall1 - transparency_83: -252374831
-      wall1 - transparency_33: -16615003
-      wall1 - transparency_1: 1933384976
-      wall1 - transparency_29: -729583358
-      wall1 - transparency_98: -1511691893
-      wall1 - transparency_26: 1182474857
-      wall1 - transparency_24: -568830910
-      wall1 - transparency_71: 1887086665
-      wall1 - transparency_31: 2133868324
-      wall1 - transparency_54: 267612553
-      wall1 - transparency_105: 905282111
-      wall1 - transparency_80: -1357049455
-      wall1 - transparency_43: 156286041
-      wall1 - transparency_62: -1339636727
-      wall1 - transparency_53: 1935116754
-      wall1 - transparency_16: -434277874
-      wall1 - transparency_68: -1185825054
-      wall1 - transparency_21: 1540995858
-      wall1 - transparency_42: -858006641
-      wall1 - transparency_8: 1156291415
-      wall1 - transparency_23: 1779222023
-      wall1 - transparency_77: 525692120
-      wall1 - transparency_28: 67968806
-      wall1 - transparency_45: 1279066209
-      wall1 - transparency_44: -580775115
-      wall1 - transparency_97: 1150638710
-      wall1 - transparency_60: 1869802961
-      wall1 - transparency_66: -1214047848
-      wall1 - transparency_61: -1212336965
-      wall1 - transparency_99: 715493473
       wall1 - transparency_14: -443729422
-      wall1 - transparency_92: -1965105452
-      wall1 - transparency_7: 933999456
-      wall1 - transparency_32: 1895117716
-      wall1 - transparency_0: 1431914393
-      wall1 - transparency_56: -452769526
-      wall1 - transparency_89: -1034306094
-      wall1 - transparency_58: -2106509549
-      wall1 - transparency_11: 1817285208
-      wall1 - transparency_84: -696240912
-      wall1 - transparency_27: 419450960
-      wall1 - transparency_110: 1956019766
-      wall1 - transparency_107: -860677208
       wall1 - transparency_15: -200876412
-      wall1 - transparency_82: -2070712806
+      wall1 - transparency_16: -434277874
+      wall1 - transparency_17: 1156444455
+      wall1 - transparency_18: -736598648
+      wall1 - transparency_19: 28829161
+      wall1 - transparency_2: 423619053
+      wall1 - transparency_20: 1242866920
+      wall1 - transparency_21: 1540995858
+      wall1 - transparency_22: 1135793339
+      wall1 - transparency_23: 1779222023
+      wall1 - transparency_24: -568830910
+      wall1 - transparency_25: 1950884995
+      wall1 - transparency_26: 1182474857
+      wall1 - transparency_27: 419450960
+      wall1 - transparency_28: 67968806
+      wall1 - transparency_29: -729583358
+      wall1 - transparency_3: 766756090
+      wall1 - transparency_30: -1214068701
+      wall1 - transparency_31: 2133868324
+      wall1 - transparency_32: 1895117716
+      wall1 - transparency_33: -16615003
+      wall1 - transparency_34: -890699287
+      wall1 - transparency_35: 93476353
+      wall1 - transparency_36: -683356567
+      wall1 - transparency_37: 1672861966
+      wall1 - transparency_38: 1895569585
+      wall1 - transparency_39: 2090453147
+      wall1 - transparency_4: 1417356801
+      wall1 - transparency_40: 213339217
+      wall1 - transparency_41: -848115837
+      wall1 - transparency_42: -858006641
+      wall1 - transparency_43: 156286041
+      wall1 - transparency_44: -580775115
+      wall1 - transparency_45: 1279066209
+      wall1 - transparency_46: -341367065
+      wall1 - transparency_47: -1004155794
+      wall1 - transparency_48: -327705783
+      wall1 - transparency_49: 1596775907
+      wall1 - transparency_5: -840546314
+      wall1 - transparency_50: -1332523650
+      wall1 - transparency_51: -448796529
+      wall1 - transparency_52: -1289229371
+      wall1 - transparency_53: 1935116754
+      wall1 - transparency_54: 267612553
+      wall1 - transparency_55: -1551237778
+      wall1 - transparency_56: -452769526
+      wall1 - transparency_57: -816907174
+      wall1 - transparency_58: -2106509549
+      wall1 - transparency_59: 2104247324
+      wall1 - transparency_6: 1121154677
+      wall1 - transparency_60: 1869802961
+      wall1 - transparency_61: -1212336965
+      wall1 - transparency_62: -1339636727
+      wall1 - transparency_63: -19566812
+      wall1 - transparency_64: 1244438851
+      wall1 - transparency_65: 1915825671
+      wall1 - transparency_66: -1214047848
+      wall1 - transparency_67: 2080849874
+      wall1 - transparency_68: -1185825054
+      wall1 - transparency_69: 20617266
+      wall1 - transparency_7: 933999456
+      wall1 - transparency_70: 1856100448
+      wall1 - transparency_71: 1887086665
+      wall1 - transparency_72: -1602784431
+      wall1 - transparency_73: -627923006
+      wall1 - transparency_74: -195386103
       wall1 - transparency_75: 31105736
       wall1 - transparency_76: -1391676490
-      wall1 - transparency_59: 2104247324
+      wall1 - transparency_77: 525692120
+      wall1 - transparency_78: 1739265082
+      wall1 - transparency_79: 991163059
+      wall1 - transparency_8: 1156291415
+      wall1 - transparency_80: -1357049455
+      wall1 - transparency_81: -1417561943
+      wall1 - transparency_82: -2070712806
+      wall1 - transparency_83: -252374831
+      wall1 - transparency_84: -696240912
       wall1 - transparency_85: 278658875
-      wall1 - transparency_91: -1656764984
-      wall1 - transparency_67: 2080849874
-      wall1 - transparency_17: 1156444455
-      wall1 - transparency_101: -1891808607
-      wall1 - transparency_38: 1895569585
-      wall1 - transparency_49: 1596775907
+      wall1 - transparency_86: -2040887463
       wall1 - transparency_87: -1898492002
-  spritePackingTag: 
+      wall1 - transparency_88: 956056092
+      wall1 - transparency_89: -1034306094
+      wall1 - transparency_9: -474318851
+      wall1 - transparency_90: 1417951867
+      wall1 - transparency_91: -1656764984
+      wall1 - transparency_92: -1965105452
+      wall1 - transparency_93: 245727840
+      wall1 - transparency_94: -673322776
+      wall1 - transparency_95: 1335201453
+      wall1 - transparency_96: 1124297638
+      wall1 - transparency_97: 1150638710
+      wall1 - transparency_98: -1511691893
+      wall1 - transparency_99: 715493473
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

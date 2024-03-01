@@ -3,7 +3,7 @@ guid: 28a7c59e1b89c274d94410602b4dab09
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -20,11 +20,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -63,6 +64,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -74,6 +77,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -86,6 +90,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -98,6 +103,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -110,6 +116,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -1659,82 +1666,81 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      orc melee - anims color2-all anims-with fx_5: 626992657
-      orc melee - anims color2-all anims-with fx_53: 1090303606
-      orc melee - anims color2-all anims-with fx_1: 1589396801
-      orc melee - anims color2-all anims-with fx_63: 1932669364
-      orc melee - anims color2-all anims-with fx_62: -2005738755
-      orc melee - anims color2-all anims-with fx_60: -1585328541
-      orc melee - anims color2-all anims-with fx_16: 525720524
-      orc melee - anims color2-all anims-with fx_28: 1119027183
-      orc melee - anims color2-all anims-with fx_33: -423275002
-      orc melee - anims color2-all anims-with fx_41: 2022157447
-      orc melee - anims color2-all anims-with fx_24: 1155829233
-      orc melee - anims color2-all anims-with fx_8: -1689922610
-      orc melee - anims color2-all anims-with fx_30: 481762899
-      orc melee - anims color2-all anims-with fx_71: 908066958
-      orc melee - anims color2-all anims-with fx_44: -907162098
-      orc melee - anims color2-all anims-with fx_55: -1148741796
-      orc melee - anims color2-all anims-with fx_7: -1831624137
-      orc melee - anims color2-all anims-with fx_61: 697433611
-      orc melee - anims color2-all anims-with fx_15: -72998567
-      orc melee - anims color2-all anims-with fx_43: 1558183126
-      orc melee - anims color2-all anims-with fx_34: -139773427
-      orc melee - anims color2-all anims-with fx_68: 1370088862
-      orc melee - anims color2-all anims-with fx_17: 772938673
-      orc melee - anims color2-all anims-with fx_3: 991044199
-      orc melee - anims color2-all anims-with fx_65: -168974144
-      orc melee - anims color2-all anims-with fx_12: -1792075988
-      orc melee - anims color2-all anims-with fx_59: 1774614909
-      orc melee - anims color2-all anims-with fx_32: 1925120193
-      orc melee - anims color2-all anims-with fx_2: -493456476
-      orc melee - anims color2-all anims-with fx_10: 238941510
-      orc melee - anims color2-all anims-with fx_46: -1194416130
-      orc melee - anims color2-all anims-with fx_69: -24538683
-      orc melee - anims color2-all anims-with fx_57: 1951052450
-      orc melee - anims color2-all anims-with fx_70: -1961421748
-      orc melee - anims color2-all anims-with fx_25: 1273189441
-      orc melee - anims color2-all anims-with fx_40: -849249502
-      orc melee - anims color2-all anims-with fx_20: -1699334199
-      orc melee - anims color2-all anims-with fx_35: 1051393519
-      orc melee - anims color2-all anims-with fx_48: 724612875
-      orc melee - anims color2-all anims-with fx_72: -1897148864
-      orc melee - anims color2-all anims-with fx_36: -102488605
-      orc melee - anims color2-all anims-with fx_64: 1477410993
-      orc melee - anims color2-all anims-with fx_18: -10681650
-      orc melee - anims color2-all anims-with fx_22: 1701013285
-      orc melee - anims color2-all anims-with fx_50: -1236008739
-      orc melee - anims color2-all anims-with fx_29: -701536240
-      orc melee - anims color2-all anims-with fx_13: 621433903
-      orc melee - anims color2-all anims-with fx_31: 268768984
-      orc melee - anims color2-all anims-with fx_52: -816300610
-      orc melee - anims color2-all anims-with fx_9: 1495114759
-      orc melee - anims color2-all anims-with fx_42: 1861007048
-      orc melee - anims color2-all anims-with fx_38: 1555959318
-      orc melee - anims color2-all anims-with fx_67: 1776396558
-      orc melee - anims color2-all anims-with fx_51: 1650200140
-      orc melee - anims color2-all anims-with fx_11: -814637614
-      orc melee - anims color2-all anims-with fx_14: -395044097
-      orc melee - anims color2-all anims-with fx_26: -1595591199
-      orc melee - anims color2-all anims-with fx_54: -366946603
-      orc melee - anims color2-all anims-with fx_19: 610358663
-      orc melee - anims color2-all anims-with fx_45: 583038732
-      orc melee - anims color2-all anims-with fx_58: -542039185
-      orc melee - anims color2-all anims-with fx_37: -630582467
-      orc melee - anims color2-all anims-with fx_21: -1094530606
-      orc melee - anims color2-all anims-with fx_56: 1904880772
       orc melee - anims color2-all anims-with fx_0: -1718139254
-      orc melee - anims color2-all anims-with fx_27: -1030461289
-      orc melee - anims color2-all anims-with fx_6: 1574195821
+      orc melee - anims color2-all anims-with fx_1: 1589396801
+      orc melee - anims color2-all anims-with fx_10: 238941510
+      orc melee - anims color2-all anims-with fx_11: -814637614
+      orc melee - anims color2-all anims-with fx_12: -1792075988
+      orc melee - anims color2-all anims-with fx_13: 621433903
+      orc melee - anims color2-all anims-with fx_14: -395044097
+      orc melee - anims color2-all anims-with fx_15: -72998567
+      orc melee - anims color2-all anims-with fx_16: 525720524
+      orc melee - anims color2-all anims-with fx_17: 772938673
+      orc melee - anims color2-all anims-with fx_18: -10681650
+      orc melee - anims color2-all anims-with fx_19: 610358663
+      orc melee - anims color2-all anims-with fx_2: -493456476
+      orc melee - anims color2-all anims-with fx_20: -1699334199
+      orc melee - anims color2-all anims-with fx_21: -1094530606
+      orc melee - anims color2-all anims-with fx_22: 1701013285
       orc melee - anims color2-all anims-with fx_23: 587273176
-      orc melee - anims color2-all anims-with fx_66: -2010912773
-      orc melee - anims color2-all anims-with fx_47: -1751842060
+      orc melee - anims color2-all anims-with fx_24: 1155829233
+      orc melee - anims color2-all anims-with fx_25: 1273189441
+      orc melee - anims color2-all anims-with fx_26: -1595591199
+      orc melee - anims color2-all anims-with fx_27: -1030461289
+      orc melee - anims color2-all anims-with fx_28: 1119027183
+      orc melee - anims color2-all anims-with fx_29: -701536240
+      orc melee - anims color2-all anims-with fx_3: 991044199
+      orc melee - anims color2-all anims-with fx_30: 481762899
+      orc melee - anims color2-all anims-with fx_31: 268768984
+      orc melee - anims color2-all anims-with fx_32: 1925120193
+      orc melee - anims color2-all anims-with fx_33: -423275002
+      orc melee - anims color2-all anims-with fx_34: -139773427
+      orc melee - anims color2-all anims-with fx_35: 1051393519
+      orc melee - anims color2-all anims-with fx_36: -102488605
+      orc melee - anims color2-all anims-with fx_37: -630582467
+      orc melee - anims color2-all anims-with fx_38: 1555959318
       orc melee - anims color2-all anims-with fx_39: 1096106008
       orc melee - anims color2-all anims-with fx_4: 439732458
+      orc melee - anims color2-all anims-with fx_40: -849249502
+      orc melee - anims color2-all anims-with fx_41: 2022157447
+      orc melee - anims color2-all anims-with fx_42: 1861007048
+      orc melee - anims color2-all anims-with fx_43: 1558183126
+      orc melee - anims color2-all anims-with fx_44: -907162098
+      orc melee - anims color2-all anims-with fx_45: 583038732
+      orc melee - anims color2-all anims-with fx_46: -1194416130
+      orc melee - anims color2-all anims-with fx_47: -1751842060
+      orc melee - anims color2-all anims-with fx_48: 724612875
       orc melee - anims color2-all anims-with fx_49: 1181305780
-  spritePackingTag: 
+      orc melee - anims color2-all anims-with fx_5: 626992657
+      orc melee - anims color2-all anims-with fx_50: -1236008739
+      orc melee - anims color2-all anims-with fx_51: 1650200140
+      orc melee - anims color2-all anims-with fx_52: -816300610
+      orc melee - anims color2-all anims-with fx_53: 1090303606
+      orc melee - anims color2-all anims-with fx_54: -366946603
+      orc melee - anims color2-all anims-with fx_55: -1148741796
+      orc melee - anims color2-all anims-with fx_56: 1904880772
+      orc melee - anims color2-all anims-with fx_57: 1951052450
+      orc melee - anims color2-all anims-with fx_58: -542039185
+      orc melee - anims color2-all anims-with fx_59: 1774614909
+      orc melee - anims color2-all anims-with fx_6: 1574195821
+      orc melee - anims color2-all anims-with fx_60: -1585328541
+      orc melee - anims color2-all anims-with fx_61: 697433611
+      orc melee - anims color2-all anims-with fx_62: -2005738755
+      orc melee - anims color2-all anims-with fx_63: 1932669364
+      orc melee - anims color2-all anims-with fx_64: 1477410993
+      orc melee - anims color2-all anims-with fx_65: -168974144
+      orc melee - anims color2-all anims-with fx_66: -2010912773
+      orc melee - anims color2-all anims-with fx_67: 1776396558
+      orc melee - anims color2-all anims-with fx_68: 1370088862
+      orc melee - anims color2-all anims-with fx_69: -24538683
+      orc melee - anims color2-all anims-with fx_7: -1831624137
+      orc melee - anims color2-all anims-with fx_70: -1961421748
+      orc melee - anims color2-all anims-with fx_71: 908066958
+      orc melee - anims color2-all anims-with fx_72: -1897148864
+      orc melee - anims color2-all anims-with fx_8: -1689922610
+      orc melee - anims color2-all anims-with fx_9: 1495114759
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

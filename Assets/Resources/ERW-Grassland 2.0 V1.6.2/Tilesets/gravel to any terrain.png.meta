@@ -3,7 +3,7 @@ guid: e166522b144296b4e98afe2e81da3cdc
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -20,11 +20,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -63,6 +64,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -74,6 +77,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -86,6 +90,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -98,6 +103,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -110,6 +116,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -1617,80 +1624,79 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      gravel to any terrain_69: -1381148793
-      gravel to any terrain_2: 1676938991
-      gravel to any terrain_15: 1420106720
-      gravel to any terrain_48: 1965920768
-      gravel to any terrain_22: 757581679
-      gravel to any terrain_55: 489201787
-      gravel to any terrain_24: 1305515494
-      gravel to any terrain_36: -1949958628
-      gravel to any terrain_11: -1433220050
-      gravel to any terrain_38: -977735713
-      gravel to any terrain_67: 779181128
-      gravel to any terrain_56: -1824542162
-      gravel to any terrain_41: -995803586
-      gravel to any terrain_27: -1082233261
-      gravel to any terrain_54: -1299545866
-      gravel to any terrain_35: -861454435
-      gravel to any terrain_28: -2088537109
-      gravel to any terrain_42: -178011946
-      gravel to any terrain_12: -1716960920
       gravel to any terrain_0: 960902811
-      gravel to any terrain_37: -291957071
-      gravel to any terrain_30: -1503685662
-      gravel to any terrain_62: -1636650610
-      gravel to any terrain_59: -419913209
-      gravel to any terrain_17: -1291099280
-      gravel to any terrain_34: -1456871657
-      gravel to any terrain_7: 1912598027
-      gravel to any terrain_14: 2051283565
-      gravel to any terrain_19: 1055161694
+      gravel to any terrain_1: -565241266
+      gravel to any terrain_10: -225173165
+      gravel to any terrain_11: -1433220050
+      gravel to any terrain_12: -1716960920
       gravel to any terrain_13: 1969269565
-      gravel to any terrain_23: -1362960457
-      gravel to any terrain_45: 1096435704
+      gravel to any terrain_14: 2051283565
+      gravel to any terrain_15: 1420106720
+      gravel to any terrain_16: 761741491
+      gravel to any terrain_17: -1291099280
       gravel to any terrain_18: -1273103013
+      gravel to any terrain_19: 1055161694
+      gravel to any terrain_2: 1676938991
+      gravel to any terrain_20: 1741467420
+      gravel to any terrain_21: -1191587370
+      gravel to any terrain_22: 757581679
+      gravel to any terrain_23: -1362960457
+      gravel to any terrain_24: 1305515494
+      gravel to any terrain_25: -495142539
+      gravel to any terrain_26: -786535076
+      gravel to any terrain_27: -1082233261
+      gravel to any terrain_28: -2088537109
+      gravel to any terrain_29: 2062907725
+      gravel to any terrain_3: 627396812
+      gravel to any terrain_30: -1503685662
+      gravel to any terrain_31: -1252267606
+      gravel to any terrain_32: -251815120
       gravel to any terrain_33: 1120297169
-      gravel to any terrain_61: -445333702
-      gravel to any terrain_63: -1487102877
-      gravel to any terrain_51: 1121737866
+      gravel to any terrain_34: -1456871657
+      gravel to any terrain_35: -861454435
+      gravel to any terrain_36: -1949958628
+      gravel to any terrain_37: -291957071
+      gravel to any terrain_38: -977735713
+      gravel to any terrain_39: -1310786491
+      gravel to any terrain_4: 1371702676
+      gravel to any terrain_40: -106498055
+      gravel to any terrain_41: -995803586
+      gravel to any terrain_42: -178011946
+      gravel to any terrain_43: -145790192
+      gravel to any terrain_44: -1246474778
+      gravel to any terrain_45: 1096435704
       gravel to any terrain_46: -719864595
       gravel to any terrain_47: -1524001234
-      gravel to any terrain_57: 1297047398
-      gravel to any terrain_66: -1933937375
-      gravel to any terrain_21: -1191587370
-      gravel to any terrain_31: -1252267606
-      gravel to any terrain_53: 808239182
-      gravel to any terrain_65: 1788437206
-      gravel to any terrain_50: -1646316677
-      gravel to any terrain_3: 627396812
-      gravel to any terrain_9: 33792980
-      gravel to any terrain_10: -225173165
-      gravel to any terrain_25: -495142539
-      gravel to any terrain_58: -2142158876
-      gravel to any terrain_70: -19367075
-      gravel to any terrain_6: 1554467731
-      gravel to any terrain_8: 868971657
-      gravel to any terrain_20: 1741467420
-      gravel to any terrain_26: -786535076
-      gravel to any terrain_44: -1246474778
-      gravel to any terrain_52: 1739827457
-      gravel to any terrain_68: 1245057087
+      gravel to any terrain_48: 1965920768
       gravel to any terrain_49: 1534131178
-      gravel to any terrain_4: 1371702676
-      gravel to any terrain_39: -1310786491
-      gravel to any terrain_40: -106498055
-      gravel to any terrain_16: 761741491
       gravel to any terrain_5: -919336859
-      gravel to any terrain_64: -830540049
-      gravel to any terrain_1: -565241266
-      gravel to any terrain_29: 2062907725
-      gravel to any terrain_43: -145790192
+      gravel to any terrain_50: -1646316677
+      gravel to any terrain_51: 1121737866
+      gravel to any terrain_52: 1739827457
+      gravel to any terrain_53: 808239182
+      gravel to any terrain_54: -1299545866
+      gravel to any terrain_55: 489201787
+      gravel to any terrain_56: -1824542162
+      gravel to any terrain_57: 1297047398
+      gravel to any terrain_58: -2142158876
+      gravel to any terrain_59: -419913209
+      gravel to any terrain_6: 1554467731
       gravel to any terrain_60: 1144343661
-      gravel to any terrain_32: -251815120
-  spritePackingTag: 
+      gravel to any terrain_61: -445333702
+      gravel to any terrain_62: -1636650610
+      gravel to any terrain_63: -1487102877
+      gravel to any terrain_64: -830540049
+      gravel to any terrain_65: 1788437206
+      gravel to any terrain_66: -1933937375
+      gravel to any terrain_67: 779181128
+      gravel to any terrain_68: 1245057087
+      gravel to any terrain_69: -1381148793
+      gravel to any terrain_7: 1912598027
+      gravel to any terrain_70: -19367075
+      gravel to any terrain_8: 868971657
+      gravel to any terrain_9: 33792980
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

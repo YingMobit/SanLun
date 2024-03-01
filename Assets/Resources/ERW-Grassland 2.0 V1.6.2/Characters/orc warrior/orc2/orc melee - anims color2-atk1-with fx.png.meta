@@ -3,7 +3,7 @@ guid: 8010678ea24a29545b5c6210641a42c2
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -20,11 +20,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -63,6 +64,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -74,6 +77,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -86,6 +90,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -98,6 +103,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -110,6 +116,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -462,25 +469,24 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      orc melee - anims color2-atk1-with fx_13: -844029008
-      orc melee - anims color2-atk1-with fx_7: -820001952
-      orc melee - anims color2-atk1-with fx_14: -241605592
-      orc melee - anims color2-atk1-with fx_9: -1827629809
-      orc melee - anims color2-atk1-with fx_4: 650039747
-      orc melee - anims color2-atk1-with fx_6: 421296657
-      orc melee - anims color2-atk1-with fx_8: 609389943
-      orc melee - anims color2-atk1-with fx_15: 2307420
-      orc melee - anims color2-atk1-with fx_3: -625872928
       orc melee - anims color2-atk1-with fx_0: -322415023
-      orc melee - anims color2-atk1-with fx_2: 819004300
+      orc melee - anims color2-atk1-with fx_1: 207426833
       orc melee - anims color2-atk1-with fx_10: 1035992730
       orc melee - anims color2-atk1-with fx_11: 1155128176
-      orc melee - anims color2-atk1-with fx_5: 937826999
       orc melee - anims color2-atk1-with fx_12: 550551726
-      orc melee - anims color2-atk1-with fx_1: 207426833
-  spritePackingTag: 
+      orc melee - anims color2-atk1-with fx_13: -844029008
+      orc melee - anims color2-atk1-with fx_14: -241605592
+      orc melee - anims color2-atk1-with fx_15: 2307420
+      orc melee - anims color2-atk1-with fx_2: 819004300
+      orc melee - anims color2-atk1-with fx_3: -625872928
+      orc melee - anims color2-atk1-with fx_4: 650039747
+      orc melee - anims color2-atk1-with fx_5: 937826999
+      orc melee - anims color2-atk1-with fx_6: 421296657
+      orc melee - anims color2-atk1-with fx_7: -820001952
+      orc melee - anims color2-atk1-with fx_8: 609389943
+      orc melee - anims color2-atk1-with fx_9: -1827629809
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

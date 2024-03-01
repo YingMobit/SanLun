@@ -3,7 +3,7 @@ guid: 472c2792489b2894f88006761205e649
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -20,11 +20,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -63,6 +64,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -74,6 +77,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -86,6 +90,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -98,6 +103,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -110,6 +116,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -1113,56 +1120,55 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      gravel to grass_14: -556245694
-      gravel to grass_18: -1543899982
-      gravel to grass_45: 521165479
-      gravel to grass_7: 1229826646
-      gravel to grass_33: -339915519
-      gravel to grass_24: 476535937
-      gravel to grass_40: 78096840
-      gravel to grass_9: -1939886835
-      gravel to grass_11: 72516663
-      gravel to grass_10: -1482939261
-      gravel to grass_36: -1196335610
-      gravel to grass_27: -1360786953
-      gravel to grass_43: 376163109
       gravel to grass_0: 2048322283
-      gravel to grass_34: 354286327
-      gravel to grass_3: -588780901
-      gravel to grass_31: 794479956
-      gravel to grass_28: -791093782
-      gravel to grass_6: -1106496204
-      gravel to grass_30: -1698194810
-      gravel to grass_38: -510905952
-      gravel to grass_19: 2011211912
-      gravel to grass_5: 1478442353
-      gravel to grass_4: -1797024989
-      gravel to grass_15: -456187644
-      gravel to grass_12: 658569808
-      gravel to grass_20: 1839708917
-      gravel to grass_46: 1147492153
-      gravel to grass_42: -1309378866
-      gravel to grass_8: -992059346
-      gravel to grass_41: 332772982
-      gravel to grass_44: -331868858
-      gravel to grass_17: 402933699
-      gravel to grass_21: 1111850719
-      gravel to grass_37: -1708829326
-      gravel to grass_22: -1420278706
-      gravel to grass_35: -397469544
-      gravel to grass_29: 1930179417
-      gravel to grass_2: -2052489053
-      gravel to grass_13: 1906533378
-      gravel to grass_39: -1176650139
-      gravel to grass_26: 2034255433
-      gravel to grass_25: 134169913
       gravel to grass_1: 1517898272
+      gravel to grass_10: -1482939261
+      gravel to grass_11: 72516663
+      gravel to grass_12: 658569808
+      gravel to grass_13: 1906533378
+      gravel to grass_14: -556245694
+      gravel to grass_15: -456187644
       gravel to grass_16: -1591813763
-      gravel to grass_32: 251590440
+      gravel to grass_17: 402933699
+      gravel to grass_18: -1543899982
+      gravel to grass_19: 2011211912
+      gravel to grass_2: -2052489053
+      gravel to grass_20: 1839708917
+      gravel to grass_21: 1111850719
+      gravel to grass_22: -1420278706
       gravel to grass_23: -1783269557
-  spritePackingTag: 
+      gravel to grass_24: 476535937
+      gravel to grass_25: 134169913
+      gravel to grass_26: 2034255433
+      gravel to grass_27: -1360786953
+      gravel to grass_28: -791093782
+      gravel to grass_29: 1930179417
+      gravel to grass_3: -588780901
+      gravel to grass_30: -1698194810
+      gravel to grass_31: 794479956
+      gravel to grass_32: 251590440
+      gravel to grass_33: -339915519
+      gravel to grass_34: 354286327
+      gravel to grass_35: -397469544
+      gravel to grass_36: -1196335610
+      gravel to grass_37: -1708829326
+      gravel to grass_38: -510905952
+      gravel to grass_39: -1176650139
+      gravel to grass_4: -1797024989
+      gravel to grass_40: 78096840
+      gravel to grass_41: 332772982
+      gravel to grass_42: -1309378866
+      gravel to grass_43: 376163109
+      gravel to grass_44: -331868858
+      gravel to grass_45: 521165479
+      gravel to grass_46: 1147492153
+      gravel to grass_5: 1478442353
+      gravel to grass_6: -1106496204
+      gravel to grass_7: 1229826646
+      gravel to grass_8: -992059346
+      gravel to grass_9: -1939886835
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

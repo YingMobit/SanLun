@@ -3,7 +3,7 @@ guid: 2b22c709f20e47045aa78fdb0116fe8c
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -20,11 +20,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -63,6 +64,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -74,6 +77,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -86,6 +90,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -98,6 +103,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -110,6 +116,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -1029,52 +1036,51 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      stone path with curb to grass_20: 1969808806
-      stone path with curb to grass_28: 949093286
-      stone path with curb to grass_23: 1795078742
-      stone path with curb to grass_7: 827924091
-      stone path with curb to grass_6: -1885260271
       stone path with curb to grass_0: 121487821
-      stone path with curb to grass_30: 1472911827
-      stone path with curb to grass_26: 126176421
-      stone path with curb to grass_9: -1788119727
       stone path with curb to grass_1: 146897862
-      stone path with curb to grass_36: 506904903
-      stone path with curb to grass_32: -1565721847
-      stone path with curb to grass_5: -885590155
-      stone path with curb to grass_31: 1877961324
-      stone path with curb to grass_27: 1493079560
-      stone path with curb to grass_2: -423424888
-      stone path with curb to grass_41: -249125979
-      stone path with curb to grass_22: 1363937468
-      stone path with curb to grass_4: 1792283832
-      stone path with curb to grass_18: -1137970247
-      stone path with curb to grass_11: 2075911029
-      stone path with curb to grass_29: 1550353047
-      stone path with curb to grass_15: -371258407
-      stone path with curb to grass_8: -16498456
-      stone path with curb to grass_24: 1964604142
-      stone path with curb to grass_12: 1538582578
-      stone path with curb to grass_42: -1304761169
-      stone path with curb to grass_16: -1439080557
-      stone path with curb to grass_17: 606954360
-      stone path with curb to grass_38: -138534598
-      stone path with curb to grass_21: -739402924
-      stone path with curb to grass_40: -1804187189
       stone path with curb to grass_10: 60137569
-      stone path with curb to grass_37: 1293131383
-      stone path with curb to grass_25: 618088488
-      stone path with curb to grass_39: -789936832
-      stone path with curb to grass_3: 211986110
-      stone path with curb to grass_19: -1774689464
-      stone path with curb to grass_34: -433424033
+      stone path with curb to grass_11: 2075911029
+      stone path with curb to grass_12: 1538582578
       stone path with curb to grass_13: 1845451021
       stone path with curb to grass_14: 2103513639
+      stone path with curb to grass_15: -371258407
+      stone path with curb to grass_16: -1439080557
+      stone path with curb to grass_17: 606954360
+      stone path with curb to grass_18: -1137970247
+      stone path with curb to grass_19: -1774689464
+      stone path with curb to grass_2: -423424888
+      stone path with curb to grass_20: 1969808806
+      stone path with curb to grass_21: -739402924
+      stone path with curb to grass_22: 1363937468
+      stone path with curb to grass_23: 1795078742
+      stone path with curb to grass_24: 1964604142
+      stone path with curb to grass_25: 618088488
+      stone path with curb to grass_26: 126176421
+      stone path with curb to grass_27: 1493079560
+      stone path with curb to grass_28: 949093286
+      stone path with curb to grass_29: 1550353047
+      stone path with curb to grass_3: 211986110
+      stone path with curb to grass_30: 1472911827
+      stone path with curb to grass_31: 1877961324
+      stone path with curb to grass_32: -1565721847
       stone path with curb to grass_33: 308580688
+      stone path with curb to grass_34: -433424033
       stone path with curb to grass_35: 1779288327
-  spritePackingTag: 
+      stone path with curb to grass_36: 506904903
+      stone path with curb to grass_37: 1293131383
+      stone path with curb to grass_38: -138534598
+      stone path with curb to grass_39: -789936832
+      stone path with curb to grass_4: 1792283832
+      stone path with curb to grass_40: -1804187189
+      stone path with curb to grass_41: -249125979
+      stone path with curb to grass_42: -1304761169
+      stone path with curb to grass_5: -885590155
+      stone path with curb to grass_6: -1885260271
+      stone path with curb to grass_7: 827924091
+      stone path with curb to grass_8: -16498456
+      stone path with curb to grass_9: -1788119727
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

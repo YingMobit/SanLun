@@ -3,7 +3,7 @@ guid: 829cdb12c01ffbe4d9dcb67bb1a65853
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -20,11 +20,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -63,6 +64,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -74,6 +77,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -86,6 +90,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -98,6 +103,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -110,6 +116,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -1596,79 +1603,78 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      tall grass_11: -1112017975
-      tall grass_26: 1178520184
-      tall grass_40: -1636083288
-      tall grass_39: -896804963
-      tall grass_9: 670604466
-      tall grass_14: -874184727
-      tall grass_45: -942540931
-      tall grass_38: 1204450401
-      tall grass_1: 556558328
-      tall grass_57: -804016814
-      tall grass_30: 478467885
-      tall grass_52: 403626517
-      tall grass_43: -204323284
-      tall grass_35: 60222971
-      tall grass_65: 1157662577
-      tall grass_53: -119016536
-      tall grass_49: -1077750344
-      tall grass_61: 621888803
-      tall grass_47: 254292638
       tall grass_0: 1029378823
-      tall grass_58: 1499329049
+      tall grass_1: 556558328
+      tall grass_10: -789438370
+      tall grass_11: -1112017975
       tall grass_12: 412112322
-      tall grass_5: -29903052
-      tall grass_25: 360429508
-      tall grass_32: -228969265
-      tall grass_3: 220355525
-      tall grass_51: 343336008
-      tall grass_54: 931000782
-      tall grass_17: 919378069
-      tall grass_64: 2120935460
-      tall grass_21: -708039649
-      tall grass_19: 864252703
-      tall grass_63: -658565123
-      tall grass_62: 1513987797
-      tall grass_29: 256339768
-      tall grass_4: 526931590
-      tall grass_66: -191860958
-      tall grass_2: 879280721
-      tall grass_7: 1960552179
-      tall grass_48: 2038922452
-      tall grass_16: 1398653960
-      tall grass_20: -391055875
-      tall grass_46: -660136654
-      tall grass_41: 740019036
-      tall grass_56: 772137882
-      tall grass_15: 1701771646
-      tall grass_60: -571589684
       tall grass_13: -817780244
-      tall grass_68: 272833593
-      tall grass_34: 2053376895
+      tall grass_14: -874184727
+      tall grass_15: 1701771646
+      tall grass_16: 1398653960
+      tall grass_17: 919378069
+      tall grass_18: 1320262890
+      tall grass_19: 864252703
+      tall grass_2: 879280721
+      tall grass_20: -391055875
+      tall grass_21: -708039649
+      tall grass_22: -73619455
+      tall grass_23: 1903975366
+      tall grass_24: 793767704
+      tall grass_25: 360429508
+      tall grass_26: 1178520184
       tall grass_27: 1470353939
       tall grass_28: -1014377862
-      tall grass_18: 1320262890
-      tall grass_55: -1722676750
-      tall grass_36: 954986478
-      tall grass_67: -2014658559
-      tall grass_59: -243144335
-      tall grass_44: -1836933809
-      tall grass_37: 386974521
-      tall grass_33: -274623350
-      tall grass_6: 460389280
-      tall grass_22: -73619455
-      tall grass_8: -1052721978
-      tall grass_23: 1903975366
-      tall grass_10: -789438370
-      tall grass_69: -1837188336
-      tall grass_24: 793767704
-      tall grass_42: -1387875662
-      tall grass_50: 965319396
+      tall grass_29: 256339768
+      tall grass_3: 220355525
+      tall grass_30: 478467885
       tall grass_31: -1578587247
-  spritePackingTag: 
+      tall grass_32: -228969265
+      tall grass_33: -274623350
+      tall grass_34: 2053376895
+      tall grass_35: 60222971
+      tall grass_36: 954986478
+      tall grass_37: 386974521
+      tall grass_38: 1204450401
+      tall grass_39: -896804963
+      tall grass_4: 526931590
+      tall grass_40: -1636083288
+      tall grass_41: 740019036
+      tall grass_42: -1387875662
+      tall grass_43: -204323284
+      tall grass_44: -1836933809
+      tall grass_45: -942540931
+      tall grass_46: -660136654
+      tall grass_47: 254292638
+      tall grass_48: 2038922452
+      tall grass_49: -1077750344
+      tall grass_5: -29903052
+      tall grass_50: 965319396
+      tall grass_51: 343336008
+      tall grass_52: 403626517
+      tall grass_53: -119016536
+      tall grass_54: 931000782
+      tall grass_55: -1722676750
+      tall grass_56: 772137882
+      tall grass_57: -804016814
+      tall grass_58: 1499329049
+      tall grass_59: -243144335
+      tall grass_6: 460389280
+      tall grass_60: -571589684
+      tall grass_61: 621888803
+      tall grass_62: 1513987797
+      tall grass_63: -658565123
+      tall grass_64: 2120935460
+      tall grass_65: 1157662577
+      tall grass_66: -191860958
+      tall grass_67: -2014658559
+      tall grass_68: 272833593
+      tall grass_69: -1837188336
+      tall grass_7: 1960552179
+      tall grass_8: -1052721978
+      tall grass_9: 670604466
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

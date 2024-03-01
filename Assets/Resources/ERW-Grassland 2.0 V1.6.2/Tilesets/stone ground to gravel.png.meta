@@ -3,7 +3,7 @@ guid: 98c854a10bda6e64fae722fa9b91dcde
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -20,11 +20,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -63,6 +64,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -74,6 +77,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -86,6 +90,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -98,6 +103,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -110,6 +116,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -735,38 +742,37 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      stone ground to gravel_8: -1393493394
+      stone ground to gravel_0: 1348744563
       stone ground to gravel_1: 1776190553
-      stone ground to gravel_18: 211512956
       stone ground to gravel_10: 1982610579
-      stone ground to gravel_12: -709642146
       stone ground to gravel_11: -671928592
-      stone ground to gravel_4: -1598883960
-      stone ground to gravel_5: 729600773
-      stone ground to gravel_22: -151491181
-      stone ground to gravel_21: 1424897463
-      stone ground to gravel_27: 1636800360
-      stone ground to gravel_9: 584176914
+      stone ground to gravel_12: -709642146
+      stone ground to gravel_13: 1952464014
+      stone ground to gravel_14: -1238402104
+      stone ground to gravel_15: 238468159
       stone ground to gravel_16: -1416990875
       stone ground to gravel_17: -49537302
-      stone ground to gravel_25: -528039887
-      stone ground to gravel_3: -1769951967
-      stone ground to gravel_6: 864761338
-      stone ground to gravel_26: -1200633949
-      stone ground to gravel_13: 1952464014
+      stone ground to gravel_18: 211512956
       stone ground to gravel_19: -1115811815
-      stone ground to gravel_23: 956145543
-      stone ground to gravel_0: 1348744563
-      stone ground to gravel_15: 238468159
-      stone ground to gravel_24: 1954736977
       stone ground to gravel_2: 1264385293
-      stone ground to gravel_14: -1238402104
-      stone ground to gravel_7: -19830959
       stone ground to gravel_20: -1361771866
+      stone ground to gravel_21: 1424897463
+      stone ground to gravel_22: -151491181
+      stone ground to gravel_23: 956145543
+      stone ground to gravel_24: 1954736977
+      stone ground to gravel_25: -528039887
+      stone ground to gravel_26: -1200633949
+      stone ground to gravel_27: 1636800360
       stone ground to gravel_28: 1121655448
-  spritePackingTag: 
+      stone ground to gravel_3: -1769951967
+      stone ground to gravel_4: -1598883960
+      stone ground to gravel_5: 729600773
+      stone ground to gravel_6: 864761338
+      stone ground to gravel_7: -19830959
+      stone ground to gravel_8: -1393493394
+      stone ground to gravel_9: 584176914
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

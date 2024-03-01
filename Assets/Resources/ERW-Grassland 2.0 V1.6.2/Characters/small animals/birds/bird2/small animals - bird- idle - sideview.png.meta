@@ -3,7 +3,7 @@ guid: fdf0c2c557e274a48a5473db9ab97494
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -20,11 +20,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -63,6 +64,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -74,6 +77,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -86,6 +90,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -98,6 +103,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -110,6 +116,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -441,24 +448,23 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      small animals - bird- idle - sideview_3: -411579743
-      small animals - bird- idle - sideview_8: 1724388432
-      small animals - bird- idle - sideview_14: 786054444
-      small animals - bird- idle - sideview_1: -1908643866
       small animals - bird- idle - sideview_0: 125780376
-      small animals - bird- idle - sideview_2: -1552139952
+      small animals - bird- idle - sideview_1: -1908643866
       small animals - bird- idle - sideview_10: 856637453
-      small animals - bird- idle - sideview_13: 685542790
-      small animals - bird- idle - sideview_6: -213796887
-      small animals - bird- idle - sideview_12: 90220842
-      small animals - bird- idle - sideview_4: -1607320402
-      small animals - bird- idle - sideview_7: -1916213168
-      small animals - bird- idle - sideview_9: 2069908330
-      small animals - bird- idle - sideview_5: -892434995
       small animals - bird- idle - sideview_11: 1847187533
-  spritePackingTag: 
+      small animals - bird- idle - sideview_12: 90220842
+      small animals - bird- idle - sideview_13: 685542790
+      small animals - bird- idle - sideview_14: 786054444
+      small animals - bird- idle - sideview_2: -1552139952
+      small animals - bird- idle - sideview_3: -411579743
+      small animals - bird- idle - sideview_4: -1607320402
+      small animals - bird- idle - sideview_5: -892434995
+      small animals - bird- idle - sideview_6: -213796887
+      small animals - bird- idle - sideview_7: -1916213168
+      small animals - bird- idle - sideview_8: 1724388432
+      small animals - bird- idle - sideview_9: 2069908330
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

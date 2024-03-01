@@ -3,7 +3,7 @@ guid: 6cec29a8480b66b44b29197e2b801ab9
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -20,11 +20,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -63,6 +64,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -74,6 +77,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -86,6 +90,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -98,6 +103,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -110,6 +116,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -1071,54 +1078,53 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      dirt2 to grass extra shade_16: 874047397
-      dirt2 to grass extra shade_14: -1270277314
-      dirt2 to grass extra shade_33: 69103297
-      dirt2 to grass extra shade_26: 1321713666
-      dirt2 to grass extra shade_43: 502543686
-      dirt2 to grass extra shade_32: -2135806879
-      dirt2 to grass extra shade_15: 1938077000
-      dirt2 to grass extra shade_28: -1727984994
-      dirt2 to grass extra shade_19: 1340129199
-      dirt2 to grass extra shade_27: 2024200712
-      dirt2 to grass extra shade_41: -133421611
-      dirt2 to grass extra shade_7: 763713880
-      dirt2 to grass extra shade_37: -757550688
-      dirt2 to grass extra shade_6: -1979597361
-      dirt2 to grass extra shade_25: -911269641
-      dirt2 to grass extra shade_35: -977600125
       dirt2 to grass extra shade_0: -543502819
-      dirt2 to grass extra shade_11: 850580979
-      dirt2 to grass extra shade_31: 593380382
-      dirt2 to grass extra shade_39: -728464963
-      dirt2 to grass extra shade_8: 456551398
       dirt2 to grass extra shade_1: -467505926
-      dirt2 to grass extra shade_12: 1556349271
-      dirt2 to grass extra shade_42: -1169943929
-      dirt2 to grass extra shade_3: 1086020388
-      dirt2 to grass extra shade_38: 2028640687
-      dirt2 to grass extra shade_5: -612833894
-      dirt2 to grass extra shade_17: -775793638
-      dirt2 to grass extra shade_22: 1935307629
       dirt2 to grass extra shade_10: 698623805
-      dirt2 to grass extra shade_24: -1420606210
-      dirt2 to grass extra shade_23: -684029075
-      dirt2 to grass extra shade_44: 46277856
-      dirt2 to grass extra shade_29: -2107924349
-      dirt2 to grass extra shade_36: 709527875
-      dirt2 to grass extra shade_34: 2024082419
-      dirt2 to grass extra shade_4: -1186406657
-      dirt2 to grass extra shade_18: 1878025637
-      dirt2 to grass extra shade_2: -95120016
-      dirt2 to grass extra shade_9: 1297930283
-      dirt2 to grass extra shade_40: 816137986
+      dirt2 to grass extra shade_11: 850580979
+      dirt2 to grass extra shade_12: 1556349271
       dirt2 to grass extra shade_13: 2076147068
-      dirt2 to grass extra shade_21: -134466506
-      dirt2 to grass extra shade_30: -1613230976
+      dirt2 to grass extra shade_14: -1270277314
+      dirt2 to grass extra shade_15: 1938077000
+      dirt2 to grass extra shade_16: 874047397
+      dirt2 to grass extra shade_17: -775793638
+      dirt2 to grass extra shade_18: 1878025637
+      dirt2 to grass extra shade_19: 1340129199
+      dirt2 to grass extra shade_2: -95120016
       dirt2 to grass extra shade_20: -696200610
-  spritePackingTag: 
+      dirt2 to grass extra shade_21: -134466506
+      dirt2 to grass extra shade_22: 1935307629
+      dirt2 to grass extra shade_23: -684029075
+      dirt2 to grass extra shade_24: -1420606210
+      dirt2 to grass extra shade_25: -911269641
+      dirt2 to grass extra shade_26: 1321713666
+      dirt2 to grass extra shade_27: 2024200712
+      dirt2 to grass extra shade_28: -1727984994
+      dirt2 to grass extra shade_29: -2107924349
+      dirt2 to grass extra shade_3: 1086020388
+      dirt2 to grass extra shade_30: -1613230976
+      dirt2 to grass extra shade_31: 593380382
+      dirt2 to grass extra shade_32: -2135806879
+      dirt2 to grass extra shade_33: 69103297
+      dirt2 to grass extra shade_34: 2024082419
+      dirt2 to grass extra shade_35: -977600125
+      dirt2 to grass extra shade_36: 709527875
+      dirt2 to grass extra shade_37: -757550688
+      dirt2 to grass extra shade_38: 2028640687
+      dirt2 to grass extra shade_39: -728464963
+      dirt2 to grass extra shade_4: -1186406657
+      dirt2 to grass extra shade_40: 816137986
+      dirt2 to grass extra shade_41: -133421611
+      dirt2 to grass extra shade_42: -1169943929
+      dirt2 to grass extra shade_43: 502543686
+      dirt2 to grass extra shade_44: 46277856
+      dirt2 to grass extra shade_5: -612833894
+      dirt2 to grass extra shade_6: -1979597361
+      dirt2 to grass extra shade_7: 763713880
+      dirt2 to grass extra shade_8: 456551398
+      dirt2 to grass extra shade_9: 1297930283
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

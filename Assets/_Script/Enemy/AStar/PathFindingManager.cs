@@ -4,22 +4,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-public class PathFindingManager
+public class PathFindingManager:MonoBehaviour
 {
-    private static PathFindingManager instance;
 
-    public PathFindingManager Instance
-    {
-        get
-        { 
-            if (instance == null)
-                instance = new PathFindingManager();
-            return instance;
-        }
-    }
+    List<AStarTile> Openlist = new List<AStarTile>();
+    List<AStarTile> Closelist = new List<AStarTile>();
 
     public AStarTile[,] InitialTile(Tilemap ground,Tilemap obstacle)
     {
+        Debug.Log("InitialTile");
         BoundsInt groundbounds = ground.cellBounds;
         BoundsInt obstaclebounds = obstacle.cellBounds;
         AStarTile[,] Tiles = new AStarTile[groundbounds.xMax - groundbounds.xMin, groundbounds.yMax - groundbounds.yMin];
@@ -29,8 +22,8 @@ public class PathFindingManager
             {
                 if (ground.GetTile(new Vector3Int(x, y, 0)))
                 {
-                    AStarTile newTie = new AStarTile(x - groundbounds.xMin, y - groundbounds.yMin, TileType.Ground);
-                    Tiles[newTie.x, newTie.y] = newTie;
+                    AStarTile newTie = new AStarTile(x, y, TileType.Ground);
+                    Tiles[newTie.x - groundbounds.xMin, newTie.y - groundbounds.yMin] = newTie;
                 }
             }
         }//初始化可行区域
@@ -41,8 +34,8 @@ public class PathFindingManager
             {
                 if (obstacle.GetTile(new Vector3Int(x, y, 0)))
                 {
-                    AStarTile newTie = new AStarTile(x - obstaclebounds.xMin, y - obstaclebounds.yMin, TileType.Obastacle);
-                    Tiles[newTie.x, newTie.y] = newTie;
+                    AStarTile newTie = new AStarTile(x, y, TileType.Obastacle);
+                    Tiles[newTie.x - obstaclebounds.xMin, newTie.y - obstaclebounds.yMin] = newTie;
                 }
             }
         }//初始化不可行区域
@@ -51,16 +44,15 @@ public class PathFindingManager
 
     public List<AStarTile> FindPath(Vector3Int StartPos,Vector3Int GoalPos, AStarTile[,] Tiles, Tilemap ground, Tilemap obstacle) 
     {
-        List<AStarTile> Openlist = null;
-        List<AStarTile> Closelist = null;
+        Debug.Log("进入寻路");
         BoundsInt groundbounds = ground.cellBounds;
         BoundsInt obstaclebounds = obstacle.cellBounds;
         StartPos -= new Vector3Int(groundbounds.xMin, groundbounds.yMin, 0);
         GoalPos -= new Vector3Int(groundbounds.xMin,groundbounds.yMin,0);
-        if (Tiles[StartPos.x, StartPos.y].type == TileType.Ground && Tiles[GoalPos.x, GoalPos.y].type == TileType.Ground) 
+        if (Tiles[StartPos.x, StartPos.y].type == TileType.Ground && Tiles[GoalPos.x, GoalPos.y].type == TileType.Ground)
         {
             AStarTile[] around;
-            around = GetAround(StartPos,Tiles);
+            around = GetAround(StartPos, Tiles);
             int count = 0;
             foreach (AStarTile tile in around)
             {
@@ -72,7 +64,7 @@ public class PathFindingManager
                         tile.toStartCost = 1 + tile.father.toStartCost;
                     }
                     else tile.toStartCost = 1.4f + tile.father.toStartCost;
-                    tile.toGoalCost = Mathf.Abs(tile.x - GoalPos.x) + Mathf.Abs(tile.y - GoalPos.y);
+                    tile.toGoalCost = Mathf.Abs(tile.x - groundbounds.xMin - GoalPos.x) + Mathf.Abs(tile.y - groundbounds.yMin - GoalPos.y);
                     tile.GeneralCost = tile.toStartCost + tile.toGoalCost;
                     Openlist.Add(tile);
                 }
@@ -80,13 +72,16 @@ public class PathFindingManager
             }
             AStarTile closestTile = Openlist[0];
             foreach (AStarTile tile in Openlist)
-            { 
+            {
                 if (tile.GeneralCost < closestTile.GeneralCost) closestTile = tile;
             }
-            Closelist.Add(closestTile);
-            Openlist.Remove(closestTile);
-            if (closestTile.x == GoalPos.x && closestTile.y == GoalPos.y) return Closelist;
-            else return FindPath(new Vector3Int(closestTile.x,closestTile.y,0),GoalPos,Tiles,ground,obstacle);
+            if (!Closelist.Contains(closestTile)) Closelist.Add(closestTile);
+            if (Openlist.Contains(closestTile)) Openlist.Remove(closestTile);
+            if (closestTile.x - groundbounds.xMin == GoalPos.x && closestTile.y - groundbounds.yMin == GoalPos.y) { Debug.Log("寻路完成"); return Closelist;}
+            else
+            {
+                Debug.Log("寻路递归"); return FindPath(new Vector3Int(closestTile.x, closestTile.y, 0), GoalPos + new Vector3Int(groundbounds.xMin, groundbounds.yMin, 0), Tiles, ground, obstacle);
+            } 
         }
         else return null;
     }

@@ -3,7 +3,7 @@ guid: c5e610778fd4c7f419e255b6c4b8b5fc
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -20,11 +20,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -63,6 +64,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -74,6 +77,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -86,6 +90,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -98,6 +103,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -110,6 +116,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -882,45 +889,44 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      half sized wall_18: 574559859
-      half sized wall_27: -520753730
-      half sized wall_6: -1592041040
-      half sized wall_10: -1823292735
-      half sized wall_9: 1890444554
-      half sized wall_25: 267277349
-      half sized wall_22: -559929333
-      half sized wall_32: -1866053445
-      half sized wall_15: 1917479697
-      half sized wall_33: -806637894
       half sized wall_0: 1093153959
-      half sized wall_30: -634730390
-      half sized wall_12: 1057972991
-      half sized wall_31: -2075862168
-      half sized wall_16: -376100454
-      half sized wall_2: -1903634798
-      half sized wall_5: 533329362
-      half sized wall_3: 93925017
-      half sized wall_11: -1887300343
-      half sized wall_34: 642858547
-      half sized wall_8: 777590856
-      half sized wall_14: 943948356
-      half sized wall_23: -1453782680
-      half sized wall_29: 202007722
-      half sized wall_35: 439846742
-      half sized wall_24: -357722856
-      half sized wall_7: -1900432197
-      half sized wall_19: -1627027443
-      half sized wall_4: 2100317843
-      half sized wall_28: -415471193
-      half sized wall_20: 464520145
-      half sized wall_17: 129077078
-      half sized wall_13: 245761646
-      half sized wall_21: -8843994
       half sized wall_1: 1362745460
+      half sized wall_10: -1823292735
+      half sized wall_11: -1887300343
+      half sized wall_12: 1057972991
+      half sized wall_13: 245761646
+      half sized wall_14: 943948356
+      half sized wall_15: 1917479697
+      half sized wall_16: -376100454
+      half sized wall_17: 129077078
+      half sized wall_18: 574559859
+      half sized wall_19: -1627027443
+      half sized wall_2: -1903634798
+      half sized wall_20: 464520145
+      half sized wall_21: -8843994
+      half sized wall_22: -559929333
+      half sized wall_23: -1453782680
+      half sized wall_24: -357722856
+      half sized wall_25: 267277349
       half sized wall_26: 628590999
-  spritePackingTag: 
+      half sized wall_27: -520753730
+      half sized wall_28: -415471193
+      half sized wall_29: 202007722
+      half sized wall_3: 93925017
+      half sized wall_30: -634730390
+      half sized wall_31: -2075862168
+      half sized wall_32: -1866053445
+      half sized wall_33: -806637894
+      half sized wall_34: 642858547
+      half sized wall_35: 439846742
+      half sized wall_4: 2100317843
+      half sized wall_5: 533329362
+      half sized wall_6: -1592041040
+      half sized wall_7: -1900432197
+      half sized wall_8: 777590856
+      half sized wall_9: 1890444554
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

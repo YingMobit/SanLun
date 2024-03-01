@@ -3,7 +3,7 @@ guid: 20f9fbc4c1c19ab4fac12abfa46cf972
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -20,11 +20,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -63,6 +64,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -74,6 +77,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -86,6 +90,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -98,6 +103,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -110,6 +116,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -1386,69 +1393,68 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      stone path to grass_50: 1734289936
-      stone path to grass_28: 1774789634
-      stone path to grass_13: -1011563836
-      stone path to grass_57: 42943635
-      stone path to grass_34: -1770057280
-      stone path to grass_38: 1931237226
-      stone path to grass_16: -5204842
-      stone path to grass_26: -80063176
-      stone path to grass_42: 1338181108
-      stone path to grass_6: 344699798
-      stone path to grass_23: 637801975
-      stone path to grass_24: -1153092158
-      stone path to grass_27: 108539208
-      stone path to grass_7: 1749948394
-      stone path to grass_52: -1416087052
-      stone path to grass_29: -1716135060
-      stone path to grass_36: -1244555227
-      stone path to grass_39: -1117395376
-      stone path to grass_18: 1996924617
-      stone path to grass_4: -244184159
-      stone path to grass_48: 744369141
-      stone path to grass_59: -1104883263
-      stone path to grass_53: 659737605
-      stone path to grass_8: -1809806279
-      stone path to grass_55: -877304784
-      stone path to grass_12: -1072827182
-      stone path to grass_5: 1003755794
-      stone path to grass_10: -1432918054
-      stone path to grass_33: -1412094607
-      stone path to grass_17: -650573079
-      stone path to grass_37: -1683130266
-      stone path to grass_44: -1108915294
-      stone path to grass_9: 888041090
-      stone path to grass_54: 370133386
-      stone path to grass_51: -711461240
-      stone path to grass_15: 1912773973
-      stone path to grass_58: 1891087280
-      stone path to grass_31: -836005450
-      stone path to grass_45: -495452837
-      stone path to grass_21: -100984143
-      stone path to grass_20: -656525427
-      stone path to grass_35: -1204273910
-      stone path to grass_11: -1701223106
-      stone path to grass_32: -956687852
-      stone path to grass_46: 1207425121
-      stone path to grass_40: -707062984
+      stone path to grass_0: -600651762
       stone path to grass_1: -900669891
-      stone path to grass_25: 2089101835
-      stone path to grass_47: -778988927
+      stone path to grass_10: -1432918054
+      stone path to grass_11: -1701223106
+      stone path to grass_12: -1072827182
+      stone path to grass_13: -1011563836
+      stone path to grass_14: -256119521
+      stone path to grass_15: 1912773973
+      stone path to grass_16: -5204842
+      stone path to grass_17: -650573079
+      stone path to grass_18: 1996924617
       stone path to grass_19: -2034920768
       stone path to grass_2: -440343183
-      stone path to grass_41: -792179256
+      stone path to grass_20: -656525427
+      stone path to grass_21: -100984143
       stone path to grass_22: -859700893
-      stone path to grass_43: -1313372342
-      stone path to grass_49: 598970528
+      stone path to grass_23: 637801975
+      stone path to grass_24: -1153092158
+      stone path to grass_25: 2089101835
+      stone path to grass_26: -80063176
+      stone path to grass_27: 108539208
+      stone path to grass_28: 1774789634
+      stone path to grass_29: -1716135060
       stone path to grass_3: 196651567
       stone path to grass_30: -371300544
-      stone path to grass_0: -600651762
+      stone path to grass_31: -836005450
+      stone path to grass_32: -956687852
+      stone path to grass_33: -1412094607
+      stone path to grass_34: -1770057280
+      stone path to grass_35: -1204273910
+      stone path to grass_36: -1244555227
+      stone path to grass_37: -1683130266
+      stone path to grass_38: 1931237226
+      stone path to grass_39: -1117395376
+      stone path to grass_4: -244184159
+      stone path to grass_40: -707062984
+      stone path to grass_41: -792179256
+      stone path to grass_42: 1338181108
+      stone path to grass_43: -1313372342
+      stone path to grass_44: -1108915294
+      stone path to grass_45: -495452837
+      stone path to grass_46: 1207425121
+      stone path to grass_47: -778988927
+      stone path to grass_48: 744369141
+      stone path to grass_49: 598970528
+      stone path to grass_5: 1003755794
+      stone path to grass_50: 1734289936
+      stone path to grass_51: -711461240
+      stone path to grass_52: -1416087052
+      stone path to grass_53: 659737605
+      stone path to grass_54: 370133386
+      stone path to grass_55: -877304784
       stone path to grass_56: 7212782
-      stone path to grass_14: -256119521
-  spritePackingTag: 
+      stone path to grass_57: 42943635
+      stone path to grass_58: 1891087280
+      stone path to grass_59: -1104883263
+      stone path to grass_6: 344699798
+      stone path to grass_7: 1749948394
+      stone path to grass_8: -1809806279
+      stone path to grass_9: 888041090
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

@@ -3,7 +3,7 @@ guid: ca0f8a4129adf8a4ca8b824d86375ec0
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -20,11 +20,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -63,6 +64,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -74,6 +77,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -86,6 +90,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -98,6 +103,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -110,6 +116,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -1050,53 +1057,52 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      wind cartoonish fx-288X64- 40frames_21: 498682265
-      wind cartoonish fx-288X64- 40frames_15: -104496674
-      wind cartoonish fx-288X64- 40frames_37: -1131420710
-      wind cartoonish fx-288X64- 40frames_19: -778939861
-      wind cartoonish fx-288X64- 40frames_22: 1029851756
-      wind cartoonish fx-288X64- 40frames_34: 474458227
-      wind cartoonish fx-288X64- 40frames_16: -23485213
+      wind cartoonish fx-288X64- 40frames_0: 761888110
+      wind cartoonish fx-288X64- 40frames_1: -932034526
+      wind cartoonish fx-288X64- 40frames_10: 1487940035
+      wind cartoonish fx-288X64- 40frames_11: -707190727
+      wind cartoonish fx-288X64- 40frames_12: 125136671
+      wind cartoonish fx-288X64- 40frames_13: -899142649
       wind cartoonish fx-288X64- 40frames_14: -1920232500
-      wind cartoonish fx-288X64- 40frames_6: -600586540
-      wind cartoonish fx-288X64- 40frames_33: 2111168607
-      wind cartoonish fx-288X64- 40frames_28: 74014338
+      wind cartoonish fx-288X64- 40frames_15: -104496674
+      wind cartoonish fx-288X64- 40frames_16: -23485213
       wind cartoonish fx-288X64- 40frames_17: 1057959672
+      wind cartoonish fx-288X64- 40frames_18: -494015703
+      wind cartoonish fx-288X64- 40frames_19: -778939861
       wind cartoonish fx-288X64- 40frames_2: 1222911272
-      wind cartoonish fx-288X64- 40frames_32: -1131161699
-      wind cartoonish fx-288X64- 40frames_31: 855771023
+      wind cartoonish fx-288X64- 40frames_20: 1267151181
+      wind cartoonish fx-288X64- 40frames_21: 498682265
+      wind cartoonish fx-288X64- 40frames_22: 1029851756
+      wind cartoonish fx-288X64- 40frames_23: -1627385417
+      wind cartoonish fx-288X64- 40frames_24: 780282445
+      wind cartoonish fx-288X64- 40frames_25: -49281321
+      wind cartoonish fx-288X64- 40frames_26: -1042296448
+      wind cartoonish fx-288X64- 40frames_27: -1832288734
+      wind cartoonish fx-288X64- 40frames_28: 74014338
+      wind cartoonish fx-288X64- 40frames_29: 1108477774
       wind cartoonish fx-288X64- 40frames_3: 1634924486
+      wind cartoonish fx-288X64- 40frames_30: 569448907
+      wind cartoonish fx-288X64- 40frames_31: 855771023
+      wind cartoonish fx-288X64- 40frames_32: -1131161699
+      wind cartoonish fx-288X64- 40frames_33: 2111168607
+      wind cartoonish fx-288X64- 40frames_34: 474458227
+      wind cartoonish fx-288X64- 40frames_35: 940035935
+      wind cartoonish fx-288X64- 40frames_36: -961885999
+      wind cartoonish fx-288X64- 40frames_37: -1131420710
+      wind cartoonish fx-288X64- 40frames_38: -1741649773
       wind cartoonish fx-288X64- 40frames_39: 309502562
       wind cartoonish fx-288X64- 40frames_4: -40851362
-      wind cartoonish fx-288X64- 40frames_10: 1487940035
-      wind cartoonish fx-288X64- 40frames_20: 1267151181
-      wind cartoonish fx-288X64- 40frames_13: -899142649
-      wind cartoonish fx-288X64- 40frames_9: 2084218685
-      wind cartoonish fx-288X64- 40frames_23: -1627385417
-      wind cartoonish fx-288X64- 40frames_11: -707190727
-      wind cartoonish fx-288X64- 40frames_35: 940035935
+      wind cartoonish fx-288X64- 40frames_40: -1593489015
       wind cartoonish fx-288X64- 40frames_41: 1671016996
       wind cartoonish fx-288X64- 40frames_42: 1475920488
-      wind cartoonish fx-288X64- 40frames_1: -932034526
-      wind cartoonish fx-288X64- 40frames_12: 125136671
       wind cartoonish fx-288X64- 40frames_43: 1408378478
-      wind cartoonish fx-288X64- 40frames_24: 780282445
-      wind cartoonish fx-288X64- 40frames_30: 569448907
-      wind cartoonish fx-288X64- 40frames_8: 5991788
-      wind cartoonish fx-288X64- 40frames_25: -49281321
-      wind cartoonish fx-288X64- 40frames_18: -494015703
-      wind cartoonish fx-288X64- 40frames_26: -1042296448
-      wind cartoonish fx-288X64- 40frames_36: -961885999
-      wind cartoonish fx-288X64- 40frames_0: 761888110
-      wind cartoonish fx-288X64- 40frames_27: -1832288734
       wind cartoonish fx-288X64- 40frames_5: -101394859
-      wind cartoonish fx-288X64- 40frames_29: 1108477774
-      wind cartoonish fx-288X64- 40frames_38: -1741649773
-      wind cartoonish fx-288X64- 40frames_40: -1593489015
+      wind cartoonish fx-288X64- 40frames_6: -600586540
       wind cartoonish fx-288X64- 40frames_7: 911375211
-  spritePackingTag: 
+      wind cartoonish fx-288X64- 40frames_8: 5991788
+      wind cartoonish fx-288X64- 40frames_9: 2084218685
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

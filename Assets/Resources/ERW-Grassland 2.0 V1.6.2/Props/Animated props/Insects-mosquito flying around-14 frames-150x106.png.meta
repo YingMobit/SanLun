@@ -3,7 +3,7 @@ guid: 0bb077d9aa8d2b6479f53df2c38fb04d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -20,11 +20,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -63,6 +64,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -74,6 +77,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -86,6 +90,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -98,6 +103,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -110,6 +116,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -420,23 +427,22 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Insects-mosquito flying around-14 frames-150x106_11: -1723408948
-      Insects-mosquito flying around-14 frames-150x106_13: 81786667
-      Insects-mosquito flying around-14 frames-150x106_9: -344236687
-      Insects-mosquito flying around-14 frames-150x106_6: -480656057
-      Insects-mosquito flying around-14 frames-150x106_1: 1554274715
-      Insects-mosquito flying around-14 frames-150x106_12: 1521341833
       Insects-mosquito flying around-14 frames-150x106_0: -1445363786
+      Insects-mosquito flying around-14 frames-150x106_1: 1554274715
+      Insects-mosquito flying around-14 frames-150x106_10: -830332619
+      Insects-mosquito flying around-14 frames-150x106_11: -1723408948
+      Insects-mosquito flying around-14 frames-150x106_12: 1521341833
+      Insects-mosquito flying around-14 frames-150x106_13: 81786667
       Insects-mosquito flying around-14 frames-150x106_2: 191219567
+      Insects-mosquito flying around-14 frames-150x106_3: -260448402
       Insects-mosquito flying around-14 frames-150x106_4: 1274895252
       Insects-mosquito flying around-14 frames-150x106_5: 1653570651
-      Insects-mosquito flying around-14 frames-150x106_10: -830332619
-      Insects-mosquito flying around-14 frames-150x106_8: -1158696629
+      Insects-mosquito flying around-14 frames-150x106_6: -480656057
       Insects-mosquito flying around-14 frames-150x106_7: 415771784
-      Insects-mosquito flying around-14 frames-150x106_3: -260448402
-  spritePackingTag: 
+      Insects-mosquito flying around-14 frames-150x106_8: -1158696629
+      Insects-mosquito flying around-14 frames-150x106_9: -344236687
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

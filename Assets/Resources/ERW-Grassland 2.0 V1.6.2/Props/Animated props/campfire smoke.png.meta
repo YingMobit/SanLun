@@ -3,7 +3,7 @@ guid: c950f9a4546e44540b564b8ae44420a0
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -20,11 +20,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -63,6 +64,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -74,6 +77,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -86,6 +90,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -98,6 +103,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -110,6 +116,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -462,25 +469,24 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      campfire smoke_12: -1205217745
-      campfire smoke_6: 43540829
-      campfire smoke_2: 77996466
-      campfire smoke_11: 1249546058
-      campfire smoke_5: -589579469
-      campfire smoke_3: -389646258
-      campfire smoke_8: -550459796
-      campfire smoke_15: -682936395
-      campfire smoke_1: 85317901
-      campfire smoke_14: 1639708704
-      campfire smoke_9: 485386701
-      campfire smoke_4: -358454230
-      campfire smoke_10: 1719528386
       campfire smoke_0: 1519081567
-      campfire smoke_7: 1598708778
+      campfire smoke_1: 85317901
+      campfire smoke_10: 1719528386
+      campfire smoke_11: 1249546058
+      campfire smoke_12: -1205217745
       campfire smoke_13: -1465529416
-  spritePackingTag: 
+      campfire smoke_14: 1639708704
+      campfire smoke_15: -682936395
+      campfire smoke_2: 77996466
+      campfire smoke_3: -389646258
+      campfire smoke_4: -358454230
+      campfire smoke_5: -589579469
+      campfire smoke_6: 43540829
+      campfire smoke_7: 1598708778
+      campfire smoke_8: -550459796
+      campfire smoke_9: 485386701
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

@@ -3,7 +3,7 @@ guid: 939f7a8fced992a498d5fecffcd3f42e
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -20,11 +20,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -63,6 +64,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -74,6 +77,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -86,6 +90,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -98,6 +103,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -110,6 +116,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -1680,83 +1687,82 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      orc mage - with hand fx- all anims_44: 1148356604
-      orc mage - with hand fx- all anims_15: 2141214346
-      orc mage - with hand fx- all anims_55: 767045013
-      orc mage - with hand fx- all anims_2: -1251893499
-      orc mage - with hand fx- all anims_34: -2100832661
-      orc mage - with hand fx- all anims_43: -753806788
-      orc mage - with hand fx- all anims_25: 1405517523
-      orc mage - with hand fx- all anims_33: -1097915401
-      orc mage - with hand fx- all anims_46: -2046649036
-      orc mage - with hand fx- all anims_60: 1571010796
-      orc mage - with hand fx- all anims_16: 386207912
-      orc mage - with hand fx- all anims_68: 951509124
-      orc mage - with hand fx- all anims_37: 1708760837
-      orc mage - with hand fx- all anims_7: 1044371181
-      orc mage - with hand fx- all anims_5: -1335806816
-      orc mage - with hand fx- all anims_24: -1658199003
-      orc mage - with hand fx- all anims_35: 1762227697
-      orc mage - with hand fx- all anims_50: -60401393
-      orc mage - with hand fx- all anims_19: 632821517
-      orc mage - with hand fx- all anims_57: -702675373
-      orc mage - with hand fx- all anims_67: -1258612179
-      orc mage - with hand fx- all anims_61: -1026629245
-      orc mage - with hand fx- all anims_66: 1914764555
-      orc mage - with hand fx- all anims_72: -1799017152
-      orc mage - with hand fx- all anims_71: -423694469
-      orc mage - with hand fx- all anims_32: -1135834580
-      orc mage - with hand fx- all anims_53: -1355385269
-      orc mage - with hand fx- all anims_11: 201742384
-      orc mage - with hand fx- all anims_21: 286315861
-      orc mage - with hand fx- all anims_30: -1549703376
-      orc mage - with hand fx- all anims_73: 1814355772
+      orc mage - with hand fx- all anims_0: 1009174154
       orc mage - with hand fx- all anims_1: 1892216059
-      orc mage - with hand fx- all anims_4: -1651614254
-      orc mage - with hand fx- all anims_17: -685188635
-      orc mage - with hand fx- all anims_13: -1417417744
-      orc mage - with hand fx- all anims_38: -1262096548
-      orc mage - with hand fx- all anims_14: 725752412
-      orc mage - with hand fx- all anims_56: -1874522382
-      orc mage - with hand fx- all anims_48: 492313750
-      orc mage - with hand fx- all anims_23: 1529225192
-      orc mage - with hand fx- all anims_49: 392613355
-      orc mage - with hand fx- all anims_63: 1205792182
-      orc mage - with hand fx- all anims_12: 1021612253
-      orc mage - with hand fx- all anims_8: 1074403387
-      orc mage - with hand fx- all anims_69: 1460618399
-      orc mage - with hand fx- all anims_45: -1417381485
-      orc mage - with hand fx- all anims_6: -1055470597
-      orc mage - with hand fx- all anims_47: -1133475245
-      orc mage - with hand fx- all anims_54: -989495032
-      orc mage - with hand fx- all anims_62: 183982440
-      orc mage - with hand fx- all anims_9: -1257859660
-      orc mage - with hand fx- all anims_41: 1661686450
-      orc mage - with hand fx- all anims_65: -1741373416
-      orc mage - with hand fx- all anims_42: -842776807
-      orc mage - with hand fx- all anims_22: -167928896
       orc mage - with hand fx- all anims_10: -791296832
-      orc mage - with hand fx- all anims_52: -1936604542
-      orc mage - with hand fx- all anims_70: 772890195
-      orc mage - with hand fx- all anims_59: -1169856895
-      orc mage - with hand fx- all anims_27: 1949048837
+      orc mage - with hand fx- all anims_11: 201742384
+      orc mage - with hand fx- all anims_12: 1021612253
+      orc mage - with hand fx- all anims_13: -1417417744
+      orc mage - with hand fx- all anims_14: 725752412
+      orc mage - with hand fx- all anims_15: 2141214346
+      orc mage - with hand fx- all anims_16: 386207912
+      orc mage - with hand fx- all anims_17: -685188635
       orc mage - with hand fx- all anims_18: 1259338493
-      orc mage - with hand fx- all anims_26: -612883294
-      orc mage - with hand fx- all anims_3: -1858596952
-      orc mage - with hand fx- all anims_40: -824833806
-      orc mage - with hand fx- all anims_51: -577269165
-      orc mage - with hand fx- all anims_58: 2097311824
+      orc mage - with hand fx- all anims_19: 632821517
+      orc mage - with hand fx- all anims_2: -1251893499
       orc mage - with hand fx- all anims_20: 1537894074
-      orc mage - with hand fx- all anims_36: -1179904818
-      orc mage - with hand fx- all anims_64: 1862416037
+      orc mage - with hand fx- all anims_21: 286315861
+      orc mage - with hand fx- all anims_22: -167928896
+      orc mage - with hand fx- all anims_23: 1529225192
+      orc mage - with hand fx- all anims_24: -1658199003
+      orc mage - with hand fx- all anims_25: 1405517523
+      orc mage - with hand fx- all anims_26: -612883294
+      orc mage - with hand fx- all anims_27: 1949048837
       orc mage - with hand fx- all anims_28: 493057008
       orc mage - with hand fx- all anims_29: 1545286529
+      orc mage - with hand fx- all anims_3: -1858596952
+      orc mage - with hand fx- all anims_30: -1549703376
       orc mage - with hand fx- all anims_31: 1890325999
-      orc mage - with hand fx- all anims_0: 1009174154
+      orc mage - with hand fx- all anims_32: -1135834580
+      orc mage - with hand fx- all anims_33: -1097915401
+      orc mage - with hand fx- all anims_34: -2100832661
+      orc mage - with hand fx- all anims_35: 1762227697
+      orc mage - with hand fx- all anims_36: -1179904818
+      orc mage - with hand fx- all anims_37: 1708760837
+      orc mage - with hand fx- all anims_38: -1262096548
       orc mage - with hand fx- all anims_39: -1909255749
-  spritePackingTag: 
+      orc mage - with hand fx- all anims_4: -1651614254
+      orc mage - with hand fx- all anims_40: -824833806
+      orc mage - with hand fx- all anims_41: 1661686450
+      orc mage - with hand fx- all anims_42: -842776807
+      orc mage - with hand fx- all anims_43: -753806788
+      orc mage - with hand fx- all anims_44: 1148356604
+      orc mage - with hand fx- all anims_45: -1417381485
+      orc mage - with hand fx- all anims_46: -2046649036
+      orc mage - with hand fx- all anims_47: -1133475245
+      orc mage - with hand fx- all anims_48: 492313750
+      orc mage - with hand fx- all anims_49: 392613355
+      orc mage - with hand fx- all anims_5: -1335806816
+      orc mage - with hand fx- all anims_50: -60401393
+      orc mage - with hand fx- all anims_51: -577269165
+      orc mage - with hand fx- all anims_52: -1936604542
+      orc mage - with hand fx- all anims_53: -1355385269
+      orc mage - with hand fx- all anims_54: -989495032
+      orc mage - with hand fx- all anims_55: 767045013
+      orc mage - with hand fx- all anims_56: -1874522382
+      orc mage - with hand fx- all anims_57: -702675373
+      orc mage - with hand fx- all anims_58: 2097311824
+      orc mage - with hand fx- all anims_59: -1169856895
+      orc mage - with hand fx- all anims_6: -1055470597
+      orc mage - with hand fx- all anims_60: 1571010796
+      orc mage - with hand fx- all anims_61: -1026629245
+      orc mage - with hand fx- all anims_62: 183982440
+      orc mage - with hand fx- all anims_63: 1205792182
+      orc mage - with hand fx- all anims_64: 1862416037
+      orc mage - with hand fx- all anims_65: -1741373416
+      orc mage - with hand fx- all anims_66: 1914764555
+      orc mage - with hand fx- all anims_67: -1258612179
+      orc mage - with hand fx- all anims_68: 951509124
+      orc mage - with hand fx- all anims_69: 1460618399
+      orc mage - with hand fx- all anims_7: 1044371181
+      orc mage - with hand fx- all anims_70: 772890195
+      orc mage - with hand fx- all anims_71: -423694469
+      orc mage - with hand fx- all anims_72: -1799017152
+      orc mage - with hand fx- all anims_73: 1814355772
+      orc mage - with hand fx- all anims_8: 1074403387
+      orc mage - with hand fx- all anims_9: -1257859660
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

@@ -3,7 +3,7 @@ guid: 279a0292b6a0a9145a6c3bdc3fbfd626
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -20,11 +20,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -63,6 +64,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -74,6 +77,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -86,6 +90,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -98,6 +103,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -110,6 +116,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -693,36 +700,35 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      stone ground to dirt1_0: 66465531
+      stone ground to dirt1_1: -831519230
+      stone ground to dirt1_10: -774704214
+      stone ground to dirt1_11: -1317917613
+      stone ground to dirt1_12: 2079021129
       stone ground to dirt1_13: -1863484884
       stone ground to dirt1_14: -177165969
-      stone ground to dirt1_16: -1771306542
-      stone ground to dirt1_12: 2079021129
-      stone ground to dirt1_0: 66465531
-      stone ground to dirt1_3: 376473535
-      stone ground to dirt1_5: -472578487
-      stone ground to dirt1_9: 363027610
-      stone ground to dirt1_24: 248424060
-      stone ground to dirt1_19: 1744758923
-      stone ground to dirt1_23: 147090513
-      stone ground to dirt1_25: -1062741301
-      stone ground to dirt1_7: 1074618127
-      stone ground to dirt1_1: -831519230
-      stone ground to dirt1_6: 1051278946
-      stone ground to dirt1_11: -1317917613
       stone ground to dirt1_15: -112616599
-      stone ground to dirt1_18: 901915504
-      stone ground to dirt1_10: -774704214
-      stone ground to dirt1_26: -54503671
-      stone ground to dirt1_2: -1703667425
-      stone ground to dirt1_4: 1159820898
+      stone ground to dirt1_16: -1771306542
       stone ground to dirt1_17: -385421891
+      stone ground to dirt1_18: 901915504
+      stone ground to dirt1_19: 1744758923
+      stone ground to dirt1_2: -1703667425
       stone ground to dirt1_20: 1471174878
-      stone ground to dirt1_8: 1618780092
-      stone ground to dirt1_22: 1084807348
       stone ground to dirt1_21: -773476886
-  spritePackingTag: 
+      stone ground to dirt1_22: 1084807348
+      stone ground to dirt1_23: 147090513
+      stone ground to dirt1_24: 248424060
+      stone ground to dirt1_25: -1062741301
+      stone ground to dirt1_26: -54503671
+      stone ground to dirt1_3: 376473535
+      stone ground to dirt1_4: 1159820898
+      stone ground to dirt1_5: -472578487
+      stone ground to dirt1_6: 1051278946
+      stone ground to dirt1_7: 1074618127
+      stone ground to dirt1_8: 1618780092
+      stone ground to dirt1_9: 363027610
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

@@ -3,7 +3,7 @@ guid: 5d742dc1300872d4cbaa0b51556dea62
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -20,11 +20,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -63,6 +64,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -74,6 +77,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -86,6 +90,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -98,6 +103,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -110,6 +116,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -336,19 +343,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      small animals - frog-frog - walk - sideview_0: -739965687
+      small animals - frog-frog - walk - sideview_1: 1915773731
+      small animals - frog-frog - walk - sideview_2: -483105927
       small animals - frog-frog - walk - sideview_3: -150649843
+      small animals - frog-frog - walk - sideview_4: 1925542325
+      small animals - frog-frog - walk - sideview_5: -1152436406
+      small animals - frog-frog - walk - sideview_6: -191576986
+      small animals - frog-frog - walk - sideview_7: 737415163
       small animals - frog-frog - walk - sideview_8: -900316167
       small animals - frog-frog - walk - sideview_9: -1954734248
-      small animals - frog-frog - walk - sideview_0: -739965687
-      small animals - frog-frog - walk - sideview_2: -483105927
-      small animals - frog-frog - walk - sideview_6: -191576986
-      small animals - frog-frog - walk - sideview_1: 1915773731
-      small animals - frog-frog - walk - sideview_5: -1152436406
-      small animals - frog-frog - walk - sideview_4: 1925542325
-      small animals - frog-frog - walk - sideview_7: 737415163
-  spritePackingTag: 
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

@@ -3,7 +3,7 @@ guid: d4b2b33d284f03a4fa35427fa420e046
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -20,11 +20,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -63,6 +64,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -74,6 +77,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -86,6 +90,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -98,6 +103,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -110,6 +116,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -1008,51 +1015,50 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      sand to grass extra shade - transparency_22: -1359768814
-      sand to grass extra shade - transparency_31: 973734124
-      sand to grass extra shade - transparency_24: -1909109688
-      sand to grass extra shade - transparency_12: -453924796
-      sand to grass extra shade - transparency_9: 411851217
       sand to grass extra shade - transparency_0: -822034887
       sand to grass extra shade - transparency_1: 1799696838
-      sand to grass extra shade - transparency_14: -1664330345
-      sand to grass extra shade - transparency_7: 1142294132
-      sand to grass extra shade - transparency_11: 197404701
-      sand to grass extra shade - transparency_40: -344561469
-      sand to grass extra shade - transparency_37: 1958282828
-      sand to grass extra shade - transparency_33: -624206454
-      sand to grass extra shade - transparency_27: 900945
-      sand to grass extra shade - transparency_6: -2057715096
-      sand to grass extra shade - transparency_32: 2107700135
-      sand to grass extra shade - transparency_3: 1088007261
-      sand to grass extra shade - transparency_30: 740215223
       sand to grass extra shade - transparency_10: 233490788
-      sand to grass extra shade - transparency_38: 280702919
-      sand to grass extra shade - transparency_21: 1691491950
+      sand to grass extra shade - transparency_11: 197404701
+      sand to grass extra shade - transparency_12: -453924796
       sand to grass extra shade - transparency_13: -1283174724
-      sand to grass extra shade - transparency_5: -915831009
-      sand to grass extra shade - transparency_29: -130613321
-      sand to grass extra shade - transparency_39: 1368165412
-      sand to grass extra shade - transparency_35: 2058915541
+      sand to grass extra shade - transparency_14: -1664330345
       sand to grass extra shade - transparency_15: -1128864878
-      sand to grass extra shade - transparency_28: -614622675
-      sand to grass extra shade - transparency_34: 2055067502
-      sand to grass extra shade - transparency_36: -1794348911
-      sand to grass extra shade - transparency_20: 1442219000
+      sand to grass extra shade - transparency_16: 415699278
+      sand to grass extra shade - transparency_17: 209190342
+      sand to grass extra shade - transparency_18: 1577432560
       sand to grass extra shade - transparency_19: -1860603110
       sand to grass extra shade - transparency_2: 1749240902
-      sand to grass extra shade - transparency_17: 209190342
+      sand to grass extra shade - transparency_20: 1442219000
+      sand to grass extra shade - transparency_21: 1691491950
+      sand to grass extra shade - transparency_22: -1359768814
       sand to grass extra shade - transparency_23: -98500749
-      sand to grass extra shade - transparency_18: 1577432560
-      sand to grass extra shade - transparency_41: -1984894639
-      sand to grass extra shade - transparency_16: 415699278
-      sand to grass extra shade - transparency_4: 1787037339
-      sand to grass extra shade - transparency_8: 478763350
-      sand to grass extra shade - transparency_26: -1361747561
+      sand to grass extra shade - transparency_24: -1909109688
       sand to grass extra shade - transparency_25: 505638657
-  spritePackingTag: 
+      sand to grass extra shade - transparency_26: -1361747561
+      sand to grass extra shade - transparency_27: 900945
+      sand to grass extra shade - transparency_28: -614622675
+      sand to grass extra shade - transparency_29: -130613321
+      sand to grass extra shade - transparency_3: 1088007261
+      sand to grass extra shade - transparency_30: 740215223
+      sand to grass extra shade - transparency_31: 973734124
+      sand to grass extra shade - transparency_32: 2107700135
+      sand to grass extra shade - transparency_33: -624206454
+      sand to grass extra shade - transparency_34: 2055067502
+      sand to grass extra shade - transparency_35: 2058915541
+      sand to grass extra shade - transparency_36: -1794348911
+      sand to grass extra shade - transparency_37: 1958282828
+      sand to grass extra shade - transparency_38: 280702919
+      sand to grass extra shade - transparency_39: 1368165412
+      sand to grass extra shade - transparency_4: 1787037339
+      sand to grass extra shade - transparency_40: -344561469
+      sand to grass extra shade - transparency_41: -1984894639
+      sand to grass extra shade - transparency_5: -915831009
+      sand to grass extra shade - transparency_6: -2057715096
+      sand to grass extra shade - transparency_7: 1142294132
+      sand to grass extra shade - transparency_8: 478763350
+      sand to grass extra shade - transparency_9: 411851217
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

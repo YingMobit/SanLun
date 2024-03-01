@@ -18,6 +18,7 @@ public class WeaponSystem : MonoBehaviour,IGuns
     public float BufOn_Damage=1;
     public float BufOn_Magazine_Capacity=0;
     public int BufOn_Penetration_Quantity=0;
+    public float Bufon_HitBackForce = 1f;
 
     [Header("实际参数")]
     public float Fac_Reloading_time;
@@ -85,7 +86,7 @@ public class WeaponSystem : MonoBehaviour,IGuns
         Fac_Damage = Mathf.RoundToInt( BasData.Bas_Damage * BufOn_Damage);
         Fac_Magazine_Capacity = BasData.Bas_Magazine_Capacity + BufOn_Magazine_Capacity;
         Fac_Penetration_Quantity = BasData.Bas_Penetration_Quantity + BufOn_Penetration_Quantity;
-        Fac_HitBackForce = BasData.Bas_HitBack;
+        Fac_HitBackForce = BasData.Bas_HitBack * Bufon_HitBackForce; 
         ReloadAudio = BasData.ReloadAudio;
 
         Bullet_Remained = Fac_Magazine_Capacity;

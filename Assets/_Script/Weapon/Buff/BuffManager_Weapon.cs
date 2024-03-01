@@ -13,8 +13,22 @@ public class BuffManager_Weapon: MonoBehaviour
     public  float bufon_Damage = 1f;
     public  int bufon_Magazine_Capacity = 0;
     public  int bufon_Penetration_Quantity = 0;
+    public float bufon_HitBackForce = 1f;
 
     public event Action OnDataChanged_Weapon; // 定义数据改变事件
+
+    public float Bufon_HitBackForce
+    {
+        get { return bufon_HitBackForce; }
+        set
+        {
+            if (value != bufon_HitBackForce)
+            {
+                bufon_HitBackForce = value;
+                OnDataChanged_Weapon.Invoke();
+            }
+        }
+    }
 
     public string Weapon_Name
     { 

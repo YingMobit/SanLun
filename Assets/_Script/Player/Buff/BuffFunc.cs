@@ -39,6 +39,8 @@ public class BuffFunc : MonoBehaviour
     public void Buff_15() { buff_Player.Healthreward_Value += 5; CloseScene(); }
     public void Buff_16() { buff_Player.Blood_suck_value += 5; CloseScene(); }
 
+    public void Buff_17() { buff_Weapon.Bufon_HitBackForce += 0.2f;CloseScene(); }
+
     void CloseScene()
     {
         for (int i = 0; i < BuffBackGround.transform.childCount; i++) { GameObject child = BuffBackGround.transform.GetChild(i).gameObject; child.SetActive(false); }

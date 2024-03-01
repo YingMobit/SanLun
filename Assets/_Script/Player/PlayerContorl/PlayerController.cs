@@ -1,3 +1,4 @@
+
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -18,7 +19,7 @@ public class PlayerController : MonoBehaviour
     private Vector3 relative_pos;
     public Vector3 MousePos;
 
-    [Header("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½")]
+    [Header("»ù´¡ÊôÐÔ")]
     public float Turningspeed;
     public float Bas_MoveSpeed;
     public int Bas_MaxHealth;
@@ -27,7 +28,7 @@ public class PlayerController : MonoBehaviour
     public int Bufon_Health;
     public float Bufon_Speed;
 
-    [Header("Êµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½")]
+    [Header("Êµ¼ÊÊôÐÔ")]
     public float Fac_Speed;
     public float Fac_SuckBloodChance;
     public bool Whether_Generate_Shield;
@@ -48,7 +49,7 @@ public class PlayerController : MonoBehaviour
     }
 
 
-    [Header("ÊµÊ±ï¿½ï¿½ï¿½ï¿½")]
+    [Header("ÊµÊ±²ÎÊý")]
     public bool dead;
     public float Last_Be_Attacked_time;
     public GameObject Shield;
@@ -74,7 +75,7 @@ public class PlayerController : MonoBehaviour
     public Rigidbody2D rigidbody;
 
     [SerializeField]
-    [Tooltip("ï¿½ï¿½ï¿½ï¿½Æ¶ï¿½")]
+    [Tooltip("Íæ¼ÒÒÆ¶¯")]
     public float move_dir_x;
     public float move_dir_y;
 
@@ -124,7 +125,7 @@ public class PlayerController : MonoBehaviour
     {
         move_dir_x = Input.GetAxis("Horizontal");
         move_dir_y = Input.GetAxis("Vertical");
-        rigidbody.velocity = new Vector2(move_dir_x* Fac_Speed, move_dir_y*Fac_Speed);
+        rigidbody.velocity = new Vector2(move_dir_x, move_dir_y).normalized*Fac_Speed;
         if (move_dir_x != 0 || move_dir_y != 0) animator.SetBool("Moving", true);
         else animator.SetBool("Moving", false);
     }
@@ -141,7 +142,6 @@ public class PlayerController : MonoBehaviour
     void Dead()
     { 
         dead = true;
-        PlayerPrefs.SetInt("PointState", 0);
         animator.SetBool("Dead",true);
     }
 
@@ -152,7 +152,7 @@ public class PlayerController : MonoBehaviour
         float chance = (float)rand.NextDouble();
         if (chance <= Fac_SuckBloodChance)
         {
-            Debug.Log("ï¿½ï¿½Ñª");
+            Debug.Log("ÎüÑª");
             Health += Blood_suck_value;
             if (Health > Fac_MaxHealth) Health = Fac_MaxHealth;
             GameObject newCurePop = Instantiate(CurePop,transform.position,Quaternion.identity);

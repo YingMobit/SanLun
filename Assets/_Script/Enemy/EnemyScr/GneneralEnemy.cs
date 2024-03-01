@@ -1,9 +1,15 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.AI;
+using UnityEngine.Tilemaps;
+using UnityEngine.UI;
 
 public class GneneralEnemy : MonoBehaviour
 {
+    public Tilemap tilemap;
     public Timer timer_scr;
     public Rigidbody2D rigidbody;
     public Animator animator;
@@ -11,7 +17,7 @@ public class GneneralEnemy : MonoBehaviour
     public GameObject Attackarea;
     public GameObject DamagePop;
     public GameObject HealthReward;
-    GameObject bullet;
+           GameObject bullet;
     public Enemy_data BAS_data;
     public ExpCountor exp;
     public Collider2D Body;
@@ -19,7 +25,11 @@ public class GneneralEnemy : MonoBehaviour
     public Rigidbody2D Rigidbody2d;
     public PlayerController Player_scr;
     public GameObject Blood;
-    Bullets bullets;
+           Bullets bullets;
+    public Tilemap Ground;
+    public Tilemap Obstacle;
+    public GameObject Ground_obj;
+    public GameObject Obstacle_obj;
 
     [Header("FactData")]
     public float FAC_Speed;
@@ -33,15 +43,18 @@ public class GneneralEnemy : MonoBehaviour
     public bool Attacking;
     public bool Dead;
     public bool BeHittingBack;
-    public Vector3 Chasing_dir;
-    GameObject new_Attackarea;
+    public bool AvoidingObstacle;
+    public Vector3 Chasing_dir; 
     public Color CriticalHit;
     public Coroutine death;
+    public Coroutine FindingPath;
+           GameObject new_Attackarea;
 
     public event Action Die;
 
     public void Start()
     {
+        tilemap = GameObject.Find("FloorTilemap").GetComponent<Tilemap>();
         Rigidbody2d = GetComponent<Rigidbody2D>();
         Player = GameObject.Find("Player");
         Body = transform.GetChild(0).GetComponent<Collider2D>();
@@ -67,9 +80,24 @@ public class GneneralEnemy : MonoBehaviour
     // Update is called once per frame
     public void Update()
     {
-        if (!Attacking&&!BeHittingBack && !Dead) Chase();
-        if (!Attacking && (Vector3.Distance(transform.position, Player.transform.position) <= FAC_Attackarea) && !Dead) StartCoroutine(Attack());
+        GetTile();
+        if (!Attacking && !BeHittingBack && !Dead && !AvoidingObstacle) Chase();
+        if (!Attacking && (Vector3.Distance(transform.position, Player.transform.position) <= FAC_Attackarea) && !Dead && !AvoidingObstacle) StartCoroutine(Attack());
         if (Health <= 0 && death == null) death = StartCoroutine(Death());
+    }
+
+    void GetTile()
+    {
+        if (Ground == null)
+        {
+            Ground_obj = GameObject.Find("FloorTilemap");
+            Ground = Ground_obj.GetComponent<Tilemap>();
+        }
+        if (Obstacle == null)
+        {
+            Obstacle_obj = GameObject.Find("ObstacleTilemap");
+            Obstacle = Obstacle_obj.GetComponent<Tilemap>();
+        }
     }
 
 
@@ -143,6 +171,11 @@ public class GneneralEnemy : MonoBehaviour
             animator.Play("BeAttacked");
             StartCoroutine(BeHitBack());
         }
+
+        if (collision.gameObject.CompareTag("Obstacle"))
+        {
+            if (FindingPath == null) FindingPath = StartCoroutine(ObstacleAvoidance());
+        }
     }
 
     IEnumerator BeHitBack()
@@ -177,5 +210,30 @@ public class GneneralEnemy : MonoBehaviour
     {
         float chance = UnityEngine.Random.Range(0f, 1f);
         if (chance < HealthRewardChance) Instantiate(HealthReward, transform.position, Quaternion.identity);
+    }
+
+    IEnumerator ObstacleAvoidance()
+    {
+        AvoidingObstacle = true;
+        PathFindingManager pathFindingManager = new PathFindingManager();
+        if (Ground != null && Obstacle != null)
+        {
+            Debug.Log("±ÜÕÏ");
+            List<AStarTile> path = pathFindingManager.FindPath(Ground.WorldToCell(transform.position), Ground.WorldToCell(Player.transform.position), pathFindingManager.InitialTile(Ground, Obstacle), Ground, Obstacle);
+            do
+            {
+                AStarTile nextnode = path[0];
+                Vector3 WorldPos = Ground.CellToWorld(new Vector3Int(nextnode.x, nextnode.y, 0));
+                Vector3 nowPos = transform.position;
+                do
+                    transform.position = Vector3.Lerp(nowPos, WorldPos, FAC_Speed * Time.deltaTime);
+                while (Ground.WorldToCell(transform.position) == new Vector3Int(nextnode.x, nextnode.y, 0));
+                path.Remove(nextnode);
+            }
+            while (path.Count > 0);
+            AvoidingObstacle = false;
+            return null;
+        }
+        else return null;
     }
 }

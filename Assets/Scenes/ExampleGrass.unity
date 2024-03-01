@@ -470,6 +470,7 @@ MonoBehaviour:
   bufon_Damage: 1
   bufon_Magazine_Capacity: 0
   bufon_Penetration_Quantity: 0
+  bufon_HitBackForce: 1
   Bufon_Critical_Hit_Chance: 0.1
   Bufon_Critical_Hit_Damage: 2
 --- !u!1 &193279833
@@ -549,6 +550,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 897d0a4ce0638984082ab41f18d4fb2b, type: 2}
   - {fileID: 11400000, guid: dfe55be5d93aea0409d56e00fe1249af, type: 2}
   - {fileID: 11400000, guid: 9d2442562911a0848a3f16d7e4fb811f, type: 2}
+  - {fileID: 11400000, guid: 07a6f6125136436418c20e398e00f615, type: 2}
   Function: {fileID: 1485468720}
   BuffCount: 0
   FuncName: 
@@ -1275,6 +1277,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 897d0a4ce0638984082ab41f18d4fb2b, type: 2}
   - {fileID: 11400000, guid: dfe55be5d93aea0409d56e00fe1249af, type: 2}
   - {fileID: 11400000, guid: 9d2442562911a0848a3f16d7e4fb811f, type: 2}
+  - {fileID: 11400000, guid: 07a6f6125136436418c20e398e00f615, type: 2}
   Function: {fileID: 1485468720}
   BuffCount: 0
   FuncName: 
@@ -2912,6 +2915,7 @@ MonoBehaviour:
   BufOn_Damage: 1
   BufOn_Magazine_Capacity: 0
   BufOn_Penetration_Quantity: 0
+  Bufon_HitBackForce: 1
   Fac_Reloading_time: 0
   Fac_Shooting_Interval: 0
   Fac_Damage: 0
@@ -3460,6 +3464,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 897d0a4ce0638984082ab41f18d4fb2b, type: 2}
   - {fileID: 11400000, guid: dfe55be5d93aea0409d56e00fe1249af, type: 2}
   - {fileID: 11400000, guid: 9d2442562911a0848a3f16d7e4fb811f, type: 2}
+  - {fileID: 11400000, guid: 07a6f6125136436418c20e398e00f615, type: 2}
   Function: {fileID: 1485468720}
   BuffCount: 0
   FuncName: 

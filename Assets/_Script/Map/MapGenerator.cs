@@ -316,7 +316,7 @@ public class MapGenerator : MonoBehaviour
         if(exitCanGenerate)
         {
             GameObject exitClone = Instantiate(Exit, grid.CellToLocalInterpolated(centerPos), Quaternion.Euler(Vector3.zero));// 在centerPos添加出口
-            exitClone.GetComponent<ExitManager>().ProtalBar = ProtalBar;
+            //exitClone.GetComponent<ExitManager>().portalBar = ProtalBar;//TODO:解决读条问题
             exitCanGenerate = false;// 清数据
         }
         GenerateObstacle(centerPos);//bug：人出生卡死在木桩 现在改人出生网格（0.5，0.5，0）*5.12

@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 5
-  ProtalBar: {fileID: 2521478758987673180, guid: 29df363868bb8694c88930d69d7b844a, type: 3}
+  portalBarPrefab: {fileID: 4765747452505381383, guid: 843c5055b50ce644789782f27927a270, type: 3}
 --- !u!60 &8738625124500354919
 PolygonCollider2D:
   m_ObjectHideFlags: 0

@@ -32,9 +32,9 @@ public class ExitManager : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            ProtalBar.gameObject.SetActive(true); // 显示进度条
             timer = 0.0f; // 重置计时器
             IsPlayerInTrigger = true;
+            ProtalBar.gameObject.SetActive(true); // 显示进度条
             Debug.Log("jinru");
         }
     }

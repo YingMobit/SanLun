@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     public BuffController_Player Buff;
     public Animator animator;
     public GameObject CurePop;
+    public GameObject DeadUI; 
     public HealthStick healthStick;
 
     private bool point_dir;
@@ -143,6 +144,9 @@ public class PlayerController : MonoBehaviour
     { 
         dead = true;
         animator.SetBool("Dead",true);
+        Collider2D Body = GetComponent<Collider2D>();
+        Body.enabled = false;
+        DeadUI.active = true;
     }
 
     public void SuckBlood()

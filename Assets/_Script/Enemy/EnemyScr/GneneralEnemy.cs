@@ -175,9 +175,10 @@ public class GneneralEnemy : MonoBehaviour
             StartCoroutine(BeHitBack());
         }
 
-        if (collision.gameObject.CompareTag("Obstacle"))
+        if (collision.gameObject.CompareTag("Obstacle") && Vector3.Distance(transform.position ,Player.transform.position )<30)
         {
-            if (FindingPath == null) FindingPath = StartCoroutine(ObstacleAvoidance());
+            if (FindingPath != null) StopCoroutine(FindingPath);
+            FindingPath = StartCoroutine(ObstacleAvoidance());
         }
     }
 
@@ -188,8 +189,6 @@ public class GneneralEnemy : MonoBehaviour
         float angle = (bullet.transform.rotation.eulerAngles.z-270)*Mathf.Deg2Rad;
         Vector2 Dirction = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle)).normalized;
         rigidbody.AddForce(Dirction * Force, ForceMode2D.Impulse);
-        Debug.Log(angle);
-        Debug.Log(Dirction);
         yield return new WaitForSeconds(0.3f);
         BeHittingBack = false;
     }
@@ -222,18 +221,18 @@ public class GneneralEnemy : MonoBehaviour
         if (Ground != null && Obstacle != null)
         {
             BoundsInt ground = Ground.cellBounds;
-            List<AStarTile> path = pathFindingManager.FindPath(Ground.WorldToCell(transform.position), Ground.WorldToCell(Player.transform.position), pathFindingManager.InitialTile(Ground, Obstacle), Ground, Obstacle);
+            yield return new WaitForEndOfFrame();
+            List<AStarTile> path = null;
+            path = pathFindingManager.FindPath(Ground.WorldToCell(transform.position), Ground.WorldToCell(Player.transform.position), pathFindingManager.InitialTile(Ground, Obstacle), Ground, Obstacle);
             if (path != null)
             {
+                Debug.Log(new Vector2(path[path.Count-1].x, path[path.Count-1].y), gameObject);
                 do
                 {
                     AStarTile nextnode = path[0];
-                    Vector3 WorldPos = Ground.CellToWorld(new Vector3Int(nextnode.x, nextnode.y, 0)) + new Vector3Int(ground.xMin, ground.yMin, 0);
+                    Vector3 WorldPos = Ground.CellToWorld(new Vector3Int(nextnode.x, nextnode.y, 0));
                     Vector3 nowPos = transform.position;
-                    do
-                    { rigidbody.velocity = (WorldPos - nowPos).normalized * FAC_Speed; }
-                    while (Ground.WorldToCell(WorldPos) != Ground.WorldToCell(transform.position));
-                    //StartCoroutine(MoveToPosition(WorldPos, 0.1f, new Vector3Int(nextnode.x, nextnode.y, 0)));
+                    StartCoroutine(MoveToPosition(WorldPos,Vector3.Distance(transform.position ,Player.transform.position )/FAC_Speed, new Vector3Int(nextnode.x, nextnode.y, 0)));
                     path.Remove(nextnode);
                 }
                 while (path.Count > 0);

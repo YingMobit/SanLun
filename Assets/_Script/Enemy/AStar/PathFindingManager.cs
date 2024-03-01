@@ -1,6 +1,7 @@
 using Newtonsoft.Json.Serialization;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
@@ -52,11 +53,11 @@ public class PathFindingManager:MonoBehaviour
         if (Tiles[StartPos.x, StartPos.y].type == TileType.Ground && Tiles[GoalPos.x, GoalPos.y].type == TileType.Ground)
         {
             AStarTile[] around;
-            around = GetAround(StartPos, Tiles);
+            around = GetAround(StartPos, Tiles,groundbounds.size.x,groundbounds.size.y);
             int count = 0;
             foreach (AStarTile tile in around)
             {
-                if (tile.type != TileType.Obastacle && !Openlist.Contains(tile) && !Closelist.Contains(tile))
+                if (tile != null && tile.type != TileType.Obastacle && !Openlist.Contains(tile) && !Closelist.Contains(tile))
                 {
                     tile.father = Tiles[StartPos.x, StartPos.y];
                     if (count <= 3)
@@ -86,17 +87,17 @@ public class PathFindingManager:MonoBehaviour
         else return null;
     }
 
-    AStarTile[] GetAround( Vector3Int StartPos, AStarTile[,] Tiles)
+    AStarTile[] GetAround( Vector3Int StartPos, AStarTile[,] Tiles,int Tile_x_max,int Tile_y_max)
     {
         AStarTile[] around = new AStarTile[8];
-        around[0] = Tiles[StartPos.x + 1, StartPos.y];
-        around[1] = Tiles[StartPos.x - 1, StartPos.y];
-        around[2] = Tiles[StartPos.x , StartPos.y + 1];
-        around[3] = Tiles[StartPos.x , StartPos.y - 1];
-        around[4] = Tiles[StartPos.x + 1, StartPos.y+1];
-        around[5] = Tiles[StartPos.x + 1, StartPos.y-1];
-        around[6] = Tiles[StartPos.x - 1, StartPos.y - 1];
-        around[7] = Tiles[StartPos.x - 1, StartPos.y + 1];
+        if (StartPos.x + 1 <= Tile_x_max - 1)                                    around[0] = Tiles[StartPos.x + 1, StartPos.y];
+        if (StartPos.x - 1 >= 0)                                                 around[1] = Tiles[StartPos.x - 1, StartPos.y];
+        if (StartPos.y + 1 <= Tile_y_max - 1)                                    around[2] = Tiles[StartPos.x , StartPos.y + 1];
+        if (StartPos.y - 1 >= 0)                                                 around[3] = Tiles[StartPos.x , StartPos.y - 1];
+        if (StartPos.x + 1 <= Tile_x_max - 1&& StartPos.y + 1 <= Tile_y_max - 1) around[4] = Tiles[StartPos.x + 1, StartPos.y+1];
+        if (StartPos.x + 1 <= Tile_x_max - 1&& StartPos.y - 1 >= 0)              around[5] = Tiles[StartPos.x + 1, StartPos.y-1];
+        if (StartPos.x - 1 >= 0&& StartPos.y - 1 >= 0)                           around[6] = Tiles[StartPos.x - 1, StartPos.y - 1];
+        if (StartPos.x - 1 >= 0&& StartPos.y + 1 <= Tile_y_max - 1)              around[7] = Tiles[StartPos.x - 1, StartPos.y + 1];
         return around;
     }
 }

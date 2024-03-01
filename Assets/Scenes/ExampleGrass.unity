@@ -2056,6 +2056,7 @@ MonoBehaviour:
   Buff: {fileID: 0}
   animator: {fileID: 0}
   CurePop: {fileID: 6451222663598607286, guid: 66e5fa9ad3164784db9a2df6bc49b6d4, type: 3}
+  DeadUI: {fileID: 607308485}
   healthStick: {fileID: 0}
   angle: 0
   MousePos: {x: 0, y: 0, z: 0}

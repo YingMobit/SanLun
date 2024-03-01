@@ -86,6 +86,7 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
+        DeadUI = GameObject.Find("Canvas").transform.GetChild(6).gameObject;
         ExpCountor = FindAnyObjectByType<ExpCountor>();
         healthStick = FindFirstObjectByType<HealthStick>();
         HealthDataChanged += healthStick.Update;
@@ -151,8 +152,7 @@ public class PlayerController : MonoBehaviour
         Body.enabled = false;
         DeadUI.SetActive(true);
         PlayerPrefs.SetInt("PointState",0);
-        PlayerPrefs.SetInt("Level",ExpCountor.CorrentLevel);
-        Time.timeScale = 0 ;
+        PlayerPrefs.SetInt("Level", ExpCountor.CorrentLevel);
     }
 
     public void SuckBlood()

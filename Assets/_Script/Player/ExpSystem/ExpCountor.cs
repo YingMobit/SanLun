@@ -35,7 +35,7 @@ public class ExpCountor : MonoBehaviour
         {
             CorrentExp -= CorrentLevelExp;
             CorrentLevel++;
-            CorrentLevelExp = 2000 + 2000 * (CorrentLevel - 1);
+            CorrentLevelExp = 1200 + 400 * (CorrentLevel - 1);
             LevelUPed.Invoke();
         }
     }

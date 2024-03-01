@@ -25,7 +25,7 @@ public class ExitManager : MonoBehaviour
     private void UpdateProgressBar()
     {
         ProtalBar.transform.GetChild(1).GetComponent<Image>().fillAmount = timer / delay; // 更新进度条
-        ProtalBar.transform.GetChild(2).GetComponent<Text>().text = timer + "/"+ delay;
+        ProtalBar.transform.GetChild(2).GetComponent<Text>().text = timer.ToString("F1") + "/"+ delay;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -68,6 +68,7 @@ public class ExitManager : MonoBehaviour
                 UpdateProgressBar();
                 if (timer <= 0.0f)
                 {
+                    timer = 0.0f;
                     ProtalBar.gameObject.SetActive(false);// 当计时器为0时销毁进度条
                 }
             }

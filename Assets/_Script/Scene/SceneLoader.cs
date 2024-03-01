@@ -18,12 +18,12 @@ public class SceneLoader : MonoBehaviour
     public void StartGame()
     {
         PlayerPrefs.SetInt("PointState", -1);//1 成功 0 死亡 -1无数据/已读取
-        StartCoroutine(LoadSceneByCrossFade(SceneManager.GetActiveScene().buildIndex == 1 ? 0 : 1));
+        StartCoroutine(LoadSceneByCrossFade(SceneManager.GetActiveScene().buildIndex == 2 ? 1 : 2));
     }
 
     public void SwichScene()
     {
-        StartCoroutine(LoadSceneByCrossFade(SceneManager.GetActiveScene().buildIndex == 1 ? 0 : 1));
+        StartCoroutine(LoadSceneByCrossFade(SceneManager.GetActiveScene().buildIndex == 2 ? 1 : 2));
     }// 未添加 PlayerPrefs.SetInt("PointState", 1);
 
     public void ContinueGame()
@@ -86,7 +86,7 @@ public class SceneLoader : MonoBehaviour
         if(Input.GetMouseButtonDown(1))
         {
             Debug.Log("换场景");
-            StartCoroutine(LoadSceneByCrossFade(SceneManager.GetActiveScene().buildIndex == 1 ? 0 : 1));
+            StartCoroutine(LoadSceneByCrossFade(SceneManager.GetActiveScene().buildIndex == 2 ? 1 : 2));
         }
     }
 

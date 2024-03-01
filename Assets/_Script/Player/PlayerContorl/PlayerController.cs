@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     public Sprite Death;
     public GameObject Shield_pref;
     public BuffController_Player Buff;
+    public ExpCountor ExpCountor;
     public Animator animator;
     public GameObject CurePop;
     public GameObject DeadUI; 
@@ -56,6 +57,7 @@ public class PlayerController : MonoBehaviour
     public GameObject Shield;
     public float Last_Shield_Time;
     public int health = 100;
+    public bool Invincible;
     public int Health
     {
         get {return health;}
@@ -84,6 +86,7 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
+        ExpCountor = FindAnyObjectByType<ExpCountor>();
         healthStick = FindFirstObjectByType<HealthStick>();
         HealthDataChanged += healthStick.Update;
         animator = gameObject.GetComponentInChildren<Animator>();
@@ -146,7 +149,10 @@ public class PlayerController : MonoBehaviour
         animator.SetBool("Dead",true);
         Collider2D Body = GetComponent<Collider2D>();
         Body.enabled = false;
-        DeadUI.active = true;
+        DeadUI.SetActive(true);
+        PlayerPrefs.SetInt("PointState",0);
+        PlayerPrefs.SetInt("Level",ExpCountor.CorrentLevel);
+        Time.timeScale = 0 ;
     }
 
     public void SuckBlood()
@@ -172,8 +178,6 @@ public class PlayerController : MonoBehaviour
     {
         if (Shield == null && Time.time - Last_Shield_Time >= 20)
         {
-            Collider2D Body = GetComponent<Collider2D>();
-            Body.enabled = false;
             Shield = Instantiate(Shield_pref,transform.position ,Quaternion.identity);
             Shield.transform.SetParent(transform);
         }

@@ -13,18 +13,18 @@ public class Shield : MonoBehaviour
     {
         Player = GameObject.Find("Player");
         Player_scr = transform.GetComponentInParent<PlayerController>();
+        Player_scr.Invincible = true;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "EnemyAttack") Destroy(gameObject);
+        if (collision.gameObject.tag == "EnemyAttack") { Destroy(gameObject); }
     }
 
     void OnDestroy()
     {
-        Collider2D PlayerBody = Player.GetComponent<Collider2D>();
-        PlayerBody.enabled = true;
         Player_scr.Last_Shield_Time = Time.time;
         Player_scr.Last_Be_Attacked_time = Time.time;
+        Player_scr.Invincible = false;
     }
 }

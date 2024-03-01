@@ -84,8 +84,8 @@ public class Bullets : MonoBehaviour
         }
         if(collision.gameObject.CompareTag("Barrier"))
         {
-            bullet_penetration_times--;
             collision.gameObject.GetComponent<Defence>().DealDamage(1f);
+            Destroy(gameObject);
         }
         if(collision.gameObject.CompareTag("Obstacle")) Destroy(gameObject);
     }

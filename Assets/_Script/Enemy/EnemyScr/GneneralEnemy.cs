@@ -84,7 +84,7 @@ public class GneneralEnemy : MonoBehaviour
     public void Update()
     {
         GetTile();
-        if (!Attacking && !BeHittingBack && !Dead && !AvoidingObstacle) Chase();
+        if (!Attacking && !BeHittingBack && !Dead/* && !AvoidingObstacle*/) Chase();
         if (!Attacking && (Vector3.Distance(transform.position, Player.transform.position) <= FAC_Attackarea) && !Dead && !AvoidingObstacle) StartCoroutine(Attack());
         if (Health <= 0 && death == null) death = StartCoroutine(Death());
     }
@@ -175,11 +175,11 @@ public class GneneralEnemy : MonoBehaviour
             StartCoroutine(BeHitBack());
         }
 
-        if (collision.gameObject.CompareTag("Obstacle") && Vector3.Distance(transform.position ,Player.transform.position )<30)
-        {
-            if (FindingPath != null) StopCoroutine(FindingPath);
-            FindingPath = StartCoroutine(ObstacleAvoidance());
-        }
+        //if (collision.gameObject.CompareTag("Obstacle") && Vector3.Distance(transform.position ,Player.transform.position )<30)
+        //{
+        //    if (FindingPath != null) StopCoroutine(FindingPath);
+        //    FindingPath = StartCoroutine(ObstacleAvoidance());
+        //}
     }
 
     IEnumerator BeHitBack()

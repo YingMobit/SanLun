@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: USP
   m_EditorClassIdentifier: 
   Bas_Reloading_time: 1.4
-  Bas_Shooting_Interval: 0.2
+  Bas_Shooting_Interval: 0.18
   Bas_Damage: 20
   Bas_Magazine_Capacity: 12
   Bas_Penetration_Quantity: 0

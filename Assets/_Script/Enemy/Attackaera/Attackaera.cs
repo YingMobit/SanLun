@@ -12,8 +12,12 @@ public class Attackaera : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             Player_scr = collision.gameObject.GetComponent<PlayerController>();
-            Instantiate(Blood, collision.gameObject.transform.position, Quaternion.identity);
-            if (Time.time - Player_scr.Last_Be_Attacked_time > 0.5f) { Player_scr.Health -= AttackValue; Player_scr.Last_Be_Attacked_time = Time.time; }
+            if (Player_scr == null) Player_scr = collision.gameObject.GetComponentInParent<PlayerController>();
+            if (!Player_scr.Invincible)
+            {
+                Instantiate(Blood, collision.gameObject.transform.position, Quaternion.identity);
+                if (Time.time - Player_scr.Last_Be_Attacked_time > 0.5f) { Player_scr.Health -= AttackValue; Player_scr.Last_Be_Attacked_time = Time.time; }
+            }
         }
     }
 }

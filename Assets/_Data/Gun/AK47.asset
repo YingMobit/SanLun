@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: AK47
   m_EditorClassIdentifier: 
   Bas_Reloading_time: 2.3
-  Bas_Shooting_Interval: 0.18
+  Bas_Shooting_Interval: 0.168
   Bas_Damage: 35
   Bas_Magazine_Capacity: 25
   Bas_Penetration_Quantity: 1

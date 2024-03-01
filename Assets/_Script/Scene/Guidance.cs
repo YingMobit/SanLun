@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Tilemaps;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -21,7 +21,7 @@ public class Guidance : MonoBehaviour
     //Goal：用来引导玩家
     //SETTING：污染者这里是唯一净土秘境，，外界全被污染，杀怪的exp就是魂力，提升能力，在击溃一定的屏障后就可以找到出口（说清），返回这里但是一旦失败，你将万劫不复（积分0减半）
     //CONVERSATION：SETTING，进入洞口就可以到外界。提供一个左轮。
-    //CONVERSATION：这里被污染的泰国严重了，你的大威力左轮被削弱了，现在需要换弹，但我尽力帮你把后坐力移除了，这下你可以又快又准的打中敌人了，告诉屏障规则，出口规则
+    //CONVERSATION：这里被污染的太过严重了，你的大威力左轮被削弱了，现在需要换弹，但我尽力帮你把后坐力移除了，这下你可以又快又准的打中敌人了，告诉屏障规则，出口规则
     //TODO：TImeLine展示怪物屏障
 
     // 函数

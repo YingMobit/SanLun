@@ -36,7 +36,7 @@ public class EnemyGenerate : MonoBehaviour
 
     IEnumerator GetTile()
     { 
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(2);
         //GroundTile = GameObject.Find("FloorTilemap");
         //Ground = GroundTile.GetComponent<Tilemap>();
         ObstacleTile = GameObject.Find("ObstacleTilemap");
@@ -105,7 +105,7 @@ public class EnemyGenerate : MonoBehaviour
         int seed = DateTime.Now.GetHashCode();
         System.Random rand = new System.Random(seed);
         bool isPositionFar =false;
-        Vector3 Position = new Vector3(0,0,0);
+        Vector3 Position = new Vector3(34,23,0);
         if (Ground != null)
         {
             BoundsInt Bounds = Ground.cellBounds;

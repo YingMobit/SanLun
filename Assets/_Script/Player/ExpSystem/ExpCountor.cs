@@ -19,7 +19,9 @@ public class ExpCountor : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        CorrentLevelExp = 2000;
+        PlayerPrefs.SetInt("MaxLevel",25);
+        PlayerPrefs.SetInt("CorrentLevel", 1);
+        CorrentLevelExp = 1200;
         CorrentLevel = 1;
     }
 
@@ -31,10 +33,11 @@ public class ExpCountor : MonoBehaviour
 
     void LevelUP()
     {
-        if (CorrentLevel < MaxLevel && CorrentExp >= CorrentLevelExp)
+        if (PlayerPrefs.GetInt("CorrentLevel",1) < PlayerPrefs.GetInt("MaxLevel",25) && CorrentExp >= CorrentLevelExp)
         {
             CorrentExp -= CorrentLevelExp;
             CorrentLevel++;
+            PlayerPrefs.SetInt("CorrentLevel",CorrentLevel);
             CorrentLevelExp = 1200 + 400 * (CorrentLevel - 1);
             LevelUPed.Invoke();
         }

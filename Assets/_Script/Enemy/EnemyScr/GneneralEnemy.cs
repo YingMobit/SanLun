@@ -214,7 +214,8 @@ public class GneneralEnemy : MonoBehaviour
         Body2.enabled = false;
         HealthRewarding();
         animator.Play("Death");
-        PlayerPrefs.SetInt("Point",PlayerPrefs.GetInt("Point",0)+BAS_data.Exp_reward);
+        Debug.Log(PlayerPrefs.GetInt("Point", 0));
+        PlayerPrefs.SetInt("Point",PlayerPrefs.GetInt("Point",0)+BAS_data.Exp_reward/100);
         yield return new WaitForSeconds(1f);
         Destroy(gameObject);
     }

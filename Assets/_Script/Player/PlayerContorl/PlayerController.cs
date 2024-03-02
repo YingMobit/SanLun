@@ -154,7 +154,9 @@ public class PlayerController : MonoBehaviour
         DeadUI.SetActive(true);
         DeadUI.transform.GetChild(3).GetComponent<Text>().text = "数据统计\r\n昵称："+ PlayerPrefs.GetString("playerName", "Guest" + UnityEngine.Random.Range(1000, 10000).ToString()) + "\r\n积分："+ PlayerPrefs.GetInt("Point", 0) +"\r\n等级："+ PlayerPrefs.GetInt("Level", 1); 
         PlayerPrefs.SetInt("PointState",0);
+
         PlayerPrefs.SetInt("Level", ExpCountor.CorrentLevel);
+        Debug.Log(PlayerPrefs.GetInt("Level"));
     }
 
     public void SuckBlood()

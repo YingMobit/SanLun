@@ -11,7 +11,7 @@ public class BuffTile : MonoBehaviour
     public Text Internalcode;
     public Text Buffname;
     public Text Buffdescription;
-    public RectTransform transform;
+    public RectTransform Recttransform;
     public GameObject BackGround;
     public Button button;
     public List<BuffData> Data;
@@ -24,8 +24,8 @@ public class BuffTile : MonoBehaviour
     public bool Active;
     void Start()
     {
-        transform = GetComponent<RectTransform>(); 
-        button = transform .parent.GetChild(3).gameObject .GetComponent<Button>();
+        Recttransform = GetComponent<RectTransform>();
+        button = GameObject.Find("Confirm").GetComponent<Button>();
         Function = GameObject.Find("BuffFunc").GetComponent<BuffFunc>();
         Internalcode = transform.Find("Text (Internal_code)").GetComponent<Text>();
         Buffname = transform.Find("Text (BuffName)").GetComponent<Text>();
@@ -59,7 +59,7 @@ public class BuffTile : MonoBehaviour
         button.onClick.RemoveAllListeners();
         if (func != null) button.onClick.AddListener(() => { func.Invoke(Function, null); });
         HighLight.enabled = true;
-        HighLight.rectTransform.position = transform.position;
+        HighLight.rectTransform.position = Recttransform.position;
     }
 
     private void OnDisable()

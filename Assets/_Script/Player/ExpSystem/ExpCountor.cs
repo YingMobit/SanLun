@@ -20,7 +20,7 @@ public class ExpCountor : MonoBehaviour
     void Start()
     {
         PlayerPrefs.SetInt("MaxLevel",25);
-        PlayerPrefs.SetInt("CorrentLevel", 1);
+        PlayerPrefs.SetInt("Level", 1);
         CorrentLevelExp = 1200;
         CorrentLevel = 1;
     }
@@ -33,11 +33,11 @@ public class ExpCountor : MonoBehaviour
 
     void LevelUP()
     {
-        if (PlayerPrefs.GetInt("CorrentLevel",1) < PlayerPrefs.GetInt("MaxLevel",25) && CorrentExp >= CorrentLevelExp)
+        if (PlayerPrefs.GetInt("Level",1) < PlayerPrefs.GetInt("MaxLevel",25) && CorrentExp >= CorrentLevelExp)
         {
             CorrentExp -= CorrentLevelExp;
             CorrentLevel++;
-            PlayerPrefs.SetInt("CorrentLevel",CorrentLevel);
+            PlayerPrefs.SetInt("Level",CorrentLevel);
             CorrentLevelExp = 1200 + 400 * (CorrentLevel - 1);
             LevelUPed.Invoke();
         }

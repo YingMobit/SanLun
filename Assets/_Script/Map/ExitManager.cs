@@ -1,3 +1,4 @@
+using UnityEditor.Tilemaps;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -12,6 +13,7 @@ public class ExitManager : MonoBehaviour
     [Header("Portal Bar Prefab")]
     public GameObject portalBarPrefab; // 读条bar的预制体
     private GameObject portalBarInstance; // portalBar的实例
+    public GameObject canvas;           // 画布
     private Image progressBar; // 进度条Image组件
     private Text progressText; // 进度条Text组件
 
@@ -77,7 +79,8 @@ public class ExitManager : MonoBehaviour
     {
         if (show && portalBarInstance == null)
         {
-            portalBarInstance = Instantiate(portalBarPrefab);
+            portalBarInstance = Instantiate(portalBarPrefab, Quaternion.identity,canvas.transform);
+
             progressBar = portalBarInstance.transform.GetChild(1).GetComponent<Image>();
             progressText = portalBarInstance.transform.GetChild(2).GetComponent<Text>();
             timer = 0.0f; // 重置计时器

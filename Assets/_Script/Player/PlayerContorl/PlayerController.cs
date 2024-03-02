@@ -116,7 +116,7 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         if (!dead&& Whether_Generate_Shield) { GenerateShield(); }
-        if (Health_Value <= 0) Dead();
+        if (Health_Value <= 0&&!dead) Dead();
     }
 
     private void FixedUpdate()

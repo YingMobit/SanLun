@@ -10,7 +10,6 @@ public class ExpCountor : MonoBehaviour
     public Enemy_data tank_Data;
 
     public int CorrentLevel;
-    public int MaxLevel;
     public int CorrentExp;
     public int CorrentLevelExp;//��ǰ�ȼ�����ֵ����
 
@@ -19,7 +18,6 @@ public class ExpCountor : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        PlayerPrefs.SetInt("MaxLevel",25);
         PlayerPrefs.SetInt("Level", 1);
         CorrentLevelExp = 1200;
         CorrentLevel = 1;
@@ -33,7 +31,7 @@ public class ExpCountor : MonoBehaviour
 
     void LevelUP()
     {
-        if (PlayerPrefs.GetInt("Level",1) < PlayerPrefs.GetInt("MaxLevel",25) && CorrentExp >= CorrentLevelExp)
+        if (CorrentExp >= CorrentLevelExp)
         {
             CorrentExp -= CorrentLevelExp;
             CorrentLevel++;

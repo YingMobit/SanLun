@@ -9,6 +9,7 @@ public class BasePlayer : MonoBehaviour
     [Header("×é¼þ")]
     public Rigidbody2D rigidbody;
     public Animator anitor;
+    public GameObject EggInfo;
 
     [Header("ÒÆ¶¯")]
     public float speed;
@@ -47,6 +48,17 @@ public class BasePlayer : MonoBehaviour
         else
         {
             transform.rotation = Quaternion.Euler(0, 0, 0);
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Egg"))
+        {
+            PlayerPrefs.SetString("InitWeapon", "M4A1");
+            Vector3 GenPos = transform.position + new Vector3(0, 3, 0);
+            GameObject newInfoPop = Instantiate(EggInfo, GenPos,Quaternion.identity);
+            newInfoPop.transform.parent = transform;
         }
     }
 

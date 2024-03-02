@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: M4A1
   m_EditorClassIdentifier: 
   Bas_Reloading_time: 2
-  Bas_Shooting_Interval: 0.15
+  Bas_Shooting_Interval: 0.135
   Bas_Damage: 25
   Bas_Magazine_Capacity: 30
   Bas_Penetration_Quantity: 0

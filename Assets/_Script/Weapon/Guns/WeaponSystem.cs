@@ -35,11 +35,13 @@ public class WeaponSystem : MonoBehaviour,IGuns
     public bool Reloading;
     public string Weapon_Name;
     public float last_shoot_time;
+    public float Last_AudioPlayed_Time;
 
     void Start()
     {
         sprite_renderer = GetComponent<SpriteRenderer>();
         Buff = GameObject.Find("BuffManager").GetComponent<BuffManager_Weapon>();
+        gameObject.name = PlayerPrefs.GetString("InitWeapon","USP"); 
         Weapon_Name = gameObject.name;
         Buff.OnDataChanged_Weapon+=DataInitial;
         DataInitial();
@@ -139,7 +141,7 @@ public class WeaponSystem : MonoBehaviour,IGuns
                 if (Time.time - last_shoot_time > Fac_Shooting_Interval)
                 {
                     last_shoot_time = Time.time;
-                    bgmController.PLayAudio(ShootingAudio);
+                    if (Time.time - Last_AudioPlayed_Time > 0.06f) { bgmController.PLayAudio(ShootingAudio); Last_AudioPlayed_Time = Time.time; }
                     GameObject bullet = Instantiate(Bullet, transform.position, Quaternion.identity);
                     Bullets bullet_scr = bullet.GetComponent<Bullets>();
                     bullet_scr.bullet_damage = Fac_Damage;

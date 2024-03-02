@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 328b34b644a64ab4dbc77a8951e0b275, type: 3}
   m_Name: Tank
   m_EditorClassIdentifier: 
-  BAS_Speed: 16
+  BAS_Speed: 18
   BAS_MaxHealth: 300
   BAS_Atackvalue: 25
   BAS_Attackarea: 6

@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: M249
   m_EditorClassIdentifier: 
   Bas_Reloading_time: 4.5
-  Bas_Shooting_Interval: 0.08
-  Bas_Damage: 15
+  Bas_Shooting_Interval: 0.09
+  Bas_Damage: 12
   Bas_Magazine_Capacity: 80
   Bas_Penetration_Quantity: 0
-  Bas_HitBack: 5
+  Bas_HitBack: 8
   sprite: {fileID: 21300000, guid: e0065641900536d4f9ac44ab7a8d38b7, type: 2}
   ShootAudio: {fileID: 8300000, guid: 535684efae3239b49ac994383ffbce20, type: 3}
   ReloadAudio: {fileID: 8300000, guid: 9730b8f1669201e4ab695371621c2613, type: 3}

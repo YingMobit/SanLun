@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEditor.Tilemaps;
 using UnityEngine;
 
@@ -5,6 +6,7 @@ public class TrackingArrow : MonoBehaviour
 {
     // 声明
     public Transform player; // 玩家位置
+    public Transform exit; // 出口位置
     public float visibilityDistance = 20f; // 可视距离
     private Vector3 screenCenter;
     private float screenBorderBuffer = 50f; // 箭头与屏幕边界的缓冲距离
@@ -13,9 +15,11 @@ public class TrackingArrow : MonoBehaviour
     // 函数
     private void Start()
     {
-        player = GameObject.Find("Player").transform;
+        if (player == null)
+        {
+            player = GameObject.Find("Player").transform;
+        }
     }
-
     private void Update()
     {
         float distance = Vector3.Distance(player.position, gameObject.transform.position);

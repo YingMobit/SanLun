@@ -12,11 +12,22 @@ public class ExitManager : MonoBehaviour
 
     [Header("Portal Bar Prefab")]
     public GameObject portalBarPrefab; // 读条bar的预制体
+    public GameObject Arrow;            //导航
     private GameObject portalBarInstance; // portalBar的实例
     public GameObject canvas; // 画布
     private UnityEngine.UI.Image progressBar; // 进度条Image组件
     private Text progressText; // 进度条Text组件
 
+
+    private void Start()
+    {
+        if (canvas == null)
+        {
+            canvas = GameObject.Find("Canvas");
+        }
+        GameObject arrow = Instantiate(Arrow, Vector3.zero, Quaternion.identity, canvas.transform);
+        arrow.GetComponent<TrackingArrow>().exit = gameObject.transform;
+    }
     private void Update()
     {
         if (canvas == null)

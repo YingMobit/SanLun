@@ -12,33 +12,48 @@ public class ExitManager : MonoBehaviour
 
     [Header("Portal Bar Prefab")]
     public GameObject portalBarPrefab; // 读条bar的预制体
-    public GameObject Arrow;            //导航
+    public GameObject ArrowPrefab;            //导航
     private GameObject portalBarInstance; // portalBar的实例
+    private GameObject arrow;           // 实例
     public GameObject canvas; // 画布
+    public Transform player;
+    public float visibilityDistance = 20f; // 可视距离
     private UnityEngine.UI.Image progressBar; // 进度条Image组件
     private Text progressText; // 进度条Text组件
 
 
     private void Start()
     {
+        if (player == null)
+        {
+            player = GameObject.Find("Player").transform;
+        }
         if (canvas == null)
         {
             canvas = GameObject.Find("Canvas");
         }
-        GameObject arrow = Instantiate(Arrow, Vector3.zero, Quaternion.identity, canvas.transform);
+        arrow = Instantiate(ArrowPrefab, Vector3.zero, Quaternion.identity, canvas.transform);
         arrow.GetComponent<TrackingArrow>().exit = gameObject.transform;
+        arrow.GetComponent<TrackingArrow>().player = player;
     }
     private void Update()
     {
+        if (player == null)
+        {
+            player = GameObject.Find("Player").transform;
+        }
         if (canvas == null)
         {
             canvas = GameObject.Find("Canvas");
         }
-
         if (isPlayerInTrigger || (portalBarInstance != null && timer > 0))
         {
             UpdateLoadTime();
             UpdateProgressBar();
+        }
+        if(arrow!=null)
+        {
+            ShowArrow();
         }
     }
 
@@ -88,6 +103,7 @@ public class ExitManager : MonoBehaviour
     private void CompleteLoading()
     {
         PlayerPrefs.SetInt("PointState", 1); //1 成功 0 死亡 -1 无数据/已读取
+        PlayerPrefs.SetInt("Point", PlayerPrefs.GetInt("Point", 0) + Health.BarrierDestroyCount + Health.ExitGenerateCount * 100);
         ShowPortalBar(false); // 隐藏并销毁进度条
         SceneLoader.Instance.SwichScene();
     }
@@ -109,6 +125,19 @@ public class ExitManager : MonoBehaviour
         {
             Destroy(portalBarInstance);
             portalBarInstance = null;
+        }
+    }
+
+    private void ShowArrow()
+    {
+        float distance = Vector3.Distance(player.position, gameObject.transform.position);
+        if(distance> visibilityDistance)
+        {
+            arrow.SetActive(true);
+        }
+        else
+        {
+            arrow.SetActive(false);
         }
     }
 }

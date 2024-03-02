@@ -22,7 +22,7 @@ public class BuffFunc : MonoBehaviour
     }
 
     public void Buff_0() { buff_Player.Bufon_Speed += 0.1f; CloseScene(); }
-    public void Buff_1() { buff_Player.Bufon_Health += 20;playerController.Health += 20; CloseScene(); }
+    public void Buff_1() { buff_Player.Bufon_Health += 20;playerController.Health_Value += 20; CloseScene(); }
     public void Buff_2() { buff_Player.Bufon_blood_suck_chance += 0.05f; CloseScene(); }
     public void Buff_3() { playerController.Whether_Generate_Shield = true; CloseScene(); }
     public void Buff_4() { buff_Weapon.Bufon_Damage += 0.2f; CloseScene(); }

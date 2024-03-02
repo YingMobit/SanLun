@@ -67,7 +67,7 @@ public class SceneLoader : MonoBehaviour
     }
     private void Start()
     {
-        if (PauseMenu.transform.GetChild(3) != null)
+        if (PauseMenu.transform.childCount >= 4 && PauseMenu.transform.GetChild(3) != null)
         {
             record = PauseMenu.transform.GetChild(3).GetChild(0).GetComponent<Text>();
         }
@@ -88,6 +88,13 @@ public class SceneLoader : MonoBehaviour
                 {
                     //HASDO:需要判断在那个场景中CHANGE:不需要，只需要改每个场景的PauseMenu就好
                     PauseGame();
+                }
+            }
+            else
+            {
+                if (Input.GetKeyDown(KeyCode.Tab) || Input.GetKeyDown(KeyCode.Escape))
+                {
+                    ContinueGame();
                 }
             }
         }

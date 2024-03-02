@@ -33,11 +33,12 @@ public class ExpCountor : MonoBehaviour
 
     void LevelUP()
     {
-        if (PlayerPrefs.GetInt("Level",1) < PlayerPrefs.GetInt("MaxLevel",25) && CorrentExp >= CorrentLevelExp)
+        if ( CorrentExp >= CorrentLevelExp)
         {
             CorrentExp -= CorrentLevelExp;
             CorrentLevel++;
             PlayerPrefs.SetInt("Level",CorrentLevel);
+            Debug.Log(PlayerPrefs.GetInt("Level", 1));
             CorrentLevelExp = 1200 + 400 * (CorrentLevel - 1);
             LevelUPed.Invoke();
         }

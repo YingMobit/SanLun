@@ -26,7 +26,7 @@ public class HealthStick : MonoBehaviour
 
     public void ChangeUI()
     {
-        PlayerHealthValue = PlayerController_scr.Health;
+        PlayerHealthValue = PlayerController_scr.Health_Value;
         PlayerHealthValue_Max = PlayerController_scr.Fac_MaxHealth;
         float current_fillamount = ViscousEffect.fillAmount;
         PlayerHealth.fillAmount = (float)PlayerHealthValue / PlayerHealthValue_Max;

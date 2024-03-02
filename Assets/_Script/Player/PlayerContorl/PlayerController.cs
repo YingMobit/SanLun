@@ -59,7 +59,7 @@ public class PlayerController : MonoBehaviour
     public float Last_Shield_Time;
     public int health = 100;
     public bool Invincible;
-    public int Health
+    public int Health_Value
     {
         get {return health;}
         set
@@ -97,7 +97,7 @@ public class PlayerController : MonoBehaviour
         cam = Camera.main;
         rigidbody = GetComponent<Rigidbody2D>();
         DataInitial();
-        Health = Fac_MaxHealth;
+        Health_Value = Fac_MaxHealth;
     }
 
     void DataInitial()
@@ -116,7 +116,7 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         if (!dead&& Whether_Generate_Shield) { GenerateShield(); }
-        if (Health <= 0) Dead();
+        if (Health_Value <= 0) Dead();
     }
 
     private void FixedUpdate()
@@ -152,6 +152,7 @@ public class PlayerController : MonoBehaviour
         Collider2D Body = GetComponent<Collider2D>();
         Body.enabled = false;
         DeadUI.SetActive(true);
+        PlayerPrefs.SetInt("Point", PlayerPrefs.GetInt("Point", 0)+Health.BarrierDestroyCount+Health.ExitGenerateCount*100);
         DeadUI.transform.GetChild(3).GetComponent<Text>().text = "数据统计\r\n昵称："+ PlayerPrefs.GetString("playerName", "Guest" + UnityEngine.Random.Range(1000, 10000).ToString()) + "\r\n积分："+ PlayerPrefs.GetInt("Point", 0) +"\r\n等级："+ PlayerPrefs.GetInt("Level", 1); 
         PlayerPrefs.SetInt("PointState",0);
 
@@ -167,8 +168,8 @@ public class PlayerController : MonoBehaviour
         if (chance <= Fac_SuckBloodChance)
         {
             Debug.Log("吸血");
-            Health += Blood_suck_value;
-            if (Health > Fac_MaxHealth) Health = Fac_MaxHealth;
+            Health_Value += Blood_suck_value;
+            if (Health_Value > Fac_MaxHealth) Health_Value = Fac_MaxHealth;
             GameObject newCurePop = Instantiate(CurePop,transform.position,Quaternion.identity);
             newCurePop .transform.SetParent(transform);
             TextMesh text = newCurePop.GetComponent<TextMesh>(); 
@@ -191,8 +192,8 @@ public class PlayerController : MonoBehaviour
     {
         if (collision .gameObject .CompareTag("HealthReward"))
         {
-            Health += HealthReward_Value;
-            Health = Health > Fac_MaxHealth? Fac_MaxHealth:Health;
+            Health_Value += HealthReward_Value;
+            Health_Value = Health_Value > Fac_MaxHealth? Fac_MaxHealth: Health_Value;
             GameObject newCurePop = Instantiate(CurePop, transform.position, Quaternion.identity);
             newCurePop.transform.SetParent(transform);
             TextMesh text = newCurePop.GetComponent<TextMesh>();

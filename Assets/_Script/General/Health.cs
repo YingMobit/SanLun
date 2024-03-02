@@ -143,15 +143,13 @@ public class Health : MonoBehaviour
     private void OnBarrierDead()
     {
         BarrierDestroyCount++;
-        Debug.Log(PlayerPrefs.GetInt("Level", 1));
         // 检查是否生成出口
-        if (PlayerPrefs.GetInt("Level", 1)== 25)//TODO!!!
+        if (PlayerPrefs.GetInt("Level", 1) >= 25 && (PlayerPrefs.GetInt("Level", 1) - 25) / 10 == ExitGenerateCount)//  每10级一个出口
         {
             AddExit?.Invoke();// 生成出口
             Debug.Log("生成出口");
             ExitGenerateCount++;
         }
-        //TODO:是否要增加一个出口
     }
 
     // 死亡后

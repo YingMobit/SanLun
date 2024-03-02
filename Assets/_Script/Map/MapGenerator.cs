@@ -7,6 +7,8 @@ using UnityEditor.Experimental;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using UnityEditor.SceneManagement;
+using System.Linq.Expressions;
 
 public class MapGenerator : MonoBehaviour
 {
@@ -31,7 +33,8 @@ public class MapGenerator : MonoBehaviour
     public float ObstacleFrequency = 0.4f;  // 障碍物的生成频率，数值越大障碍物越多
     public int ObstacleSeed;              // 随机种子，可以生成不同的障碍物模式
     public GameObject Exit;         // 出口
-    public GameObject ProtalBar;            // 读秒条
+    public GridStorage storage;         // 存储网格中心点信息
+
 
     // 出口逻辑
     private bool exitCanGenerate;           // 是否可以生成出口
@@ -74,6 +77,9 @@ public class MapGenerator : MonoBehaviour
     {
         // 清空地图
         ClearChildren(grid.gameObject);
+        // 初始数组
+        storage = new GridStorage();
+        storage.ClearPos();
         // 初始小地图
         BarrierNum = 1;
         exitCanGenerate = false;
@@ -144,6 +150,7 @@ public class MapGenerator : MonoBehaviour
         ObstacleTilemap.SetTile(centerPos, null);
         GenerateBarrier(centerPos);
         GenerateCorner(centerPos);
+        storage.AddPos(centerPos);
     }
 
     private void GeneratePlot(Vector3Int centerPos)
@@ -319,7 +326,9 @@ public class MapGenerator : MonoBehaviour
         GeneratePlot(centerPos);
         if(exitCanGenerate)
         {
-            Instantiate(Exit, grid.CellToLocalInterpolated(centerPos), Quaternion.Euler(Vector3.zero));// 在centerPos添加出口
+            Vector3Int exitPos = storage.GetRandomPos();
+            Debug.Log("获取到了pos");
+            Instantiate(Exit, grid.CellToLocalInterpolated(exitPos), Quaternion.Euler(Vector3.zero));// 在centerPos添加出口
         }
         GenerateObstacle(centerPos);//bug：人出生卡死在木桩 现在改人出生网格（0.5，0.5，0）*5.12
         if (exitCanGenerate)
@@ -333,6 +342,7 @@ public class MapGenerator : MonoBehaviour
         GenerateBarrier(centerPos);
         GenerateCorner(centerPos);
         ChangeFloor(Posdata);
+        storage.AddPos(centerPos);
     }
 
     private Vector3Int GetCenterPos(Health.Pos Posdata)

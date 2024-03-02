@@ -16,7 +16,7 @@ public class Attackaera : MonoBehaviour
             if (!Player_scr.Invincible)
             {
                 Instantiate(Blood, collision.gameObject.transform.position, Quaternion.identity);
-                if (Time.time - Player_scr.Last_Be_Attacked_time > 0.5f) { Player_scr.Health -= AttackValue; Player_scr.Last_Be_Attacked_time = Time.time; }
+                if (Time.time - Player_scr.Last_Be_Attacked_time > 0.5f) { Player_scr.Health_Value -= AttackValue; Player_scr.Last_Be_Attacked_time = Time.time; }
             }
         }
     }

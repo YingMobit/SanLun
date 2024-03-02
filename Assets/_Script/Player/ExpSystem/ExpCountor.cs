@@ -29,7 +29,7 @@ public class ExpCountor : MonoBehaviour
         LevelUP();
         if(Input.GetKeyDown(KeyCode.O)&& Input.GetKeyDown(KeyCode.P))
         {
-            CorrentExp += 1000;
+            CorrentExp += 10000;
         }
     }
 

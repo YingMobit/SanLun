@@ -94,7 +94,6 @@ public class Health : MonoBehaviour
                     break;
             }
         }
-        
         curHealth = maxHealth;
     }
 
@@ -144,10 +143,12 @@ public class Health : MonoBehaviour
     private void OnBarrierDead()
     {
         BarrierDestroyCount++;
+        Debug.Log(PlayerPrefs.GetInt("Level", 1));
         // 检查是否生成出口
-        if (ExpCountor.CorrentLevel == ExpCountor.MaxLevel)
+        if (PlayerPrefs.GetInt("Level", 1)== 25)//TODO!!!
         {
             AddExit?.Invoke();// 生成出口
+            Debug.Log("生成出口");
             ExitGenerateCount++;
         }
         //TODO:是否要增加一个出口

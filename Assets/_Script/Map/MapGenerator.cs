@@ -78,9 +78,13 @@ public class MapGenerator : MonoBehaviour
         BarrierNum = 1;
         exitCanGenerate = false;
         InitialMap();
-        //注册函数
+        // 注册函数
         Health.UpdataMap += AddMap;
         Health.AddExit += GenerateExit;
+        // 清理数据
+        Health.ExitGenerateCount = 0;
+        Health.BarrierDestroyCount = 0;
+        PlayerPrefs.SetInt("Point", 0);
     }
 
     private void Update()

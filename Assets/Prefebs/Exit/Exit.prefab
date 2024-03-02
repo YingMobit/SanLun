@@ -74,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: e4a23425b3c39ca41b2aeefed65c717e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -98,8 +98,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e20ed5db586c214396b7c42387f870e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 5
+  delay: 1
   portalBarPrefab: {fileID: 4765747452505381383, guid: 843c5055b50ce644789782f27927a270, type: 3}
+  canvas: {fileID: 0}
 --- !u!60 &8738625124500354919
 PolygonCollider2D:
   m_ObjectHideFlags: 0

@@ -2513,7 +2513,6 @@ MonoBehaviour:
   pBO_Data: {fileID: 11400000, guid: 1536ac0cebca7db4e9a67de4e5cf6395, type: 2}
   tank_Data: {fileID: 11400000, guid: 9c54d2d5d53dc2147afc36835abbabdb, type: 2}
   CorrentLevel: 0
-  MaxLevel: 25
   CorrentExp: 0
   CorrentLevelExp: 0
 --- !u!1 &812688005

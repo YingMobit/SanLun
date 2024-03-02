@@ -10,6 +10,7 @@ public class Guidance : MonoBehaviour
     public GameObject player;           // 玩家
     public GameObject DialogPanel;          // 对话panel
     public GameObject GuideMovePanel;           // 指引移动Panel
+    public GameObject PointPanel;           // 分数
     public Text DialogText;         // 对话框的文本 这里默认先给NPC //TODO：给玩家是否需要一个Panel
 
     private int page;           // 页数
@@ -29,14 +30,20 @@ public class Guidance : MonoBehaviour
     {
         DialogPanel.SetActive(false);
         GuideMovePanel.SetActive(false);
-        if (PlayerPrefs.GetInt("IsFirst", 1)==1)
+        if (PlayerPrefs.GetInt("IsFirst", 1) == 1)
         {
             player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             player.GetComponent<Animator>().SetBool("Moving", false);
             player.GetComponent<BasePlayer>().enabled = false;
             GuideMove();
         }
-
+        else
+        {
+            if (PlayerPrefs.GetInt("Pointstate", -1) == 1 || PlayerPrefs.GetInt("Pointstate", -1) == 0)
+            {
+                StartCoroutine(ShowPoint());
+            }
+        }
     }
     private void Update()
     {
@@ -146,6 +153,58 @@ public class Guidance : MonoBehaviour
             rectTransform.anchoredPosition = Vector2.Lerp(startPosition, endPosition, time / duration);
             time += Time.deltaTime; // 增加过去的时间
             yield return null; // 等待下一帧
+        }
+
+        rectTransform.anchoredPosition = endPosition; // 确保移动到最终位置
+        GuideMovePanel.SetActive(false);
+    }
+
+    IEnumerator ShowPoint()
+    {
+        yield return new WaitForSecondsRealtime(1f);
+
+        GuideMovePanel.SetActive(true);
+        float duration = 1f; // 移动持续时间
+        float time = 0; // 已经过去的时间
+        RectTransform rectTransform = GuideMovePanel.GetComponent<RectTransform>();
+        if(PlayerPrefs.GetInt("Pointstate", -1) == 1)
+        {
+            GuideMovePanel.GetComponent<Text>().text = "上一回合\r\n积分：" + PlayerPrefs.GetInt("Point", 0) + "\r\n等级：" + PlayerPrefs.GetInt("Level", 1);
+        }
+        else if(PlayerPrefs.GetInt("Pointstate", -1) == 0)
+        {
+            GuideMovePanel.GetComponent<Text>().text = "上一回合\r\n积分：" + PlayerPrefs.GetInt("Point", 0) / 2 + "(死亡损半)\r\n等级：" + PlayerPrefs.GetInt("Level", 1);
+        }
+
+        Vector2 startPosition = new Vector3(-380.5f, -111.01f); // 开始位置
+        Vector2 endPosition = new Vector3(-380.5f, 111.01f); // 结束位置
+
+        while (time < duration)
+        {
+            // 在开始和结束位置之间插值位置
+            rectTransform.anchoredPosition = Vector2.Lerp(startPosition, endPosition, time / duration);
+            time += Time.deltaTime; // 增加过去的时间
+            yield return null; // 等待下一帧
+        }
+
+        rectTransform.anchoredPosition = endPosition; // 确保移动到最终位置
+        StartCoroutine(WithdrawPoint());
+    }
+
+    IEnumerator WithdrawPoint()
+    {
+        yield return new WaitForSecondsRealtime(3f);
+        float duration = 1f; // 移动持续时间
+        float time = 0; // 已经过去的时间
+        RectTransform rectTransform = GuideMovePanel.GetComponent<RectTransform>();
+        Vector2 startPosition = new Vector3(-380.5f, 111.01f); // 开始位置
+        Vector2 endPosition = new Vector3(-380.5f, -111.01f); // 结束位置
+
+        while (time < duration)
+        {
+            rectTransform.anchoredPosition = Vector2.Lerp(startPosition, endPosition, time / duration);
+            time += Time.deltaTime;
+            yield return null;
         }
 
         rectTransform.anchoredPosition = endPosition; // 确保移动到最终位置

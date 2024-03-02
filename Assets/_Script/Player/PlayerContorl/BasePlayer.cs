@@ -9,7 +9,7 @@ public class BasePlayer : MonoBehaviour
     [Header("×é¼þ")]
     public Rigidbody2D rigidbody;
     public Animator anitor;
-    
+
     [Header("ÒÆ¶¯")]
     public float speed;
     private Vector3 mousePos;
@@ -26,7 +26,7 @@ public class BasePlayer : MonoBehaviour
         float xMove = Input.GetAxisRaw("Horizontal");
         float yMove = Input.GetAxisRaw("Vertical");
         rigidbody.velocity = new Vector2(xMove * speed, yMove * speed);
-        if (rigidbody.velocity!=Vector2.zero)
+        if (rigidbody.velocity != Vector2.zero)
         {
             anitor.SetBool("Moving", true);
         }
@@ -38,7 +38,7 @@ public class BasePlayer : MonoBehaviour
 
     private void Flip()
     {
-        mousePos =Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         relativePos = mousePos - transform.position;
         if (relativePos.x < 0)
         {
@@ -49,4 +49,5 @@ public class BasePlayer : MonoBehaviour
             transform.rotation = Quaternion.Euler(0, 0, 0);
         }
     }
+
 }

@@ -23,4 +23,9 @@ public class CameraFollow : MonoBehaviour
         transform .position = new Vector3 ( Vector2.Lerp(transform .position ,Player .transform .position ,speed*Time.deltaTime).x, 
             Vector2.Lerp(transform.position, Player.transform.position, speed * Time.deltaTime).y, transform.position .z);
     }
+
+    void Restrain()
+    {
+
+    }
 }

@@ -1,7 +1,7 @@
-using UnityEditor.Tilemaps;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.UIElements;
 
 public class ExitManager : MonoBehaviour
 {
@@ -13,13 +13,18 @@ public class ExitManager : MonoBehaviour
     [Header("Portal Bar Prefab")]
     public GameObject portalBarPrefab; // 读条bar的预制体
     private GameObject portalBarInstance; // portalBar的实例
-    public GameObject canvas;           // 画布
-    private Image progressBar; // 进度条Image组件
+    public GameObject canvas; // 画布
+    private UnityEngine.UI.Image progressBar; // 进度条Image组件
     private Text progressText; // 进度条Text组件
 
     private void Update()
     {
-        if (portalBarInstance != null)
+        if (canvas == null)
+        {
+            canvas = GameObject.Find("Canvas");
+        }
+
+        if (isPlayerInTrigger || (portalBarInstance != null && timer > 0))
         {
             UpdateLoadTime();
             UpdateProgressBar();
@@ -30,7 +35,7 @@ public class ExitManager : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            Debug.Log("enter");
+            Debug.Log("Player entered");
             isPlayerInTrigger = true;
             ShowPortalBar(true); // 创建并显示进度条
         }
@@ -40,8 +45,9 @@ public class ExitManager : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            Debug.Log("Player exited");
             isPlayerInTrigger = false;
-            ShowPortalBar(false); // 隐藏并可能销毁进度条
+            // 不立即隐藏进度条，允许其自然递减至0后消失
         }
     }
 
@@ -54,7 +60,7 @@ public class ExitManager : MonoBehaviour
         {
             CompleteLoading();
         }
-        else if (timer <= 0.0f && !isPlayerInTrigger)
+        else if (timer <= 0.0f && portalBarInstance != null && !isPlayerInTrigger)
         {
             ShowPortalBar(false); // 隐藏并销毁进度条
         }
@@ -70,18 +76,21 @@ public class ExitManager : MonoBehaviour
 
     private void CompleteLoading()
     {
-        PlayerPrefs.SetInt("PointState", 1); //1 成功 0 死亡 -1无数据/已读取
-        SceneLoader.Instance.SwichScene();
+        PlayerPrefs.SetInt("PointState", 1); //1 成功 0 死亡 -1 无数据/已读取
         ShowPortalBar(false); // 隐藏并销毁进度条
+        SceneLoader.Instance.SwichScene();
     }
 
     private void ShowPortalBar(bool show)
     {
         if (show && portalBarInstance == null)
         {
-            portalBarInstance = Instantiate(portalBarPrefab,new Vector3(0, 428,0), Quaternion.identity,canvas.transform);
-
-            progressBar = portalBarInstance.transform.GetChild(1).GetComponent<Image>();
+            portalBarInstance = Instantiate(portalBarPrefab, Vector3.zero, Quaternion.identity, canvas.transform);//new Vector3(500f, 428f, 0)
+            //RectTransform canvasRectTransform = canvas.GetComponent<RectTransform>();
+            RectTransform portalBarRectTransform = portalBarInstance.GetComponent<RectTransform>();
+            //float positionY = (canvasRectTransform.sizeDelta.y / 4); // 画布高度的1/
+            portalBarRectTransform.anchoredPosition = new Vector2(0, 380f);
+            progressBar = portalBarInstance.transform.GetChild(1).GetComponent<UnityEngine.UI.Image>();
             progressText = portalBarInstance.transform.GetChild(2).GetComponent<Text>();
             timer = 0.0f; // 重置计时器
         }

@@ -30,6 +30,7 @@ public class Welcome : MonoBehaviour
     // 内部函数
     private void Awake()
     {
+
         if (!PlayerPrefs.HasKey(FirstLaunchKey))
         {
             PlayerPrefs.DeleteAll();// 第一次启动游戏，清空所有PlayerPrefs

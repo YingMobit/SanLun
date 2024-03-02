@@ -16,10 +16,4 @@ public class Test : MonoBehaviour
     {
         
     }
-
-    public void Testfunc()
-    {
-        Debug.Log("?");
-        SceneManager.LoadScene("ExampleGrass");
-    }
 }

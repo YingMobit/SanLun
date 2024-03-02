@@ -6,11 +6,14 @@ using UnityEngine.UIElements;
 public class ExitManager : MonoBehaviour
 {
     [Header("读条相关")]
-    public float delay = 1.0f; // 玩家需要停留的时间
+    public float delay = 1.1f; // 玩家需要停留的时间
     private float timer = 0.0f; // 计时器
     private bool isPlayerInTrigger = false; // 玩家是否在触发区域内的标志
 
     [Header("Portal Bar Prefab")]
+
+    public GameObject Arrow_Pre;
+
     public GameObject portalBarPrefab; // 读条bar的预制体
     public GameObject ArrowPrefab;            //导航
     private GameObject portalBarInstance; // portalBar的实例

@@ -98,7 +98,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e20ed5db586c214396b7c42387f870e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 1
+  delay: 2
+  Arrow_Pre: {fileID: 0}
   portalBarPrefab: {fileID: 4765747452505381383, guid: 843c5055b50ce644789782f27927a270, type: 3}
   ArrowPrefab: {fileID: 5818031125018919179, guid: ba3a7d1f201eb124688126d67daf5d4f, type: 3}
   canvas: {fileID: 0}

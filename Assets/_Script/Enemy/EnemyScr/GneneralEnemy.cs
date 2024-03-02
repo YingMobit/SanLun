@@ -32,6 +32,7 @@ public class GneneralEnemy : MonoBehaviour
     public GameObject Ground_obj;
     public GameObject Obstacle_obj;
     public PathFindingManager pathFindingManager;
+    public EnemyGenerate generate = new EnemyGenerate();
 
     [Header("FactData")]
     public float FAC_Speed;
@@ -56,6 +57,7 @@ public class GneneralEnemy : MonoBehaviour
 
     public void Start()
     {
+        generate = FindAnyObjectByType<EnemyGenerate>();
         pathFindingManager = FindAnyObjectByType<PathFindingManager>();
         tilemap = GameObject.Find("FloorTilemap").GetComponent<Tilemap>();
         Rigidbody2d = GetComponent<Rigidbody2D>();
@@ -84,7 +86,7 @@ public class GneneralEnemy : MonoBehaviour
     public void Update()
     {
         GetTile();
-        if (!Attacking && !BeHittingBack && !Dead/* && !AvoidingObstacle*/) Chase();
+        if (!Attacking && !BeHittingBack && !Dead/* && !AvoidingObstacle*/) { Chase(); PosiionCorrection(); }
         if (!Attacking && (Vector3.Distance(transform.position, Player.transform.position) <= FAC_Attackarea) && !Dead && !AvoidingObstacle) StartCoroutine(Attack());
         if (Health <= 0 && death == null) death = StartCoroutine(Death());
     }
@@ -151,6 +153,14 @@ public class GneneralEnemy : MonoBehaviour
         rigidbody.velocity = Chasing_dir * FAC_Speed;
         if (transform.position.x < Player.transform.position.x) { transform.rotation = Quaternion.Euler(0, 0, 0); }
         else transform.rotation = Quaternion.Euler(0, 180, 0);
+    }
+
+    void PosiionCorrection()
+    {
+        if (Vector3.Distance(transform.position, Player.transform.position) > 80)
+        {
+            transform.position = generate.ChoosePos(40);
+        }
     }
 
     public void OnTriggerEnter2D(Collider2D collision)

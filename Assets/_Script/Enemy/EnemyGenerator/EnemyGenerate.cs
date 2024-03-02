@@ -65,7 +65,7 @@ public class EnemyGenerate : MonoBehaviour
     {
         if (Ground != null && Obstacle != null)
         {
-            Instantiate(Enemy, ChoosePos(), Quaternion.identity);
+            Instantiate(Enemy, ChoosePos(Closest_generate_distance), Quaternion.identity);
             last_generate_time = Time.time;
         }
     }
@@ -100,7 +100,7 @@ public class EnemyGenerate : MonoBehaviour
      * {20-50范围里头随机一个vector3的世界坐标}
      * while（！MapGenerator.Instance.EnemyPos(vector3的世界坐标)）
      */
-    Vector3 ChoosePos()
+    public Vector3 ChoosePos(float Closest_generate_distance)
     {
         int seed = DateTime.Now.GetHashCode();
         System.Random rand = new System.Random(seed);
@@ -113,8 +113,6 @@ public class EnemyGenerate : MonoBehaviour
             {
                 do
                 {
-                    Debug.Log(new Vector2Int(Bounds.xMin + 1, Bounds.xMax - 1));
-                    Debug.Log(new Vector2Int(Bounds.yMin + 1, Bounds.yMax - 1));
                     int X = rand.Next(Bounds.xMin + 1, Bounds.xMax - 1);
                     int Y = rand.Next(Bounds.yMin + 1, Bounds.yMax - 1);
                     Vector3Int spawnPosition = new Vector3Int(X, Y, 0);

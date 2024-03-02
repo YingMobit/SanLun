@@ -7,8 +7,6 @@ using UnityEditor.Experimental;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Tilemaps;
-using UnityEditor.SceneManagement;
-using System.Linq.Expressions;
 
 public class MapGenerator : MonoBehaviour
 {

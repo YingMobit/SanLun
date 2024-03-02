@@ -27,6 +27,10 @@ public class ExpCountor : MonoBehaviour
     void Update()
     {
         LevelUP();
+        if(Input.GetKeyDown(KeyCode.O)&& Input.GetKeyDown(KeyCode.P))
+        {
+            CorrentExp += 1000;
+        }
     }
 
     void LevelUP()

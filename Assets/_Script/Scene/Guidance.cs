@@ -163,17 +163,17 @@ public class Guidance : MonoBehaviour
     {
         yield return new WaitForSecondsRealtime(1f);
 
-        GuideMovePanel.SetActive(true);
+        PointPanel.SetActive(true);
         float duration = 1f; // 移动持续时间
         float time = 0; // 已经过去的时间
-        RectTransform rectTransform = GuideMovePanel.GetComponent<RectTransform>();
+        RectTransform rectTransform = PointPanel.GetComponent<RectTransform>();
         if(PlayerPrefs.GetInt("Pointstate", -1) == 1)
         {
-            GuideMovePanel.GetComponent<Text>().text = "上一回合\r\n积分：" + PlayerPrefs.GetInt("Point", 0) + "\r\n等级：" + PlayerPrefs.GetInt("Level", 1);
+            PointPanel.transform.GetChild(0).GetComponent<Text>().text = "上一回合\r\n积分：" + PlayerPrefs.GetInt("Point", 0) + "\r\n等级：" + PlayerPrefs.GetInt("Level", 1);
         }
         else if(PlayerPrefs.GetInt("Pointstate", -1) == 0)
         {
-            GuideMovePanel.GetComponent<Text>().text = "上一回合\r\n积分：" + PlayerPrefs.GetInt("Point", 0) / 2 + "(死亡损半)\r\n等级：" + PlayerPrefs.GetInt("Level", 1);
+            PointPanel.transform.GetChild(0).GetComponent<Text>().text = "上一回合\r\n积分：" + PlayerPrefs.GetInt("Point", 0) / 2 + "(死亡损半)\r\n等级：" + PlayerPrefs.GetInt("Level", 1);
         }
 
         Vector2 startPosition = new Vector3(-380.5f, -111.01f); // 开始位置
@@ -196,7 +196,7 @@ public class Guidance : MonoBehaviour
         yield return new WaitForSecondsRealtime(3f);
         float duration = 1f; // 移动持续时间
         float time = 0; // 已经过去的时间
-        RectTransform rectTransform = GuideMovePanel.GetComponent<RectTransform>();
+        RectTransform rectTransform = PointPanel.GetComponent<RectTransform>();
         Vector2 startPosition = new Vector3(-380.5f, 111.01f); // 开始位置
         Vector2 endPosition = new Vector3(-380.5f, -111.01f); // 结束位置
 
@@ -208,6 +208,6 @@ public class Guidance : MonoBehaviour
         }
 
         rectTransform.anchoredPosition = endPosition; // 确保移动到最终位置
-        GuideMovePanel.SetActive(false);
+        PointPanel.SetActive(false);
     }
 }

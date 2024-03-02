@@ -6,7 +6,7 @@ using UnityEngine.UIElements;
 public class ExitManager : MonoBehaviour
 {
     [Header("读条相关")]
-    public float delay = 6.0f; // 玩家需要停留的时间
+    public float delay = 1.0f; // 玩家需要停留的时间
     private float timer = 0.0f; // 计时器
     private bool isPlayerInTrigger = false; // 玩家是否在触发区域内的标志
 

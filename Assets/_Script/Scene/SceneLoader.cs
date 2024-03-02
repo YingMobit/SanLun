@@ -11,6 +11,7 @@ public class SceneLoader : MonoBehaviour
     public GameObject DeadMenu;         // 死亡菜单
     public Animator transition;         // 过场
     public float transitionTime = 1f;           // 过场时间
+    private Text record;            // 战绩
     public static SceneLoader Instance { get; private set; }           // 静态的 Instance 属性，用于获取单例实例
 
     // 函数
@@ -66,6 +67,10 @@ public class SceneLoader : MonoBehaviour
     }
     private void Start()
     {
+        if (PauseMenu.transform.GetChild(3) != null)
+        {
+            record = PauseMenu.transform.GetChild(3).GetChild(0).GetComponent<Text>();
+        }
         PauseMenu.SetActive(false);
         if (DeadMenu != null)
         {
@@ -75,25 +80,34 @@ public class SceneLoader : MonoBehaviour
 
     private void Update()
     {
-        if(!PauseMenu.activeSelf)
+        if (gameObject.transform.GetChild(0).GetChild(0).GetComponent<CanvasGroup>().alpha == 0)
         {
-            if (Input.GetKeyDown(KeyCode.Tab) || Input.GetKeyDown(KeyCode.Escape))
+            if (!PauseMenu.activeSelf)
             {
-                //HASDO:需要判断在那个场景中CHANGE:不需要，只需要改每个场景的PauseMenu就好
-                PauseGame();
+                if (Input.GetKeyDown(KeyCode.Tab) || Input.GetKeyDown(KeyCode.Escape))
+                {
+                    //HASDO:需要判断在那个场景中CHANGE:不需要，只需要改每个场景的PauseMenu就好
+                    PauseGame();
+                }
             }
         }
-        if(Input.GetMouseButtonDown(1))
+        /*if(Input.GetMouseButtonDown(1))
         {
             Debug.Log("换场景");
             StartCoroutine(LoadSceneByCrossFade(SceneManager.GetActiveScene().buildIndex == 2 ? 1 : 2));
-        }
+        }*/
     }
 
     private void PauseGame()// 暂停游戏
     {
+        //TODO:战绩
+        if(record!=null)
+        {
+            record.text = "击杀敌怪得分："+ PlayerPrefs.GetInt("Point", 0)+"\r\n打破屏障数量："+Health.BarrierDestroyCount+"\r\n解锁出口数量："+Health.ExitGenerateCount;
+        }
         Time.timeScale = 0f;
         PauseMenu.SetActive(true);
+
     }
 
     IEnumerator LoadSceneAsync(string sceneName)

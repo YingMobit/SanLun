@@ -62,7 +62,7 @@ public class LeaderBored : MonoBehaviour
         //HASDO：数据自动传递CHANGE:由于无法备注直接在回到这个场景的时候添加
         string playerName = PlayerPrefs.GetString("playerName", "Guest" + Random.Range(1000, 10000).ToString());
         int score = PlayerPrefs.GetInt("Point", 0);
-        int level = PlayerPrefs.GetInt("Level", 0);
+        int level = PlayerPrefs.GetInt("Level", 1);
         if (PlayerPrefs.GetInt("PointState", -1) == 0)
         {
             score = score / 2;
@@ -136,6 +136,7 @@ public class LeaderBored : MonoBehaviour
     IEnumerator AddNewPlayer(string playerName, int score,int level, int attempt = 0)
     {
         Debug.Log(score);
+        Debug.Log(level);
         UnityWebRequest request = UnityWebRequest.Get(url + privateCode + "/add/" + UnityWebRequest.EscapeURL(playerName) + "/" + score + "/" + level);
         yield return request.SendWebRequest();
         if (request.result == UnityWebRequest.Result.ConnectionError || request.result == UnityWebRequest.Result.ProtocolError)

@@ -31,6 +31,7 @@ public class Health : MonoBehaviour
     public string tag;
     public Pos Posdata;         // 存了位置信息
     public static int BarrierDestroyCount;          // 破坏的屏障计数
+    public static int ExitGenerateCount;          // 生成的出口计数
 
     // 事件
     public static event Action<float> UpgradeData;          // 加血
@@ -53,6 +54,7 @@ public class Health : MonoBehaviour
     static Health()// 静态构造函数,当类第一次调用时激活
     {
         BarrierDestroyCount = 0;//但整型默认初始到0
+        ExitGenerateCount = 0;
         //UpgradeData += UpHealth;
     }
     
@@ -113,7 +115,7 @@ public class Health : MonoBehaviour
         }
     }
 
-    private void OnBarrierDead()
+    /*private void OnBarrierDead()
     {
         BarrierDestroyCount++;
         if (BarrierDestroyCount % 10 == 0)
@@ -128,14 +130,27 @@ public class Health : MonoBehaviour
         if (UnityEngine.Random.value < exitProbability)
         {
             AddExit?.Invoke();// 生成出口
+            ExitGenerateCount++;
             ResetExitProbability();
             return;
         }
         if (BarrierDestroyCount >= 2) // bug：暂时修改
         {
             AddExit?.Invoke();// 生成出口
+            ExitGenerateCount++;
             BarrierDestroyCount = 0; // 重置屏障破坏计数
         }
+    }*/
+    private void OnBarrierDead()
+    {
+        BarrierDestroyCount++;
+        // 检查是否生成出口
+        if (ExpCountor.CorrentLevel == ExpCountor.MaxLevel)
+        {
+            AddExit?.Invoke();// 生成出口
+            ExitGenerateCount++;
+        }
+        //TODO:是否要增加一个出口
     }
 
     // 死亡后

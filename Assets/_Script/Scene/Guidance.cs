@@ -112,18 +112,19 @@ public class Guidance : MonoBehaviour
         GuideMovePanel.SetActive(true);
         float duration = 0.6f; // 移动持续时间
         float time = 0; // 已经过去的时间
-        Vector3 startPosition = new Vector3(734.49f, 567.83f, 0); // 开始位置
-        Vector3 endPosition = new Vector3(734.47f, 462.16f, 0); // // debug出来下面位置(734.47f, 462.16f, 0),上面位置(734.49f, 567.83f, 0)
+        RectTransform rectTransform = GuideMovePanel.GetComponent<RectTransform>();
+        Vector2 startPosition = new Vector3(-380.5f, -111.01f); // 开始位置
+        Vector2 endPosition = new Vector3(-380.5f, 111.01f); // 结束位置
 
         while (time < duration)
         {
             // 在开始和结束位置之间插值位置
-            GuideMovePanel.transform.position = Vector3.Lerp(startPosition, endPosition, time / duration);
+            rectTransform.anchoredPosition = Vector2.Lerp(startPosition, endPosition, time / duration);
             time += Time.deltaTime; // 增加过去的时间
             yield return null; // 等待下一帧
         }
 
-        GuideMovePanel.transform.position = endPosition; // 确保移动到最终位置
+        rectTransform.anchoredPosition = endPosition; // 确保移动到最终位置
 
         player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         player.GetComponent<Animator>().SetBool("Moving", false);
@@ -135,20 +136,19 @@ public class Guidance : MonoBehaviour
     {
         float duration = 1.5f; // 移动持续时间
         float time = 0; // 已经过去的时间
-        Vector3 startPosition = new Vector3(734.47f, 462.16f, 0); // 开始位置
-        Vector3 endPosition = new Vector3(734.49f, 567.83f, 0); // 结束位置
-        //Debug.Log(GuideMovePanel.GetComponent<RectTransform>().sizeDelta.y);// debug出来高度！！！gousi的是错的105.67
-        //Debug.Log(GuideMovePanel.transform.position);// debug出来位置(734.47, 462.16, 0),上面(734.49, 567.83, 0)
+        RectTransform rectTransform = GuideMovePanel.GetComponent<RectTransform>();
+        Vector2 startPosition = new Vector3(-380.5f, 111.01f); // 开始位置
+        Vector2 endPosition = new Vector3(-380.5f, -111.01f); // 结束位置
 
         while (time < duration)
         {
             // 在开始和结束位置之间插值位置
-            GuideMovePanel.transform.position = Vector3.Lerp(startPosition, endPosition, time / duration);
+            rectTransform.anchoredPosition = Vector2.Lerp(startPosition, endPosition, time / duration);
             time += Time.deltaTime; // 增加过去的时间
             yield return null; // 等待下一帧
         }
 
-        GuideMovePanel.transform.position = endPosition; // 确保移动到最终位置
+        rectTransform.anchoredPosition = endPosition; // 确保移动到最终位置
         GuideMovePanel.SetActive(false);
     }
 }

@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -151,6 +152,7 @@ public class PlayerController : MonoBehaviour
         Collider2D Body = GetComponent<Collider2D>();
         Body.enabled = false;
         DeadUI.SetActive(true);
+        DeadUI.transform.GetChild(3).GetComponent<Text>().text = "数据统计\r\n昵称："+ PlayerPrefs.GetString("playerName", "Guest" + UnityEngine.Random.Range(1000, 10000).ToString()) + "\r\n积分："+ PlayerPrefs.GetInt("Point", 0) +"\r\n等级："+ PlayerPrefs.GetInt("Level", 1); 
         PlayerPrefs.SetInt("PointState",0);
         PlayerPrefs.SetInt("Level", ExpCountor.CorrentLevel);
     }

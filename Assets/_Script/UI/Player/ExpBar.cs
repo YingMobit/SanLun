@@ -22,6 +22,6 @@ public class ExpBar : MonoBehaviour
     {
         Exp.fillAmount = (float)expcountor.CorrentExp / expcountor.CorrentLevelExp;
         ExpBarText.text = expcountor.CorrentExp.ToString()+"/"+expcountor.CorrentLevelExp.ToString();
-        Level.text = "CurrentLevel  " + expcountor.CorrentLevel.ToString();
+        Level.text = "CurrentLevel  " + ExpCountor.CorrentLevel.ToString();
     }
 }

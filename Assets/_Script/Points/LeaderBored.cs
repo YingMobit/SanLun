@@ -128,7 +128,10 @@ public class LeaderBored : MonoBehaviour
         {
             AddScore();
         }
-        StartCoroutine(DownLoad()); // 获取
+        else
+        {
+            StartCoroutine(DownLoad()); // 获取
+        }
         isLevel = false;
         PopPanel.SetActive(false);
     }
@@ -152,8 +155,8 @@ public class LeaderBored : MonoBehaviour
                 PopMessage("成绩提交至排行榜失败,请检查网络");
             }
         }
-        PlayerPrefs.SetInt("PointState", -1);
         //HASDO:添加一个Panel用来提示输入错误,将addTextComponent修改成弹窗
+        StartCoroutine(DownLoad()); // 获取
     }
 
     IEnumerator DownLoad(int attempt = 0)

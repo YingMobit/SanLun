@@ -37,13 +37,12 @@ public class Guidance : MonoBehaviour
             player.GetComponent<BasePlayer>().enabled = false;
             GuideMove();
         }
-        else
+        Debug.Log(PlayerPrefs.GetInt("PointState", -1) == 1);
+        Debug.Log(PlayerPrefs.GetInt("PointState", -1) == 0);
+        if (PlayerPrefs.GetInt("PointState", -1) == 1 || PlayerPrefs.GetInt("PointState", -1) == 0)
         {
-            if (PlayerPrefs.GetInt("Pointstate", -1) == 1 || PlayerPrefs.GetInt("Pointstate", -1) == 0)
-            {
-                Debug.Log("showpoint");
-                StartCoroutine(ShowPoint());
-            }
+            Debug.Log("showpoint");
+            StartCoroutine(ShowPoint());
         }
     }
     private void Update()
@@ -121,12 +120,11 @@ public class Guidance : MonoBehaviour
         float duration = 0.6f; // 移动持续时间
         float time = 0; // 已经过去的时间
         RectTransform rectTransform = GuideMovePanel.GetComponent<RectTransform>();
-        Vector2 startPosition = new Vector3(-380.5f, -111.01f); // 开始位置
-        Vector2 endPosition = new Vector3(-380.5f, 111.01f); // 结束位置
+        Vector2 startPosition = new Vector2(-380.5f, 111.01f); // 结束位置
+        Vector2 endPosition = new Vector2(-380.5f, -111.01f); // 开始位置
 
         while (time < duration)
         {
-            // 在开始和结束位置之间插值位置
             rectTransform.anchoredPosition = Vector2.Lerp(startPosition, endPosition, time / duration);
             time += Time.deltaTime; // 增加过去的时间
             yield return null; // 等待下一帧
@@ -145,8 +143,8 @@ public class Guidance : MonoBehaviour
         float duration = 1.5f; // 移动持续时间
         float time = 0; // 已经过去的时间
         RectTransform rectTransform = GuideMovePanel.GetComponent<RectTransform>();
-        Vector2 startPosition = new Vector3(-380.5f, 111.01f); // 开始位置
-        Vector2 endPosition = new Vector3(-380.5f, -111.01f); // 结束位置
+        Vector2 startPosition = new Vector3(-380.5f, -111.01f); // 开始位置
+        Vector2 endPosition = new Vector3(-380.5f, 111.01f); // 结束位置
 
         while (time < duration)
         {
@@ -165,21 +163,22 @@ public class Guidance : MonoBehaviour
         yield return new WaitForSecondsRealtime(1f);
 
         PointPanel.SetActive(true);
+        PointPanel.active = true;
         float duration = 1f; // 移动持续时间
         float time = 0; // 已经过去的时间
         Debug.Log("来了") ;
         RectTransform rectTransform = PointPanel.GetComponent<RectTransform>();
-        if(PlayerPrefs.GetInt("Pointstate", -1) == 1)
+        if(PlayerPrefs.GetInt("PointState", -1) == 1)
         {
             PointPanel.transform.GetChild(0).GetComponent<Text>().text = "上一回合\r\n积分：" + PlayerPrefs.GetInt("Point", 0) + "\r\n等级：" + PlayerPrefs.GetInt("Level", 1);
         }
-        else if(PlayerPrefs.GetInt("Pointstate", -1) == 0)
+        else if(PlayerPrefs.GetInt("PointState", -1) == 0)
         {
             PointPanel.transform.GetChild(0).GetComponent<Text>().text = "上一回合\r\n积分：" + PlayerPrefs.GetInt("Point", 0) / 2 + "(死亡损半)\r\n等级：" + PlayerPrefs.GetInt("Level", 1);
         }
 
-        Vector2 startPosition = new Vector3(-380.5f, -111.01f); // 开始位置
-        Vector2 endPosition = new Vector3(-380.5f, 111.01f); // 结束位置
+        Vector2 startPosition = new Vector2(-380.5f, 111.01f); // 结束位置
+        Vector2 endPosition = new Vector2(-380.5f, -111.01f); // 开始位置
 
         while (time < duration)
         {
@@ -199,8 +198,8 @@ public class Guidance : MonoBehaviour
         float duration = 1f; // 移动持续时间
         float time = 0; // 已经过去的时间
         RectTransform rectTransform = PointPanel.GetComponent<RectTransform>();
-        Vector2 startPosition = new Vector3(-380.5f, 111.01f); // 开始位置
-        Vector2 endPosition = new Vector3(-380.5f, -111.01f); // 结束位置
+        Vector2 startPosition = new Vector3(-380.5f, -111.01f); // 开始位置
+        Vector2 endPosition = new Vector3(-380.5f, 111.01f); // 结束位置
 
         while (time < duration)
         {

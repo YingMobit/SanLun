@@ -9,7 +9,7 @@ public class Welcome : MonoBehaviour
     // 声明
     public InputField inputField;           // 昵称输入框
     public GameObject WelcomePanel;         // 欢迎界面
-    private const string FirstLaunchKey = "FirstLaunch";
+    private const string FirstLaunchKey = "FirstLaunch3";
 
     // 函数
     // 外部函数
@@ -39,12 +39,13 @@ public class Welcome : MonoBehaviour
     }
     private void Start()
     {
-        if (PlayerPrefs.GetInt("IsFirst", 1) == 0)
+        if (PlayerPrefs.GetInt("IsFirst",1) == 0)
         {
             inputField.text = PlayerPrefs.GetString("playerName", "Guest" + Random.Range(1000, 10000).ToString());
         }
         else
         {
+            PlayerPrefs.SetInt("IsFirst",1);
             inputField.text = null;
         }
     }

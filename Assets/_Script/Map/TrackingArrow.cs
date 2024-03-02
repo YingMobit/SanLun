@@ -13,7 +13,7 @@ public class TrackingArrow : MonoBehaviour
     {
         arrowRectTransform = GetComponent<RectTransform>();
         mainCamera = Camera.main;
-        screenBorderBuffer = 50f;
+        screenBorderBuffer = 500;
     }
 
     void Update()

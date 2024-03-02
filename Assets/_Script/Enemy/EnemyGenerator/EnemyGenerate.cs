@@ -25,6 +25,7 @@ public class EnemyGenerate : MonoBehaviour
     [Range(0,10)]public float generate_interval;
     public float last_generate_time;
     public Vector3 Player_Pos;
+    public int EnemyCount;
 
     // Start is called before the first frame update
     void Start()
@@ -46,6 +47,7 @@ public class EnemyGenerate : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        EnemyCount = GameObject.FindGameObjectsWithTag("Enemy").Length;
         if (Ground == null) 
         {
             GroundTile = GameObject.Find("FloorTilemap");
@@ -56,7 +58,7 @@ public class EnemyGenerate : MonoBehaviour
             ObstacleTile = GameObject.Find("ObstacleTilemap");
             Obstacle = ObstacleTile.GetComponent<Tilemap>();
         }
-        if (Time.time - last_generate_time >= generate_interval&& Obstacle != null&& Ground != null) Generate(ChooseEnemy());
+        if (Time.time - last_generate_time >= generate_interval&& Obstacle != null&& Ground != null && EnemyCount <= 500) Generate(ChooseEnemy());
     }
 
     void LevelUP() { current_level++; generate_interval -= 0.03f; generate_interval = generate_interval < 0.2f ? 0.2f : generate_interval; }

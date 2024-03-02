@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Drawing;
 using System.Linq; // Add this for sorting
 using System.Threading;
 using UnityEngine;
@@ -62,6 +63,14 @@ public class LeaderBored : MonoBehaviour
         string playerName = PlayerPrefs.GetString("playerName", "Guest" + Random.Range(1000, 10000).ToString());
         int score = PlayerPrefs.GetInt("Point", 0);
         int level = PlayerPrefs.GetInt("Level", 0);
+        if (PlayerPrefs.GetInt("PointState", -1) == 0)
+        {
+            score = score / 2;
+        }
+        else if (PlayerPrefs.GetInt("PointState", -1) == 1)
+        {
+            score = score;
+        }
         StartCoroutine(AddNewPlayer(playerName, score,level));
     }
 
@@ -115,7 +124,10 @@ public class LeaderBored : MonoBehaviour
     // 内部函数
     private void Start()
     {
-        AddScore();
+        if(PlayerPrefs.GetInt("PointState", -1) == 1 || PlayerPrefs.GetInt("PointState", -1) == 0)
+        {
+            AddScore();
+        }
         StartCoroutine(DownLoad()); // 获取
         isLevel = false;
         PopPanel.SetActive(false);
@@ -123,16 +135,8 @@ public class LeaderBored : MonoBehaviour
 
     IEnumerator AddNewPlayer(string playerName, int score,int level, int attempt = 0)
     {
-        float point = score;
-        if (PlayerPrefs.GetInt("PointState", -1) == 0)
-        {
-            point = score / 2.0f;
-        }
-        else if(PlayerPrefs.GetInt("PointState", -1) == 1)
-        {
-            point = score;
-        }
-        UnityWebRequest request = UnityWebRequest.Get(url + privateCode + "/add/" + UnityWebRequest.EscapeURL(playerName) + "/" + point.ToString("F1") + "/" + level);
+        Debug.Log(score);
+        UnityWebRequest request = UnityWebRequest.Get(url + privateCode + "/add/" + UnityWebRequest.EscapeURL(playerName) + "/" + score + "/" + level);
         yield return request.SendWebRequest();
         if (request.result == UnityWebRequest.Result.ConnectionError || request.result == UnityWebRequest.Result.ProtocolError)
         {

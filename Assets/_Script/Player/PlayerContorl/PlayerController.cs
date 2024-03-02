@@ -153,7 +153,7 @@ public class PlayerController : MonoBehaviour
         Body.enabled = false;
         DeadUI.SetActive(true);
         PlayerPrefs.SetInt("Point", PlayerPrefs.GetInt("Point", 0)+Health.BarrierDestroyCount+Health.ExitGenerateCount*100);
-        DeadUI.transform.GetChild(3).GetComponent<Text>().text = "数据统计\r\n昵称："+ PlayerPrefs.GetString("playerName", "Guest" + UnityEngine.Random.Range(1000, 10000).ToString()) + "\r\n积分："+ PlayerPrefs.GetInt("Point", 0) +"\r\n等级："+ PlayerPrefs.GetInt("Level", 1); 
+        DeadUI.transform.GetChild(3).GetComponent<Text>().text = "数据统计\r\n昵称："+ PlayerPrefs.GetString("playerName", "Guest" + UnityEngine.Random.Range(1000, 10000).ToString()) + "\r\n积分："+ PlayerPrefs.GetInt("Point", 0)/2 +"(死亡损半 )\r\n等级："+ PlayerPrefs.GetInt("Level", 1); 
         PlayerPrefs.SetInt("PointState",0);
 
         PlayerPrefs.SetInt("Level", ExpCountor.CorrentLevel);

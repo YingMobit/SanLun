@@ -59,7 +59,7 @@ public class EnemyGenerate : MonoBehaviour
         if (Time.time - last_generate_time >= generate_interval&& Obstacle != null&& Ground != null) Generate(ChooseEnemy());
     }
 
-    void LevelUP() { current_level++; generate_interval -= 0.03f; }
+    void LevelUP() { current_level++; generate_interval -= 0.03f; generate_interval = generate_interval < 0.2f ? 0.2f : generate_interval; }
 
     void Generate(GameObject Enemy)
     {

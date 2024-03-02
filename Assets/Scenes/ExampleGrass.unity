@@ -2737,6 +2737,7 @@ MonoBehaviour:
   Reloading: 0
   Weapon_Name: 
   last_shoot_time: 0
+  Last_AudioPlayed_Time: 0
 --- !u!1 &830538204
 GameObject:
   m_ObjectHideFlags: 0

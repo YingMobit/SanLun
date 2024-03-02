@@ -43,7 +43,7 @@ public class BuffTile : MonoBehaviour
     void SelectBuff()
     {
         Debug.Log("SelectBuff");
-        int seed = DateTime.Now.GetHashCode()+Mathf.RoundToInt(gameObject.transform .position.x);
+        int seed = DateTime.Now.GetHashCode()+Mathf.RoundToInt(transform.position.x)*1000;
         System.Random random = new System.Random(seed);
         BuffCount = random.Next(0,Data.Count);
         selected_data = Data[BuffCount];

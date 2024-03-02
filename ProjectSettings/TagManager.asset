@@ -12,6 +12,8 @@ TagManager:
   - Ground
   - Obstacle
   - HealthReward
+  - Enemies
+  - Egg
   layers:
   - Default
   - TransparentFX

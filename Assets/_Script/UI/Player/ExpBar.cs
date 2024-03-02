@@ -7,7 +7,6 @@ public class ExpBar : MonoBehaviour
 {
 
     public Image Exp;
-    public Text ExpBarText;
     public Text Level;
     public ExpCountor expcountor;
 
@@ -21,7 +20,6 @@ public class ExpBar : MonoBehaviour
     void Update()
     {
         Exp.fillAmount = (float)expcountor.CorrentExp / expcountor.CorrentLevelExp;
-        ExpBarText.text = expcountor.CorrentExp.ToString()+"/"+expcountor.CorrentLevelExp.ToString();
-        Level.text = "CurrentLevel  " + expcountor.CorrentLevel.ToString();
+        Level.text =expcountor.CorrentLevel.ToString();
     }
 }

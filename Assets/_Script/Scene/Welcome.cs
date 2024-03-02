@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Welcome : MonoBehaviour
@@ -21,8 +22,8 @@ public class Welcome : MonoBehaviour
         {
             PlayerPrefs.SetString("playerName", "Guest" + Random.Range(1000, 10000).ToString());
         }
-        SceneLoader.Instance.SwichScene();
         PlayerPrefs.SetInt("PointState", -1);
+        SceneManager.LoadScene(1);
     }
     // ÄÚ²¿º¯Êý
     private void Start()

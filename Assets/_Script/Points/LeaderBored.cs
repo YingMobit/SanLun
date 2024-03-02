@@ -115,7 +115,7 @@ public class LeaderBored : MonoBehaviour
     // 内部函数
     private void Start()
     {
-        StartCoroutine(AddNewPlayer("樂", 1,5)); // 测试添加新玩家
+        AddScore();
         StartCoroutine(DownLoad()); // 获取
         isLevel = false;
         PopPanel.SetActive(false);
@@ -123,7 +123,16 @@ public class LeaderBored : MonoBehaviour
 
     IEnumerator AddNewPlayer(string playerName, int score,int level, int attempt = 0)
     {
-        UnityWebRequest request = UnityWebRequest.Get(url + privateCode + "/add/" + UnityWebRequest.EscapeURL(playerName) + "/" + score + "/" + level);
+        float point = score;
+        if (PlayerPrefs.GetInt("PointState", -1) == 0)
+        {
+            point = score / 2.0f;
+        }
+        else if(PlayerPrefs.GetInt("PointState", -1) == 1)
+        {
+            point = score;
+        }
+        UnityWebRequest request = UnityWebRequest.Get(url + privateCode + "/add/" + UnityWebRequest.EscapeURL(playerName) + "/" + point.ToString("F1") + "/" + level);
         yield return request.SendWebRequest();
         if (request.result == UnityWebRequest.Result.ConnectionError || request.result == UnityWebRequest.Result.ProtocolError)
         {
@@ -138,6 +147,7 @@ public class LeaderBored : MonoBehaviour
                 PopMessage("成绩提交至排行榜失败,请检查网络");
             }
         }
+        PlayerPrefs.SetInt("PointState", -1);
         //HASDO:添加一个Panel用来提示输入错误,将addTextComponent修改成弹窗
     }
 

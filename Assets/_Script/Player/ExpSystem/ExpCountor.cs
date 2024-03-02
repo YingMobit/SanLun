@@ -9,10 +9,10 @@ public class ExpCountor : MonoBehaviour
     public Enemy_data pBO_Data;
     public Enemy_data tank_Data;
 
-    public static int CorrentLevel;
-    public static int MaxLevel;
+    public int CorrentLevel;
+    public int MaxLevel;
     public int CorrentExp;
-    public int CorrentLevelExp;//当前等级经验值上限
+    public int CorrentLevelExp;//锟斤拷前锟饺硷拷锟斤拷锟斤拷值锟斤拷锟斤拷
 
     public event Action LevelUPed;
 

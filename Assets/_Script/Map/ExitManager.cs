@@ -79,7 +79,7 @@ public class ExitManager : MonoBehaviour
     {
         if (show && portalBarInstance == null)
         {
-            portalBarInstance = Instantiate(portalBarPrefab, Quaternion.identity,canvas.transform);
+            portalBarInstance = Instantiate(portalBarPrefab,new Vector3(0, 428,0), Quaternion.identity,canvas.transform);
 
             progressBar = portalBarInstance.transform.GetChild(1).GetComponent<Image>();
             progressText = portalBarInstance.transform.GetChild(2).GetComponent<Text>();

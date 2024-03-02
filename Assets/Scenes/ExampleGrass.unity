@@ -5485,6 +5485,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ProtalBar
       objectReference: {fileID: 0}
+    - target: {fileID: 4765747452505381383, guid: 843c5055b50ce644789782f27927a270, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7255756755700122726, guid: 843c5055b50ce644789782f27927a270, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

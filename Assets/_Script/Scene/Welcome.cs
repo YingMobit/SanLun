@@ -24,7 +24,6 @@ public class Welcome : MonoBehaviour
             PlayerPrefs.SetString("playerName", "Guest" + Random.Range(1000, 10000).ToString());
         }
         PlayerPrefs.SetInt("PointState", -1);
-        PlayerPrefs.SetInt("IsFirst", 1);
         SceneManager.LoadScene(1);
     }
     // ÄÚ²¿º¯Êý

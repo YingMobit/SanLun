@@ -10,7 +10,7 @@ using UnityEngine.Tilemaps;
 
 public class MapGenerator : MonoBehaviour
 {
-    // ÉùÃ÷
+    // ï¿½ï¿½ï¿½ï¿½
     public enum Direction
     {
         Up,
@@ -19,39 +19,39 @@ public class MapGenerator : MonoBehaviour
         Right
     }
 
-    public Tilemap FloorTilemap;            // µØÃæ
-    public Tilemap ObstacleTilemap;          // ÕÏ°­
-    public TileBase BarrierTile;     // ÆÁÕÏÍßÆ¬
-    public TileBase[] GrassTiles;           // ²ÝµØÍßÆ¬×é
-    public TileBase FloorTile;          // ºÚÉ«Ê¯×©ÍßÆ¬
-    public TileBase ObstacleTile;         // ÕÏ°­ÎïÍßÆ¬
-    public Grid grid;         // Íø¸ñ¸¸ÎïÌå
-    public int[,] MapData;         // ´æ´¢µØÍ¼Êý¾Ýxy×ø±ê Êý¾Ý0Î´½âËø1½âËø// ÔÝÊ±ÓÃ²»µ½
-    public int BarrierNum;          // ÆÁÕÏÃüÃûÊý
-    public float ObstacleFrequency = 0.4f;  // ÕÏ°­ÎïµÄÉú³ÉÆµÂÊ£¬ÊýÖµÔ½´óÕÏ°­ÎïÔ½¶à
-    public int ObstacleSeed;              // Ëæ»úÖÖ×Ó£¬¿ÉÒÔÉú³É²»Í¬µÄÕÏ°­ÎïÄ£Ê½
-    public GameObject Exit;         // ³ö¿Ú
-    public GridStorage storage;         // ´æ´¢Íø¸ñÖÐÐÄµãÐÅÏ¢
+    public Tilemap FloorTilemap;            // ï¿½ï¿½ï¿½ï¿½
+    public Tilemap ObstacleTilemap;          // ï¿½Ï°ï¿½
+    public TileBase BarrierTile;     // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ¬
+    public TileBase[] GrassTiles;           // ï¿½Ýµï¿½ï¿½ï¿½Æ¬ï¿½ï¿½
+    public TileBase FloorTile;          // ï¿½ï¿½É«Ê¯×©ï¿½ï¿½Æ¬
+    public TileBase ObstacleTile;         // ï¿½Ï°ï¿½ï¿½ï¿½ï¿½ï¿½Æ¬
+    public Grid grid;         // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    public int[,] MapData;         // ï¿½æ´¢ï¿½ï¿½Í¼ï¿½ï¿½ï¿½ï¿½xyï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½0Î´ï¿½ï¿½ï¿½ï¿½1ï¿½ï¿½ï¿½ï¿½// ï¿½ï¿½Ê±ï¿½Ã²ï¿½ï¿½ï¿½
+    public int BarrierNum;          // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    public float ObstacleFrequency = 0.4f;  // ï¿½Ï°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æµï¿½Ê£ï¿½ï¿½ï¿½ÖµÔ½ï¿½ï¿½ï¿½Ï°ï¿½ï¿½ï¿½Ô½ï¿½ï¿½
+    public int ObstacleSeed;              // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É²ï¿½Í¬ï¿½ï¿½ï¿½Ï°ï¿½ï¿½ï¿½Ä£Ê½
+    public GameObject Exit;         // ï¿½ï¿½ï¿½ï¿½
+    public GridStorage storage;         // ï¿½æ´¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Äµï¿½ï¿½ï¿½Ï¢
 
 
-    // ³ö¿ÚÂß¼­
-    private bool exitCanGenerate;           // ÊÇ·ñ¿ÉÒÔÉú³É³ö¿Ú
+    // ï¿½ï¿½ï¿½ï¿½ï¿½ß¼ï¿½
+    private bool exitCanGenerate;           // ï¿½Ç·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É³ï¿½ï¿½ï¿½
 
 
-    public static MapGenerator Instance { get; private set; }           // ¾²Ì¬µÄ Instance ÊôÐÔ£¬ÓÃÓÚ»ñÈ¡µ¥ÀýÊµÀý
+    public static MapGenerator Instance { get; private set; }           // ï¿½ï¿½Ì¬ï¿½ï¿½ Instance ï¿½ï¿½ï¿½Ô£ï¿½ï¿½ï¿½ï¿½Ú»ï¿½È¡ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½
 
-    // º¯Êý
+    // ï¿½ï¿½ï¿½ï¿½
 
     void Awake()
     {
         if (Instance != null && Instance != this)
         {
-            Destroy(Instance.gameObject);  // Ïú»Ù¾ÉÊµÀý
+            Destroy(Instance.gameObject);  // ï¿½ï¿½ï¿½Ù¾ï¿½Êµï¿½ï¿½
         }
         Instance = this;
     }
 
-    //Íâ²¿º¯Êý
+    //ï¿½â²¿ï¿½ï¿½ï¿½ï¿½
     public bool EnemyPos(Vector3 worldPos)
     {
         Vector3Int gridPos = grid.LocalToCell(worldPos);
@@ -70,22 +70,22 @@ public class MapGenerator : MonoBehaviour
         exitCanGenerate = true;
     }
 
-    // ÄÚ²¿º¯Êý
+    // ï¿½Ú²ï¿½ï¿½ï¿½ï¿½ï¿½
     private void Start()
     {
-        // Çå¿ÕµØÍ¼
+        // ï¿½ï¿½Õµï¿½Í¼
         ClearChildren(grid.gameObject);
-        // ³õÊ¼Êý×é
+        // ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½
         storage = new GridStorage();
         storage.ClearPos();
-        // ³õÊ¼Ð¡µØÍ¼
+        // ï¿½ï¿½Ê¼Ð¡ï¿½ï¿½Í¼
         BarrierNum = 1;
         exitCanGenerate = false;
         InitialMap();
-        // ×¢²áº¯Êý
+        // ×¢ï¿½áº¯ï¿½ï¿½
         Health.UpdataMap += AddMap;
         Health.AddExit += GenerateExit;
-        // ÇåÀíÊý¾Ý
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         Health.ExitGenerateCount = 0;
         Health.BarrierDestroyCount = 0;
         PlayerPrefs.SetInt("Point", 0);
@@ -107,7 +107,7 @@ public class MapGenerator : MonoBehaviour
             return;
         }
 
-        // ±éÀú×ÓÎïÌå²¢Ïú»Ù
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½å²¢ï¿½ï¿½ï¿½ï¿½
         foreach (Transform child in parent.transform)
         {
             Destroy(child.gameObject);
@@ -116,12 +116,12 @@ public class MapGenerator : MonoBehaviour
 
     private void InitialMap()
     {
-        // ³õÊ¼»¯Â·¾¶µã
+        // ï¿½ï¿½Ê¼ï¿½ï¿½Â·ï¿½ï¿½ï¿½ï¿½
         Vector3Int centerPos = Vector3Int.zero;
 
-        // ´´½¨FloorTilemap,Ìí¼Ó×é¼þ
+        // ï¿½ï¿½ï¿½ï¿½FloorTilemap,ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         GameObject tilemapObj = new GameObject("FloorTilemap");
-        tilemapObj.transform.parent = grid.transform; // ½«TilemapÉèÎªgridµÄ×ÓÎïÌå
+        tilemapObj.transform.parent = grid.transform; // ï¿½ï¿½Tilemapï¿½ï¿½Îªgridï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         FloorTilemap = tilemapObj.AddComponent<Tilemap>();
         TilemapRenderer tilemapRenderer = tilemapObj.AddComponent<TilemapRenderer>();
         tilemapRenderer.sortingOrder = 0;
@@ -130,7 +130,7 @@ public class MapGenerator : MonoBehaviour
         tilemapObj.AddComponent<CompositeCollider2D>();
         tilemapObj.tag = "Ground";
 
-        // ´´½¨Ëæ»úÕÏ°­Îï
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ï¿½ï¿½
         GameObject tilemapObj1 = new GameObject("ObstacleTilemap");
         tilemapObj1.transform.parent = grid.transform;
         ObstacleTilemap = tilemapObj1.AddComponent<Tilemap>();
@@ -142,7 +142,7 @@ public class MapGenerator : MonoBehaviour
         tilemapObj1.tag = "Obstacle";
 
 
-        //´´½¨³õÊ¼µØÍ¼
+        //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½Í¼
         GeneratePlot(centerPos);
         GenerateObstacle(centerPos);
         ObstacleTilemap.SetTile(centerPos, null);
@@ -153,7 +153,7 @@ public class MapGenerator : MonoBehaviour
 
     private void GeneratePlot(Vector3Int centerPos)
     {
-        // ´´½¨µØÃæÍßÆ¬   13*9
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ¬   13*9
         for (int x = -6+ centerPos.x; x < 7+ centerPos.x; x++)
         {
             for (int y = -4+ centerPos.y; y < 5+ centerPos.y; y++)
@@ -162,7 +162,7 @@ public class MapGenerator : MonoBehaviour
                 FloorTilemap.SetTile(new Vector3Int(x, y, 0), tile);
             }
         }
-    }//centorPosÊÇÒªÉú³ÉµÄÖÐÐÄµã
+    }//centorPosï¿½ï¿½Òªï¿½ï¿½ï¿½Éµï¿½ï¿½ï¿½ï¿½Äµï¿½
 
     private void GenerateCorner(Vector3Int centerPos)
     {
@@ -177,36 +177,36 @@ public class MapGenerator : MonoBehaviour
         bool hasTile;
         //Direction.Up
         hasTile = FloorTilemap.HasTile(centerPos + new Vector3Int(0, +9, 0));//  || FloorTilemap.HasTile(centerPos + new Vector3Int(0, +5, 0));
-        if (!hasTile)// Ã»ÓÐÐ¡µØÍ¼ÄÇÃ´Éú³ÉÆÁÕÏ
+        if (!hasTile)// Ã»ï¿½ï¿½Ð¡ï¿½ï¿½Í¼ï¿½ï¿½Ã´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         {
-            GameObject Barrier1 = new GameObject("Barrier" + BarrierNum++);// ÉÏ 0,+9,0
+            GameObject Barrier1 = new GameObject("Barrier" + BarrierNum++);// ï¿½ï¿½ 0,+9,0
             Barrier1.transform.SetParent(grid.transform);
             AddBarrierComponent(Barrier1,centerPos, Direction.Up);
         }
 
         //Direction.Down
         hasTile = FloorTilemap.HasTile(centerPos + new Vector3Int(0, -9, 0));//  && FloorTilemap.HasTile(centerPos + new Vector3Int(0, -5, 0));
-        if (!hasTile)// Ã»ÓÐÐ¡µØÍ¼ÄÇÃ´Éú³ÉÆÁÕÏ
+        if (!hasTile)// Ã»ï¿½ï¿½Ð¡ï¿½ï¿½Í¼ï¿½ï¿½Ã´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         {
-            GameObject Barrier2 = new GameObject("Barrier" + BarrierNum++);// ÏÂ 0,-9,0
+            GameObject Barrier2 = new GameObject("Barrier" + BarrierNum++);// ï¿½ï¿½ 0,-9,0
             Barrier2.transform.SetParent(grid.transform);
             AddBarrierComponent(Barrier2, centerPos, Direction.Down);
         }
 
         //Direction.Left
         hasTile = FloorTilemap.HasTile(centerPos + new Vector3Int(-13, 0, 0));//  && FloorTilemap.HasTile(centerPos + new Vector3Int(-7, 0, 0));
-        if (!hasTile)// Ã»ÓÐÐ¡µØÍ¼ÄÇÃ´Éú³ÉÆÁÕÏ
+        if (!hasTile)// Ã»ï¿½ï¿½Ð¡ï¿½ï¿½Í¼ï¿½ï¿½Ã´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         {
-            GameObject Barrier3 = new GameObject("Barrier" + BarrierNum++);// ×ó -13,0,0
+            GameObject Barrier3 = new GameObject("Barrier" + BarrierNum++);// ï¿½ï¿½ -13,0,0
             Barrier3.transform.SetParent(grid.transform);
             AddBarrierComponent(Barrier3, centerPos, Direction.Left);
         }
 
         //Direction.Right
         hasTile = FloorTilemap.HasTile(centerPos + new Vector3Int(+13, 0, 0));//  && FloorTilemap.HasTile(centerPos + new Vector3Int(+7, 0, 0));
-        if (!hasTile)// Ã»ÓÐÐ¡µØÍ¼ÄÇÃ´Éú³ÉÆÁÕÏ
+        if (!hasTile)// Ã»ï¿½ï¿½Ð¡ï¿½ï¿½Í¼ï¿½ï¿½Ã´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         {
-            GameObject Barrier4 = new GameObject("Barrier" + BarrierNum++);// ÓÒ +13,0,0
+            GameObject Barrier4 = new GameObject("Barrier" + BarrierNum++);// ï¿½ï¿½ +13,0,0
             Barrier4.transform.SetParent(grid.transform);
             AddBarrierComponent(Barrier4, centerPos, Direction.Right);
         }
@@ -226,7 +226,7 @@ public class MapGenerator : MonoBehaviour
         Vector3Int setPos = Vector3Int.zero;
         switch (dir)
         {
-            case Direction.Up://-6£¬+5£¬0 ×óÖÁÓÒ
+            case Direction.Up://-6ï¿½ï¿½+5ï¿½ï¿½0 ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
                 setPos = centerPos + new Vector3Int(-6, +5, 0);
                 for (int i = 0; i < 13; i++)
                 {
@@ -234,7 +234,7 @@ public class MapGenerator : MonoBehaviour
                     setPos += new Vector3Int(+1, 0, 0);
                 }
                 break;
-            case Direction.Down://-6,-5,0 ×óÖÁÓÒ
+            case Direction.Down://-6,-5,0 ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
                 setPos = centerPos + new Vector3Int(-6, -5, 0);
                 for (int i = 0; i < 13; i++)
                 {
@@ -242,7 +242,7 @@ public class MapGenerator : MonoBehaviour
                     setPos += new Vector3Int(+1, 0, 0);
                 }
                 break;
-            case Direction.Left:// -7,-4,0 ÏÂÖÁÉÏ
+            case Direction.Left:// -7,-4,0 ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
                 setPos = centerPos + new Vector3Int(-7, -4, 0);
                 for (int i = 0; i < 9; i++)
                 {
@@ -294,18 +294,18 @@ public class MapGenerator : MonoBehaviour
 
     private void GenerateObstacle(Vector3Int centerPos)
     {
-        // Ê¹ÓÃµ±Ç°Ê±¼ä×÷ÎªÖÖ×ÓÀ´Éú³ÉÒ»¸öËæ»úÆ«ÒÆÁ¿
+        // Ê¹ï¿½Ãµï¿½Ç°Ê±ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Æ«ï¿½ï¿½ï¿½ï¿½
         System.Random rand = new System.Random((int)DateTime.Now.Ticks & 0x0000FFFF);
         float randomOffsetX = rand.Next(-100000, 100000);
-        float randomOffsetY = rand.Next(-100000, 100000);// Æ«ÒÆÁ¿ÕâÀïÑ¡¾Ö²¿//TODO¸Ä³ÉÈ«¾Ö
+        float randomOffsetY = rand.Next(-100000, 100000);// Æ«ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½Ö²ï¿½//TODOï¿½Ä³ï¿½È«ï¿½ï¿½
 
         for (int x = -6 + centerPos.x; x < 7 + centerPos.x; x++)
         {
             for (int y = -4 + centerPos.y; y < 5 + centerPos.y; y++)
             {
-                // ÔÚPerlinÔëÉùµÄ»ù´¡ÉÏÌí¼ÓËæ»úÆ«ÒÆÁ¿
+                // ï¿½ï¿½Perlinï¿½ï¿½ï¿½ï¿½ï¿½Ä»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ«ï¿½ï¿½ï¿½ï¿½
                 float perlinValue = Mathf.PerlinNoise((x + randomOffsetX) * ObstacleFrequency, (y + randomOffsetY) * ObstacleFrequency);
-                if (perlinValue > 0.7f) // ÕâÀïµÄãÐÖµ¾ö¶¨ÁËÕÏ°­ÎïµÄÏ¡Êè³Ì¶È
+                if (perlinValue > 0.7f) // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ï¿½ï¿½ï¿½Ï¡ï¿½ï¿½Ì¶ï¿½
                 {
                     ObstacleTilemap.SetTile(new Vector3Int(x, y, 0), ObstacleTile);
                 }
@@ -316,7 +316,7 @@ public class MapGenerator : MonoBehaviour
     public void AddMap(Health.Pos Posdata,GameObject barrier)
     {
         Vector3Int centerPos = GetCenterPos(Posdata);
-        if (centerPos == new Vector3Int(1, 0, 0))// fix£ºÎªÁËÐÞ¸´ÒÑ¾­½âËøµÄÐ¡µØÍ¼ÒòÎªÓÖÒ»´ÎÆÁÕÏµÄÆÆ»µ¶øÔö¼Ó
+        if (centerPos == new Vector3Int(1, 0, 0))// fixï¿½ï¿½Îªï¿½ï¿½ï¿½Þ¸ï¿½ï¿½Ñ¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½Í¼ï¿½ï¿½Îªï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Ïµï¿½ï¿½Æ»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         {
             ChangeFloor(Posdata);
             return;
@@ -325,17 +325,17 @@ public class MapGenerator : MonoBehaviour
         if(exitCanGenerate)
         {
             Vector3Int exitPos = storage.GetRandomPos();
-            Debug.Log("»ñÈ¡µ½ÁËpos");
-            Instantiate(Exit, grid.CellToLocalInterpolated(exitPos), Quaternion.Euler(Vector3.zero));// ÔÚcenterPosÌí¼Ó³ö¿Ú
+            Debug.Log("ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½pos");
+            Instantiate(Exit, grid.CellToLocalInterpolated(exitPos), Quaternion.Euler(Vector3.zero));// ï¿½ï¿½centerPosï¿½ï¿½ï¿½Ó³ï¿½ï¿½ï¿½
         }
-        GenerateObstacle(centerPos);//bug£ºÈË³öÉú¿¨ËÀÔÚÄ¾×® ÏÖÔÚ¸ÄÈË³öÉúÍø¸ñ£¨0.5£¬0.5£¬0£©*5.12
+        GenerateObstacle(centerPos);//bugï¿½ï¿½ï¿½Ë³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¾×® ï¿½ï¿½ï¿½Ú¸ï¿½ï¿½Ë³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½0.5ï¿½ï¿½0.5ï¿½ï¿½0ï¿½ï¿½*5.12
         if (exitCanGenerate)
         {
             ObstacleTilemap.SetTile(centerPos, null);
             ObstacleTilemap.SetTile(centerPos + new Vector3Int(-1, 0, 0), null);
             ObstacleTilemap.SetTile(centerPos + new Vector3Int(0,-1,0), null);
             ObstacleTilemap.SetTile(centerPos + new Vector3Int(-1, -1, 0), null);
-            exitCanGenerate = false;// ÇåÊý¾Ý
+            exitCanGenerate = false;// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         }
         GenerateBarrier(centerPos);
         GenerateCorner(centerPos);
@@ -345,10 +345,10 @@ public class MapGenerator : MonoBehaviour
 
     private Vector3Int GetCenterPos(Health.Pos Posdata)
     {
-        Vector3Int centerPos = Vector3Int.zero;// ´òµÄÓÒ±ß
+        Vector3Int centerPos = Vector3Int.zero;// ï¿½ï¿½ï¿½ï¿½Ò±ï¿½
         if (Posdata.dir == Health.Direction.Horizon) { centerPos = Posdata.max + new Vector3Int(-7, 0, 0); }
         if (Posdata.dir == Health.Direction.Vertical) { centerPos = Posdata.max + new Vector3Int(0, -5, 0); }
-        if (Posdata.dir == Health.Direction.Horizon)//ÉÏÏÂÄÄÒ»¸ö
+        if (Posdata.dir == Health.Direction.Horizon)//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½
         {
             centerPos = centerPos + new Vector3Int(0, -5, 0);
             if (!FloorTilemap.HasTile(centerPos))
@@ -361,10 +361,10 @@ public class MapGenerator : MonoBehaviour
                 return centerPos;
             }
         }
-        else// Êú×ÅµÄ ×óÓÒÑ¡Ò»¸ö
+        else// ï¿½ï¿½ï¿½Åµï¿½ ï¿½ï¿½ï¿½ï¿½Ñ¡Ò»ï¿½ï¿½
         {
             centerPos = centerPos + new Vector3Int(-7, 0, 0);
-            if (!FloorTilemap.HasTile(centerPos))// ÓÐµÄ»°»»ÁíÒ»±ß
+            if (!FloorTilemap.HasTile(centerPos))// ï¿½ÐµÄ»ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½
             {
                 return centerPos;
             }
@@ -377,8 +377,8 @@ public class MapGenerator : MonoBehaviour
         return new Vector3Int(1,0,0);
     }
 
-    // ÆäËûº¯Êý
-    // Êó±êµã»÷»ñÈ¡Íø¸ñ×ø±ê
+    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     public void GetPos(Vector3 screenPos)
     {
         Vector3 worldPos = Camera.main.ScreenToWorldPoint(screenPos);

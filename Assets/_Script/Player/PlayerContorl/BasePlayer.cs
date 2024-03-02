@@ -57,8 +57,8 @@ public class BasePlayer : MonoBehaviour
         {
             PlayerPrefs.SetString("InitWeapon", "M4A1");
             Vector3 GenPos = transform.position + new Vector3(0, 3, 0);
+            Destroy(collision.gameObject);
             GameObject newInfoPop = Instantiate(EggInfo, GenPos,Quaternion.identity);
-            newInfoPop.transform.parent = transform;
         }
     }
 

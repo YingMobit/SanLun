@@ -48,7 +48,6 @@ public class BuffTile : MonoBehaviour
         BuffCount = random.Next(0,Data.Count);
         selected_data = Data[BuffCount];
         FuncName = "Buff_" + BuffCount;
-        Internalcode.text = selected_data.InternalCode.ToString();
         Buffname.text = selected_data.BuffName.ToString();
         Buffdescription.text = selected_data.Buffdescription.ToString();
     }

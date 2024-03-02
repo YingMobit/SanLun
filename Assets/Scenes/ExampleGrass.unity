@@ -2010,7 +2010,7 @@ MonoBehaviour:
   ExpCountor: {fileID: 0}
   animator: {fileID: 0}
   CurePop: {fileID: 6451222663598607286, guid: 66e5fa9ad3164784db9a2df6bc49b6d4, type: 3}
-  DeadUI: {fileID: 0}
+  DeadUI: {fileID: 607308485}
   healthStick: {fileID: 0}
   angle: 0
   MousePos: {x: 0, y: 0, z: 0}
@@ -2370,13 +2370,13 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 830538207}
+  - {fileID: 309708031}
   - {fileID: 754696388}
   - {fileID: 647614680}
   - {fileID: 1835746124782314685}
-  - {fileID: 309708031}
-  - {fileID: 696688266}
   - {fileID: 607308486}
+  - {fileID: 830538207}
+  - {fileID: 696688266}
   - {fileID: 1890858954}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2513,7 +2513,6 @@ MonoBehaviour:
   pBO_Data: {fileID: 11400000, guid: 1536ac0cebca7db4e9a67de4e5cf6395, type: 2}
   tank_Data: {fileID: 11400000, guid: 9c54d2d5d53dc2147afc36835abbabdb, type: 2}
   CorrentLevel: 0
-  MaxLevel: 25
   CorrentExp: 0
   CorrentLevelExp: 0
 --- !u!1 &812688005
@@ -2719,6 +2718,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 11aa277f7c62a38458fe912b80c7fe93, type: 2}
   - {fileID: 11400000, guid: a671fcc614a27ae40910843e613b35b4, type: 2}
   BasData: {fileID: 0}
+  playerController: {fileID: 0}
   BufOn_Reloading_time: 1
   BufOn_Shooting_Interval: 1
   BufOn_Damage: 1
@@ -4609,7 +4609,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: e11f014edccbe284a9fba93cd0c7673e, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.496
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -4705,6 +4705,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 145e7a6ad13990a49bb91bd00068adb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Audio: {fileID: 0}
 --- !u!1001 &1592243636
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -87,7 +87,7 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
-        DeadUI = GameObject.Find("Canvas").transform.GetChild(6).gameObject;
+        DeadUI = GameObject.Find("Canvas").transform.GetChild(4).gameObject;
         ExpCountor = FindAnyObjectByType<ExpCountor>();
         healthStick = FindFirstObjectByType<HealthStick>();
         HealthDataChanged += healthStick.Update;

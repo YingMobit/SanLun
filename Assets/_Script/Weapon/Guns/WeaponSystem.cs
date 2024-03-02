@@ -11,6 +11,7 @@ public class WeaponSystem : MonoBehaviour,IGuns
     [Header("»ù´¡²ÎÊý")]
     public List<GunData> GunDatas;
     public GunData BasData;
+    public PlayerController playerController;
 
     [Header("Buff")]
     public float BufOn_Reloading_time=1;
@@ -39,6 +40,7 @@ public class WeaponSystem : MonoBehaviour,IGuns
 
     void Start()
     {
+        playerController = transform.GetComponentInParent<PlayerController>();
         sprite_renderer = GetComponent<SpriteRenderer>();
         Buff = GameObject.Find("BuffManager").GetComponent<BuffManager_Weapon>();
         gameObject.name = PlayerPrefs.GetString("InitWeapon","USP"); 
@@ -100,26 +102,29 @@ public class WeaponSystem : MonoBehaviour,IGuns
     // Update is called once per frame
     void Update()
     {
-        Weapon_Name = gameObject.name;
-        switch (gameObject.name)
+        if (!playerController.dead)
         {
-            case "USP":
-            case "Revolver":
-            if (Input.GetMouseButtonDown(0))
-            { 
-                Shoot(); 
-            }
-            break;
+            Weapon_Name = gameObject.name;
+            switch (gameObject.name)
+            {
+                case "USP":
+                case "Revolver":
+                    if (Input.GetMouseButtonDown(0))
+                    {
+                        Shoot();
+                    }
+                    break;
 
-            default:
-                if (Input.GetMouseButton(0))
-                {
-                    Shoot();
-                }
-            break;
+                default:
+                    if (Input.GetMouseButton(0))
+                    {
+                        Shoot();
+                    }
+                    break;
+            }
+            if (Input.GetKeyDown(KeyCode.R)) { StartCoroutine(ReLoad(Fac_Reloading_time)); }
+            if (Bullet_Remained <= 0) { StartCoroutine(ReLoad(Fac_Reloading_time)); }
         }
-        if (Input.GetKeyDown(KeyCode.R)) { StartCoroutine(ReLoad(Fac_Reloading_time)); }
-        if (Bullet_Remained <= 0) { StartCoroutine(ReLoad(Fac_Reloading_time)); }
     }
 
     public IEnumerator ReLoad(float reloading_time)

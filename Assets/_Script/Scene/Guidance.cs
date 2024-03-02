@@ -41,6 +41,7 @@ public class Guidance : MonoBehaviour
         {
             if (PlayerPrefs.GetInt("Pointstate", -1) == 1 || PlayerPrefs.GetInt("Pointstate", -1) == 0)
             {
+                Debug.Log("showpoint");
                 StartCoroutine(ShowPoint());
             }
         }
@@ -166,6 +167,7 @@ public class Guidance : MonoBehaviour
         PointPanel.SetActive(true);
         float duration = 1f; // 移动持续时间
         float time = 0; // 已经过去的时间
+        Debug.Log("来了") ;
         RectTransform rectTransform = PointPanel.GetComponent<RectTransform>();
         if(PlayerPrefs.GetInt("Pointstate", -1) == 1)
         {
